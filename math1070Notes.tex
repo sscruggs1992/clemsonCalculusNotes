@@ -1,0 +1,89 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tkz-euclide}
+\usepackage[titles]{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usetkzobj{all}
+%% Externalize graphics and save in ./images/ folder
+%% pdflatex -shell-escape <tex file>
+%% The document can be compiled with the two following
+%% lines commented out, but will recompile all figures
+%% each time.
+\usetikzlibrary{external}
+\tikzexternalize[prefix=images/]
+%% 
+\usepackage{tabularx}
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+\makeatletter
+\title{Math 1070 Class notes\\[0.25\baselineskip]Spring 2020}
+\author{\thefname\ \thelname}
+
+\pagestyle{headandfoot}
+
+%\firstpageheader{\@title\\\@date}{}{Math 1070}
+%\firstpageheadrule
+
+\newcommand*{\currentname}{\@currentlabelname}
+
+\runningfootrule
+\runningfooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+\makeatother
+
+\begin{document}
+  %% Title
+  \pagenumbering{roman}
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \makeatletter
+    {\huge
+    \@title}\\[\baselineskip]
+    \@author\\[\baselineskip]
+    Last updated:
+    \@date\\
+    \makeatother
+  \end{center}
+  \vspace*{\stretch{1}}
+  \thispagestyle{empty}
+  \pagebreak
+  \pagestyle{headandfoot}
+
+  \renewcommand{\contentsname}{Table Of Contents}
+  \renewcommand\thesection{}
+  \tableofcontents
+  \newpage
+  
+  \makeatletter
+  \firstpageheader{}{}{}
+  \firstpagefooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+  \firstpagefootrule
+  \makeatother
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+  %% everything else
+  \relscale{1.4}
+
+\input{review1040}
+\input{jit13_1}
+\input{briggs3_08}
+\input{briggs3_09}
+\input{jit9_1_2_3}
+\input{briggs3_10}
+\input{briggs3_11}
+\input{briggs4_01}
+\input{briggs4_02}
+\input{briggs4_03}
+\input{briggs4_04}
+\input{briggs4_05}
+\input{briggs4_06}
+\input{briggs4_07}
+\input{briggs4_09}
+\input{briggs5_01}
+\input{briggs5_02}
+\input{briggs5_03}
+\input{briggs5_04}
+\input{briggs5_05}
+\end{document}

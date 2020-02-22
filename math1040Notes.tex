@@ -1,0 +1,111 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tabularx}
+\usepackage[titles]{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+%% Externalize graphics and save in ./images/ folder
+%% pdflatex -shell-escape <tex file>
+%% The document can be compiled with the two following
+%% lines commented out, but will recompile all figures
+%% each time.
+\usetikzlibrary{external}
+\tikzexternalize[prefix=images/]
+%% 
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+\makeatletter
+\title{Math 1040 Class notes\\[0.25\baselineskip]Spring 2020}
+\author{\thefname\ \thelname}
+
+\pagestyle{headandfoot}
+
+%\firstpageheader{\@title\\\@date}{}{Math 1040}
+%\firstpageheadrule
+
+\newcommand{\currentname}{\@currentlabelname}
+
+\runningfootrule
+\runningfooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+\makeatother
+
+\begin{document}
+  %% Title
+  \pagenumbering{roman}
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \makeatletter
+    {\huge
+    \@title}\\[\baselineskip]
+    \@author\\[\baselineskip]
+    Last updated:
+    \@date\\
+    \makeatother
+  \end{center}
+  \vspace*{\stretch{1}}
+  \thispagestyle{empty}
+  \pagebreak
+  \pagestyle{headandfoot}
+
+  \renewcommand{\contentsname}{Table Of Contents}
+  \renewcommand\thesection{}
+  \tableofcontents
+  \newpage
+  
+  \makeatletter
+  \firstpageheader{}{}{}
+  \firstpagefooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+  \firstpagefootrule
+  \makeatother
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+  %% everything else
+
+  \relscale{1.4}
+
+  \input{jit01_1-5_8}
+  \input{jit04_1}
+  \input{jit04_2}
+  \input{jit04_3}
+  \input{jit04_4}
+  \input{jit04_5}
+  \input{jit04_6}
+  \input{jit04_7}
+  \input{jit05_1}
+  \input{jit05_2}
+  \input{jit05_3}
+  \input{jit05_5}
+  \input{jit05_4}
+  \input{jit15_1}
+  \input{jit10_1}
+  \input{jit10_2}
+  \input{jit10_3}
+  \input{jit10_4}
+  \input{jit02_1}
+  \input{jit10_5}
+  \input{jit10_6}
+  \input{jit03_1}
+  \input{jit03_2}
+  \input{jit03_3}
+  \input{briggs2_01}
+  \input{briggs2_02}
+  \input{briggs2_03}
+  \input{briggs2_04}
+  \input{briggs2_05}
+  \input{jit06_1-2-7_1}
+  \input{jit07_2-3-4}
+  \input{jit08_1-2-3-4}
+  \input{briggs2_06}
+  \input{briggs2_07}
+  \input{jit11_1}
+  \input{briggs3_01}
+  \input{briggs3_02}
+  \input{briggs3_03}
+  \input{briggs3_04}
+  \input{briggs3_05}
+  \input{briggs3_06}
+  \input{jit12_1}
+  \input{briggs3_07}
+\end{document}

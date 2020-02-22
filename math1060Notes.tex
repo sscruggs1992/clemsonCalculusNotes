@@ -1,0 +1,106 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tkz-euclide}
+\usepackage[titles]{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\usetkzobj{all}
+%% Externalize graphics and save in ./images/ folder
+%% pdflatex -shell-escape <tex file>
+%% The document can be compiled with the two following
+%% lines commented out, but will recompile all figures
+%% each time.
+\usetikzlibrary{external}
+\tikzexternalize[prefix=images/]
+%% Uncomment the following line to recompile ALL images
+%    \tikzset{external/force remake}
+%% Place this line in braces around the image to recompile
+%% e.g. { tikzset{...} \begin{tikzpicture} ... \end{tikzpicture} }
+%% 
+\usepackage{tabularx}
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+\makeatletter
+\title{Math 1060 Class notes\\[0.25\baselineskip]Spring 2020}
+\author{\thefname\ \thelname}
+
+\pagestyle{headandfoot}
+
+%\firstpageheader{\@title\\\@date}{}{Math 1060}
+%\firstpageheadrule
+
+\newcommand*{\currentname}{\@currentlabelname}
+
+\runningfootrule
+\runningfooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+\makeatother
+
+\begin{document}
+   %% Title
+  \pagenumbering{roman}
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \makeatletter
+    {\huge
+    \@title}\\[\baselineskip]
+    \@author\\[\baselineskip]
+    Last updated:
+    \@date\\
+    \makeatother
+  \end{center}
+  \vspace*{\stretch{1}}
+  \thispagestyle{empty}
+  \pagebreak
+  \pagestyle{headandfoot}
+
+  \renewcommand{\contentsname}{Table Of Contents}
+  \renewcommand\thesection{}
+  \tableofcontents
+  \newpage
+  
+  \makeatletter
+  \firstpageheader{}{}{}
+  \firstpagefooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+  \firstpagefootrule
+  \makeatother
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+  %% everything else
+  \relscale{1.4}
+
+\input{briggs1_03}
+\input{briggs1_04}
+\input{briggs2_01}
+\input{briggs2_02}
+\input{briggs2_03}
+\input{briggs2_04}
+\input{briggs2_05}
+\input{briggs2_06}
+\input{briggs2_07}
+\input{briggs3_01}
+\input{briggs3_02}
+\input{briggs3_03}
+\input{briggs3_04}
+\input{briggs3_05}
+\input{briggs3_06}
+\input{briggs3_07}
+\input{briggs3_08}
+\input{briggs3_09}
+\input{briggs3_10}
+\input{briggs3_11}
+\input{briggs4_01}
+\input{briggs4_02}
+\input{briggs4_03}
+\input{briggs4_04}
+\input{briggs4_06}
+\input{briggs4_07}
+\input{briggs4_05}
+\input{briggs4_09}
+\input{briggs5_01}
+\input{briggs5_02}
+\input{briggs5_03}
+\input{briggs5_04}
+\input{briggs5_05}
+\end{document}

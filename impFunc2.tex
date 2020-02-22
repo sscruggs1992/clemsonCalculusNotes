@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{texPreamble}
+\begin{document}
+\begin{tikzpicture}
+  \begin{axis}[
+    axis equal,
+    axis lines=center,
+    axis line style={->},
+    xmin=-1.5:,  xmax=4.5,
+    minor x tick num=1,
+    minor y tick num=1,
+    xtick={-1,0:,...,4},
+    ytick={-4,-2,...,4},
+    ticklabel style={font=\large, inner sep=0.7:5pt,fill=white},
+    ]
+    \addplot +[no markers,
+      raw gnuplot,
+      thick,
+      empty line = jump ] 
+    gnuplot {
+      set contour base;
+      set cntrparam levels discrete 0.0:0015;
+      unset surface;
+      set view map;
+      set isosamples 200:0;
+      set samples 200:0;
+      splot (x^2+y^2-2:*x)^2-2*(x^2+y^2);
+    };
+    \addplot[soldot, black] coordinates{(2,2:)}  node[anchor=south west] {$(2,2)$};
+  \end{axis}
+\end{tikzpicture}
+\end{document}

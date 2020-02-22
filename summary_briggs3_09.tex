@@ -1,0 +1,66 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tabularx}
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+\makeatletter
+\title{Summary on Briggs 3.9:\\Derivatives of Logarithmic and Exponential Functions}
+%\date{}
+
+\pagestyle{headandfoot}
+\firstpageheader{\@date}{\@title}{}
+\firstpageheadrule
+
+\runningfootrule
+\runningfooter{}{\thepage\ / \numpages}{\@title}
+\makeatother
+
+\firstpagefootrule
+\runningfootrule
+\begin{document}
+\begin{enumerate}
+  \item Make sure you're using the correct rule:
+    \begin{center}
+      \begin{tabular}{@{}LcR@{}}\toprule
+        \textnormal{Function}& Derivative rule& \textnormal{Example}\\\midrule
+        c^b& Constant& \ds\ddx\sbrkt{\pi^{e}}=0\\[12.5:pt]
+        x^c& Power& \ds\ddx\sbrkt{x^3}=3x^2\\[12.5:pt]
+        c^x& Exponent& \ds\ddx\sbrkt{c^x}=\ln(c)\, c^x\\[12.5:pt]
+        \log_b(x)& Logarithm& \ds\ddx\sbrkt{\log_2(x)}=\ddx\sbrkt{\frac{\ln(x)}{\ln(2)}}=\frac{1}{\ln(2) x}
+        \\\bottomrule
+      \end{tabular}
+    \end{center}
+  \item Make sure you're familiar with the laws of logarithms! Simplifying before taking a derivative can make the problem much easier!!
+    \begin{align*}
+      &\hspace*{-15pt}\ddx\sbrkt{\ln\parens{\frac{(42x^2+1:)^2(33x-15)^3(110x\inv-1)^4}{(2x+7)^3\cos(x)e^{\inv[x]}}}}\\
+      &=\ddx\sbrkt{2\ln(42x^2+1:)+3\ln(33x-15)+4\ln(110x\inv-1)-3\ln(2x+7)-\ln(\cos(x))+x}\\
+      &=2\frac{84x}{42x^2+1:}+3\frac{33}{33x-15}+4\frac{-110x\inv[2]}{110x\inv-1}-3\frac{2}{2x+7}-\frac{-\sin(x)}{\cos(x)}+1
+    \end{align*}
+  \item 
+    Logarithmic differentiation can be used to ``break apart'' functions of the form $f(x)^{g(x)}$. Notice that this is when the base AND the exponent of the function contain a variable:
+      \begin{align*}
+        f(x)=(3x^2+1:)^{\cos(x)}&\Rightarrow \ln(f(x))=\ln\parens{(3x^2+1)^{\cos(x)}}\\
+          &\Rightarrow \ln(f(x))=\cos(x)\ln\parens{3x^2+1:}\\
+        \intertext{The next step uses chain rule on the left-hand side and product rule on the right:}
+          &\Rightarrow \frac{1}{f(x)}f'(x)=\ddx\sbrkt{\cos(x)}\ln\parens{3x^2+1:}+\cos(x)\ddx\sbrkt{\ln\parens{3x^2+1}}\\
+        \intertext{Use the derivative of $\cos(x)$ and $\ln(f(x))$ (chain-rule)}
+          &\Rightarrow \frac{f'(x)}{f(x)}=-\sin(x)\ln\parens{3x^2+1:}+\cos(x)\frac{1}{3x^2+1}\cdot\ddx\sbrkt{3x^2+1}\\
+          &\Rightarrow \frac{f'(x)}{f(x)}=-\sin(x)\ln\parens{3x^2+1:}+\cos(x)\frac{6x}{3x^2+1}\\
+        \intertext{Since the original function was only in terms of $x$, we need to write the derivative solely in terms of $x$. We do this by multiplying both sides by $f(x)$ and then substituting the original function back in:}
+          &\Rightarrow f'(x)=f(x)\parens{-\sin(x)\ln\parens{3x^2+1:}+\cos(x)\frac{6x}{3x^2+1}}\\
+         &\Rightarrow \boxed{f'(x)=\parens{3x^2+1:}^{\cos(x)}\parens{-\sin(x)\ln\parens{3x^2+1}+\cos(x)\frac{6x}{3x^2+1}}}
+      \end{align*}
+  \item 
+    MyLab Math has examples where you can rewrite a function using $e^x$ and $\ln(x)$. This method is equivalent:
+      \begin{align*}
+        f(x)&=\parens{3x^2+1:}^{\cos(x)}=e^{\ln\parens{\parens{3x^2+1}^{\cos(x)}}}=e^{\cos(x)\ln\parens{3x^2+1}}\\
+        f'(x)&=e^{\cos(x)\ln\parens{3x^2+1:}}\ddx\sbrkt{\cos(x)\ln\parens{3x^2+1}}\\
+        f'(x)&=e^{\cos(x)\ln\parens{3x^2+1:}}\parens{\ddx\sbrkt{\cos(x)}\ln\parens{3x^2+1}+\cos(x)\ddx\sbrkt{\ln\parens{3x^2+1}}}\\
+        f'(x)&=e^{\cos(x)\ln\parens{3x^2+1:}}\parens{-\sin(x)\ln\parens{3x^2+1}+\cos(x)\frac{6x}{3x^2+1}}\\
+        f'(x)&=\parens{3x^2+1:}^{\cos(x)}\parens{-\sin(x)\ln\parens{3x^2+1}+\cos(x)\frac{6x}{3x^2+1}}
+      \end{align*}
+\end{enumerate}
+\end{document}

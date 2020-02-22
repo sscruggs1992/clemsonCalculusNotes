@@ -1,0 +1,196 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tabularx}
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+\firstpagefootrule
+\runningfootrule
+\begin{document}
+%\relscale{1.4}
+\section{5.4: Working with Integrals}
+
+\fbox{\parbox{0.9875\linewidth}{
+  \textbf{Theorem 5.4: Integrals of Even and Odd Functions}
+  
+  Let $a$ be a positive real number and let $f$ be an integrable function on the interval $\sbrkt{-a,a}$.
+  \begin{itemize}
+    \item If $f$ is even, $\ds\int_{-a}^a f(x)\,dx=2\int_{0}^a f(x)\,dx.$
+    \item If $f$ is odd, $\ds\int_{-a}^a f(x)\,dx=0.$
+  \end{itemize}
+}}
+
+\begin{ex*}
+  Rewrite the following trig functions to determine if it is even or odd:
+  \begin{tasks}[label=\mbox{}](2)
+    \task $\sin(-x)=$
+    \task $\cos(-x)=$
+    \task $\tan(-x)=$
+    \task $\cot(-x)=$
+    \task $\csc(-x)=$
+    \task $\sec(-x)=$
+  \end{tasks}
+  Use this to rewrite and evaluate the following integrals:
+\end{ex*}
+\begin{tasks}[after-item-skip=\stretch{1}, label=\mbox{}](2)
+  \task $\ds\int_{-\pi}^\pi \sin(x)\,dx$
+  \task $\ds\int_{-\pi}^\pi \cos(x)\,dx$
+  \task $\ds\int_{-\pi/4}^{\pi/4} \tan(x)\,dx$
+  \task $\ds\int_{-\pi/4}^{\pi/4} \sec(x)\,dx$
+\end{tasks}
+\vspace*{\stretch{1}}
+\textit{Note:} $\cot(x)$ and $\csc(x)$ are excluded here as they are not continuous on $\sbrkt{-\frac{\pi}{4},\frac{\pi}{4}}$.
+
+\vspace*{-\baselineskip}
+\pagebreak
+
+\begin{ex*}
+  Use symmetry to evaluate the following integrals:
+\end{ex*}
+\begin{tasks}[after-item-skip=\stretch{1}](1)
+  \task $\ds\int_{-10}^{10} \frac{x}{\sqrt{200-x^2}}\,dx$
+  \task $\ds\int_{-2}^{2}\parens{x^9-3x^5+2x^2-10}\,dx$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+
+\begin{tasks}[after-item-skip=\stretch{1}, resume](1)
+  \task $\ds\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}}\sin^5(x)\,dx$
+  \task $\ds\int_{-1}^{1}\parens{1-\abs{x}}\,dx$
+  \task $\ds\int_{-2}^{2}\frac{x^3-4x}{x^2+1}\,dx$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+
+\begin{ex*}
+  Given that $f(x)$ is even and $\ds\int_{-8}^{8} f(x)\,dx=18$, find
+\end{ex*}
+\begin{tasks}(2)
+  \task $\ds\int_{0}^{8}f(x)\,dx$
+  \task $\ds\int_{-8}^{8}xf(x)\,dx$
+\end{tasks}
+\vspace*{\stretch{1}}
+\begin{ex*}
+  Given that $f(x)$ is odd and $\ds\int_{0}^{4} f(x)\,dx=3$ and $\ds\int_0^8 f(x)\,dx=9$, find
+\end{ex*}
+\begin{tasks}(2)
+  \task $\ds\int_{-4}^{8}f(x)\,dx$
+  \task $\ds\int_{-8}^{4}f(x)\,dx$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+
+\begin{ex*}
+  Use symmetry to explain why
+\end{ex*}
+  \[\int_{-4}^{4}\parens{5x^4+3x^3+2x^2+x+1}\,dx=2\int_0^4 \parens{5x^4+2x^2+1}\,dx\]
+
+  \vspace*{\stretch{1}}
+\begin{ex*}
+  Evaluate
+\end{ex*}
+  $\ds\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\parens{\cos(2\theta)+\cos(\theta)\sin(\theta)-3\sin(\theta^5)}\,d\theta$
+\vspace*{\stretch{1}}
+\begin{ex*}
+  While the following integrals are not on symmetric intervals, symmetry still applies here:
+\end{ex*}
+\begin{tasks}(3)
+  \task $\ds\int_0^\pi \cos(x)\,dx$
+  \task $\ds\int_0^{2\pi} \sin(x)\,dx$
+  \task $\ds\int_0^{4\pi} \cos(x)\,dx$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+
+\begin{defn*}[Average Value of a Function]
+  The average value of an integrable function $f$ on the interval $\sbrkt{a,b}$ is
+    \[\bar f= \frac{1}{b-a}\int_a^b f(x)\,dx.\]
+\end{defn*}
+\begin{ex*}
+  Find the average value of $f(x)=-\dfrac{x^2}{2}$ on $\sbrkt{0,3}$.
+\end{ex*}
+\vspace*{\stretch{1}}
+\begin{ex*}
+  Find the average value of $f(x)=3x^2-3$ on $\sbrkt{0,1}$.
+\end{ex*}
+\vspace*{\stretch{1}}
+\begin{ex*}
+  Find the average value of $f(t)=t^2-t$ on $\sbrkt{-2,1}$.
+\end{ex*}
+\vspace*{\stretch{1}}
+\pagebreak
+
+\begin{ex*}
+  Find the average value of $f(x)=\dfrac{1}{x^2+1}$ on $\sbrkt{-1,1}$.
+\end{ex*}
+\vspace*{\stretch{1}}
+\begin{ex*}
+  Find the average value of $f(x)=\dfrac{1}{x}$ on $\sbrkt{1,e}$.
+\end{ex*}
+\vspace*{\stretch{1}}
+\begin{ex*}
+  Find the average value of $f(x)=x^\frac{1}{n}$ on $\sbrkt{0,1}$.
+\end{ex*}
+\vspace*{\stretch{1}}
+\pagebreak
+
+\begin{ex*}
+  The velocity in $m/s$ of an object moving along a line over the time interval $\sbrkt{0,6}$ is $v(t)=t^2+3t$. Find the average velocity of the object over this time interval.
+\end{ex*}
+\vspace*{\stretch{1}}
+
+\begin{ex*}
+  A rock is launched vertically upward from the ground with a speed of $64 ft/s$. The height of the rock (in $ft$) above the ground after $t$ seconds is given by the function $s(t)=-16t^2+64t$. Find its average velocity during its flight.
+\end{ex*}
+\vspace*{\stretch{1}}
+
+\pagebreak
+\begin{ex*}
+  The surface of a water wave is described by $y=5\parens{1+\cos(x)}$, for $-\pi\leq x\leq \pi$, where $y=0$ corresponds to a trough of the wave. Find the average height of the wave above the trough on $\sbrkt{-\pi,\pi}$.
+\end{ex*}
+
+\noindent
+\begin{minipage}{0.5\linewidth}
+  \begin{tikzpicture}
+    \begin{axis}[
+      axis lines=center,
+      axis line style={->},
+      xmin=-1.2*pi, xmax=1.2*pi,
+      ymin=-0.5, ymax=11,
+      height=2.5in, width=3.5in,
+      xtick={-3.141592654,-1.570796327,1.570796327,3.141592654},
+      xticklabels={$-\pi$,$-\sfrac{\pi}{2}$,$\sfrac{\pi}{2}$,$\pi$},
+      ticklabel style={font=\small,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+      xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+      ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+      every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+      ]
+      \addplot[-] expression[domain=-pi:pi] {5*(1+cos(x*180/pi))};
+    \end{axis}
+  \end{tikzpicture}
+\end{minipage}
+\pagebreak
+
+\noindent
+\fbox{\parbox{0.9875\linewidth}{
+  \textbf{Theorem 5.5: Mean Value Theorem for Integrals}
+
+  Let $f$ be continuous on the interval $\sbrkt{a,b}$. There exists a point $c$ in $\parens{a,b}$ such that 
+    \[f(c)=\bar f=\frac{1}{b-a}\int_a^b f(t)\,dt\]
+}}
+\begin{ex*}
+  For the following problems, find the point(s) that satisfy the Mean Value Theorem for Integrals.
+\end{ex*}
+\begin{tasks}[after-item-skip=\stretch{1}](1)
+  \task $f(x)=\dfrac{1}{x^2}$ on $\sbrkt{1,4}$.
+  \task $f(x)=e^x$ on $\sbrkt{0,2}$.
+  \task $f(x)=\cos(x)$ on $\sbrkt{-\dfrac{\pi}{2},\dfrac{\pi}{2}}$
+  \task $f(x)=1-\abs{x}$ on $\sbrkt{-1,1}$.
+\end{tasks}
+\vspace*{\stretch{1}}
+
+%TODO remove relscale
+\pagebreak
+\end{document}

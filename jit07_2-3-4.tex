@@ -1,0 +1,266 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tabularx}
+\usepackage{scrextend}
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+
+\begin{document}
+%\relscale{1.4}
+\section{JIT 7.2: The Ideas of Inverses}
+  \begin{defn*}[Inverse function]
+    Given a function $f$, its inverse (if it exists) is a function $f\inv$ such that whenever $y=f(x)$, then $f\inv(y)=x$.
+  \end{defn*}
+  \vfill
+  %\begin{addmargin}[30pt]{0pt}
+    \begin{description}
+      \item[Note:] $f$ and $g$ are inverses if $f\parens{g(x)}=x$ \textit{and} $g\parens{f(x)}=x$.
+      \item[Note:] The domain of $f(x)$ must be the range of $g(x)$.
+      \item[Note:] The domain of $g(x)$ must be the range of $f(x)$.
+      \item[Note:] The inverse, $f\inv(x)$, should \textbf{not} be confused with $\sbrkt{f(x)}\inv=\dfrac{1}{f(x)}$.
+    \end{description}
+  %\end{addmargin}
+  \pagebreak
+  \begin{ex*}
+    For the following, verify that $f(x)$ and $g(x)$ are inverses:
+    \begin{enumerate}[label=,itemsep=25pt]
+      \item $f(x)=x^2,\ x>0\\ g(x)=\sqrt x$
+      \item $f(x)=\sfrac{1}{x}\\ g(x)=\sfrac{1}{x}$
+      \item $f(x)=3x+2\\ g(x)=\dfrac{1}{3}(x-2)$
+    \end{enumerate}
+  \end{ex*}
+  \vfill
+  \begin{defn*}[One-to-One Functions and the Horizontal Line Test]
+    A function $f$ is \textbf{one-to-one} on a domain $D$ if each value of $f(x)$ corresponds to exactly one value of $x$ in $D$. More precisely, $f$ is one-to-one on $D$ if $f(x_1)\neq f(x_2)$ whenever $x_1\neq x_2$, for $x_1$ and $x_2$ in $D$. 
+    
+    The \textbf{horizontal line test} says that every horizontal line intercepts the graph of a one-to-one function at most once.
+  \end{defn*}
+  \vfill
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{groupplot}[
+        group style={group size=2 by 1, horizontal sep=2cm},
+        axis lines=center,
+        axis line style={->},
+        xmin=-0.5, xmax=4,
+        ymin=-0.125, ymax=2.5,
+        xmajorticks=false,
+        ymajorticks=false,
+        enlargelimits={abs=0.75},
+        ticklabel style={font=\tiny, inner sep=0.75pt,fill=white},
+        every axis plot/.append style={line width=0.95pt}
+        ]
+      \nextgroupplot
+        \addplot[->] expression[domain=0:4.5, blue, samples=50] {sqrt(x)};
+      \nextgroupplot[
+        xmin=-4.5, xmax=4.5,
+        ymin=-64, ymax=64,
+        ]
+        \addplot[<->] expression[domain=-4:4, blue, samples=50] {x^3};
+      \end{groupplot}
+    \end{tikzpicture}
+  \end{center}
+  \vfill
+  \pagebreak
+  \noindent
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{groupplot}[
+        group style={group size=2 by 1, horizontal sep=2cm},
+        axis lines=center,
+        axis line style={->},
+        xmin=-6.5, xmax=6.5,
+        xmajorticks=false,
+        ymajorticks=false,
+        enlargelimits={abs=0.75},
+        ticklabel style={font=\tiny, inner sep=0.75pt,fill=white},
+        every axis plot/.append style={line width=0.95pt}
+        ]
+      \nextgroupplot
+        \addplot[<->] expression[domain=-2.3*pi:2.3*pi, blue, samples=100] {sin(\x r)};
+      \nextgroupplot[
+        xmin=-4, xmax=4,
+        ymin=-2, ymax=16,
+        ]
+        \addplot[<->] expression[domain=-4:4, blue, samples=50] {x^2};
+      \end{groupplot}
+    \end{tikzpicture}
+  \end{center}
+  \vfill
+  \begin{center}
+    \fbox{\parbox{0.9\linewidth}{ \textbf{Existence of Inverse Functions}
+    
+    Let $f$ be a one-to-one function on a domain $D$ with a range $R$. Then $f$ has a unique inverse $f\inv$ with domain $R$ and range $D$ such that
+      $$f\inv\parens{f(x)}=x\hspace*{50pt}\text{ and }\hspace*{50pt}f\parens{f\inv(y)}=y$$
+    where $x$ is in $D$ and $y$ is in $R$.
+    }}
+  \end{center}
+  \vfill
+  \begin{ex*}
+    Using the table below, solve the following:
+    \vspace*{10pt}    
+    
+    \noindent
+    \begin{minipage}{0.5\linewidth}
+      \begin{enumerate}[label=,itemsep=12.5pt]
+        \item $\parens{f\circ f}(-1)$
+        \item $f\inv(2)$
+        \item $f\inv(6)$
+        \item $f\parens{f\inv(6)}$
+        \item $f\inv\parens{f\inv(6)}$
+      \end{enumerate}
+    \end{minipage}%
+    \begin{minipage}{0.5\linewidth}
+      \begin{flushright}
+        \begin{tabular}{@{}R@{\hspace*{15pt}}R@{}}\toprule
+          x& f(x)\\\midrule
+          -2&-8\\
+          -1&-2\\
+          0&0\\
+          1&2\\
+          2&6\\\bottomrule
+        \end{tabular}
+      \end{flushright}
+    \end{minipage}%
+  \end{ex*}
+  \pagebreak
+\section{JIT 7.3: Finding the Inverse of $f$ Given a Graph}
+  \textit{Note:} A function is symmetric with it's inverse with respect to $y=x$.
+  \vfill
+  
+  \begin{center}
+    \begin{tabularx}{\linewidth}{*{3}{>{\centering\arraybackslash}X}}
+      \begin{tabular}{@{}R@{\ =\ }L@{}}
+        f(x)&\sqrt x\\
+        f\inv(x)& x^2,\ x>0
+      \end{tabular}&
+      \begin{tabular}{@{}R@{\ =\ }L@{}}
+        f(x)&x^3\\
+        f\inv(x)& \sqrt[3]{x}=x^{\sfrac{1}{3}}
+      \end{tabular}&  
+      \begin{tabular}{@{}R@{\ =\ }L@{}}
+        f(x)&\sin x \text{ on } \sbrkt{-\sfrac{\pi}{2},\sfrac{\pi}{2}}\\
+        f\inv(x)& \sin\inv x
+      \end{tabular}\\
+    \end{tabularx}
+    \begin{tikzpicture}[scale=0.75]
+      \begin{groupplot}[
+        group style={group size=3 by 1, horizontal sep=1.5cm},
+        axis lines=center,
+        axis line style={->},
+        axis equal,
+        xmin=-1, xmax=3,
+        ymin=-1, ymax=3,
+        xtick={-4,-3,...,4},
+        ytick={-2,-1,...,6},
+        enlargelimits={abs=0.75},
+        ticklabel style={font=\tiny, inner sep=0.75pt,fill=white},
+        xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+        ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+        every axis plot/.append style={line width=0.95pt}
+        ]
+      \nextgroupplot
+        \addplot[->] expression[domain=0:4, blue, samples=50] {sqrt(x)};
+        \addplot[->] expression[domain=0:1.9, red, samples=50] {x^2};
+        \addplot[dashed] expression[domain=-2.5:4.5, black!50] {x};
+      \nextgroupplot[
+        xmin=-3, xmax=3,
+        ymin=-3, ymax=3,
+        ytick={-6,-5,...,6},
+        ]
+        \addplot[<->] expression[domain=-1.55:1.55, blue, samples=50] {x^3};
+        \addplot[<->] expression[domain=-4.25:4.25, red, samples=100] {x/abs(x)*abs(x)^(1/3)};
+        \addplot[dashed] expression[domain=-2.5:4.5, black!50] {x};
+      \nextgroupplot[
+        xmin=-0.45*pi, xmax=0.45*pi,
+        ymin=-0.45*pi, ymax=0.45*pi,
+        ]
+        \addplot[<->] expression[domain=-0.5*pi:0.5*pi, blue, samples=50] {sin(\x r)};
+        \addplot[<->] expression[domain=-1:1, red, samples=100] {rad(asin(x))};
+        \addplot[dashed] expression[domain=-3:3, black!50] {x};
+      \end{groupplot}
+    \end{tikzpicture}
+  \end{center}
+  \vspace*{\stretch{1}}
+  \begin{ex*}
+    Draw the function's inverse:
+    
+    \noindent
+    \begin{minipage}{0.5\linewidth}
+      \begin{center}
+        $$f(x)=2^x$$
+        \begin{tikzpicture}[scale=1.25]
+          \begin{axis}[
+            axis lines=center,
+            axis line style={->},
+            xmin=-5, xmax=5,
+            ymin=-5, ymax=5,
+            xmajorticks=false,
+            ymajorticks=false
+            ]
+          \end{axis}
+        \end{tikzpicture}
+      \end{center}
+    \end{minipage}%
+    \begin{minipage}{0.5\linewidth}
+      \begin{center}
+        $$f(x)=\sqrt{x+1}-2$$
+        \begin{tikzpicture}[scale=1.25]
+          \begin{axis}[
+            axis lines=center,
+            axis line style={->},
+            xmin=-5, xmax=5,
+            ymin=-5, ymax=5,
+            xmajorticks=false,
+            ymajorticks=false
+            ]
+          \end{axis}
+        \end{tikzpicture}
+      \end{center}
+    \end{minipage}%
+  \end{ex*}
+  \pagebreak
+\section{JIT 7.4: Finding the Inverse of $f$ Given by an Expression}
+  {\centering\fbox{\parbox{0.95\linewidth}{
+    \textbf{Finding an Inverse Function}
+    
+    Suppose $f$ is one-to-one on an interval $I$. To find $f\inv$, use the following steps:
+    \begin{enumerate}
+      \item Solve $y=f(x)$ for $x$. If necessary, choose the function that corresponds to $I$.
+      \item Interchange $x$ and $y$ and write $y=f\inv(x)$.
+    \end{enumerate}
+  }}}
+  \begin{ex*}
+    Find $f\inv(x)$:
+    \begin{enumerate}[label=, itemsep=50pt]
+      \item $f(x)=x^2-2x+1,\ x\geq 1$
+      \item $g(x)=\dfrac{x}{2}-\dfrac{7}{2}$
+      \item $h(x)=\sqrt[3]{5x+1}$
+      \item $j(x)=\dfrac{2x}{1-x}$
+      \item $k(x)=e^x$
+    \end{enumerate}
+  \end{ex*}
+  \pagebreak
+  
+  \begin{ex*}
+    Find the inverse of $f(x)=\parens{x-1}^4$ (on a restricted domain) and graph $f(x)$ and $f\inv(x)$.
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-4, xmax=4,
+          ymin=-4, ymax=4,
+          xmajorticks=false,
+          ymajorticks=false,
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+\end{document}

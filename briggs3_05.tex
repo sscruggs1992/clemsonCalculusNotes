@@ -1,0 +1,214 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+\makeatletter
+\newcommand{\currentname}{\@currentlabelname}
+
+\runningfootrule
+\runningfooter{\currentname}{\thepage}{}
+\makeatother
+
+\begin{document}
+%\relscale{1.4}
+\section{3.5: Derivatives of Trigonometric Functions}
+\begin{center}
+  \fbox{\parbox{0.95\linewidth}{
+  \textbf{Theorem 3.10} Trigonometric Limits
+  
+  $$\lim_{x\to 0}\dfrac{\sin x}{x}=1 \qquad \lim_{x\to 0}\dfrac{\cos x-1}{x}=0$$
+  }}
+
+  \vspace*{15pt}
+
+  \begin{tikzpicture}[scale=1.15]
+    \begin{groupplot}[
+      group style={group size=2 by 1},
+      axis lines=center,
+      axis line style={->},
+      xmin=-10, xmax=10,
+      ymin=-1.25, ymax=1.25,
+      xmajorticks=false,
+      ymajorticks=false,
+      ticklabel style={font=\normalsize, inner sep=0.75pt, fill=white,opacity=0.65, text opacity=1},
+      every axis plot/.append style={line width=0.95pt},
+      legend style={draw=none, empty legend}
+      ] 
+      \nextgroupplot 
+        \addplot[<->] expression[domain=-10:10, blue, samples=100] {sin(\x r)/x};
+        \addlegendentry{$\dfrac{\sin x}{x}$}
+      \nextgroupplot 
+        \addplot[<->] expression[domain=-10:10, blue, samples=100] {(cos(\x r)-1)/x};
+        \addlegendentry{$\dfrac{\cos(x)-1}{x}$}
+    \end{groupplot} 
+  \end{tikzpicture}
+\end{center}
+\begin{ex*}
+  Evaluate the following limits:
+\end{ex*}
+\begin{tasks}[after-item-skip=\stretch{1}](3)
+  \task[] $\ds\lim_{x\to 0} \dfrac{\sin(3x)}{3x}$
+  \task[] $\ds\lim_{x\to 0} \dfrac{\sin(4x)}{x}$
+  \task[] $\ds\lim_{h\to 0} \dfrac{5h}{\sin(3h)}$
+  \task[] $\ds\lim_{t\to \frac{\pi}{2}} \dfrac{\sin\parens{t-\frac{\pi}{2}}}{t-\frac{\pi}{2}}$
+  \task[] $\ds\lim_{x\to 0} \frac{\tan(2x)}{x}$
+  \task[] $\ds\lim_{x\to 0} \frac{\sin(7x)}{\sin(5x)}$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+\begin{center}
+  \fbox{\parbox{0.95\linewidth}{
+  \textbf{Theorem 3.11} Derivatives of Sine and Cosine
+  
+  $$\dfrac{d}{dx}\sbrkt{\sin(x)}=\cos(x)\hspace*{50pt} \dfrac{d}{dx}\sbrkt{\cos(x)}=-\sin(x)$$
+  }}
+\end{center}
+\begin{proof}
+  \begin{align*}
+    \dfrac{d}{dx}\sbrkt{\sin(x)}&=\lim_{h\to 0}\dfrac{\sin(x+h)-\sin(x)}{h}\\
+      &=\lim_{h\to 0}\dfrac{\sin(x)\cos(h)+\cos(x)\sin(h)-\sin(x)}{h}\\
+      &=\sin(x)\lim_{h\to 0}\dfrac{\cos(h)-1}{h}+\cos(x)\lim_{h\to 0}\dfrac{\sin(h)}{h}=\cos(x)\\\\
+      %
+    \dfrac{d}{dx}\sbrkt{\cos(x)}&=\lim_{h\to 0} \dfrac{\cos(x+h)-\cos(x)}{h}\\
+      &=\lim_{h\to 0}\dfrac{\cos(x)\cos(h)-\sin(x)\sin(h)-\cos(x)}{h}\\
+      &=\cos(x)\lim_{h\to 0}\dfrac{\cos(h)-1}{h}-\sin(x)\lim_{h\to 0}\dfrac{\sin(h)}{h}=-\sin(x)
+  \end{align*}
+\end{proof}
+\vspace*{\stretch{1}}
+\begin{center}
+  \begin{tikzpicture}[scale=0.75]
+    \begin{groupplot}[
+      group style={group size=2 by 2},
+      axis lines=center,
+      axis line style={->},
+      width=5.25in, height=2in,
+      xmin=-6, xmax=6,
+      ymin=-1.25, ymax=1.4,
+      xmajorticks=false,
+      ymajorticks=false,
+      ticklabel style={font=\normalsize, inner sep=0.75pt, fill=white,opacity=0.65, text opacity=1},
+      every axis plot/.append style={line width=1.75pt, opacity=0.85},
+      legend style={draw=none, empty legend, at={(axis cs:6.1,1.6)},anchor=north east}
+      ] 
+      \nextgroupplot 
+        \addplot[<->] expression[domain=-10:10, ClemsonOrange, samples=100] {sin(\x r)};
+        \addlegendentry{$f(x)=\sin (x)$}
+      \nextgroupplot 
+        \addplot[<->] expression[domain=-10:10, ClemsonPurple, samples=100] {cos(\x r)};
+        \addlegendentry{$g(x)=\cos(x)$}
+      \nextgroupplot 
+        \addplot[<->] expression[domain=-10:10, ClemsonOrange, samples=100] {cos(\x r)};
+        \addlegendentry{$f'(x)=\cos(x)$}
+      \nextgroupplot 
+        \addplot[<->] expression[domain=-10:10, ClemsonPurple, samples=100] {-sin(\x r)};
+        \addlegendentry{$g'(x)=-\sin (x)$}
+    \end{groupplot} 
+  \end{tikzpicture}
+\end{center}
+\vspace*{-25pt}
+\pagebreak
+\begin{ex*}
+  Find the derivative of the following functions:
+\end{ex*}
+\begin{tasks}[after-item-skip=\stretch{1}](3)
+  \task[] $y=3\cos(x)-2x^{\frac{3}{2}}$
+  \task[] $z=\dfrac{\sin(x)}{x}$
+  \task[] $w=\dfrac{x}{\cos(x)}$
+  \task[] $\ell=e^x\cos(x)$
+  \task[] $m=\dfrac{\cos(x)}{\sin(x)}$
+  \task[] $n=\sin^2(x)+\cos^2(x)$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+
+\begin{ex*}
+  Find the equation of the line tangent to $y=\cos(x)$ at $x=\frac{\pi}{4}$.
+  \vspace*{\stretch{1}}
+\end{ex*}
+\begin{ex*}
+  Find the derivative of $y=\dfrac{x\cos(x)}{1+\sin(x)}$ and simplify.
+  \vspace*{\stretch{1}}
+\end{ex*}
+\pagebreak
+
+\begin{center}
+  \fbox{\parbox{0.95\linewidth}{
+  \textbf{Theorem 3.12} Derivatives of the Trigonometric Functions
+  \begin{center}
+    \begin{tabular}{@{}*{2}{R@{\ =\ }L}@{}}
+      \dfrac{d}{dx} \sin(x)&\cos(x)& \dfrac{d}{dx}\cos(x)&-\sin(x)\\[10pt]
+      \dfrac{d}{dx} \tan(x)&\sec^2(x)& \dfrac{d}{dx}\cot(x)&-\csc^2(x)\\[10pt]
+      \dfrac{d}{dx} \sec(x)&\sec(x)\tan(x)& \dfrac{d}{dx}\csc(x)&-\csc(x)\cot(x)
+    \end{tabular}
+  \end{center}
+  }}
+\end{center}
+\begin{ex*}
+  Find the derivatives of the following:
+\end{ex*}
+\begin{tasks}[after-item-skip=\stretch{1}](2)
+  \task[] $y=\frac{4}{x}-\frac{9}{13}\tan(x)$
+  \task[] $f(x)=-4x^3\cot(x)$
+  \task[] $g(\theta)=\dfrac{\sec(\theta)}{1+\sec(\theta)}$
+  \task[] $h(w)=e^w\csc(w)$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+
+\begin{ex*}
+  Evaluate
+\end{ex*}
+\begin{tasks}[after-item-skip=\stretch{1}](2)
+  \task[] $\left.\dfrac{d}{dx}\sbrkt{\tan(x)}\right|_{x=\frac{\pi}{4}}$
+  \task[] $\dfrac{d}{dx}\sbrkt{\parens{\sin(x)+\cos(x)}\csc(x)}$
+  \task[] $\dfrac{d}{d\theta}\sbrkt{\theta^2\sin(\theta)\tan(\theta)}$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+\begin{ex*}
+  Find the following higher order derivatives:
+\end{ex*}
+\begin{tasks}[after-item-skip=\stretch{1}](2)
+  \task[] $y''$ when $y=\cos(x)$
+  \task[] $f''(x)$ when $f(x)=\sin(x)$
+  \task[] $y^\parens{42}$ when $y=\cos(x)$
+  \task[] $\dfrac{d^2}{d\theta^2}\sbrkt{\sin(\theta)\cos(\theta)}$
+  \task[] $\dfrac{d^2}{dx^2}\sbrkt{\frac{1}{2}e^x\cos(x)}$
+  \task[] $\dfrac{d^2}{dx^2}\sbrkt{\cot x}$
+\end{tasks}
+\vspace*{\stretch{1}}
+\pagebreak
+\begin{ex*}
+  For 
+    $$f=\begin{cases}
+      \frac{3\sin(x)}{x},& x\neq0\\
+      a,& x=0
+    \end{cases}$$
+  Find $a$ such that $f$ is continuous.
+  \vspace*{\stretch{1}}
+\end{ex*}
+\begin{ex*}
+  Find the equation of the line tangent to $y=\dfrac{\cos(x)}{1-\cos(x)}$ at $x=\frac{\pi}{3}$.
+  \vspace*{\stretch{1}}
+\end{ex*}
+\begin{ex*}
+  For what values of $x$ does $x-\sin(x)$ have a horizontal tangent line?
+  \vspace*{\stretch{1}}
+\end{ex*}
+\pagebreak
+
+\begin{ex*}
+  Evaluate the following limits
+\end{ex*}
+\begin{enumerate}[label=,itemsep=\stretch{1}]
+  \item $\ds\lim_{x\to \pi/4} \frac{\tan(x)-1}{x-\pi/4}$
+  \item $\ds\lim_{h\to 0} \frac{\sin\parens{\frac{\pi}{6}+h}-\frac{1}{2}}{h}$
+  \item $\ds\lim_{x\to \pi/4} \frac{\cot x-1}{x-\frac{\pi}{4}}$
+\end{enumerate}
+\vspace*{\stretch{1}}
+\pagebreak
+\end{document}

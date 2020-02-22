@@ -1,0 +1,67 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tabularx}
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+
+\begin{document}
+    \section{JIT 15.1: Trigonometric Identities}
+      \begin{defn*}
+        The \textbf{Pythagorean Identity for trigonometric functions} is
+          $$\sin^2(\theta)+\cos^2(\theta)=1$$
+      \end{defn*}
+      \pagebreak
+      \begin{defn*}
+        The \textbf{Angle Sum Formulas} are
+        \begin{align*}
+          \sin(A\pm B)&=\sin(A)\cos(B)\pm\cos(A)\sin(B)\\
+          \cos(A\pm B)&=\cos(A)\cos(B)\mp\sin(A)\sin(B)
+        \end{align*}
+        \textbf{Note:} Since $\cos(\theta)$ is even and $\sin(\theta)$ is odd, we can derive the difference formula from the sum formula.
+      \end{defn*}
+      \pagebreak
+      \begin{defn*}
+        The \textbf{double-angle formulas} are a special case of the angle-sum formulas:
+        
+        \begin{minipage}{0.5\linewidth}
+          \begin{align*}
+            \sin(2\theta)&=\sin(\theta+\theta)\\
+              &=\sin(\theta)\cos(\theta)+\cos(\theta)\sin(\theta)\\
+              &=\boxed{2\sin(\theta)\cos(\theta)}
+          \end{align*}
+        \end{minipage}%
+        \begin{minipage}{0.5\linewidth}
+          \begin{align*}
+            \cos(2\theta)&=\cos(\theta+\theta)\\
+              &=\cos(\theta)\cos(\theta)-\sin(\theta)\sin(\theta)\\
+              &=\boxed{\cos^2(\theta)-\sin^2(\theta)}
+          \end{align*}
+        \end{minipage}\\[15pt]
+        
+        \textbf{Note:} Using the Pythagorean Identity, we have 2 additional representations of $\cos(2\theta)$.
+      \end{defn*}
+      \pagebreak
+      \begin{defn*}
+        The \textbf{half-angle formulas} are derived from the double angle formula:
+        \begin{align*}
+          \sin(\theta)&=\pm\sqrt{\frac{1-\cos(2\theta)}{2}}\\
+          \cos(\theta)&=\pm\sqrt{\frac{1+\cos(2\theta)}{2}}
+        \end{align*}
+      \end{defn*}
+      \pagebreak
+      \begin{ex*}
+        Solve all the following on $\sbrkt{0,2\pi}$.
+        \begin{tasks}(2)
+          \task $2\theta\cos(\theta)+\theta=0$
+          \task $\sin(\theta)=\frac{1}{2}$\\[2in]
+          \task $4\cos^2(x)-3=0$
+          \task $2\sin^2(x)-\sin(x)-1=0$\\[2in]
+          \task $\sin(3x)=\dfrac{\sqrt2}{2}$
+          \task $\cos(3x)=\sin(3x)$
+        \end{tasks}
+      \end{ex*}
+      \pagebreak
+\end{document}
