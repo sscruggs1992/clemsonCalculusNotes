@@ -45,7 +45,7 @@
 \begin{ex*}
   Consider the function $f(x)=\dfrac{x}{x+1}$. Find the linearization at $a=1$. Use the linearization to estimate $f(1.1)$ and compare with the true value of $f(1.1)$.
 \end{ex*}
-\pagebreak
+\vspace*{\stretch{1}}
 
 \begin{ex*}
   Find the linearization $L(x)$ of $f(x)=e^{3x-6}$ at $a=2$.
@@ -57,6 +57,7 @@
 \end{ex*}
 \vspace*{\stretch{1}}
 
+\pagebreak
 \begin{ex*}
   Find a linearization over an interval which will contain the given point $x_0$. Choose your center at a point \textit{near} $x_0$ but not at $x_0$ so that the given function and its derivative are easy to evaluate. Lastly, use the linearization to approximate $f(x_0)$.
 \end{ex*}
@@ -84,15 +85,28 @@
 \pagebreak
 
 \begin{ex*}
-  Find the linearization $L(x)$ of $f(x)=\sqrt{x^2+9}$ at $a=-4$. Use $L(x)$ to estimate $f(-4.1)$ and $\sqrt{23.44}$.
+  Find the linearization $L(x)$ of $f(x)=\sqrt{x^2+9}$ at $a=-4$. Use $L(x)$ to estimate $f(-4.1)$ and $\sqrt{23.44}$. (\textit{Hint:} $3.8^2=14.44$)
 \end{ex*}
 \vspace*{\stretch{1}}
-\pagebreak
-
+  
 \begin{ex*}
   Use a linearization to show that $0.05$ is a good approximation for $\ln(1.05)$.
 \end{ex*}
+\vspace*{\stretch{1}}
 \pagebreak
+\noindent
+\fbox{\parbox{0.9875\linewidth}{
+  \textbf{Concavity and Overestimating versus Underestimating.} Suppose $L(x)$ is a linearization of $f(x)$ centered at $a$.
+  \begin{enumerate}
+    \item
+        If $f''(a)>0$, then $L(x)$ is an underestimation of $f$.
+    \item 
+        If $f''(a)<0$, then $L(x)$ is an overestimation of $f$.
+  \end{enumerate}
+}}
+\begin{center}
+    \includegraphics[scale=0.5]{images/briggs_04_06/fig4_71}
+\end{center}
 
 \begin{ex*}
   Find the linearization of the following functions at the given point and use concavity to identify if the linearization is an overestimate or an underestimate.
@@ -102,28 +116,53 @@
   \item $f(x)=e\inv[x];\, a=\ln(2)$
 \end{enumerate}
 \vspace*{\stretch{1}}
-
-
-\noindent
-\fbox{\parbox{0.9875\linewidth}{
-  \textbf{Summary: Uses of Linear Approximation}
-  \begin{enumerate}
-    \item 
-      To approximate $f$ near $x=a$, use
-        $$f(x)\approx L(x)=f(a)+f'(a)(x-a).$$
-    \item 
-      To approximate the change $\Delta y$ in the dependent variable when the independent variable $x$ changes from $a$ to $a+\Delta x$, use
-        $$\Delta y\approx f'(a)\Delta x.$$
-  \end{enumerate}
-}}
 \pagebreak
 
+%\noindent
+%\fbox{\parbox{0.9875\linewidth}{
+%  \textbf{Summary: Uses of Linear Approximation}
+%  \begin{enumerate}
+%    \item 
+%      To approximate $f$ near $x=a$, use
+%        $$f(x)\approx L(x)=f(a)+f'(a)(x-a).$$
+%    \item 
+%      To approximate the change $\Delta y$ in the dependent variable when the independent variable $x$ changes from $a$ to $a+\Delta x$, use
+%        $$\Delta y\approx f'(a)\Delta x.$$
+%  \end{enumerate}
+%}}
+%\pagebreak
+
+%\begin{defn*}[Differentials]
+%  
+%  Let $f$ be differentiable on an interval containing $x$. A small change in $x$ is denoted by the \textbf{differential} $dx$. The corresponding change in $f$ is approximated by the \textbf{differential} $dy=f'(x)\,dx$. So if $\Delta x=dx$, where $\Delta x$ and $dx$ are both small, then $\Delta y\approx dy$:
+%    \[\Delta y= f(x+dx)-f(x)\approx dy=f'(x)\,dx.\]
+%    
+%\end{defn*}
+
 \begin{defn*}[Differentials]
-  
-  Let $f$ be differentiable on an interval containing $x$. A small change in $x$ is denoted by the \textbf{differential} $dx$. The corresponding change in $f$ is approximated by the \textbf{differential} $dy=f'(x)\,dx$. So if $\Delta x=dx$, where $\Delta x$ and $dx$ are both small, then $\Delta y\approx dy$:
-    \[\Delta y= f(x+dx)-f(x)\approx dy=f'(x)\,dx.\]
-    
+    Let $f$ be a differentiable function on an interval containing $x$. An infinitesimal change in $x$ can be denoted by the \textbf{differential} $dx$. The corresponding change in the output of $f$ can be denoted by the \textbf{differential} $dy$. This yields the relation
+        $$dy = f'(x)dx.$$
+    Note that $dy$ and $dx$ can be thought of as the `rise' and `run' (respectively) of the line tangent to $f$ at the point $(x,f(x))$.
 \end{defn*}
+
+\begin{defn*}[$\Delta x$ and $\Delta y$]
+    Let $f$ be a differentiable function on an interval containing $x$. We let $\Delta x$ denote a small change in $x$ and we let $\Delta y$ denote the corresponding change in $f(x)$. This yields the relation
+        $$\Delta y = f(x+\Delta x) - f(x).$$
+    Note that $\Delta y$ and $\Delta x$ can be thought of as the `rise' and `run' (respectively) of the secant line passing through the points $(x,f(x))$ and $(x+\Delta x, f(x+\Delta x))$.
+\end{defn*}
+
+\vspace*{\stretch{1}}
+\noindent
+\fbox{\parbox{0.9875\linewidth}{
+  \textbf{Linear Approximation and Differentials}
+    To approximate the change $\Delta y$ in the dependent variable when the independent variable $x$ changes from $x$ to $x+\Delta x$, use
+        $$\Delta y\approx f'(x)\Delta x$$
+    because if we set $\Delta x = dx$, then we have the following:
+        $$\Delta y= f(x+\Delta x)-f(x)\approx f'(x)\,dx=dy.$$
+    One can think of $\Delta y$ as the \textit{actual change} in the output of a function when $x$ changes by $\Delta x$, whereas $f'(x)\Delta x$ is the \textit{projected change} in the output of the function when the same $\Delta x$ is imposed. The point is these are approximately equal when $\Delta x$ is small.
+}}
+\vspace*{\stretch{1}}
+\pagebreak
 
 \begin{ex*}
   Find the differential $dy$.
