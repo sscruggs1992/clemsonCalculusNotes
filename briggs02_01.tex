@@ -1,0 +1,108 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tabularx}
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+
+\begin{document}
+  \section{2.1: The Idea of Limits}
+    \begin{defn*}
+      The \textbf{average velocity} is the distance traveled over some time period.
+      
+      The \textbf{instantaneous velocity} is the limit of the average velocities as the length of the time period goes to zero.
+    \end{defn*}
+    \begin{ex*}
+      An unladen swallow is flying from Camelot to the Castle Anthrax and back. It's current position, in miles, is given by
+        $$s(t)=-16t^2+96t$$
+      where $t$ is given in hours. Find the average velocity between:
+      \begin{tasks}(2)
+        \task $t=1$ and $t=3$,
+        \task $t=1$ and $t=2$,
+      \end{tasks}
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \begin{ex*}
+      Find the instantaneous velocity using $s(t)$ by computing the average velocity between $t=1$ and $t=h$:
+    \end{ex*}
+    %\vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          x=2.5cm,
+          xmin=-0.25, xmax=3.5,
+          ymin=-10, ymax=175,
+          xtick={0,1,2,3},
+          ytick={50,100,150},
+          xlabel=$t$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$s(t)$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt}
+          ]
+          \addplot[->] expression[domain=0:3.5] {-16*x^2+96*x};
+          \addplot[soldot] coordinates{(1,80)}  node[below right, black] {$(1,80)$};
+          \addplot[soldot] coordinates{(2,128)} node[above left, black] {$(2,128)$};
+          \addplot[soldot] coordinates{(3,144)} node[below, black, xshift=5pt, yshift=-5pt] {$(3,144)$};
+          \addplot[domain=0.5:3.25] {48*x+32};
+          \addplot[domain=0.5:3.25] {32*x+48};
+        \end{axis}
+      \end{tikzpicture}
+      \vspace*{-30pt}
+    \end{flushright}
+    \pagebreak
+    \begin{defn*}
+      The \textbf{secant line} is the line that intersects the function in two places. 
+       
+       The \textbf{tangent line} is the line that intersects the function in exactly one place (locally).
+    \end{defn*}
+    \textit{Note--} The average velocity is the slope of the secant line. The instantaneous velocity is the slope of the tangent line. 
+    \vspace*{15pt}
+     \noindent
+    \begin{minipage}[t]{0.55\linewidth}
+      \begin{ex*}
+        Using the average velocity between $t=1$ and $t=h$:
+          $$v_{avg}=-16(h-5)$$
+        compute the instantaneous velocity at $h=1$.
+      \end{ex*}
+    \end{minipage}
+    \begin{minipage}[t]{0.45\linewidth}
+      \begin{flushright}
+        \vspace*{-15pt}
+        \begin{tikzpicture}
+          \begin{axis}[
+            axis lines=center,
+            axis line style={->},
+            xmin=0.75, xmax=2.25,
+            ymin=60, ymax=160,
+            xtick={0,0.5,...,2},
+            ytick={50,100,150},
+            xlabel=$t$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+            ylabel=$s(t)$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+            every axis plot/.append style={line width=0.95pt},
+            height=1.025\linewidth, 
+            width=\linewidth
+            ]
+            \addplot[->] expression[domain=0:2.25] {-16*x^2+96*x};
+            \addplot[soldot] coordinates{(1,80)}  node[below, black, yshift=-4pt, xshift=5pt] {\small $(1,80)$};
+            \addplot[soldot] coordinates{(1.1,86.24)} node[below right, black, xshift=2pt, yshift=5pt] {\small $(1.1,86.24)$};
+            \addplot[soldot] coordinates{(1.5,108)} node[below right, black, xshift=4pt, yshift=5pt] {\small $(1.5,108)$};
+            \addplot[soldot] coordinates{(2,128)} node[below right, black, xshift=-10.5pt] {\small $(2,128)$};
+            
+            \addplot[domain=0.8:2.2, blue!75, fill opacity=0.5] {48*x+80-48};
+            \addplot[domain=0.8:2.2, ClemsonOrange] {56*x+80-56};
+            \addplot[domain=0.8:2.2, ClemsonPurple] {62.4*x+80-62.4};
+          \end{axis}
+        \end{tikzpicture}
+      \end{flushright}
+    \end{minipage}
+    \begin{ex*}
+      Find the instantaneous velocity of
+        $$f(x)=2x^2-4x+1$$
+      for any value of $x$.
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \pagebreak
+\end{document}

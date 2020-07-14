@@ -1,0 +1,291 @@
+\documentclass[answers]{exam}
+\usepackage{texPreamble}
+\usepackage{relsize}
+\usepackage{tabularx}
+\extraheadheight{0.25in}
+\extrafootheight{1.0in}
+\extrawidth{1in}
+% ----------------------------------------------------------------
+\firstpagefootrule
+\runningfootrule
+\begin{document}
+%\relscale{1.4}
+\section{3.9: Derivatives of Logarithmic and Exponential Functions}
+  Recall that $y=\log_a(x)$ and $y=a^x$ are inverse functions:
+
+    \noindent
+    \begin{minipage}{0.65\linewidth}
+      \fbox{\parbox{0.9875\linewidth}{\centering
+        \textbf{Inverse Properites of $a^x$ and $\log_a(x)$}
+        
+        \begin{enumerate}
+          \item $a^{\log_a(x)}=x$, for $x>0$, and $\log_a(a^x)=x$, for all $x$.
+          \item $y=\log_a(x)$ if and only if $x=a^y$.
+          \item For real numbers $x$ and $b>0$, $b^x=a^{\log_a(b^x)}=a^{x\log_a(b)}$.
+        \end{enumerate}
+      }}
+    \end{minipage}%
+    \begin{minipage}{0.35\linewidth}
+      \begin{flushright}
+        \begin{tikzpicture}[scale=0.8]
+          \begin{axis}[
+            axis lines=center,
+            axis line style={->},
+            axis equal,
+            xmin=-4.25, xmax=4.25,
+            ymin=-4.25, ymax=4.25,
+            xmajorticks=false,
+            ymajorticks=false,
+            ticklabel style={font=\tiny,inner sep=0.75pt,fill=white},
+            xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+            ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+            every axis plot/.append style={line width=1.25pt}
+            ]
+            \addplot[<->] expression[domain=-5.125:1.45, ClemsonPurple, samples=100] {e^x} node[black, right, pos=0.95, fill=white, xshift=3pt] {$a^x$};
+            \addplot[<->] expression[domain=0.0142:5.1, ClemsonOrange,  samples=100] {ln(x)} node[black, above, pos=0.875, fill=white, yshift=5pt] {$\log_a(x)$};
+            \addplot[dashed] expression[domain=-5.5:5.5, black!50] {x};
+            \addplot[soldot, black, mark size=2pt] coordinates{(0,1)(1,0)};
+            \node[anchor = north west] at (1,0) {$(1,0)$};
+            \node[anchor = south east] at (0,1) {$(0,1)$};
+          \end{axis}
+        \end{tikzpicture}
+      \end{flushright}
+    \end{minipage}%
+
+  \vfill
+  \noindent
+    \fbox{\parbox{0.9875\linewidth}{
+      \textbf{Theorem 3.15: Derivative of $\ln(x)$.}
+        $$\ddx\parens{\ln(x)}=\frac{1}{x}, \text{ for } x>0\qquad \ddx\parens{\ln\abs{x}}=\frac{1}{x}, \text{ for } x\neq 0$$
+      
+      If $u$ is differentiable at $x$ and $u(x)\neq 0$, then
+        $$\ddx\parens{\ln\abs{u(x)}}=\frac{u'(x)}{u(x)}$$
+    }}
+  \vfill
+  \begin{center}
+    \begin{tikzpicture}
+      \begin{groupplot}[
+        group style={group size=2 by 1, horizontal sep=50pt},
+        axis lines=center,
+        axis line style={->},
+        xmax=3.75,
+        ymin=-4, ymax=4,
+        xtick={-5,-3,...,7},
+        ytick={-5,-3,...,7},
+        ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+        xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+        ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+        every axis plot/.append style={line width=0.95pt, color=blue}
+        ]
+        \nextgroupplot[  
+          xmin=-0.75, 
+          ]
+          \addplot[->] expression[domain=exp(-4):3.75, black, samples=301]{ln(x)}
+            node[above, pos=0.9] {$y=\ln(x)$};
+          \addplot[->] expression[domain=0.25:3.75, red, samples=100]{1/x}
+            node[right, pos=0.15] {$y'=\dfrac{1}{x},\ x>0$};
+        \nextgroupplot[
+          xmin=-3.75, 
+          ]
+          \addplot[->] expression[domain=exp(-4):3.75, black, samples=301]{ln(x)}
+            node[above, pos=0.825, yshift=5pt] {$y=\ln\abs{x}$};
+          \addplot[->] expression[domain=0.25:3.75, red, samples=100]{1/x}
+            node[left, pos=0.15, xshift=-15pt] {$y'=\dfrac{1}{x}, x\neq0$};
+          \addplot[<-] expression[domain=-3.75:-exp(-4), black, samples=301]{ln(-x)};
+          \addplot[<-] expression[domain=-3.75:-0.25, red, samples=100]{1/x};
+      \end{groupplot}
+    \end{tikzpicture}
+  \end{center}
+  \vfill
+  \pagebreak
+  
+  \begin{ex*}
+    Use implicit differentiation to prove $\ds\ddx\ln(x)=\frac{1}{x}$. 
+    
+    \noindent 
+    Then, use the piecewise definition of $\abs{x}$ to prove that $\ds\ddx\ln\abs{x}=\frac{1}{x}$.
+  \end{ex*}
+  \vfill
+  
+  \begin{ex*}
+    Find the derivatives of the following functions:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=~](3)
+    \task $y=\ln(x)$
+    \task $y=\ln(4x)$
+    \task $y=\ln\parens{4x^2+2}$
+    \task $f(x)=\sqrt x\ln(x^2)$
+    \task $f(x)=\ln\parens{\frac{10}{x}}$
+    \task $f(x)=\dfrac{\ln(x)}{1+\ln(x)}$
+  \end{tasks}
+  \vfill
+  
+  \pagebreak
+  \begin{tasks}[after-item-skip=\stretch{1}, label=~](2)
+    \task $f(x)=\sqrt[5]{\ln\parens{3x^4}}$
+    \task $f(x)=\ln\sqrt[5]{3x}$
+    \task $f(x)=\ln\parens{\ln\parens{\ln(4x)}}$
+    \task $f(x)=\ln\abs{x^2-1}$
+    \task $y=\ln\parens{\sec^2\theta}$
+    \task $y=\parens{\ln\parens{\sin(3x)}}^2$
+  \end{tasks}
+  \vfill 
+  \pagebreak
+  
+  \noindent
+    \fbox{\parbox{0.9875\linewidth}{
+      \textbf{Theorem 3.16: Derivative of $b^x$.}
+      
+      If $b>0$ and $b\neq 1$, then for all $x$.
+        $$\ddx\sbrkt{b^x}=b^x\ln(b).$$
+    }}
+  \begin{ex*}
+    Using the properties of exponents and logarithms, prove the above theorem. 
+    
+    \noindent
+    Extend this theorem by stating the derivative of $y=b^{f(x)}$.
+  \end{ex*}
+  \vfill
+  
+  \begin{ex*}
+    Find the derivatives of the following functions:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=~](2)
+    \task $y=5^{3x}$
+    \task $s(t)=\cos(2^t)$
+    \task $g(v)=10^v\parens{\ln(10^v)-1}$
+    \task $y=6^{x\ln(x)}$
+  \end{tasks}
+  \vfill 
+  
+  \pagebreak
+  
+  \noindent
+    \fbox{\parbox{0.9875\linewidth}{
+      \textbf{Theorem 3.18: Derivative of $\log_b(x)$.}
+      
+      If $b>0$ and $b\neq 1$, then
+        \[\ddx\sbrkt{\log_b(x)}=\frac{1}{x\ln b},\text{ for }x>0 \text{ and }\ddx\sbrkt{\log_b\abs{x}}=\frac{1}{x\ln b},\text{ for } x\neq 0.\]
+    }}
+
+  \begin{ex*}
+    Using the properties of exponents and logarithms, prove the above theorem. 
+    
+    \noindent
+    Extend this theorem by stating the derivative of $y=\log_b\parens{g(x)}$.
+  \end{ex*}
+  \vfill
+  \begin{ex*}
+    Find the derivatives of the following functions:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=~](2)
+    \task $f(x)=\log_4\parens{4x^2+3x}$
+    \task $f(x)=\log_5\parens{x e^x}$
+    \task $y=2x\log_{10}\sqrt x$
+    \task $y=\dfrac{\log_3\parens{\tan\parens{e^2x}}}{\pi\cdot e\inv[4x]}$
+  \end{tasks}
+  \vfill
+  \pagebreak
+  
+  \begin{center}
+    \vfill
+    \setlength{\jot}{10pt}
+    \noindent
+    \fbox{\parbox{0.9875\linewidth}{
+      \textbf{Derivative rules for exponential functions:}
+      \begin{align*}
+        \hspace*{-10pt}
+        \ddx \sbrkt{e^x}&=e^x&  \ddx \sbrkt{e^{f(x)}}&=e^{f(x)}\cdot f'(x)\\
+        \hspace*{-10pt}
+        \ddx \sbrkt{b^x}&=\ln(b)\cdot b^x&  \ddx \sbrkt{b^{g(x)}}&=\ln(b)\cdot b^{g(x)}\cdot g'(x)\hspace*{-10pt}
+      \end{align*}
+    }}
+    \vfill
+    
+    \fbox{\parbox{0.9875\linewidth}{
+      \textbf{Derivative rules for logarithmic functions:}
+      \begin{align*}
+        \hspace*{-10pt}
+        &\ddx\sbrkt{\ln x}=\frac{1}{x}& &\ddx\sbrkt{\ln\parens{f(x)}}=\frac{1}{f(x)}\cdot f'(x)\hspace*{-10pt}\\
+        \hspace*{-10pt}
+        &\ddx\sbrkt{\log_b(x)}=\frac{1}{\ln(b) x}& &\ddx\sbrkt{\log_b\parens{g(x)}}=\frac{g'(x)}{\ln(b) g(x)}
+      \end{align*} 
+   }}
+   \vfill
+   \fbox{\parbox{0.9875\linewidth}{\textbf{Laws of Logarithms}
+      
+      For $x,y>0$:
+      \begin{tasks}[after-item-skip=10pt, label=~](2)
+        \task $\log_a(xy)=\log_a(x)+\log_a(y)$
+        \task $\log_a\parens{\frac{x}{y}}=\log_a(x)-\log_a(x)$
+        \task $\log_a(x^r)=r\log_a(x)$
+        \task $\log_a(1)=0$
+        \task $\log_a(x)=\dfrac{\log_b(x)}{\log_b(a)}$
+        \task $\log_a(a)=1$
+      \end{tasks}
+    }}
+    \vfill
+  \end{center}
+  \pagebreak
+  
+  \begin{ex*}
+    For the following functions, use the laws of logarithms to rewrite the function before taking the derivative:
+  \end{ex*}
+  
+  \noindent
+  \begin{tasks}[after-item-skip=\stretch{1}, label=~](1)
+    \task $F(t)=\ln\parens{\dfrac{\parens{2t+1}^3}{\parens{3t+1}^4}}$
+    \task $y=\ln\sqrt[3]{\dfrac{1+x}{1-x}}$
+    \task $y=\ln\sqrt{\dfrac{\parens{x+1}^5}{\parens{x+2}^{20}}}$
+  \end{tasks}
+  \vfill 
+  
+  \pagebreak
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Logarithmic Differentiation:}
+    
+    \begin{enumerate}
+      \item Take the natural logarithm of both sides of the equation.
+      \item Use logarithm laws to simplify.
+      \item Use implicit differentiation to take the derivative of both sides.
+      \item Solve for $\dydx$.
+    \end{enumerate}
+  }}
+  \begin{ex*}
+    Find the derivatives of the following functions:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=~](2)
+    \task $y=\dfrac{\sin^2(x)\tan^4(x)}{\parens{x^2+1}^2}$
+    \task $h(\theta)=\dfrac{\theta \sin(\theta)}{\sqrt{\sec(\theta)}}$
+    \task $g(x)=\sqrt[10]{\dfrac{3x+4}{2x-4}}$
+    \task $y=\dfrac{e\inv[x]\cos^2(x)}{x^2+x+1}$
+  \end{tasks}
+  \vfill
+  \pagebreak
+  
+  \noindent
+  \textit{Note:} Whenever the function is of the form $f(x)^{g(x)}$, then \textit{Logarithmic Differentiation} is the only option!
+  \begin{tasks}[after-item-skip=\stretch{1}, label=~](2)
+    \task $y=x^x$
+    \task $y=\parens{\ln(x)}^x$
+    \task $y=\parens{\tan x}^\frac{1}{x}$
+    \task $y=\parens{2x}^{3x}$
+  \end{tasks}
+  \vfill 
+  \pagebreak
+  
+  \begin{ex*}
+    Use the definition of the derivative to evaluate the following limits:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=~](2)
+    \task $\ds\lim_{x\to e} \dfrac{\ln(x)-1}{x-e}$
+    \task $\ds\lim_{h\to 0} \dfrac{\ln(e^8+h)-8}{h}$
+    \task $\ds\lim_{x\to 2} \dfrac{5^x-25}{x-2}$
+    \task $\ds\lim_{h\to 0} \dfrac{\parens{3+h}^{3+h}-27}{h}$
+  \end{tasks}
+  \vfill
+  \pagebreak
+  
+  %TODO comment out \relsize!
+\end{document}
