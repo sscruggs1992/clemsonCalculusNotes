@@ -1,46 +1,20 @@
-\documentclass[answers]{exam}
-% 'texPreamble' contains formatting and macros. 
-% https://github.com/pwesterbaan/scripts/tree/master/texmf/tex/latex/local
-\usepackage{texPreamble}
-\hypersetup{hidelinks}
-\usepackage{relsize}
-\usepackage{tkz-euclide}
-\usepackage[titles]{tocloft}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\usetkzobj{all}
-%% Externalize graphics and save in ./images/ folder
-%% pdflatex -shell-escape <tex file>
-%% The document can be compiled with the two following
-%% lines commented out, but will recompile all figures
-%% each time.
-\usetikzlibrary{external}
-\tikzexternalize[prefix=images/]
-%% Uncomment the following line to recompile ALL images
-%    \tikzset{external/force remake}
-%% Place this line in braces around the image to recompile
-%% e.g. { tikzset{...} \begin{tikzpicture} ... \end{tikzpicture} }
-%% 
-\usepackage{tabularx}
-\extraheadheight{0.25in}
-\extrafootheight{1.0in}
-\extrawidth{1in}
-% ----------------------------------------------------------------
-\makeatletter
-\title{Math 1060 Class notes\\[0.25\baselineskip]Fall 2020}
-\author{\thefname\ \thelname}
-
-\pagestyle{headandfoot}
-
-%\firstpageheader{\@title\\\@date}{}{Math 1060}
-%\firstpageheadrule
-
-\newcommand*{\currentname}{\@currentlabelname}
-
-\runningfootrule
-\runningfooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
-\makeatother
-
+\documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
+  \makeatletter
+  \title{Math 1060 Class notes\\[0.25\baselineskip]Fall 2020}
+  \author{\thefname\ \thelname}
+
+  \pagestyle{headandfoot}
+
+  %\firstpageheader{\@title\\\@date}{}{Math 1060}
+  %\firstpageheadrule
+
+  \newcommand*{\currentname}{\@currentlabelname}
+
+  \runningfootrule
+  \runningfooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+  \makeatother
+
    %% Title
   \pagenumbering{roman}
   \vspace*{\stretch{1}}
@@ -73,37 +47,37 @@
   %% everything else
   \relscale{1.4}
 
-\input{briggs01_03}
-\input{briggs01_04}
-\input{briggs02_01}
-\input{briggs02_02}
-\input{briggs02_03}
-\input{briggs02_04}
-\input{briggs02_05}
-\input{briggs02_06}
-\input{briggs02_07}
-\input{briggs03_01}
-\input{briggs03_02}
-\input{briggs03_03}
-\input{briggs03_04}
-\input{briggs03_05}
-\input{briggs03_06}
-\input{briggs03_07}
-\input{briggs03_08}
-\input{briggs03_09}
-\input{briggs03_10}
-\input{briggs03_11}
-\input{briggs04_01}
-\input{briggs04_02}
-\input{briggs04_03}
-\input{briggs04_04}
-\input{briggs04_06}
-\input{briggs04_07}
-\input{briggs04_05}
-\input{briggs04_09}
-\input{briggs05_01}
-\input{briggs05_02}
-\input{briggs05_03}
-\input{briggs05_04}
-\input{briggs05_05}
+\subfile{briggs01_03}
+\subfile{briggs01_04}
+\subfile{briggs02_01}
+\subfile{briggs02_02}
+\subfile{briggs02_03}
+\subfile{briggs02_04}
+\subfile{briggs02_05}
+\subfile{briggs02_06}
+\subfile{briggs02_07}
+\subfile{briggs03_01}
+\subfile{briggs03_02}
+\subfile{briggs03_03}
+\subfile{briggs03_04}
+\subfile{briggs03_05}
+\subfile{briggs03_06}
+\subfile{briggs03_07}
+\subfile{briggs03_08}
+\subfile{briggs03_09}
+\subfile{briggs03_10}
+\subfile{briggs03_11}
+\subfile{briggs04_01}
+\subfile{briggs04_02}
+\subfile{briggs04_03}
+\subfile{briggs04_04}
+\subfile{briggs04_06}
+\subfile{briggs04_07}
+\subfile{briggs04_05}
+\subfile{briggs04_09}
+\subfile{briggs05_01}
+\subfile{briggs05_02}
+\subfile{briggs05_03}
+\subfile{briggs05_04}
+\subfile{briggs05_05}
 \end{document}

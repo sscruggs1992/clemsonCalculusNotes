@@ -1,42 +1,20 @@
-\documentclass[answers]{exam}
-% 'texPreamble' contains formatting and macros. 
-% https://github.com/pwesterbaan/scripts/tree/master/texmf/tex/latex/local
-\usepackage{texPreamble}
-\hypersetup{hidelinks}
-\usepackage{relsize}
-\usepackage{tkz-euclide}
-\usepackage[titles]{tocloft}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-\usetkzobj{all}
-%% Externalize graphics and save in ./images/ folder
-%% pdflatex -shell-escape <tex file>
-%% The document can be compiled with the two following
-%% lines commented out, but will recompile all figures
-%% each time.
-\usetikzlibrary{external}
-\tikzexternalize[prefix=images/]
-%% 
-\usepackage{tabularx}
-\extraheadheight{0.25in}
-\extrafootheight{1.0in}
-\extrawidth{1in}
-% ----------------------------------------------------------------
-\makeatletter
-\title{Math 1070 Class notes\\[0.25\baselineskip]Fall 2020}
-\author{\thefname\ \thelname}
-
-\pagestyle{headandfoot}
-
-%\firstpageheader{\@title\\\@date}{}{Math 1070}
-%\firstpageheadrule
-
-\newcommand*{\currentname}{\@currentlabelname}
-
-\runningfootrule
-\runningfooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
-\makeatother
-
+\documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
+  \makeatletter
+  \title{Math 1070 Class notes\\[0.25\baselineskip]Fall 2020}
+  \author{\thefname\ \thelname}
+
+  \pagestyle{headandfoot}
+
+  %\firstpageheader{\@title\\\@date}{}{Math 1070}
+  %\firstpageheadrule
+
+  \newcommand*{\currentname}{\@currentlabelname}
+
+  \runningfootrule
+  \runningfooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+  \makeatother
+
   %% Title
   \pagenumbering{roman}
   \vspace*{\stretch{1}}
@@ -69,24 +47,24 @@
   %% everything else
   \relscale{1.4}
 
-\input{review1040}
-\input{jit13_1}
-\input{briggs03_08}
-\input{briggs03_09}
-\input{jit9_1_2_3}
-\input{briggs03_10}
-\input{briggs03_11}
-\input{briggs04_01}
-\input{briggs04_02}
-\input{briggs04_03}
-\input{briggs04_04}
-\input{briggs04_06}
-\input{briggs04_07}
-\input{briggs04_05}
-\input{briggs04_09}
-\input{briggs05_01}
-\input{briggs05_02}
-\input{briggs05_03}
-\input{briggs05_04}
-\input{briggs05_05}
+\subfile{review1040}
+\subfile{jit13_1}
+\subfile{briggs03_08}
+\subfile{briggs03_09}
+\subfile{jit9_1_2_3}
+\subfile{briggs03_10}
+\subfile{briggs03_11}
+\subfile{briggs04_01}
+\subfile{briggs04_02}
+\subfile{briggs04_03}
+\subfile{briggs04_04}
+\subfile{briggs04_06}
+\subfile{briggs04_07}
+\subfile{briggs04_05}
+\subfile{briggs04_09}
+\subfile{briggs05_01}
+\subfile{briggs05_02}
+\subfile{briggs05_03}
+\subfile{briggs05_04}
+\subfile{briggs05_05}
 \end{document}
