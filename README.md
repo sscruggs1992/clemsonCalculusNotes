@@ -1,7 +1,7 @@
 # clemsonCalculusNotes
 Notes for Clemson Math 1040, 1060, 1070 (Calc I), 1080 (Calc II) {currently incomplete}, and 2060 (Calc III). The main files are math10?0Notes.{pdf,tex} which inherit their styling from mathNotesPreamble.tex.
 
-/*
+/*:
   -[math1040Notes.pdf](https://github.com/pwesterbaan/clemsonCalculusNotes/blob/master/math1040Notes.pdf)
   -[math1060Notes.pdf](https://github.com/pwesterbaan/clemsonCalculusNotes/blob/master/math1060Notes.pdf)
   -[math1070Notes.pdf](https://github.com/pwesterbaan/clemsonCalculusNotes/blob/master/math1070Notes.pdf)
