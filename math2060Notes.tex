@@ -1,0 +1,89 @@
+\documentclass[mathNotesPreamble]{subfiles}
+%% Externalize graphics and save in ./images/ folder
+%% pdflatex -shell-escape <tex file>
+%% The document can be compiled with the two following
+%% lines commented out, but will recompile all figures
+%% each time.
+\usetikzlibrary{external}
+\tikzexternalize[prefix=images/]
+\begin{document}
+  \makeatletter
+  \title{Math 2060 Class notes\\[0.25\baselineskip]Spring 2021}
+  \author{\thefname\ \thelname}
+
+  \pagestyle{headandfoot}
+
+  %\firstpageheader{\@title\\\@date}{}{Math 1070}
+  %\firstpageheadrule
+
+  \newcommand*{\currentname}{\@currentlabelname}
+
+  \runningfootrule
+  \runningfooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+  \makeatother
+
+  %% Title
+  \pagenumbering{roman}
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \makeatletter
+    {\huge
+    \@title}\\[\baselineskip]
+    \@author\\[\baselineskip]
+    Last updated:
+    \@date\\
+    \makeatother
+  \end{center}
+  \vspace*{\stretch{1}}
+  \thispagestyle{empty}
+  \pagebreak
+  \pagestyle{headandfoot}
+
+  \renewcommand{\contentsname}{Table Of Contents}
+  \renewcommand\thesection{}
+  \tableofcontents
+  \newpage
+  
+  \makeatletter
+  \firstpageheader{}{}{}
+  \firstpagefooter{\parbox{0.45\linewidth}{\currentname}}{\thepage}{\@title}
+  \firstpagefootrule
+  \makeatother
+  \pagenumbering{arabic}
+  \setcounter{page}{1}
+  %% everything else
+  \relscale{1.4}
+
+  \subfile{briggs13_01}
+  \subfile{briggs13_02}
+  \subfile{briggs13_03}
+  % \subfile{briggs13_04}
+  % \subfile{briggs13_05}
+  % \subfile{briggs13_06}
+  % \subfile{briggs14_01}
+  % \subfile{briggs14_02}
+  % \subfile{briggs14_03}
+  % \subfile{briggs14_04}
+  % \subfile{briggs14_05}
+  % \subfile{briggs15_01}
+  % \subfile{briggs15_02}
+  % \subfile{briggs15_03}
+  % \subfile{briggs15_04}
+  % \subfile{briggs15_05}
+  % \subfile{briggs15_06}
+  % \subfile{briggs15_07}
+  % \subfile{briggs15_08}
+  % \subfile{briggs16_01}
+  % \subfile{briggs16_02}
+  % \subfile{briggs16_03}
+  % \subfile{briggs16_04}
+  % \subfile{briggs16_05}
+  % \subfile{briggs16_06}
+  % \subfile{briggs17_01}
+  % \subfile{briggs17_02}
+  % \subfile{briggs17_03}
+  % \subfile{briggs17_04}
+  % \subfile{briggs17_05}
+  % \subfile{briggs17_06}
+  % \subfile{briggs17_07}
+\end{document}
