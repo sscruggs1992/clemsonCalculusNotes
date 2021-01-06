@@ -1,8 +1,27 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{13.5: Lines and Planes in Space}
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Equation of a Line}\\
+    A \textbf{vector equation of the line} passing through the point $P_0(x_0,y_0,z_0)$ in the direction of the vector $\bfv=\bracket{a,b,c}$ is $\bfr=\bfr_0+t\bfv$, or 
+      \[\bracket{x,y,z}=\bracket{x_0,y_0,z_0}+t\bracket{a,b,c},\quad \textnormal{for}\quad -\infty<t<\infty\]
+    Equivalently, the corresponding \textbf{parametric equations of the line} are
+      \[x=x_0+at,\quad y=y_0+bt,\quad z=z_0+ct,\quad\textnormal{for}\quad-\infty<t<\infty\]
+  }}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Distance Between a Point and a Line}\\
+    The distance $d$ between the point $Q$ and the $\bfr =\bfr_0+t\bfv$ is
+      \[d=\frac{\abs{\bfv\times \overrightharp{PQ}}}{\abs{\bfv}},\]
+    where $P$ is any point on the line and $\bfv$ is a vector parallel to the line.
+  }}
+
+  \begin{defn*}[Plane in $\bbr^3$]
+    Given a fixed point $P_0$ and a nonzero \textbf{normal vector} $\mathbf n$, the set of points $P$ in $\bbr^3$ for which $\overrightharp{P_0P}$ is orthogonal to $\mathbf n$
+  \end{defn*}
+
   \pagebreak
   
 \end{document}
