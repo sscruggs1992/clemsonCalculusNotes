@@ -56,7 +56,7 @@
       \item \textbf{Zero vector}, denoted $\bfO$ or $\overrightharp{0}$, has length $0$ and no direction
     \end{itemize}
   \end{defn*}
-  %TODO create interactive LC based on these questions
+  \vspace*{\stretch{1}}
 
   \textbf{Scalar-vector multiplication:}
     \begin{tasks}[label=\textbullet](1)
@@ -84,6 +84,8 @@
         \draw[black, ->] (O) -- ($(A)+(B)$) node[pos=0.5, sloped, above] {$\bfu+\bfv$};
       \end{tikzpicture}
     \end{center}
+    \vspace*{\stretch{1}}
+
     The difference, denoted $\bfu-\bfv$, is the sum of $\bfu+(-\bfv)$:
     \begin{center}
       \hspace*{\stretch{1}}
@@ -114,6 +116,7 @@
       \end{tikzpicture}
       \hspace*{\stretch{1}}
     \end{center}
+    \vspace*{\stretch{1}}
     
   \textbf{Vector Components:}\newline
   A vector $\bfv$ whose tail is at the origin $(0,0)$ and head is at $(v_1,v_2)$ is a \textbf{position vector} (in \textbf{standard position}) and is denoted $\bracket{v_1,v_2}$. The real numbers $v_1$ and $v_2$ are the $x$- and $y$-components of $\bfv$.
@@ -184,6 +187,7 @@
     \underline{Note:} The norm, denoted $\norm[\bfu]$ or $\norm[\bfu]_2$, is equivalent to the magnitude of a vector.
   }}
   \end{center}
+  \vspace*{\stretch{1}}
   
   \textbf{Equation of a Circle:}
     \begin{defn*}
@@ -268,11 +272,27 @@
       \end{groupplot}
     \end{tikzpicture}
   \end{center}
+  \begin{ex*}
+    Let $\bfu=\bracket{1,2}$, $\bfv=\bracket{-2,3}$, $c=2$, and $d=3$. Find the following:
+    \begin{tasks}[after-item-skip=20pt, label=](2)
+      \task $\bfu+\bfv$
+      \task $c\bfu$
+      \task $c\bfu+d\bfv$
+      \task $\bfu-c\bfv$
+    \end{tasks}
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
   \begin{defn*}
     A \textbf{unit vector} is any vector with length 1.
     
     In $\bbr^2$, the \textbf{coordinate unit vectors} are $\bfi=\bracket{1,0}$ and $\bfj=\bracket{0,1}$.
   \end{defn*}
+  \begin{ex*}
+    Let $\bfu=\bracket{-7,3}$. Find two unit vectors parallel to $\bfu$. Find another vector parallel to $\bfu$ with a magnitude of $2$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
   
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
@@ -315,9 +335,6 @@
       \end{enumerate}
     \end{quote}
   }}
-
-  \textbf{Applications of Vectors:}
-  % TODO add examples (check MLM)
 
   \pagebreak
 \end{document}
