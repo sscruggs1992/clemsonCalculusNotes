@@ -170,11 +170,11 @@
   
   \textbf{Vector Operations in Terms of Components}
     \begin{defn*}[Vector Operations in $\bbr^3$]
-      Suppose $c$ is a scalar, $\bfu=\bracket{u_1,u_2,u_3}$, and $\bfv=\bracket{v_1,v_2,v_3}$.
+      Suppose $c$ is a scalar, $\vecu=\bracket{u_1,u_2,u_3}$, and $\vecv=\bracket{v_1,v_2,v_3}$.
         \begin{alignat*}{2}
-          \bfu+\bfv&=\bracket{u_1+v_1,u_2+v_2,u_3+v_3}&\hspace*{25pt}& \textnormal{\textcolor{blue}{ Vector addition}}\\
-          \bfu-\bfv&=\bracket{u_1-v_1,u_2-v_2,u_3-v_3}&& \textnormal{\textcolor{blue}{ Vector subtraction}}\\
-          c\bfu&=\bracket{cu_1,cu_2,cu_3}&& \textnormal{\textcolor{blue}{ Scalar multiplication}}
+          \vecu+\vecv&=\bracket{u_1+v_1,u_2+v_2,u_3+v_3}&\hspace*{25pt}& \textnormal{\textcolor{blue}{ Vector addition}}\\
+          \vecu-\vecv&=\bracket{u_1-v_1,u_2-v_2,u_3-v_3}&& \textnormal{\textcolor{blue}{ Vector subtraction}}\\
+          c\vecu&=\bracket{cu_1,cu_2,cu_3}&& \textnormal{\textcolor{blue}{ Scalar multiplication}}
         \end{alignat*}
     \end{defn*}
     \vspace*{\stretch{1}}
@@ -236,40 +236,40 @@
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Properties of Vector Operations:}
     
-    Suppose $\bfu$, $\bfv$, and $\bm{w}$ are vectors and $a$ and $c$ are scalars. Then the following properties hold (for vectors in any number of dimensions).
+    Suppose $\vecu$, $\vecv$, and $\bm{w}$ are vectors and $a$ and $c$ are scalars. Then the following properties hold (for vectors in any number of dimensions).
     \begin{center}
       \begin{minipage}{0.925\linewidth}
         \TabPositions{0.425\linewidth}
         \begin{enumerate}
           \item 
-            $\bfu+\bfv=\bfv+\bfu$ 
+            $\vecu+\vecv=\vecv+\vecu$ 
             \tab \textcolor{blue}{Commutative property of addition}
           \item 
-            $\parens{\bfu+\bfv}+\bm w=\bfu+\parens{\bfv+\bm w}$
+            $\parens{\vecu+\vecv}+\bm w=\vecu+\parens{\vecv+\bm w}$
             \tab \textcolor{blue}{Associative property of addition}
           \item 
-            $\bfv+\bfO=\bfv$
+            $\vecv+\bfO=\vecv$
             \tab \textcolor{blue}{Additive identity}
           \item 
-            $\bfv+\parens{-\bfv}=\bfO$
+            $\vecv+\parens{-\vecv}=\bfO$
             \tab \textcolor{blue}{Additive inverse}
           \item 
-            $c\parens{\bfu+\bfv}=c\bfu+c\bfv$
+            $c\parens{\vecu+\vecv}=c\vecu+c\vecv$
             \tab \textcolor{blue}{Distributive property 1}
           \item 
-            $\parens{a+c}\bfv=a\bfv+c\bfv$
+            $\parens{a+c}\vecv=a\vecv+c\vecv$
             \tab \textcolor{blue}{Distributive property 2}
           \item 
-            $0\bfv=\bfO$
+            $0\vecv=\bfO$
             \tab \textcolor{blue}{Multiplication by zero scalar}
           \item 
             $c\bfO=\bfO$
             \tab \textcolor{blue}{Multiplication by zero vector}
           \item 
-            $1\bfv=\bfv$
+            $1\vecv=\vecv$
             \tab \textcolor{blue}{Multiplicative identity}
           \item 
-            $a\parens{c\bfv}=\parens{ac}\bfv$
+            $a\parens{c\vecv}=\parens{ac}\vecv$
             \tab \textcolor{blue}{Associative property of scalar multiplication}
         \end{enumerate}
       \end{minipage}

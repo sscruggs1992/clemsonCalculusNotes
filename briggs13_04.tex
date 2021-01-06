@@ -3,16 +3,16 @@
 % \relscale{1.4} %TODO
 \section{13.4: Cross Products}
   \begin{defn*}[Cross Product]
-    Given two nonzero vectors $\bfu$ and $\bfv$ in $\bbr^3$, the \textbf{cross product $\bfu\times\bfv$} is a vector with magnitude
-      \[\abs{\bfu\times \bfv}=\abs{\bfu}\abs{\bfv}\sin\theta,\]
-    where $0\leq \theta\leq \pi$ is the angle between $\bfu$ and $\bfv$. 
+    Given two nonzero vectors $\vecu$ and $\vecv$ in $\bbr^3$, the \textbf{cross product $\vecu\times\vecv$} is a vector with magnitude
+      \[\abs{\vecu\times \vecv}=\abs{\vecu}\abs{\vecv}\sin\theta,\]
+    where $0\leq \theta\leq \pi$ is the angle between $\vecu$ and $\vecv$. 
 
-    The direction of $\bfu\times\bfv$ is given by the \textbf{right-hand rule}: 
+    The direction of $\vecu\times\vecv$ is given by the \textbf{right-hand rule}: 
     \begin{quote}
-      When you put your the vectors tail to tail and let the fingers of your right hand curl from $\bfu$ to $\bfv$, the direction of $\bfu \times\bfv$ is the direction of your thumb, orthogonal to both $\bfu$ and $\bfv$ (Figure 13.56).
+      When you put your the vectors tail to tail and let the fingers of your right hand curl from $\vecu$ to $\vecv$, the direction of $\vecu \times\vecv$ is the direction of your thumb, orthogonal to both $\vecu$ and $\vecv$ (Figure 13.56).
     \end{quote}
     
-    When $\bfu\times \bfv=\bfO$, the direction of $\bfu\times\bfv$ is undefined.
+    When $\vecu\times \vecv=\bfO$, the direction of $\vecu\times\vecv$ is undefined.
   \end{defn*}
   \begin{center}
     \begin{minipage}{0.175\linewidth}
@@ -30,11 +30,11 @@
         \tkzFillAngle[draw= ClemsonOrange!90,size=0.45cm, opacity=0.8](B,O,A);
         \tkzLabelAngle[pos = 0.6,font=\normalsize](B,O,A){\color{black}$\theta$};
         \draw[ClemsonOrange, ->] (O) -- (A)
-          node[above left,pos=0.5, black, font=\large] {$\bfv$};
+          node[above left,pos=0.5, black, font=\large] {$\vecv$};
         \draw[ClemsonPurple, ->] (O) -- (B) 
-          node[above,pos=0.35, black, font=\large] {$\bfu$};
-        \draw[black, <->, line width=0.9pt] ($(A)+(0.65,0)$)  -- node[pos=0.5, fill=white, inner sep=1pt, font=\large] {$\abs{\bfv}\sin\theta$} ($(O)!(A)!(B)+(0.65,0)$);
-        \draw[black, <->, line width=0.9pt] ($(O)+(0,-0.25)$)  -- node[pos=0.5, fill=white, inner sep=1pt, font=\large] {$\bfu$} ($(B)+(0,-0.25)$);
+          node[above,pos=0.35, black, font=\large] {$\vecu$};
+        \draw[black, <->, line width=0.9pt] ($(A)+(0.65,0)$)  -- node[pos=0.5, fill=white, inner sep=1pt, font=\large] {$\abs{\vecv}\sin\theta$} ($(O)!(A)!(B)+(0.65,0)$);
+        \draw[black, <->, line width=0.9pt] ($(O)+(0,-0.25)$)  -- node[pos=0.5, fill=white, inner sep=1pt, font=\large] {$\vecu$} ($(B)+(0,-0.25)$);
       \end{tikzpicture}
     \end{minipage}
   \end{center}
@@ -44,13 +44,13 @@
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 13.3: Geometry of the Cross Product}
     
-    Let $\bfu$ and $\bfv$ be two nonzero vectors in $\bbr^3$.
+    Let $\vecu$ and $\vecv$ be two nonzero vectors in $\bbr^3$.
     \begin{enumerate}
       \item 
-        The vectors $\bfu$ and $\bfv$ are parallel ($\theta=0$ or $\theta=\pi$) if and only if $\bfu\times \bfv=\bfO$.
+        The vectors $\vecu$ and $\vecv$ are parallel ($\theta=0$ or $\theta=\pi$) if and only if $\vecu\times \vecv=\bfO$.
       \item 
-        If $\bfu$ and $\bfv$ are two sides of a parallelogram, then the area of the parallelogram is
-          \[\abs{\bfu\times \bfv}=\abs{\bfu}\abs{\bfv}\sin\theta\]
+        If $\vecu$ and $\vecv$ are two sides of a parallelogram, then the area of the parallelogram is
+          \[\abs{\vecu\times \vecv}=\abs{\vecu}\abs{\vecv}\sin\theta\]
     \end{enumerate}
   }}
   \pagebreak
@@ -64,22 +64,22 @@
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 13.4: Properties of the Cross Product}
-    Let $\bfu$, $\bfv$, and $\bfw$ be nonzero vectors in $\bbr^3$, and let $a$ and $b$ be scalars.
+    Let $\vecu$, $\vecv$, and $\vecw$ be nonzero vectors in $\bbr^3$, and let $a$ and $b$ be scalars.
     \begin{center}
       \begin{minipage}{0.8\linewidth}
         \TabPositions{0.59\linewidth}
         \begin{enumerate}
           \item 
-            $\bfu\times\bfv=-\parens{\bfv\times\bfu}$ 
+            $\vecu\times\vecv=-\parens{\vecv\times\vecu}$ 
             \tab \textcolor{blue}{Anticommutative property}
           \item 
-            $\parens{a\bfu}\times\parens{b\bfv}=ab\parens{\bfu\times\bfv}$
+            $\parens{a\vecu}\times\parens{b\vecv}=ab\parens{\vecu\times\vecv}$
             \tab \textcolor{blue}{Associative property}
           \item 
-            $\bfu\times\parens{\bfv+\bfw}=\parens{\bfu\times\bfv}+\parens{\bfu\times\bfw}$
+            $\vecu\times\parens{\vecv+\vecw}=\parens{\vecu\times\vecv}+\parens{\vecu\times\vecw}$
             \tab \textcolor{blue}{Distributive property}
           \item 
-            $\parens{\bfu+\bfv}\times\bfw=\parens{\bfu\times\bfw}+\parens{\bfv\times\bfw}$
+            $\parens{\vecu+\vecv}\times\vecw=\parens{\vecu\times\vecw}+\parens{\vecv\times\vecw}$
             \tab \textcolor{blue}{Distributive property}
         \end{enumerate}
       \end{minipage}
@@ -144,9 +144,9 @@
   \vspace*{\stretch{1}}
 
   \noindent
-  Using the unit vectors, we can compute $\bfu\times\bfv$:
+  Using the unit vectors, we can compute $\vecu\times\vecv$:
   \begin{align*}
-    \bfu\times\bfv&= \parens{u_1\bfi+u_2\bfj+u_3\bfk}\times\parens{v_1\bfi+v_2\bfj+v_3\bfk}\\
+    \vecu\times\vecv&= \parens{u_1\bfi+u_2\bfj+u_3\bfk}\times\parens{v_1\bfi+v_2\bfj+v_3\bfk}\\
       &=u_1v_1\underbrace{\parens{\bfi\times\bfi}}_{\bfO}
        +u_1v_2\underbrace{\parens{\bfi\times\bfj}}_{\bfk}
        +u_1v_3\underbrace{\parens{\bfi\times\bfk}}_{-\bfj}\\
@@ -168,8 +168,8 @@
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 13.6: Evaluating the Cross Product}
     
-    Let $\bfu=u_1\bfi+u_2\bfj+u_3\bfk$ and $\bfv=v_1\bfi+v_2\bfj+v_3\bfk$. Then
-    \[\bfu\times\bfv=
+    Let $\vecu=u_1\bfi+u_2\bfj+u_3\bfk$ and $\vecv=v_1\bfi+v_2\bfj+v_3\bfk$. Then
+    \[\vecu\times\vecv=
       \begin{vmatrix}
         \bfi& \bfj& \bfk\\
         u_1& u_2& u_3\\
@@ -197,7 +197,7 @@
       \]
   }}
 
-  \[\bfu\times\bfv=\parens{u_2v_3-u_3v_2}\bfi
+  \[\vecu\times\vecv=\parens{u_2v_3-u_3v_2}\bfi
        -\parens{u_1v_3-u_3v_1}\bfj
        +\parens{u_1v_2-u_2v_1}\bfk\]
   

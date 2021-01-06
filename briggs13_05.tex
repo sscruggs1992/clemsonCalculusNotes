@@ -4,7 +4,7 @@
 \section{13.5: Lines and Planes in Space}
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Equation of a Line}\\
-    A \textbf{vector equation of the line} passing through the point $P_0(x_0,y_0,z_0)$ in the direction of the vector $\bfv=\bracket{a,b,c}$ is $\bfr=\bfr_0+t\bfv$, or 
+    A \textbf{vector equation of the line} passing through the point $P_0(x_0,y_0,z_0)$ in the direction of the vector $\vecv=\bracket{a,b,c}$ is $\vecr=\vecr_0+t\vecv$, or 
       \[\bracket{x,y,z}=\bracket{x_0,y_0,z_0}+t\bracket{a,b,c},\quad \textnormal{for}\quad -\infty<t<\infty\]
     Equivalently, the corresponding \textbf{parametric equations of the line} are
       \[x=x_0+at,\quad y=y_0+bt,\quad z=z_0+ct,\quad\textnormal{for}\quad-\infty<t<\infty\]
@@ -13,13 +13,25 @@
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Distance Between a Point and a Line}\\
-    The distance $d$ between the point $Q$ and the $\bfr =\bfr_0+t\bfv$ is
-      \[d=\frac{\abs{\bfv\times \overrightharp{PQ}}}{\abs{\bfv}},\]
-    where $P$ is any point on the line and $\bfv$ is a vector parallel to the line.
+    The distance $d$ between the point $Q$ and the $\vecr =\vecr_0+t\vecv$ is
+      \[d=\frac{\abs{\vecv\times \overrightharp{PQ}}}{\abs{\vecv}},\]
+    where $P$ is any point on the line and $\vecv$ is a vector parallel to the line.
   }}
 
   \begin{defn*}[Plane in $\bbr^3$]
-    Given a fixed point $P_0$ and a nonzero \textbf{normal vector} $\mathbf n$, the set of points $P$ in $\bbr^3$ for which $\overrightharp{P_0P}$ is orthogonal to $\mathbf n$
+    Given a fixed point $P_0$ and a nonzero \textbf{normal vector} $\vecn$, the set of points $P$ in $\bbr^3$ for which \overrightharp{$P_0 P$} is orthogonal to $\vecn$ is called a \textbf{plane} (Figure 13.72)
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{General Equation of a Plane in $\bbr^3$}\\
+    The plane passing through the point $P_0(x_0,y_0,z_0)$ with a nonzero normal vector \newline$\vecn=\bracket{a,b,c}$ is described by the equation
+      \[a\parens{x-x_0}+b\parens{y-y_0}+c\parens{z-z_0}=0\quad\textnormal{or}\quad ax+by+cz=d,\]
+    where $d=ax_0+by_0+cz_0$.
+  }}
+
+  \begin{defn*}[Parallel and Orthogonal Planes]
+    Two distinct planes are \textbf{parallel} if their respective normal vectors are parallel (that is, the normal vectors are scaling multiples of each other). Two plans are \textbf{orthogonal} if their respective normal vectors are orthogonal (that is, the dot product of the normal vectors is \textit{zero}).
   \end{defn*}
 
   \pagebreak

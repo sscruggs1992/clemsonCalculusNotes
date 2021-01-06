@@ -3,9 +3,9 @@
 %\relscale{1.4} %TODO
 \section{13.3: Dot Products}
   \begin{defn*}[Dot Product]
-    Given two nonzero vectors $\bfu$ and $\bfv$ in two or three dimensions, their \textbf{dot product} is
-      \[\bfu\cdot\bfv=\abs{\bfu}\abs{\bfv}\cos\theta,\]
-    where $\theta$ is the angle between $\bfu$ and $\bfv$ with $0\leq \theta\leq \pi$. If $\bfu=\bfO$ or $\bfv=\bfO$, then $\bfu\cdot\bfv=0$, and $\theta$ is undefined.
+    Given two nonzero vectors $\vecu$ and $\vecv$ in two or three dimensions, their \textbf{dot product} is
+      \[\vecu\cdot\vecv=\abs{\vecu}\abs{\vecv}\cos\theta,\]
+    where $\theta$ is the angle between $\vecu$ and $\vecv$ with $0\leq \theta\leq \pi$. If $\vecu=\bfO$ or $\vecv=\bfO$, then $\vecu\cdot\vecv=0$, and $\theta$ is undefined.
   \end{defn*}
   %TODO Pick the two definitions of the dot product
 
@@ -17,17 +17,17 @@
         \coordinate (A) at (-1.25,0);
         \coordinate (B) at (1.5,0);
         \draw[->, ClemsonOrange, line width=1.25pt] (O) -- (A)
-          node[above, pos=0.5, black] {$\bfu$};
+          node[above, pos=0.5, black] {$\vecu$};
         \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
-          node[above, pos=0.5, black] {$\bfv$};&
+          node[above, pos=0.5, black] {$\vecv$};&
         %
         \coordinate (O) at (0-0.5,0);
         \coordinate (A) at (-1-0.5,1);
         \coordinate (B) at (2-0.5,0);
         \draw[->, ClemsonOrange, line width=1pt] (O) -- (A)
-          node[above, pos=0.5, black, xshift=5pt, yshift=5pt] {$\bfu$};
+          node[above, pos=0.5, black, xshift=5pt, yshift=5pt] {$\vecu$};
         \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
-          node[below, pos=0.5, black] {$\bfv$};
+          node[below, pos=0.5, black] {$\vecv$};
         \tkzFillAngle[fill= ClemsonOrange!90,size=0.45cm, opacity=0.8](B,O,A);
         \tkzLabelAngle[pos = 0.25,font=\normalsize](B,O,A){\color{black}$\theta$};&
         %
@@ -36,17 +36,17 @@
         \coordinate (B) at (2-0.75,0);
         \draw($(O)!0.125!(A)$)-|($(O)!0.125!(B)$);
         \draw[->, ClemsonOrange, line width=1pt] (O) -- (A)
-          node[black, pos=0.5, xshift=-10pt] {$\bfu$};
+          node[black, pos=0.5, xshift=-10pt] {$\vecu$};
         \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
-          node[below, pos=0.5, black] {$\bfv$};&
+          node[below, pos=0.5, black] {$\vecv$};&
         %
         \coordinate (O) at (0-1,0);
         \coordinate (A) at (1.414-1,1.414);
         \coordinate (B) at (2-1,0);
         \draw[->, ClemsonOrange, line width=1pt] (O) -- (A)
-          node[above, pos=0.5, black, xshift=-5pt] {$\bfu$};
+          node[above, pos=0.5, black, xshift=-5pt] {$\vecu$};
         \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
-          node[below, pos=0.5, black] {$\bfv$};
+          node[below, pos=0.5, black] {$\vecv$};
         \tkzFillAngle[fill= ClemsonOrange!90,size=0.75cm, opacity=0.8](B,O,A);
         \tkzLabelAngle[pos = 0.55,font=\normalsize](B,O,A){\color{black}$\theta$};&
         %
@@ -54,20 +54,20 @@
         \coordinate (A) at (3-1.5,0.025);
         \coordinate (B) at (2-1.5,0);
         \draw[->, ClemsonOrange, line width=1.25pt] (O) |- (A)
-          node[above, pos=0.85, black] {$\bfu$};
+          node[above, pos=0.85, black] {$\vecu$};
         \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
-          node[below, pos=0.5, black] {$\bfv$};\\
+          node[below, pos=0.5, black] {$\vecv$};\\
         %
         \node[draw=black, rounded corners, font=\normalsize]
-          {$\theta=\pi,\ \bfu\cdot\bfv=-\abs{\bfu}\abs{\bfv}$};&
+          {$\theta=\pi,\ \vecu\cdot\vecv=-\abs{\vecu}\abs{\vecv}$};&
         \node[draw=black, rounded corners, font=\normalsize]
-          {$\bfu\cdot\bfv=\abs{\bfu}\abs{\bfv}\cos\theta<0$};&
+          {$\vecu\cdot\vecv=\abs{\vecu}\abs{\vecv}\cos\theta<0$};&
         \node[draw=black, rounded corners, font=\normalsize]
-          {$\theta=\frac{\pi}{2},\ \bfu\cdot\bfv=0$};&
+          {$\theta=\frac{\pi}{2},\ \vecu\cdot\vecv=0$};&
         \node[draw=black, rounded corners, font=\normalsize]
-          {$\bfu\cdot\bfv=\abs{\bfu}\abs{\bfv}\cos\theta>0$};&
+          {$\vecu\cdot\vecv=\abs{\vecu}\abs{\vecv}\cos\theta>0$};&
         \node[draw=black, rounded corners, font=\normalsize]
-          {$\theta=0,\ \bfu\cdot\bfv=\abs{\bfu}\abs{\bfv}$};\\
+          {$\theta=0,\ \vecu\cdot\vecv=\abs{\vecu}\abs{\vecv}$};\\
       };
     \end{tikzpicture}
   \end{center}
@@ -86,11 +86,11 @@
   \pagebreak
   
   \begin{defn*}[Orthogonal Vectors]
-    Two vectors $\bfu$ and $\bfv$ are \textbf{orthogonal} if and only if $\bfu\cdot\bfv=0$. The zero vector is orthogonal to all vectors. In two or three dimensions, two nonzero orthogonal vectors are perpendicular to each other.
+    Two vectors $\vecu$ and $\vecv$ are \textbf{orthogonal} if and only if $\vecu\cdot\vecv=0$. The zero vector is orthogonal to all vectors. In two or three dimensions, two nonzero orthogonal vectors are perpendicular to each other.
   \end{defn*}
   \begin{itemize}
-    \item $\bfu$ and $\bfv$ are parallel ($\theta=0$ or $\theta=\pi$) if and only if $\bfu\cdot\bfv=\pm\abs{\bfu}\abs{\bfv}$.
-    \item $\bfu$ and $\bfv$ are perpendicular ($\theta=\frac{\pi}{2}$) if and only if $\bfu\cdot\bfv=0$.
+    \item $\vecu$ and $\vecv$ are parallel ($\theta=0$ or $\theta=\pi$) if and only if $\vecu\cdot\vecv=\pm\abs{\vecu}\abs{\vecv}$.
+    \item $\vecu$ and $\vecv$ are perpendicular ($\theta=\frac{\pi}{2}$) if and only if $\vecu\cdot\vecv=0$.
   \end{itemize}
   %TODO examples of computing the dot product
   
@@ -98,8 +98,8 @@
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 31.1: Dot Product}
     
-    Given two vectors $\bfu=\bracket{u_1,u_2,u_3}$ and $\bfv=\bracket{v_1,v_2,v_3}$, 
-      \[\bfu\cdot\bfv=u_1v_1+u_2v_2+u_3v_3.\]
+    Given two vectors $\vecu=\bracket{u_1,u_2,u_3}$ and $\vecv=\bracket{v_1,v_2,v_3}$, 
+      \[\vecu\cdot\vecv=u_1v_1+u_2v_2+u_3v_3.\]
   }}
   %TODO Outline of proof
   %TODO examples finding the angle between vectors
@@ -111,19 +111,19 @@
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 13.2: Properties of the Dot Product}
     
-    Suppose $\bfu, \bfv$ and $\bfw$ are vectors and let $c$ be a scalar.
+    Suppose $\vecu, \vecv$ and $\vecw$ are vectors and let $c$ be a scalar.
     \begin{center}
       \begin{minipage}{0.7\linewidth}
         \TabPositions{0.6\linewidth}
         \begin{enumerate}
           \item 
-            $\bfu\cdot \bfv =\bfv\cdot\bfu$ 
+            $\vecu\cdot \vecv =\vecv\cdot\vecu$ 
             \tab \textcolor{blue}{Commutative property}
           \item 
-            $c\parens{\bfu\cdot\bfv}=\parens{c\bfu}\cdot \bfv=\bfu\cdot\parens{c\bfv}$
+            $c\parens{\vecu\cdot\vecv}=\parens{c\vecu}\cdot \vecv=\vecu\cdot\parens{c\vecv}$
             \tab \textcolor{blue}{Associative property}
           \item 
-            $\bfu\cdot\parens{\bfv+\bfw}=\bfu\cdot\bfv+\bfu\cdot\bfw$
+            $\vecu\cdot\parens{\vecv+\vecw}=\vecu\cdot\vecv+\vecu\cdot\vecw$
             \tab \textcolor{blue}{Distributive property}
         \end{enumerate}
       \end{minipage}
@@ -135,20 +135,20 @@
   \textbf{Orthogonal Projections}
 
   \noindent
-  Given vectors $\bfu$ and $\bfv$, the projection of $\bfu$ onto $\bfv$ produces a vector parallel to $\bfv$ using the ``shadow'' of $\bfu$ cast onto $\bfv$.
+  Given vectors $\vecu$ and $\vecv$, the projection of $\vecu$ onto $\vecv$ produces a vector parallel to $\vecv$ using the ``shadow'' of $\vecu$ cast onto $\vecv$.
   \begin{center}
     \includegraphics[width=0.9\linewidth]{images/briggs_13_03/fig13_47}
   \end{center}
 %  \vspace*{\stretch{1}}
   %TODO "derive" projection
   %TODO LC How does |v|*|v| = v\cdot v?
-  \begin{defn*}[(Orthogonal) Projection of $\bfu$ onto $\bfv$]
-    The \textbf{orthogonal projection of $\bfu$ onto $\bfv$}, denoted $\proj_\bfv \bfu$, where $\bfv\neq\bfO$, is
-      \[\proj_\bfv \bfu =\underbrace{\abs{\bfu}\cos\theta}_{\textnormal{\textcolor{blue}{length}}}\underbrace{\parens{\frac{\bfv}{\abs{\bfv}}}}_{\textnormal{\textcolor{blue}{direction}}}.\]
+  \begin{defn*}[(Orthogonal) Projection of $\vecu$ onto $\vecv$]
+    The \textbf{orthogonal projection of $\vecu$ onto $\vecv$}, denoted $\proj_\vecv \vecu$, where $\vecv\neq\bfO$, is
+      \[\proj_\vecv \vecu =\underbrace{\abs{\vecu}\cos\theta}_{\textnormal{\textcolor{blue}{length}}}\underbrace{\parens{\frac{\vecv}{\abs{\vecv}}}}_{\textnormal{\textcolor{blue}{direction}}}.\]
     The orthogonal projection may also be computed with the formulas
-      \[\proj_\bfv \bfu=\operatorname{scal}_\bfv \bfu\parens{\frac{\bfv}{\abs{\bfv}}}=\parens{\frac{\bfu\cdot\bfv}{\bfv\cdot\bfv}}\bfv,\]
-    where the \textbf{scalar component of $\bfu$ in the direction of $\bfv$} is
-      \[\operatorname{scal}_\bfv \bfu=\abs{\bfu}\cos\theta=\frac{\bfu\cdot\bfv}{\abs{\bfv}}.\]
+      \[\proj_\vecv \vecu=\operatorname{scal}_\vecv \vecu\parens{\frac{\vecv}{\abs{\vecv}}}=\parens{\frac{\vecu\cdot\vecv}{\vecv\cdot\vecv}}\vecv,\]
+    where the \textbf{scalar component of $\vecu$ in the direction of $\vecv$} is
+      \[\operatorname{scal}_\vecv \vecu=\abs{\vecu}\cos\theta=\frac{\vecu\cdot\vecv}{\abs{\vecv}}.\]
   \end{defn*}
   \pagebreak
   %TODO examples computing proj_v u and scal_v u
