@@ -136,55 +136,14 @@
         \[\textnormal{Midpoint }=\parens{\frac{x_1+x_2}{2},\frac{y_1+y_2}{2},\frac{z_1+z_2}{2}}\]
     }}
     \pagebreak
-    \begin{ex*}
-      Consider $P(-1,4,3)$ and $Q(3,5,7)$. Find
-        \begin{tasks}[after-item-skip=\stretch{1}, label=\textbullet](1)
-          \task $\abs{\overrightharp{PQ}}$
-          \task The midpoint between $P$ and $Q$
-          \task Two unit vectors parallel to $\overrightharp{PQ}$
-          \task The equation of the sphere centered at the midpoint passing through $P$ and $Q$
-        \end{tasks}
-    \end{ex*}
-    \vspace*{\stretch{2}}
-    \pagebreak
-    
-  \textbf{Equation of a Sphere:}
-    \begin{defn*}
-      A \textbf{sphere} centered at $(a,b,c)$ with radius $r$ is the set of points satisfying the equation
-        \[\parens{x-a}^2+\parens{y-b}^2+\parens{z-c}^2=r^2.\]
-      A \textbf{ball} centered at $(a,b,c)$ with radius $r$ is the set of points satisfying the inequality
-        \[\parens{x-a}^2+\parens{y-b}^2+\parens{z-c}^2\leq r^2.\]
-    \end{defn*}
-    
-    \begin{ex*}
-      Rewrite the following equation into the standard form of a sphere:
-        \[x^2+y^2+z^2-2x+6y-8z=-1\]
-    \end{ex*}
-    \vspace*{\stretch{1}}
-    \begin{ex*}
-      What is the geometry of the intersection between $x^2+y^2+z^2=50$ and $z=1$?
-    \end{ex*}
-    \vspace*{\stretch{1}}
-    \pagebreak
 
-  
-  \textbf{Vector Operations in Terms of Components}
-    \begin{defn*}[Vector Operations in $\bbr^3$]
-      Suppose $c$ is a scalar, $\vecu=\bracket{u_1,u_2,u_3}$, and $\vecv=\bracket{v_1,v_2,v_3}$.
-        \begin{alignat*}{2}
-          \vecu+\vecv&=\bracket{u_1+v_1,u_2+v_2,u_3+v_3}&\hspace*{25pt}& \textnormal{\textcolor{blue}{ Vector addition}}\\
-          \vecu-\vecv&=\bracket{u_1-v_1,u_2-v_2,u_3-v_3}&& \textnormal{\textcolor{blue}{ Vector subtraction}}\\
-          c\vecu&=\bracket{cu_1,cu_2,cu_3}&& \textnormal{\textcolor{blue}{ Scalar multiplication}}
-        \end{alignat*}
-    \end{defn*}
-    \vspace*{\stretch{1}}
-
-  \textbf{Magnitude and Unit Vectors:}
+    \textbf{Magnitude and Unit Vectors:}
   \begin{defn*}
     The \textbf{magnitude} (or \textbf{length}) of the vector $\overrightharp{PQ}=\bracket{x_2-x_1,y_2-y_1,z_2-z_1}$ is the distance from $P(x_1,y_1,z_1)$ to $Q(x_2,y_2,z_2)$:
       \[\abs{\overrightharp{PQ}}=\sqrt{\parens{x_2-x_1}^2+\parens{y_2-y_1}^2+\parens{z_2-z_1}^2}\]
   \end{defn*}
-    
+  \noindent
+  In $\bbr^3$, the \textbf{coordinate unit vectors} are $\bfi=\bracket{1,0,0}$, $\bfj=\bracket{0,1,0}$, and $\bfk=\bracket{0,0,1}$.
 
   \begin{center}
     \begin{tikzpicture}[scale=1.0]
@@ -193,17 +152,17 @@
         axis line style={black,->},
         xmin=-0.5, xmax=3, xmajorticks=false,
         ymin=-0.5, ymax=3, ymajorticks=false,
-        zmin=-0.5, zmax=3, zmajorticks=false,
+        zmin=-0.5, zmax=3.5, zmajorticks=false,
         ticklabel style={font=\normalsize,inner sep=1pt,fill=white,opacity=1.0, text opacity=1},
         every axis plot/.append style={line width=0.95pt, color=blue, samples=100},
-        view={120}{30},
+        view={120}{22.5},
         ]
         
         \addplot3[fill=ClemsonPurple!75, opacity=0.5, draw=none]
           coordinates{(0.175,0.25,0.4) (1.75,2.675, 3) (1.75,2.675, 0.4)}
-          node[above, black, pos=0.285, pin={[pin distance=17pt]-75:{}}, 
+          node[above, black, pos=0.285, pin={[pin distance=22.5pt]-75:{}}, 
           xshift=-2.5pt, yshift=20pt, font=\footnotesize, fill=white, 
-          opacity=0.75, inner sep=1pt, text opacity=1] 
+          opacity=0.75, inner sep=1pt, text opacity=1, yshift=12pt] 
           {$\abs{\overrightharp{PQ}}=\sqrt{\parens{x_2-x_1}^2+\parens{y_2-y_1}^2+\parens{z_2-z_1}^2}$};
         \addplot3[black, ->] 
           coordinates{(0.175,0.25,0.4) (1.75,2.675, 3)};
@@ -224,12 +183,53 @@
       \end{axis}
     \end{tikzpicture}
   \end{center}
-    In $\bbr^3$, the \textbf{coordinate unit vectors} are $\bfi=\bracket{1,0,0}$, $\bfj=\bracket{0,1,0}$, and $\bfk=\bracket{0,0,1}$.
-    \pagebreak
 
   \begin{ex*}
-    Consider $P(-1,4,3)$ and $Q(3,5,7)$. Find two unit vectors parallel to $\overrightharp{PQ}$.
+    Consider $P(-1,4,3)$ and $Q(3,5,7)$. Find
+      \begin{tasks}[after-item-skip=\stretch{1}, label=\textbullet](1)
+        \task $\abs{\overrightharp{PQ}}$
+        \task The midpoint between $P$ and $Q$
+        \task Two unit vectors parallel to $\overrightharp{PQ}$
+      \end{tasks}
   \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \textbf{Equation of a Sphere:}
+  \begin{defn*}
+    A \textbf{sphere} centered at $(a,b,c)$ with radius $r$ is the set of points satisfying the equation
+      \[\parens{x-a}^2+\parens{y-b}^2+\parens{z-c}^2=r^2.\]
+    A \textbf{ball} centered at $(a,b,c)$ with radius $r$ is the set of points satisfying the inequality
+      \[\parens{x-a}^2+\parens{y-b}^2+\parens{z-c}^2\leq r^2.\]
+  \end{defn*}
+
+  \begin{ex*}
+    Consider $P(-1,4,3)$ and $Q(3,5,7)$. Find the equation of the sphere centered at the midpoint passing through $P$ and $Q$
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}
+    What is the geometry of the intersection between $x^2+y^2+z^2=50$ and $z=1$?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Rewrite the following equation into the standard form of a sphere:
+      \[x^2+y^2+z^2-2x+6y-8z=-1\]
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \textbf{Vector Operations in Terms of Components}
+    \begin{defn*}[Vector Operations in $\bbr^3$]
+      Suppose $c$ is a scalar, $\vecu=\bracket{u_1,u_2,u_3}$, and $\vecv=\bracket{v_1,v_2,v_3}$.
+        \begin{alignat*}{2}
+          \vecu+\vecv&=\bracket{u_1+v_1,u_2+v_2,u_3+v_3}&\hspace*{25pt}& \textnormal{\textcolor{blue}{ Vector addition}}\\
+          \vecu-\vecv&=\bracket{u_1-v_1,u_2-v_2,u_3-v_3}&& \textnormal{\textcolor{blue}{ Vector subtraction}}\\
+          c\vecu&=\bracket{cu_1,cu_2,cu_3}&& \textnormal{\textcolor{blue}{ Scalar multiplication}}
+        \end{alignat*}
+    \end{defn*}
   \vspace*{\stretch{1}}
 
   \noindent
