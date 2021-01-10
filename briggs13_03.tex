@@ -7,7 +7,7 @@
       \[\vecu\cdot\vecv=\abs{\vecu}\abs{\vecv}\cos\theta,\]
     where $\theta$ is the angle between $\vecu$ and $\vecv$ with $0\leq \theta\leq \pi$. If $\vecu=\bfO$ or $\vecv=\bfO$, then $\vecu\cdot\vecv=0$, and $\theta$ is undefined.
   \end{defn*}
-  %TODO Pick the two definitions of the dot product
+  %Think of "multiply the length they have in common"
 
   \begin{center}
     \begin{tikzpicture}
@@ -26,10 +26,10 @@
         \coordinate (B) at (2-0.5,0);
         \draw[->, ClemsonOrange, line width=1pt] (O) -- (A)
           node[above, pos=0.5, black, xshift=5pt, yshift=5pt] {$\vecu$};
-        \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
-          node[below, pos=0.5, black] {$\vecv$};
         \tkzFillAngle[fill= ClemsonOrange!90,size=0.45cm, opacity=0.8](B,O,A);
-        \tkzLabelAngle[pos = 0.25,font=\normalsize](B,O,A){\color{black}$\theta$};&
+        \tkzLabelAngle[pos = 0.25,font=\normalsize](B,O,A){\color{black}$\theta$};
+        \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
+          node[below, pos=0.5, black] {$\vecv$};&
         %
         \coordinate (O) at (0-0.75,0);
         \coordinate (A) at (0-0.75,2);
@@ -45,15 +45,15 @@
         \coordinate (B) at (2-1,0);
         \draw[->, ClemsonOrange, line width=1pt] (O) -- (A)
           node[above, pos=0.5, black, xshift=-5pt] {$\vecu$};
-        \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
-          node[below, pos=0.5, black] {$\vecv$};
         \tkzFillAngle[fill= ClemsonOrange!90,size=0.75cm, opacity=0.8](B,O,A);
-        \tkzLabelAngle[pos = 0.55,font=\normalsize](B,O,A){\color{black}$\theta$};&
+        \tkzLabelAngle[pos = 0.55,font=\normalsize](B,O,A){\color{black}$\theta$};
+        \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
+          node[below, pos=0.5, black] {$\vecv$};&
         %
         \coordinate (O) at (0-1.5,0);
-        \coordinate (A) at (3-1.5,0.025);
+        \coordinate (A) at (3-1.5,0);
         \coordinate (B) at (2-1.5,0);
-        \draw[->, ClemsonOrange, line width=1.25pt] (O) |- (A)
+        \draw[->, ClemsonOrange, line width=1pt] (O) -- (A)
           node[above, pos=0.85, black] {$\vecu$};
         \draw[->, ClemsonPurple, line width=1pt] (O) -- (B)
           node[below, pos=0.5, black] {$\vecv$};\\
@@ -79,21 +79,30 @@
     \includegraphics[width=0.75\linewidth]{images/briggs_13_03/fig13_43}
     
     \textit{Note}: The result of the dot product is a scalar!
-    %TODO LC The result of the dot product is (a scalar, another vector,...)
-    %TODO Think of "multiply the length they have in common"
+    
   \end{center}
-  \vspace*{\stretch{0}}
   \pagebreak
-  
+
   \begin{defn*}[Orthogonal Vectors]
     Two vectors $\vecu$ and $\vecv$ are \textbf{orthogonal} if and only if $\vecu\cdot\vecv=0$. The zero vector is orthogonal to all vectors. In two or three dimensions, two nonzero orthogonal vectors are perpendicular to each other.
   \end{defn*}
+
+
   \begin{itemize}
     \item $\vecu$ and $\vecv$ are parallel ($\theta=0$ or $\theta=\pi$) if and only if $\vecu\cdot\vecv=\pm\abs{\vecu}\abs{\vecv}$.
     \item $\vecu$ and $\vecv$ are perpendicular ($\theta=\frac{\pi}{2}$) if and only if $\vecu\cdot\vecv=0$.
   \end{itemize}
-  %TODO examples of computing the dot product
-  
+
+  \begin{ex*}
+    Given $\abs\vecu=2$ and $\abs\vecv=\sqrt 3$, compute $\vecu\cdot\vecv$ when
+      \begin{tasks}[after-item-skip=\stretch{1}, label=\textbullet](3)
+        \task $\theta=\frac{\pi}{4}$
+        \task $\theta=\frac{\pi}{3}$
+        \task $\theta=\frac{5\pi}{6}$
+      \end{tasks}
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 31.1: Dot Product}
@@ -101,10 +110,13 @@
     Given two vectors $\vecu=\bracket{u_1,u_2,u_3}$ and $\vecv=\bracket{v_1,v_2,v_3}$, 
       \[\vecu\cdot\vecv=u_1v_1+u_2v_2+u_3v_3.\]
   }}
-  %TODO Outline of proof
-  %TODO examples finding the angle between vectors
-  \pagebreak
   
+  \begin{ex*}
+    Given vectors $\vecu=\bracket{\sqrt3,1,0}$ and $\vecv=\bracket{1,\sqrt3,0}$, compute $\vecu\cdot\vecv$ and find $\theta$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
   \textbf{Properties of Dot Products}
   
   \noindent
@@ -129,8 +141,7 @@
       \end{minipage}
     \end{center}
   }}
-  %TODO LC pick out properties of dot product
-  \pagebreak
+  \vspace*{\stretch{1}}
 
   \textbf{Orthogonal Projections}
 
@@ -139,9 +150,8 @@
   \begin{center}
     \includegraphics[width=0.9\linewidth]{images/briggs_13_03/fig13_47}
   \end{center}
-%  \vspace*{\stretch{1}}
-  %TODO "derive" projection
-  %TODO LC How does |v|*|v| = v\cdot v?
+  \pagebreak
+
   \begin{defn*}[(Orthogonal) Projection of $\vecu$ onto $\vecv$]
     The \textbf{orthogonal projection of $\vecu$ onto $\vecv$}, denoted $\proj_\vecv \vecu$, where $\vecv\neq\bfO$, is
       \[\proj_\vecv \vecu =\underbrace{\abs{\vecu}\cos\theta}_{\textnormal{\textcolor{blue}{length}}}\underbrace{\parens{\frac{\vecv}{\abs{\vecv}}}}_{\textnormal{\textcolor{blue}{direction}}}.\]
@@ -150,29 +160,42 @@
     where the \textbf{scalar component of $\vecu$ in the direction of $\vecv$} is
       \[\operatorname{scal}_\vecv \vecu=\abs{\vecu}\cos\theta=\frac{\vecu\cdot\vecv}{\abs{\vecv}}.\]
   \end{defn*}
+
+  \begin{ex*}
+    Find $\proj_\vecv\vecu$ and $\operatorname{scal}_\vecv\vecu$ for the following:
+    \begin{tasks}[after-item-skip=\stretch{1}, label=\textbullet](1)
+      \task $\vecu=\bracket{1,1}$, $\vecv=\bracket{-2,1}$
+      \task $\vecu=\bracket{7,1,7}$, $\vecv=\bracket{5,7,0}$
+    \end{tasks}
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+
   \pagebreak
-  %TODO examples computing proj_v u and scal_v u
+
   \textbf{Applications of Dot Products}
 
   \begin{defn*}[Work]
     Let a constant force $\mathbf{F}$ be applied to an object, producing a displacement $\mathbf{d}$. If the angle between $\mathbf{F}$ and $\mathbf{d}$ is $\theta$, then the \textbf{work} done by the force is
       \[W=\abs{\mathbf{F}}\abs{\mathbf{d}}\cos\theta=\mathbf{F}\cdot \mathbf{d}\]
   \end{defn*}
-  %TODO work example
+
   \begin{ex*}
-    
+    A force $\mathbf F=\bracket{3,3,2}$ (in newtons) moves an object along a line segment from $P(1,1,0)$ to $Q(6,6,0)$ (in meters). What is the work done by the force? 
   \end{ex*}
+  \vspace*{\stretch{1}}
   
   \noindent
   \underline{Parallel and Normal Forces:}
+  \vspace*{0.5\baselineskip}
   
   \noindent
-  \begin{minipage}[t]{0.65\linewidth}
+  \begin{minipage}[t]{0.625\linewidth}
     \begin{ex*}
-      %TODO parallel and normal forces example
+      A $10$-lb block rests on a plane that is inclined at $30^\circ$ above the horizontal. Find the components of the gravitational force parallel to and normal (perpendicular) to the plane.
     \end{ex*}
   \end{minipage}%
-  {\begin{minipage}[t]{0.35\linewidth}\mbox{}
+  \begin{minipage}[t]{0.375\linewidth}\mbox{}
     \begin{flushright}
       \def\angle{35}
       \def\boxWidth{0.7}
@@ -207,8 +230,8 @@
         \draw[dashed, blue] (normal) -- (gravity) -- (parallel);
       \end{tikzpicture}
     \end{flushright}
-  \end{minipage}}
-\pagebreak
+  \end{minipage}
+  \vspace*{\stretch{1}}
 
-
+  \pagebreak
 \end{document}
