@@ -197,7 +197,7 @@
   \end{minipage}%
   \begin{minipage}[t]{0.375\linewidth}\mbox{}
     \begin{flushright}
-      \def\angle{35}
+      \def\angle{30}
       \def\boxWidth{0.7}
       \def\scaleFact{1.6}
       \begin{tikzpicture}[
@@ -208,8 +208,8 @@
         \draw[plane] (0,-1) coordinate (base)
                        -- coordinate[pos=0.5] (mid) ++(\angle:6) coordinate (top)
                        |- (base) coordinate[pos=0.5] (corner) -- cycle;
-        \tkzFillAngle[fill= ClemsonOrange!90,size=0.85cm, opacity=0.8](corner,base,top);
-        \tkzLabelAngle[pos = 0.65,font=\normalsize, yshift=0.5pt](corner,base,top){\color{black}$\theta$};
+        \tkzFillAngle[fill= ClemsonOrange!90,size=0.85cm, opacity=0.8](corner,base,top)
+        \tkzLabelAngle[pos = 0.65,font=\normalsize, yshift=0.5pt](corner,base,top){\color{black}$\theta$}
         \path (mid) node[M,rotate=\angle,yshift=\boxWidth cm] (M) {};
         \draw[->, line width=1pt, red] 
           ($(mid)+({-sin(\angle)*\boxWidth cm}, {cos(\angle)*\boxWidth cm})$) 
@@ -218,12 +218,12 @@
             {$\mathbf{F}$= gravitational force \\ (weight)};
         \draw[->, line width=1pt, blue] 
           ($(mid)+({-sin(\angle)*\boxWidth cm}, {cos(\angle)*\boxWidth cm})$) 
-            -- ++(35-90:4/\scaleFact) coordinate (normal)
+            -- ++(\angle-90:{5*cos(\angle)/\scaleFact}) coordinate (normal)
           node[right, pos=0.5, black, font=\normalsize, align=right] 
             {Normal\\ component\\ of $\mathbf{F}$};
         \draw[->, line width=1pt, blue] 
           ($(mid)+({-sin(\angle)*\boxWidth cm}, {cos(\angle)*\boxWidth cm})$) 
-            -- ++(35-180:3/\scaleFact) coordinate (parallel)
+            -- ++(\angle-180:{5*sin(\angle)/\scaleFact}) coordinate (parallel)
           node[above left, anchor=east, black, font=\normalsize, align=left,
             yshift=10pt, pin={[pin edge={->, shorten >=9pt}]0:{}}] 
             {Parallel\\ component\\ of $\mathbf{F}$};

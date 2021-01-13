@@ -1,7 +1,40 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
+\section{14.3: Motion in Space}
+  \begin{defn*}
+    Let the \textbf{position} of an object moving in three-dimensional space be given by \newline$\vecr(t)=\bracket{x(t),y(t),z(t)}$, for $t\geq 0$. The \textbf{velocity} of the object is
+      \[\vecv(t)=\vecr'(t)=\bracket{x'(t),y'(t),z'(t)}.\]
+    The \textbf{speed} of the object is the scalar function
+      \[\abs{\vecv(t)=\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}}\]
+    The \textbf{acceleration} of the object is $\mathbf a(t)=\vecv'(t)=\vecr''(t)$.
+  \end{defn*}
+  
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 14.2: Motion with constant $\abs{\vecr}$}\\
+    Let $\vecr$ describe a path on which $\abs{\vecr}$ is constant (motion on a circle or sphere centered at the origin). Then $\vecr\cdot\vecv=0$, which means the position vector and the velocity vector are orthogonal at all times for which the functions are defined. 
+  }}
+  
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Summary: Two-Dimensional Motion in a Gravitational Field}\\
+    Consider an object moving in a plane with a horizontal $x$-axis and a vertical $y$-axis, subject only to the force of gravity. Given the initial velocity $\vecv(0)=\bracket{u_0,v_0}$ and the initial position $\vecr(0)=\bracket{x_0,y_0}$, the velocity of the object, for $t\geq 0$, is
+      \[\vecv(t)=\bracket{x'(t), y'(t)}=\bracket{u_0,-gt+v_0}\]
+    and the position is
+      \[\vecr(t)=\bracket{x(t),y(t)}=\bracket{u_0t+x_0,-\frac{1}{2}gt^2+v_0t+y_0}.\]
+  }}
+  
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Summary: Two-Dimensional Motion}\\
+    Assume an object traveling over horizontal ground, acted on only by the gravitational force, has an initial position $\bracket{x_0,y_0}=\bracket{0,0}$ and initial velocity $\bracket{u_0,v_0}=\bracket{\abs{\vecv_0}\cos\alpha, \abs{\vecv_0}\sin\alpha}$. The trajectory, which is a segment of a parabola, has the following properties.
+    \begin{align*}
+      \textnormal{time of flight}&= T= \frac{2\abs{\vecv_0}\sin\alpha}{g}\\
+      \textnormal{range}&=\frac{\abs{\vecv_0}^2\sin\parens{2\alpha}}{g}\\
+      \textnormal{maximum height}&=y\parens{\frac{T}{2}}=\frac{\parens{\abs{\vecv_0}\sin\alpha}^2}{2g}
+    \end{align*}
+  }}
   
   \pagebreak
   

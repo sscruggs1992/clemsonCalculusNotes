@@ -1,8 +1,43 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
+\section{14.2: Calculus of Vector-Valued Functions}
+  \begin{defn*}[Derivative and Tangent Vector]
+    Let $\vecr(t)=f(t)\bfi+g(t)\bfj+h(t)\bfk$, where $f$,$g$, and $h$ are differentiable functions on $(a,b)$. Then $\vecr$ has a \textbf{derivative} (or is \textbf{differentiable}) on $(a,b)$ and
+      \[\vecr'(t)=f'(t)\bfi+g'(t)\bfj+h'(t)\bfk.\]
+    Provided $\vecr'(t)\neq \bfO$, $\vecr'(t)$ is a \textbf{tangent vector} at the point corresponding to $\vecr(t)$.
+  \end{defn*}
   
+  \begin{defn*}[Unit Tangent Vector]
+    Let $\vecr(t)=f(t)\bfi+g(t)\bfj+h(t)\bfk$ be a smooth parameterized curve, for $a\leq t\leq b$. The \textbf{unit tangent vector} for a particular value of $t$ is
+      \[\mathbf T(t)=\frac{\vecr'(t)}{\abs{\vecr'(t)}}.\]
+  \end{defn*}
+  
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Derivative Rules}\\
+    Let $\vecu$ and $\vecv$ be differentiable vector-valued functions, and let $f$ be a differentiable scalar-valued function, all at a point $t$. Let $\mathbf c$ be a constant vector. The following rules apply.
+    \begin{enumerate}
+      \TabPositions{0.6\linewidth}
+      \item $\displaystyle \ddt(\mathbf c)=\bfO$ \tab \textcolor{blue}{Constant Rule}
+      \item $\displaystyle \ddt\parens{\vecu(t)+\vecv(t)}=\vecu'(t)+\vecv'(t)$ \tab \textcolor{blue}{Sum Rule}
+      \item $\displaystyle \ddt\parens{f(t)\vecu(t)}=f'(t)\vecu(t)+f(t)\vecu'(t)$ \tab \textcolor{blue}{Product Rule}
+      \item $\displaystyle \ddt\parens{\vecu(f(t))}=\vecu'\parens{f(t)}f'(t)$ \tab \textcolor{blue}{Chain Rule}
+      \item $\displaystyle \ddt\parens{\vecu(t)\cdot\vecv(t)}=\vecu'(t)\cdot\vecv(t)+\vecu(t)\cdot\vecv'(t)$ \tab \textcolor{blue}{Dot Product Rule}
+      \item $\displaystyle \ddt\parens{\vecu(t)\times\vecv(t)}=\vecu'(t)\times\vecv(t)+\vecu(t)\times\vecv'(t)$ \tab \textcolor{blue}{Cross Product Rule}
+    \end{enumerate}
+  }}
+  
+  \begin{defn*}[Indefinite Integral of a Vector-Valued Function]
+    Let $\vecr(t)=f(t) \bfi+g(t) \bfj+h(t) \bfk$ be a vector function, and let \newline $\mathbf R(t)=F(t) \bfi+G(t) \bfj+H(t) \bfk$, where $F$, $G$, and $H$ are antiderivatives of $f$, $g$, and $h$, respectively. The \textbf{indefinate integral} of $\vecr$ is
+      \[\int\vecr(t)\,dt=\mathbf R(t)+\mathbf C,\]
+    where $\mathbf C$ is an arbitrary constant vector. Alternatively, in component form,
+      \[\int\bracket{f(t),g(t),h(t)}\,dt=\bracket{F(t),G(t),H(t)}+\bracket{C_1,C_2,C_3}.\]
+  \end{defn*}
+  
+  \begin{defn*}[Definite Integral of a Vector-Valued Function]
+    Let $\vecr(t)=f(t)\bfi+g(t)\bfj+h(t)\bfk$, where $f$, $g$, and $h$ are integrable on the interval $\sbrkt{a,b}$. The \textbf{definite integral} of $\vecr$ on $\sbrkt{a,b}$ is
+      \[\int_a^b \vecr(t)\,dt=\parens{\int_a^b f(t)\,dt}\bfi+\parens{\int_a^b g(t)\,dt}\bfj+\parens{\int_a^b h(t)\,dt}\bfk\]
+  \end{defn*}
   \pagebreak
   
 \end{document}
