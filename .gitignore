@@ -2,6 +2,8 @@
 attendanceQuiz*
 *.aux
 *.auxlock
+*.fdb_latexmk
+*.fls
 *.log
 math2060Notes_??p?.pdf
 *.out

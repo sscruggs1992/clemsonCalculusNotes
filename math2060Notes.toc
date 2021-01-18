@@ -3,3 +3,4 @@
 \contentsline {section}{\numberline {}13.3: Dot Products}{13}{section.3}%
 \contentsline {section}{\numberline {}13.4: Cross Products}{18}{section.4}%
 \contentsline {section}{\numberline {}13.5: Lines and Planes in Space}{24}{section.5}%
+\contentsline {section}{\numberline {}13.6: Cylinders and Quadric Surfaces}{30}{section.6}%
