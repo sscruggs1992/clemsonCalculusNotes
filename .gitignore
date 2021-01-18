@@ -1,8 +1,10 @@
 *~
+attendanceQuiz*
 *.aux
 *.auxlock
 *.log
+math2060Notes_??p?.pdf
 *.out
 *.synctex.gz
 *.xopp
-math2060Notes_??p?.pdf
+*.zip
