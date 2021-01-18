@@ -4,3 +4,4 @@
 \contentsline {section}{\numberline {}13.4: Cross Products}{18}{section.4}%
 \contentsline {section}{\numberline {}13.5: Lines and Planes in Space}{24}{section.5}%
 \contentsline {section}{\numberline {}13.6: Cylinders and Quadric Surfaces}{30}{section.6}%
+\contentsline {section}{\numberline {}14.1: Vector-Valued Functions}{38}{section.7}%
