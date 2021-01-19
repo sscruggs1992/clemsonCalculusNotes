@@ -32,11 +32,7 @@
   \textbf{Equations of Simple Planes:}\newline
     Planes in three-dimensions are analogous to lines in two-dimensions. Below, we see the $yz$-plane, the $xz$-plane, and the $xy$-plane, along with planes that are parallel where $x$, $y$, and $z$ are fixed respectively:
     \begin{center}
-      \begin{tikzpicture}[scale=0.8, declare function={
-        xyPlane(\x,\y,\z)=;
-        xzPlane(\x,\y,\z)=;
-        yzPlane(\x,\y,\z)=;
-        }]
+      \begin{tikzpicture}[scale=0.8]
         \begin{groupplot}[
           group style={group size=3 by 1, horizontal sep=1cm},
           axis lines=center,
