@@ -1,19 +1,61 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
-\relscale{1.4} %TODO
+%\relscale{1.4} %TODO
 \section{14.4: Length of Curves}
   \begin{defn*}[Arc Length for Vector Functions]
     Consider the parameterized curve $\vecr(t)=\bracket{f(t),g(t),h(t)}$, where $f'$, $g'$, and $h'$ are continuous, and the curve is traversed once for $a\leq t\leq b$. The \textbf{arc length} of the curve between $\parens{f(a), g(a), h(a)}$ and $\parens{f(b), g(b), h(b)}$ is
     \[L=\int_a^b \sqrt{f'(t)^2+g'(t)^2+h'(t)^2}\,dt=\int_a^b\abs{\vecr'(t)}\,dt.\]
   \end{defn*}
-  
+  \begin{ex*}[Flight of an eagle]
+    Suppose an eagle rises at a rate of 100 vertical ft/min on a helical path given by
+      \[\vecr(t)=\bracket{250\cos(t),\,250\sin(t),\,100t}\] 
+    where $\vecr$ is measured in feet and $t$ is measured in minutes. How far does it travel in 10 minutes?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Suppose a particle has a trajectory given by 
+      \[\vecr(t)=\bracket{10\cos(3t),\,10\sin(3t)}\]
+    where $0\leq t\leq \pi$. How far does this particle travel?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}
+    Find the length of the curve
+      \[\vecr(t)=\bracket{3t^2-5,\,4t^2+5}\]
+    where $0\leq t\leq 1$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Find the length of $\vecr(t)=\bracket{t^2,\,\dfrac{\parens{4t+1}^{\frac{3}{2}}}{6}}$ where $0\leq t\leq 6$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}
+    Find the length of $\vecr(t)=\bracket{2\sqrt{2},\,\sin(t),\,\cos(t)}$ where $0\leq t\leq 5$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 14.3: Arc Length as a Function of a Parameter}\\
     Let $\vecr(t)$ describe a smooth curve, for $t\geq a$. The arc length is given by 
-      \[s(t)=\int_a^t \abs{v(u)}\,du,\]
+      \[s(t)=\int_a^t \abs{\vecv(u)}\,du,\]
     where $\abs{\vecv}=\abs{\vecr'}$. Equivalently, $\displaystyle \frac{ds}{dt}=\abs{\vecv(t)}$. If $\abs{\vecv(t)}=1$, for all $t\geq a$, then the parameter $t$ corresponds to arc length.
   }}
+  \begin{ex*}
+    For the following functions, determine if $\vecr(t)$ uses arc length as a parameter. If not, find a description that uses arc length as a parameter.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](1)
+    \task $\vecr(t)=\bracket{-4t+1,3t-1}$,\ $0\leq 4$.
+    \task $\vecr(t)=\bracket{\frac{1}{\sqrt{10}}\cos(t),\frac{3}{\sqrt{10}}\sin(t)}$,\ $0\leq t\leq 2\pi$.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  
   \pagebreak
   
 \end{document}
