@@ -26,15 +26,65 @@
   \end{defn*}
   \pagebreak
 
-  
-
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 14.4: Curvature Formula}\\
     Let $\vecr(t)$ describe a smooth parameterized curve, where $t$ is any parameter. If $\vecv=\vecr'$ is the velocity and $\mathbf T$ is the unit tangent vector, then the curvature is
       \[\kappa(t)=\frac{1}{\abs{\vecv}}\abs{\frac{d\mathbf T}{dt}}=\frac{\abs{\mathbf T'(t)}}{\abs{\vecr'(t)}}.\]
   }}
+  \begin{itemize}
+    \item 
+      $\kappa$ is a non-negative scalar-valued function
+    \item 
+      Curvature of zero corresponds to a straight line
+    \item 
+      A relatively flat curve has a small curvature
+    \item 
+      A tight curve has a larger curvature
+  \end{itemize}
 
+  \begin{ex*}
+    Consider the line
+      \[\vecr(t)=\bracket{x_0+at,\,y_0+bt,\,z_0+ct},\textnormal{ for }-\infty<t<\infty.\]
+    Compute $\kappa$.
+  \end{ex*}
+
+  \pagebreak
+
+  \begin{ex*}
+    Consider the circle
+      \[\vecr(t)=\bracket{R\cos(t),\,R\sin(t)}\]
+    for $0\leq t\leq 2\pi$, where $R>0$. Show that $\kappa=1/R$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}
+    Consider the curve
+      \[\vecr(t)=\bracket{2\cos(t),\,2\sin(t),\,\sqrt{5}t}\]
+    Compute $\kappa$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \pagebreak
+  \textbf{An Alternative Curvature Formula:}\\
+  Consider a smooth function $\vecr(t)$ with non-zero velocity $\vecv(t)=\vecr'(t)$ and non-zero acceleration $\mathbf a(t)=\vecv'(t)$. 
+    \[\mathbf T=\frac{\vecv}{\abs{\vecv}}\ \Rightarrow\   \vecv=\abs{\vecv}\,\mathbf T.\]
+  Thus
+    \[\mathbf a=\frac{d\vecv}{dt}=\ddt\sbrkt{\abs{\vecv}\,\mathbf T}=\ddt\sbrkt{\abs{\vecv}}\,\mathbf T+\abs{\vecv}\,\frac{d\mathbf T}{dt}.\]
+  Now we form $\vecv\times\mathbf a$:
+  \begin{align*}
+    \vecv\times\mathbf a&=\abs{\vecv}\,\mathbf T\times\parens{\ddt\sbrkt{\abs{\vecv}}\,\mathbf T+\abs{\vecv}\,\frac{d\mathbf T}{dt}}\\[5pt]
+      &=\underbrace{\abs{\vecv}\,\mathbf T\times\ddt\sbrkt{\abs{\vecv}}\,\mathbf T}_{\bfO}+\abs{\vecv}\,\mathbf T\times\abs{\vecv}\,\frac{d\mathbf T}{dt}
+  \end{align*}
+  Since $\mathbf T$ is a unit vector, $\mathbf T$ and $d\mathbf T/dt$ are orthogonal (Theorem 14.2). Thus
+  \begin{align*}
+    \abs{\vecv\times\mathbf a}=\abs{\abs{\vecv}\,\mathbf T\times\abs{\vecv}\,\frac{d\mathbf T}{dt}}=\abs{\vecv}\underbrace{\abs{\mathbf T}}_1\,\abs{\abs{\vecv}\frac{d\mathbf T}{dt}}\underbrace{\sin\theta}_1
+      =\abs{\vecv}^2 \abs{\frac{d\mathbf T}{dt}}
+  \end{align*}
+  Now, using Theorem 14.4, where $\ds\abs{\frac{d\mathbf T}{dt}}=\kappa \abs{\vecv}$, we have
+    \[\abs{\vecv\times\mathbf a}=\abs{\vecv}^2\abs{\frac{d\mathbf T}{dt}}=\abs{\vecv}^2\,\kappa\abs{\vecv}=\kappa\abs{\vecv}^3.\]
+
+  \vspace*{\stretch{1}}
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Theorem 14.5: Alternative Curvature Formula}\\
@@ -43,6 +93,18 @@
     where $\vecv=\vecr'$ is the velocity and $\mathbf a=\vecv'$ is the acceleration.
   }}
 
+  \pagebreak
+
+  \begin{ex*}
+    Consider the curve
+      \[\vecr(t)=\bracket{-16\cos(t),\,16\sin(t),\,0}.\]
+    Compute the curvature $\kappa$ using both methods.
+  \end{ex*}
+
+  \pagebreak
+  \textbf{Principal Unit Normal Vector}\\
+  Curvature indicates how quickly a curve turns. The principal unit normal vector determines the \textit{direction} in which a curve turns.
+
   \begin{defn*}[Principal Unit Normal Vector]
     Let $\vecr$ describe a smooth curve parameterized by arc length. The \textbf{principal unit normal vector} at a point $P$ on the curve at which $\kappa\neq 0$ is
       \[\mathbf N(s)=\frac{d\mathbf T/ds}{\abs{d\mathbf T/ds}}=\frac{1}{\kappa}\frac{d\mathbf T}{ds}.\]
@@ -50,6 +112,9 @@
       \[\mathbf N(t)=\frac{d\mathbf T/dt}{\abs{d\mathbf T/dt}},\]
     evaluated at the value of $t$ corresponding to $P$.
   \end{defn*}
+  \begin{center}
+    \includegraphics[width=0.275\linewidth]{images/briggs_14_05/fig14_31}
+  \end{center}
 
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
@@ -62,6 +127,16 @@
         The principal unit normal vector points to the inside of the curve -- in the direction that the curve is turning.
     \end{enumerate}
   }}
+  \pagebreak
+
+  \begin{ex*}
+    For the curve $\vecr(t)=\bracket{a\cos(t),\,a\cos(t),\,bt}$, find the unit tangent vector $\mathbf T$ and the principal unit normal vector $\mathbf N$. Verify $\abs{\mathbf T}=\abs{\mathbf N}=1$ and $\mathbf T\cdot\mathbf N=0$.
+  \end{ex*}
+
+  \pagebreak
+
+  \textbf{Components of the Acceleration}\\
+  Recall that the change in velocity, or acceleration, of an object change change in \textit{speed} and in \textit{direction}. 
   
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
@@ -70,6 +145,8 @@
       \[\mathbf a=a_N\mathbf N+a_T\mathbf T,\]
     where $a_N=\kappa\abs{\vecv}^2=\ds\frac{\abs{\vecv\times\mathbf a}}{\abs{\vecv}}$ and $a_T=\ds\frac{d^2s}{dt^2}$.
   }}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
   \begin{defn*}[Unit Binormal Vector and Torsion]
     Let $C$ be a smooth parameterized curve with unit tangent and principal unit normal vectors $\mathbf T$ and $\mathbf N$, respectively. Then at each point of the curve at which the curvature is nonzero, the \textbf{unit binomial vector} is
@@ -78,6 +155,7 @@
       \[\tau=-\frac{d\mathbf B}{ds}\cdot\mathbf N\]
   \end{defn*}
 
+  \noindent
   \fbox{\parbox{0.9875\linewidth}{
     \textbf{Summary: Formula for Curves in Space}\\
     
