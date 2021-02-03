@@ -8,3 +8,4 @@
 \contentsline {section}{\numberline {}14.2: Calculus of Vector-Valued Functions}{44}{section.8}%
 \contentsline {section}{\numberline {}14.3: Motion in Space}{49}{section.9}%
 \contentsline {section}{\numberline {}14.4: Length of Curves}{54}{section.10}%
+\contentsline {section}{\numberline {}14.5: Curvature and Normal Vectors:}{58}{section.11}%
