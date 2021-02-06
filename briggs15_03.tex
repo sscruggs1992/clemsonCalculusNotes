@@ -1,8 +1,42 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{15.3: Partial Derivatives}
+
+  \begin{defn*}[Partial Derivatives]
+    The \textbf{partial derivative of $f$ with respect to $x$ at the point $(a,b)$ is}
+      \[f_x(a,b)=\lim_{h\to 0} \frac{f(a+h,b)-f(a,b)}{h}.\]
+    The \textbf{partial derivative of $f$ with respect to $y$ at the point $(a,b)$ is}
+      \[f_y(a,b)=\lim_{h\to 0} \frac{f(a,b+h)-f(a,b)}{h},\]
+    provided these limits exist.
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.4: (Clairut) Equality of Mixed Partial Derivatives}
+    Assume $f$ is defined on an open set $D$ of $\bbr^2$, and that $f_{xy}$ and $f_{yx}$ are continuous throughout $D$. Then $f_{xy}=f_{yx}$ at all points of $D$.
+  }}
+
+  \begin{defn*}[Differentiability]
+    The function $z=f(x,y)$ is \textbf{differentiable at $(a,b)$} provided $f_x(a,b)$ and $f_y(a,b)$ exist and the change $\Delta z=f(a+\Delta x, b+\Delta y)-f(a,b)$ equals
+      \[\Delta z=f_x(a,b)\Delta x+ f_y(a,b)\Delta y=\eps_1\Delta x+\eps_2\Delta y,\]
+    where for fixed $a$ and $b$, $\eps_1$ and $\eps_2$ are functions that depend only on $\Delta x$ and $\delta y$, with $\parens{\eps_1,\eps_2}\to (0,0)$ as $\parens{\Delta x,\Delta y}\to(0,0)$. A function is \textbf{differentiable} on an open set $R$ if it is differentiable at every point of $R$.
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.5: Conditions for Differentiability}
+    
+    Suppose the function $f$ has partial derivatives $f_x$ and $f_y$ defined on an open set containing $(a,b)$, with $f_x$ and $f_y$ continuous at $(a,b)$. Then $f$ is differentiable at $(a,b)$.
+  }}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.6: Differentiable Implies Continuous}
+    
+    If a function $f$ is differentiable at $(a,b)$, then it is continuous at $(a,b)$.
+  }}
+
   \pagebreak
   
 \end{document}

@@ -1,8 +1,83 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
+\section{15.2: Limits and Continuity}
+
+  \begin{defn*}[Limit of a Function of Two Variables]
+    The function $f$ has the \textbf{limit} $L$ as $P(x,y)$ approaches $P_0(a,b)$, written
+      \[\lim_{(x,y)\to (a,b)} f(x,y)=\lim_{P\to P_0}f(x,y)=L,\]
+    if, given any $\eps>0$, there exists a $\delta>0$ such that
+      \[\abs{f(x,y)-L}<\eps\]
+    whenever $(x,y)$ is in the domain of $f$ and 
+      \[0< \abs{PP_0}=\sqrt{(x-a)^2+(y-b)^2}<\delta.\]
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.1: Limits of Constant and Linear Functions}
+    
+    Let $a$, $b$, and $c$ be real numbers.
+    \begin{enumerate}
+      \TabPositions{0.45\linewidth}
+      \item Constant function $f(x,y)=c$: \tab $\ds\lim_{(x,y)\to (a,b)} c=c$
+      \item Linear function $f(x,y)=x$: \tab $\ds\lim_{(x,y)\to (a,b)} x=a$
+      \item Linear function $f(x,y)=y$: \tab $\ds\lim_{(x,y)\to (a,b)} y=b$
+    \end{enumerate}
+  }}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.2: Limit Laws for Functions of Two Variables}
+    
+    Let $L$ and $M$ be real numbers and suppose $\ds\lim_{(x,y)\to (a,b)} f(x,y)=L$ and \newline $\ds\lim_{(x,y)\to (a,b)} g(x,y)=M$. Assume $c$ is constant, and $n>0$ is an integer.
+    \begin{enumerate}[itemsep=0.75\baselineskip]
+      \TabPositions{0.325\linewidth, 0.7\linewidth}
+      \item \textbf{Sum} \tab $\ds\lim_{(x,y)\to (a,b)} \parens{f(x,y)+g(x,y)}=L+M$
+      \item \textbf{Difference} \tab $\ds\lim_{(x,y)\to (a,b)} \parens{f(x,y)-g(x,y)}=L-M$
+      \item \textbf{Constant multiple} \tab $\ds\lim_{(x,y)\to (a,b)} cf(x,y)=cL$
+      \item \textbf{Product} \tab $\ds\lim_{(x,y)\to (a,b)} f(x,y)g(x,y)=LM$
+      \item \textbf{Quotient} \tab $\ds\lim_{(x,y)\to (a,b)} \frac{f(x,y)}{g(x,y)}=\frac{L}{M}$, \tab provided $M\neq 0$
+      \item \textbf{Power} \tab $\ds\lim_{(x,y)\to (a,b)} \parens{f(x,y)}^n=L^n$
+      \item \textbf{Root} \tab $\ds\lim_{(x,y)\to (a,b)} \parens{f(x,y)}^{1/n}=L^{1/n}$, \tab when $L>0$ if $n$ is even.
+    \end{enumerate}
+  }}
+
+  \begin{defn*}[Interior and Boundary Points]
+    Let $R$ be a region in $\bbr^2$. An \textbf{interior point} $P$ of $R$ lies entirely within $R$, which means it is possible to find a disk centered at $P$ that contains only points of $R$.
+    \vspace*{\baselineskip}
+    
+    A \textbf{boundary point} $Q$ of $R$ lies on the edge of $R$ in the sense that every disk centered at $Q$ contains at least one point in $R$ and at least one point not in $R$.
+  \end{defn*}
+
+  \begin{defn*}[Open and Closed Sets]
+    A region is \textbf{open} if it consists entirely of interior points. A region is \textbf{closed} if it contains all its boundary points.
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Procedure: Two-Path Test for Nonexistence of Limits}
+    
+    If $f(x,y)$ approaches two different values as $(x,y)$ approaches $(a,b)$ along two different paths in the domain of $f$, then $\ds\lim_{(x,y)\to (a,b)} f(x,y)$ does not exist.
+  }}
+
+  \begin{defn*}[Continuity]
+    The function $f$ is continuous at the point $(a,b)$ provided
+    \begin{enumerate}
+      \item $f$ is defined at $(a,b)$
+      \item $\ds\lim_{(x,y)\to (a,b)} f(x,y)$ exists, and 
+      \item $\ds\lim_{(x,y)\to (a,b)} f(x,y) = f(a,b)$.
+    \end{enumerate}
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.3: Continuity of Composite Functions}
+    
+    If $u=g(x,y)$ is continuous at $(a,b)$ and $z=f(u)$ is continuous at $g(a,b)$, then the composite function $z=f\parens{g(x,y)}$ is continuous at $(a,b)$.
+  }}
+
   
+
   \pagebreak
   
 \end{document}
