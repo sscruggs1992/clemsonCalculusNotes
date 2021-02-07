@@ -9,3 +9,6 @@
 \contentsline {section}{\numberline {}14.3: Motion in Space}{49}{section.9}%
 \contentsline {section}{\numberline {}14.4: Length of Curves}{54}{section.10}%
 \contentsline {section}{\numberline {}14.5: Curvature and Normal Vectors:}{58}{section.11}%
+\contentsline {section}{\numberline {}15.1: Graphs and Level Curves}{72}{section.12}%
+\contentsline {section}{\numberline {}15.2: Limits and Continuity}{80}{section.13}%
+\contentsline {section}{\numberline {}15.3: Partial Derivatives}{86}{section.14}%
