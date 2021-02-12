@@ -1,8 +1,29 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{15.4: The Chain Rule}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.7: Chain Rule (One Independent Variable)}\\
+    Let $z$ be a differentiable function of $x$ and $y$ on its domain, where $x$ and $y$ are differentiable functions of $t$ on an interval $I$. Then
+      \[\frac{dz}{dt}=\frac{\partial z}{\partial x}\frac{dx}{dt}+\frac{\partial z}{\partial y}\frac{dy}{dt}.\]
+  }}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.8: Chain Rule (Two Independent Variables)}\\
+    Let $z$ be a differentiable function of $x$ and $y$, where $x$ and $y$ are differentiable functions of $s$ and $t$. Then
+      \[\frac{\partial z}{\partial s}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial z}{\partial y}\frac{\partial y}{\partial s} \quad\textnormal{and}\quad \frac{\partial z}{\partial t}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial t}+\frac{\partial z}{\partial y}\frac{\partial y}{\partial t}.\]
+  }}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.9: Implicit Differentiation}\\
+    Let $F$ be differentialbe on its domain and suppose $F(x,y)=0$ defines $y$ as a differentiable function of $x$. Provided $F_y\neq 0$,
+      \[\frac{dy}{dx}=-\frac{F_x}{F_y}.\]
+  }}
+
   \pagebreak
   
 \end{document}
