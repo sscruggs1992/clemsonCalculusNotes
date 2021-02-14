@@ -12,3 +12,5 @@
 \contentsline {section}{\numberline {}15.1: Graphs and Level Curves}{72}{section.12}%
 \contentsline {section}{\numberline {}15.2: Limits and Continuity}{80}{section.13}%
 \contentsline {section}{\numberline {}15.3: Partial Derivatives}{86}{section.14}%
+\contentsline {section}{\numberline {}15.4: The Chain Rule}{92}{section.15}%
+\contentsline {section}{\numberline {}15.5: Directional Derivatives and the Gradient}{98}{section.16}%
