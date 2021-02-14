@@ -2,12 +2,24 @@
 \begin{document}
 \relscale{1.4} %TODO
 \section{15.5: Directional Derivatives and the Gradient}
+  Directional derivatives allow us to evaluate the rate of change of a function $f(x,y)$ along any direction (not just parallel with the $x$-axis and $y$-axis).
+  \vspace*{\stretch{1}}
+
+  \begin{center}
+    \hspace*{\stretch{1}}
+    \includegraphics[width=0.375\linewidth]{images/briggs_15_05/fig15_45}
+    \hspace*{\stretch{1}}
+    \includegraphics[width=0.5\linewidth]{images/briggs_15_05/fig15_47}
+    \hspace*{\stretch{1}}
+  \end{center}
+  \vspace*{\stretch{1}}
 
   \begin{defn*}[Directional Derivative]
     Let $f$ be differentiable at $(a,b)$ and let $\vecu=\bracket{u_1,u_2}$ be a unit vector in the $xy$-plane. The \textbf{directional derivative of $f$ at $(a,b)$ in the direction of $u$} is 
       \[D_\vecu f(a,b)=\lim_{h\to 0} \frac{f(a+hu_1,b+hu_2)-f(a,b)}{h},\]
     provided the limit exists.
   \end{defn*}
+  \pagebreak
 
   \noindent
   \fbox{\parbox{0.9875\linewidth}{
