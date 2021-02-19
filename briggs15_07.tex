@@ -1,8 +1,81 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{15.7: Maximum/Minimum Problems}
+
+  \begin{defn*}[Local Maximum/Minimum Values]
+    Suppose $(a,b)$ is a point in a region $R$ on which $f$ is defined. 
+    \begin{itemize}
+      \item 
+        If $f(x,y)\leq f(a,b)$ for all $(x,y)$ in the domain of $f$ and in some open disk centered at $(a,b)$, then $f(a,b)$ is a \textbf{local maximum value} of $f$.
+      \item 
+        If $f(x,y)\geq f(a,b)$ for all $(x,y)$ in the domain of $f$ and in some open disk centered at $(a,b)$, then $f(a,b)$ is a \textbf{local minimum value} of $f$.
+      \item 
+        Local maximum and local minimum values are also called \textbf{local extreme values} or \textbf{local extrema}.
+    \end{itemize}
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.14: Derivatives and Local Maximum/Minimum Values}\\
+    If $f$ has a local maximum or minimum value at $(a,b)$ and the partial derivatives $f_x$ and $f_y$ exist at $(a,b)$, then $f_x(a,b)=f_y(a,b)=0$.
+  }}
+
+  \begin{defn*}[Critical Point]
+    An interior point $(a,b)$ in the domain of $f$ is a \textbf{critical point} of $f$ if either
+    \begin{enumerate}
+      \item 
+        $f_x(a,b)=f_y(a,b)=0$, or
+      \item 
+        at least one of the partial derivatives $f_x$ and $f_y$ does not exist at $(a,b)$.
+    \end{enumerate}
+  \end{defn*}
+
+  \begin{defn*}[Saddle Point]
+    Consider a function $f$ that is differentiable at a critical point $(a,b)$. Then $f$ has a \textbf{saddle point} at $(a,b)$ if, in every open disk centered at $(a,b)$, there are points $(x,y)$ for which $f(x,y)>f(a,b)$ and points for which $f(x,y)<f(a,b)$.
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Theorem 15.15: Second Derivative Test}\\
+    Suppose the second partial derivatives of $f$ are continuous throughout an open disk centered at the point $(a,b)$, where $f_x(a,b)=f_y(a,b)=0$. Let 
+      \[D(x,y)=f_{xx}(xy) f_{yy}(x,y)-\parens{f_{xy}(x,y)}^2.\]
+    \begin{enumerate}
+      \item 
+        If $D(a,b) > 0$ and $f_{xx}(a,b) < 0$, then $f$ has a local maximum value at $(a,b)$.
+      \item 
+        If $D(a,b) > 0$ and $f_{xx}(a,b) > 0$, then $f$ has a local minimum value at $(a,b)$.
+      \item 
+        If $D(a,b) <0$, then $f$ has a saddle point at $(a,b)$.
+      \item 
+        If $D(a,b)=0$, then the test is inconclusive.
+    \end{enumerate}
+  }}
+
+  \begin{defn*}[Absolute Maximum/Minimum Values]
+    Let $f$ be defined on a set $R$ in $\bbr^2$ containing the point $(a,b)$. 
+    \begin{itemize}
+      \item 
+        If $f(a,b)\geq f(x,y)$ for every $(x,y)$ in $R$, then $f(a,b)$ is an \textbf{absolute maximum value} of $f$ on $R$.
+      \item 
+        If $f(a,b)\leq f(x,y)$ for every $(x,y)$ in $R$, then $f(a,b)$ is an \textbf{absolute minimum value} of $f$ on $R$.
+    \end{itemize}
+  \end{defn*}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Procedure: Finding Absolute Maximum/Minimum Values on Closed Bounded Sets}\\
+    Let $f$ be continuous on a closed bounded set $R$ in $\bbr^2$. To find the absolute maximum and minimum values of $f$ on $R$:
+    \begin{enumerate}
+      \item 
+        Determine the values of $f$ at all critical points in $R$.
+      \item 
+        Find the maximum and minimum values of $f$ on the boundary of $R$.
+      \item 
+        The greatest function value found in Steps 1 and 2 is the absolute maximum value of $f$ on $R$, and the least function value found in Steps 1 and 2 is the absolute minimum value of $f$ on $R$.
+    \end{enumerate}
+  }}
+
   \pagebreak
   
 \end{document}

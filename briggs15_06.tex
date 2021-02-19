@@ -1,7 +1,26 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
+\section{15.6: Tangent Planes and Linear Approximation}
+
+  \noindent
+  \fbox{\parbox{0.9875\linewidth}{
+    \textbf{Tangent Plane for $z=f(x,y)$}\\
+    Let $f$ be differentiable at the point $(a,b)$. An equation of the plane tangent to the surface $z=f(x,y)$ at the point $(a,b,f(a,b))$ is
+      \[z=f_x(a,b)(x-a)+f_y(a,b)(y-b)+f(a,b)\]
+  }}
+  
+  \begin{defn*}[Linear Approximation]
+    Let $f$ be differentiable at $(a,b)$. The linear approximation to the surface $z=f(x,y)$ at the point $(a,b,f(a,b))$ is the tangent plane at that point, given by the equation
+      \[L(x,y)=f_x(a,b)(x-a)+f_y(a,b)(y-b)+f(a,b),\]
+    For a function of three variables, the linear approximation to $w=f(x,y,z)$ at the point $(a,b,c,f(a,b,c))$ is given by
+      \[L(x,y,z)=f_x(a,b,c)(x-a)+f_y(a,b,c)(y-b)+f_z(a,b,c)(z-c)+f(a,b,c).\]
+  \end{defn*}
+
+  \begin{defn*}[The differential $dz$]
+    Let $f$ be differentiable at the point $(x,y)$. The change in $z=f(x,y)$ as the independent variables change from $(x,y)$ to $(x+dx, y+dy)$ is denoted $\Delta z$ and is approximated by the differential $dz$:
+      \[\Delta z\approx dz= f_x(x,y)\,dx+f_y(x,y)\,dy.\]
+  \end{defn*}
   
   \pagebreak
   
