@@ -2,13 +2,10 @@
 \begin{document}
 %\relscale{1.4}
 \section{3.3: Rules of Differentiation}
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-    \textbf{Theorem 3.2} Constant Rule
+\begin{thmBox*}[Theorem 3.2: Constant Rule]
+  If $c$ is a real number, then $\dfrac{d}{dx}(c)=0$.
+\end{thmBox*}
 
-    If $c$ is a real number, then $\dfrac{d}{dx}(c)=0$.
-    }} 
-\end{center}
 \begin{ex*}
   Find the derivatives of
   \begin{tasks}(3)
@@ -16,13 +13,11 @@
   \end{tasks}
 \end{ex*}
 \vspace*{\stretch{1}}
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-    \textbf{Theorem 3.3} Power Rule
-    
-    If $n$ is a nonnegative integer, then $\dfrac{d}{dx}\parens{x^n}=nx^{n-1}$
-  }}
-\end{center}
+
+\begin{thmBox*}[Theorem 3.3: Power Rule]
+  If $n$ is a nonnegative integer, then $\dfrac{d}{dx}\parens{x^n}=nx^{n-1}$
+\end{thmBox*}
+
 \begin{ex*}
   Find the derivative of 
   \begin{tasks}(3)
@@ -57,16 +52,12 @@
 \end{proof}
 \pagebreak
 
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-  \textbf{Theorem 3.4} Constant Multiple Rule
-  
-  If $f$ is differentiable at $x$ and $c$ is a constant, then
-    $$\dfrac{d}{dx}\parens{cf(x)}=cf'(x)$$
-  }}
-\end{center}
-\begin{ex*}\ 
+  \begin{thmBox*}[Theorem 3.4: Constant Multiple Rule]
+    If $f$ is differentiable at $x$ and $c$ is a constant, then
+      $$\dfrac{d}{dx}\parens{cf(x)}=cf'(x)$$
+  \end{thmBox*}
 
+\begin{ex*}\ 
   \begin{tasks}(3)
     \task[] $\dfrac{d}{dx}\parens{-4x^9}$
     \task[] $\dfrac{d}{dx}\parens{-\dfrac{7x^{11}}{8}}$
@@ -74,17 +65,14 @@
   \end{tasks}
 \end{ex*}
 \vspace*{\stretch{1}}
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-    \textbf{Theorem 3.5} Sum Rule
-    
-    If $f$ and $g$ are differentiable at $x$, then 
-      $$\dfrac{d}{dx}\parens{f(x)+g(x)}=f'(x)+g'(x)$$
-  }}
-\end{center}
+
+\begin{thmBox*}[Theorem 3.5: Sum Rule]
+  If $f$ and $g$ are differentiable at $x$, then 
+    $$\dfrac{d}{dx}\parens{f(x)+g(x)}=f'(x)+g'(x)$$
+\end{thmBox*}
+
 \begin{ex*}
   Find the derivative of the following:
-  
   \begin{tasks}(2)
     \task[] $p(x)=3x^{100}+4x^e-17x+24-\pi^{\cos(e)}$
     \task[] $t(w)=2w^3+9w^2-6w+4$
@@ -92,6 +80,7 @@
 \end{ex*}
 \vspace*{\stretch{1}}
 \pagebreak
+
 \begin{defn*}(The Number $e$)
 
   The number $e=2.718281828459\dots$ satisfies
@@ -101,15 +90,13 @@
 \end{defn*}
 \textit{Note:} One way to show the above result is to recall that $\ds\lim_{n\to \infty} \parens{1+\dfrac{1}{n}}^n=e$.
 \vspace*{30pt}
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-  \textbf{Theorem 3.6} The Derivative of $e^x$
-  
+
+\begin{thmBox*}[Theorem 3.6: The Derivative of $e^x$]
   The function $f(x)=e^x$ is differentiable for all real numbers $x$, and 
     $$\dfrac{d}{dx}\parens{e^x}=e^x$$
-  }}
-\end{center}
+\end{thmBox*}
 \vspace*{20pt}
+
 \begin{proof}
   $$\dfrac{d}{dx}\parens{e^x}
       =\lim_{h\to 0}\dfrac{e^{x+h}-e^x}{h}
@@ -118,6 +105,7 @@
       =e^x\cdot 1=e^x$$
 \end{proof}
 \vspace*{20pt}
+
 \begin{ex*}
   Find the derivatives of the following
   \begin{tasks}(3)
@@ -127,6 +115,7 @@
   \end{tasks}
 \end{ex*}
 \pagebreak
+
 \begin{ex*}
   \textit{Note:} Simplify the expression before taking the derivative
   \begin{tasks}[after-item-skip=\stretch{0.5}](2)
@@ -141,6 +130,7 @@
   \end{tasks}
 \end{ex*}
 \pagebreak
+
 \begin{ex*}
   Use the table to find the following derivatives:
   \begin{center}
@@ -169,6 +159,7 @@
   \vspace*{\stretch{1}}
 \end{ex*}
 \pagebreak
+
 \begin{ex*}
   Find the equation of the normal line to $f(x)=1-x^2$ at $x=2$.
   \vspace*{\stretch{1}}
@@ -182,6 +173,7 @@
   \vspace*{\stretch{1}}
 \end{ex*}
 \pagebreak
+
 \begin{ex*}
   Find an equation of the line having slope $\dfrac{1}{4}$ that is tangent to the curve $y=\sqrt x$.
   \vspace*{\stretch{1}}

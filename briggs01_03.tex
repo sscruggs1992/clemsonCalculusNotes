@@ -46,17 +46,16 @@
   \end{defn*}
   \pagebreak
   
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-  \textbf{Laws of Exponents:}  
-  For $a>0$, we have the following laws:
-  \begin{tasks}(2)
-    \task $a^{x+y}=a^xa^y$
-    \task $a^{x-y}=\frac{a^x}{a^y}$
-    \task $\parens{a^x}^y=a^{xy}$
-    \task $\parens{ab}^x=a^xb^x$
-  \end{tasks}
-  }}
+  \begin{thmBox*}[Laws of Exponents:]
+    For $a>0$, we have the following laws:
+    \begin{tasks}(2)
+      \task $a^{x+y}=a^xa^y$
+      \task $a^{x-y}=\frac{a^x}{a^y}$
+      \task $\parens{a^x}^y=a^{xy}$
+      \task $\parens{ab}^x=a^xb^x$
+    \end{tasks}
+  \end{thmBox*}
+
   \begin{ex*}
     For the following expressions, use the Laws of Exponents to simplify:
   \end{ex*}
@@ -70,13 +69,12 @@
   \pagebreak
   
   \begin{defn*}[One-to-One Functions and the Horizontal Line Test]
-  
     A function $f$ is \textbf{one-to-one} on a domain $D$ if each value of $f(x)$ corresponds to exactly one value of $x$ in $D$. More precisely, $f$ is one-to-one on $d$ if $f(x_1)\neq f(x_2)$ whenever $x_1\neq x_2$, for $x_1$ and $x_2$ in $D$. 
     
     The \textbf{horizontal line test} says that every horizontal line intersects the graph of a one-to-one function at most once.
   \end{defn*}
-  
-  \vfill
+  \vspace*{\stretch{1}}
+
   \begin{center}
     \begin{tikzpicture}[scale=1.1]
       \begin{groupplot}[
@@ -120,15 +118,14 @@
   \vspace*{\stretch{2}}
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Finding an Inverse Function}
+  \begin{thmBox*}[Finding an Inverse Function]
     Suppose $f$ is one-to-one on an interval $I$. To find $f\inv$, use the following steps:
     \begin{enumerate}
       \item Solve $y=f(x)$ for $x$. If necessary, choose the function that corresponds to $I$.
       \item Interchange $x$ and $y$ and write $y=f\inv(x)$.
     \end{enumerate}
-  }}
+  \end{thmBox*}
+
   \begin{ex*}
     Find $f\inv(x)$:
     \begin{enumerate}[label=, itemsep=50pt]
@@ -140,20 +137,19 @@
     \end{enumerate}
   \end{ex*}
   \pagebreak
-  
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{ \textbf{Existence of Inverse Functions}
-  
-  Let $f$ be a one-to-one function on a domain $D$ with a range $R$. Then $f$ has a unique inverse $f\inv$ with domain $R$ and range $D$ such that
+
+  \begin{thmBox*}[Existence of Inverse Functions]
+    Let $f$ be a one-to-one function on a domain $D$ with a range $R$. Then $f$ has a unique inverse $f\inv$ with domain $R$ and range $D$ such that
     \[f\inv\parens{f(x)}=x\hspace*{30pt}\text{ and }\hspace*{30pt}f\parens{f\inv(y)}=y\]
   where $x$ is in $D$ and $y$ is in $R$.
-  }}
+  \end{thmBox*}
   \vspace*{15pt}
+
   \begin{ex*}
     For $f(x)=\sqrt[3]{4x-1}+2$, show that $f\inv\parens{f(x)}=f\parens{f\inv(x)}=x$
   \end{ex*}
-  
   \pagebreak
+
   \textit{Note:} A function is symmetric with it's inverse with respect to $y=x$.
   \vspace*{15pt}
   \begin{center}
@@ -477,13 +473,13 @@
     \end{minipage}
     \vspace*{\stretch{1}}
   \end{ex*}
-  \begin{center}
-    \fbox{\parbox{0.9875\linewidth}{
-      \textit{Note:} Many common mistakes come from using the logarithm rules incorrectly:
+
+  \begin{thmBox*}
+    \textit{Note:} Many common mistakes come from using the logarithm rules incorrectly:
       $$\ln A-\ln B\neq \dfrac{\ln A}{\ln B}\qquad \ln(A+B)\neq\ln(A)\ln(B)$$
-    }}
-  \end{center}
+  \end{thmBox*}
   \pagebreak
+
   \begin{ex*}
     Solve:
     \begin{extasks}(2)

@@ -2,12 +2,12 @@
 \begin{document}
 %\relscale{1.4}
 \section{5.5: Substitution Rule}
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 5.6: Substitution Rule for Indefinite Integrals}
-  
+\vspace*{-\baselineskip}
+  \begin{thmBox*}[Theorem 5.6: Substitution Rule for Indefinite Integrals]
     Let $u=g(x)$, where $g$ is differentiable on an interval, and let $f$ be continuous on the corresponding range of $g$. On that interval,
     \[\int f\parens{g(x)\vphantom{g(x)^1}}g'(x)\,dx=\int f(u)\,du\]
-  }}
+  \end{thmBox*}
+
   \begin{ex*}
     We know
       \[\ddx\sbrkt{\frac{(2x+1)^4}{4}}=2(2x+1)^3\]
@@ -21,16 +21,14 @@
   \end{ex*}
   \vspace*{\stretch{1}}
   
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Procedure: Substitution Rule (Change of Variables)}
+  \begin{thmBox*}[Procedure: Substitution Rule (Change of Variables)]
     \begin{enumerate}
       \item Given an indefinite integral involving a composite function $f\parens{g(x)\vphantom{g(x)^1}}$, identify an inner function $u=g(x)$ such that a constant multiple of $g'(x)$ appears in the integrand.
       \item Substitute $u=g(x)$ and $du=g'(x)\,dx$ in the integral.
       \item Evaluate the new indefinite integral with respect to $u$.
       \item Write the result in terms of $x$ using $u=g(x)$.
     \end{enumerate}
-  }}
+  \end{thmBox*}
   \pagebreak
   
   \begin{ex*}
@@ -92,6 +90,7 @@
   \end{tasks}
   \vspace*{\stretch{1}}
   \pagebreak
+
   \begin{ex*}
     Evaluate the following integrals using the recommended substitution:
   \end{ex*}
@@ -105,6 +104,7 @@
   \end{ex*}
   \vspace*{\stretch{1}}
   \pagebreak
+
   \begin{ex*}
     Evaluate the following integrals:
   \end{ex*}
@@ -118,13 +118,11 @@
   \vspace*{\stretch{1}}
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 5.7: Substitution Rule for Definite Integrals}
-  
+  \begin{thmBox*}[Theorem 5.7: Substitution Rule for Definite Integrals]
     Let $u=g(x)$, where $g'$ is continuous on $\sbrkt{a,b}$, and let $f$ be continuous on the range of $g$. Then
       \[\int_a^b f\parens{g(x)\vphantom{g(x)^1}}g'(x)\,dx=\int_{g(a)}^{g(b)}f(u)\,du\]
-  }}
+  \end{thmBox*}
+
   \begin{ex*}
     Evaluate the integrals:
   \end{ex*}

@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {}MATH 1040 Review}{1}{section.1}%
+\contentsline {section}{\numberline {}JIT 13.1: Solving Linear Equations Involving Derivatives}{16}{section.2}%
+\contentsline {section}{\numberline {}3.8: Implicit Differentiation}{17}{section.3}%
+\contentsline {section}{\numberline {}3.9: Derivatives of Logarithmic and Exponential Functions}{23}{section.4}%
+\contentsline {section}{\numberline {}JIT 9.1: Definition of $\qopname \relax o{arcsin}x$, the Inverse Sine Function}{33}{section.5}%
+\contentsline {section}{\numberline {}JIT 9.2: The Functions $\qopname \relax o{arctan}x$ and $\arcsec x$}{35}{section.6}%
+\contentsline {section}{\numberline {}JIT 9.3: Inverse Trigonometric Identities}{38}{section.7}%
+\contentsline {section}{\numberline {}3.10: Derivatives of Inverse Trigonometric Functions}{40}{section.8}%
+\contentsline {section}{\numberline {}3.11: Related Rates}{45}{section.9}%
+\contentsline {section}{\numberline {}4.1: Maxima and Minima}{66}{section.10}%
+\contentsline {section}{\numberline {}4.2: Mean Value Theorem}{80}{section.11}%
+\contentsline {section}{\numberline {}4.3: What Derivatives Tell Us}{86}{section.12}%
+\contentsline {section}{\numberline {}4.4: Graphing Functions}{100}{section.13}%
+\contentsline {section}{\numberline {}4.6: Linear Approximation and Differentials}{113}{section.14}%
+\contentsline {section}{\numberline {}4.7: L'H\^ opital's Rule}{128}{section.15}%
+\contentsline {section}{\numberline {}4.5: Optimization Problems}{142}{section.16}%
+\contentsline {section}{\numberline {}4.9: Antiderivatives}{159}{section.17}%
+\contentsline {section}{\numberline {}5.1: Approximating Areas under Curves}{177}{section.18}%
+\contentsline {section}{\numberline {}5.2: Definite Integrals}{193}{section.19}%
+\contentsline {section}{\numberline {}5.3: Fundamental Theorem of Calculus}{205}{section.20}%
+\contentsline {section}{\numberline {}5.4: Working with Integrals}{219}{section.21}%
+\contentsline {section}{\numberline {}5.5: Substitution Rule}{229}{section.22}%

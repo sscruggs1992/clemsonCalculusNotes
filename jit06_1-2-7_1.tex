@@ -170,7 +170,6 @@
   \vspace*{\stretch{1}}
   
 \section{JIT 6.2: The Function $e^x$}
-  \currentname
   
   The number $e$ is an irrational number whose exact form is
     $$e=\lim_{n \to \infty}\parens{1+\dfrac{1}{n}}^n\approx2.718281828459045\dots$$
@@ -241,8 +240,7 @@
   \end{minipage}%
   \begin{minipage}[t]{0.375\linewidth}\ 
   
-    \flushright
-    \fbox{\parbox{0.85\linewidth}{
+    \begin{thmBox*}
     \underline{Properties of exponents}
     \begin{enumerate}
       \item $a^m\cdot a^n=a^{m+n}$
@@ -253,7 +251,7 @@
       \item $a\inv[n]=\frac{1}{a^n}, a\neq 0$
       \item $a^0=1, a\neq 0$
     \end{enumerate}
-  }}
+    \end{thmBox*}
   \end{minipage}%
   \begin{tasks}[resume, after-item-skip=0.075\paperheight](3)
     \task $10^{\sin x}=1$

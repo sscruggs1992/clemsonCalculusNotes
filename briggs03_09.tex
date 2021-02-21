@@ -6,15 +6,13 @@
 
     \noindent
     \begin{minipage}{0.65\linewidth}
-      \fbox{\parbox{0.9875\linewidth}{\centering
-        \textbf{Inverse Properites of $a^x$ and $\log_a(x)$}
-        
+      \begin{thmBox*}[Inverse Properites of $a^x$ and $\log_a(x)$]
         \begin{enumerate}
           \item $a^{\log_a(x)}=x$, for $x>0$, and $\log_a(a^x)=x$, for all $x$.
           \item $y=\log_a(x)$ if and only if $x=a^y$.
           \item For real numbers $x$ and $b>0$, $b^x=a^{\log_a(b^x)}=a^{x\log_a(b)}$.
         \end{enumerate}
-      }}
+      \end{thmBox*}
     \end{minipage}%
     \begin{minipage}{0.35\linewidth}
       \begin{flushright}
@@ -43,16 +41,16 @@
       \end{flushright}
     \end{minipage}%
 
-  \vfill
-  \noindent
-    \fbox{\parbox{0.9875\linewidth}{
-      \textbf{Theorem 3.15: Derivative of $\ln(x)$.}
-        $$\ddx\parens{\ln(x)}=\frac{1}{x}, \text{ for } x>0\qquad \ddx\parens{\ln\abs{x}}=\frac{1}{x}, \text{ for } x\neq 0$$
-      
-      If $u$ is differentiable at $x$ and $u(x)\neq 0$, then
-        $$\ddx\parens{\ln\abs{u(x)}}=\frac{u'(x)}{u(x)}$$
-    }}
-  \vfill
+  \vspace*{\stretch{1}}
+
+  \begin{thmBox*}[Theorem 3.15: Derivative of $\ln(x)$.]
+    $$\ddx\parens{\ln(x)}=\frac{1}{x}, \text{ for } x>0\qquad \ddx\parens{\ln\abs{x}}=\frac{1}{x}, \text{ for } x\neq 0$$
+
+    If $u$ is differentiable at $x$ and $u(x)\neq 0$, then
+      $$\ddx\parens{\ln\abs{u(x)}}=\frac{u'(x)}{u(x)}$$
+  \end{thmBox*}
+  \vspace*{\stretch{1}}
+
   \begin{center}
     \begin{tikzpicture}
       \begin{groupplot}[
@@ -123,20 +121,18 @@
   \vfill 
   \pagebreak
   
-  \noindent
-    \fbox{\parbox{0.9875\linewidth}{
-      \textbf{Theorem 3.16: Derivative of $b^x$.}
-      
-      If $b>0$ and $b\neq 1$, then for all $x$.
-        $$\ddx\sbrkt{b^x}=b^x\ln(b).$$
-    }}
+  \begin{thmBox*}[Theorem 3.16: Derivative of $b^x$.]
+    If $b>0$ and $b\neq 1$, then for all $x$.
+      $$\ddx\sbrkt{b^x}=b^x\ln(b).$$
+  \end{thmBox*}
+
   \begin{ex*}
     Using the properties of exponents and logarithms, prove the above theorem. 
     
     \noindent
     Extend this theorem by stating the derivative of $y=b^{f(x)}$.
   \end{ex*}
-  \vfill
+  \vspace*{\stretch{1}}
   
   \begin{ex*}
     Find the derivatives of the following functions:
@@ -147,17 +143,13 @@
     \task $g(v)=10^v\parens{\ln(10^v)-1}$
     \task $y=6^{x\ln(x)}$
   \end{tasks}
-  \vfill 
-  
+  \vspace*{\stretch{1}}
   \pagebreak
   
-  \noindent
-    \fbox{\parbox{0.9875\linewidth}{
-      \textbf{Theorem 3.18: Derivative of $\log_b(x)$.}
-      
-      If $b>0$ and $b\neq 1$, then
-        \[\ddx\sbrkt{\log_b(x)}=\frac{1}{x\ln b},\text{ for }x>0 \text{ and }\ddx\sbrkt{\log_b\abs{x}}=\frac{1}{x\ln b},\text{ for } x\neq 0.\]
-    }}
+  \begin{thmBox*}[Theorem 3.18: Derivative of $\log_b(x)$.]
+    If $b>0$ and $b\neq 1$, then
+      \[\ddx\sbrkt{\log_b(x)}=\frac{1}{x\ln b},\text{ for }x>0 \text{ and }\ddx\sbrkt{\log_b\abs{x}}=\frac{1}{x\ln b},\text{ for } x\neq 0.\]
+  \end{thmBox*}
 
   \begin{ex*}
     Using the properties of exponents and logarithms, prove the above theorem. 
@@ -178,34 +170,30 @@
   \vfill
   \pagebreak
   
-  \begin{center}
-    \vfill
-    \setlength{\jot}{10pt}
-    \noindent
-    \fbox{\parbox{0.9875\linewidth}{
-      \textbf{Derivative rules for exponential functions:}
-      \begin{align*}
-        \hspace*{-10pt}
-        \ddx \sbrkt{e^x}&=e^x&  \ddx \sbrkt{e^{f(x)}}&=e^{f(x)}\cdot f'(x)\\
-        \hspace*{-10pt}
-        \ddx \sbrkt{b^x}&=\ln(b)\cdot b^x&  \ddx \sbrkt{b^{g(x)}}&=\ln(b)\cdot b^{g(x)}\cdot g'(x)\hspace*{-10pt}
-      \end{align*}
-    }}
-    \vfill
-    
-    \fbox{\parbox{0.9875\linewidth}{
-      \textbf{Derivative rules for logarithmic functions:}
-      \begin{align*}
-        \hspace*{-10pt}
-        &\ddx\sbrkt{\ln x}=\frac{1}{x}& &\ddx\sbrkt{\ln\parens{f(x)}}=\frac{1}{f(x)}\cdot f'(x)\hspace*{-10pt}\\
-        \hspace*{-10pt}
-        &\ddx\sbrkt{\log_b(x)}=\frac{1}{\ln(b) x}& &\ddx\sbrkt{\log_b\parens{g(x)}}=\frac{g'(x)}{\ln(b) g(x)}
-      \end{align*} 
-   }}
-   \vfill
-   \fbox{\parbox{0.9875\linewidth}{\textbf{Laws of Logarithms}
-      
-      For $x,y>0$:
+  \vspace*{\stretch{1}}
+  \setlength{\jot}{10pt}
+  \begin{thmBox*}[Derivative rules for exponential functions:]
+    \begin{align*}
+      \hspace*{-10pt}
+      \ddx \sbrkt{e^x}&=e^x&  \ddx \sbrkt{e^{f(x)}}&=e^{f(x)}\cdot f'(x)\\
+      \hspace*{-10pt}
+      \ddx \sbrkt{b^x}&=\ln(b)\cdot b^x&  \ddx \sbrkt{b^{g(x)}}&=\ln(b)\cdot b^{g(x)}\cdot g'(x)\hspace*{-10pt}
+    \end{align*}
+  \end{thmBox*}
+  \vspace*{\stretch{1}}
+
+  \begin{thmBox*}[Derivative rules for logarithmic functions:]
+    \begin{align*}
+      \hspace*{-10pt}
+      &\ddx\sbrkt{\ln x}=\frac{1}{x}& &\ddx\sbrkt{\ln\parens{f(x)}}=\frac{1}{f(x)}\cdot f'(x)\hspace*{-10pt}\\
+      \hspace*{-10pt}
+      &\ddx\sbrkt{\log_b(x)}=\frac{1}{\ln(b) x}& &\ddx\sbrkt{\log_b\parens{g(x)}}=\frac{g'(x)}{\ln(b) g(x)}
+    \end{align*} 
+  \end{thmBox*}
+  \vspace*{\stretch{1}}
+
+   \begin{thmBox*}[Laws of Logarithms]
+    For $x,y>0$:
       \begin{tasks}[after-item-skip=10pt, label=~](2)
         \task $\log_a(xy)=\log_a(x)+\log_a(y)$
         \task $\log_a\parens{\frac{x}{y}}=\log_a(x)-\log_a(x)$
@@ -214,10 +202,9 @@
         \task $\log_a(x)=\dfrac{\log_b(x)}{\log_b(a)}$
         \task $\log_a(a)=1$
       \end{tasks}
-    }}
-    \vfill
-  \end{center}
-  \pagebreak
+   \end{thmBox*}
+    \vspace*{\stretch{1}}
+    \pagebreak
   
   \begin{ex*}
     For the following functions, use the laws of logarithms to rewrite the function before taking the derivative:
@@ -229,20 +216,18 @@
     \task $y=\ln\sqrt[3]{\dfrac{1+x}{1-x}}$
     \task $y=\ln\sqrt{\dfrac{\parens{x+1}^5}{\parens{x+2}^{20}}}$
   \end{tasks}
-  \vfill 
-  
+  \vspace*{\stretch{1}}
   \pagebreak
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Logarithmic Differentiation:}
-    
+
+  \begin{thmBox*}[Logarithmic Differentiation:]
     \begin{enumerate}
       \item Take the natural logarithm of both sides of the equation.
       \item Use logarithm laws to simplify.
       \item Use implicit differentiation to take the derivative of both sides.
       \item Solve for $\dydx$.
     \end{enumerate}
-  }}
+  \end{thmBox*}
+
   \begin{ex*}
     Find the derivatives of the following functions:
   \end{ex*}
@@ -252,7 +237,7 @@
     \task $g(x)=\sqrt[10]{\dfrac{3x+4}{2x-4}}$
     \task $y=\dfrac{e\inv[x]\cos^2(x)}{x^2+x+1}$
   \end{tasks}
-  \vfill
+  \vspace*{\stretch{1}}
   \pagebreak
   
   \noindent

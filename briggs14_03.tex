@@ -17,11 +17,10 @@
   \end{flushright}
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 14.2: Motion with constant $\abs{\vecr}$}\\
+  \begin{thmBox*}[Theorem 14.2: Motion with constant $\abs{\vecr}$]
     Let $\vecr$ describe a path on which $\abs{\vecr}$ is constant (motion on a circle or sphere centered at the origin). Then $\vecr\cdot\vecv=0$, which means the position vector and the velocity vector are orthogonal at all times for which the functions are defined. 
-  }}
+  \end{thmBox*}
+
   \begin{ex*}[Path on a sphere]
     Consider
       \[\vecr(t)=\bracket{3\cos(t),\,5\sin(t),\,4\cos(t)},\quad\textnormal{for } 0\leq t\leq 2\pi.\]
@@ -39,14 +38,13 @@
   \end{ex*}
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Summary: Two-Dimensional Motion in a Gravitational Field}\\
+  \begin{thmBox*}[Summary: Two-Dimensional Motion in a Gravitational Field]
     Consider an object moving in a plane with a horizontal $x$-axis and a vertical $y$-axis, subject only to the force of gravity. Given the initial velocity $\vecv(0)=\bracket{u_0,v_0}$ and the initial position $\vecr(0)=\bracket{x_0,y_0}$, the velocity of the object, for $t\geq 0$, is
       \[\vecv(t)=\bracket{x'(t), y'(t)}=\bracket{u_0,-gt+v_0}\]
     and the position is
       \[\vecr(t)=\bracket{x(t),y(t)}=\bracket{u_0t+x_0,-\frac{1}{2}gt^2+v_0t+y_0}.\]
-  }}
+  \end{thmBox*}
+
   \begin{ex*}
     Consider a ball with an initial position of $\bracket{x_0,y_0}=\bracket{0,0}\ m$ and an initial velocity of $\bracket{u_0,v_0}=\bracket{25,4}\ m/s$.
   \end{ex*}
@@ -57,16 +55,15 @@
 
 %  \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Summary: Two-Dimensional Motion}\\
+  \begin{thmBox*}[Summary: Two-Dimensional Motion]
     Assume an object traveling over horizontal ground, acted on only by the gravitational force, has an initial position $\bracket{x_0,y_0}=\bracket{0,0}$ and initial velocity $\bracket{u_0,v_0}=\bracket{\abs{\vecv_0}\cos\alpha, \abs{\vecv_0}\sin\alpha}$. The trajectory, which is a segment of a parabola, has the following properties.
     \begin{align*}
       \textnormal{time of flight}&= T= \frac{2\abs{\vecv_0}\sin\alpha}{g}\\
       \textnormal{range}&=\frac{\abs{\vecv_0}^2\sin\parens{2\alpha}}{g}\\
       \textnormal{maximum height}&=y\parens{\frac{T}{2}}=\frac{\parens{\abs{\vecv_0}\sin\alpha}^2}{2g}
     \end{align*}
-  }}
+  \end{thmBox*}
+
   \pagebreak
   \begin{ex*}
     Consider a ball with an initial position of $\bracket{x_0,y_0}=\bracket{0,0}\ m$ and an initial velocity of $\bracket{u_0,v_0}=\bracket{25,4}\ m/s$. Assuming the ground is flat and level:
@@ -77,7 +74,6 @@
     \task What is the maximum height that the ball reaches?
   \end{tasks}
   \vspace*{\stretch{1}}
-  
   \pagebreak
   
 \end{document}

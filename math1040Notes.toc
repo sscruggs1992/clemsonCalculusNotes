@@ -1,0 +1,56 @@
+\contentsline {section}{\numberline {}JIT 1.1: Multiplying and Dividing Fractions}{1}{section.1}%
+\contentsline {section}{\numberline {}JIT 1.2: Adding and Subtracting Fractions}{3}{section.2}%
+\contentsline {section}{\numberline {}JIT 1.3: Parenthesis}{4}{section.3}%
+\contentsline {section}{\numberline {}JIT 1.4: Exponents}{5}{section.4}%
+\contentsline {section}{\numberline {}JIT 1.5: Roots}{6}{section.5}%
+\contentsline {section}{\numberline {}JIT 1.8: Intervals}{7}{section.6}%
+\contentsline {section}{\numberline {}JIT 4.1: Functions And Their Graphs}{8}{section.7}%
+\contentsline {section}{\numberline {}JIT 4.2: Lines And Their Equations}{12}{section.8}%
+\contentsline {section}{\numberline {}JIT 4.3: Power Functions}{17}{section.9}%
+\contentsline {section}{\numberline {}JIT 4.4: Shifting up and down}{20}{section.10}%
+\contentsline {section}{\numberline {}JIT 4.5: Shifting left and right}{20}{section.11}%
+\contentsline {section}{\numberline {}JIT 4.6: Translations}{21}{section.12}%
+\contentsline {section}{\numberline {}JIT 4.7: Intersection of curves and simultaneous solutions}{24}{section.13}%
+\contentsline {section}{\numberline {}JIT 5.1: Angles}{26}{section.14}%
+\contentsline {section}{\numberline {}JIT 5.2: Definition of $\qopname \relax o{sin}(\theta )$ and $\qopname \relax o{cos}(\theta )$}{27}{section.15}%
+\contentsline {section}{\numberline {}JIT 5.3: Special angles ${\left (\genfrac {}{}{}0{\pi }{4}, \genfrac {}{}{}0{\pi }{6}, \genfrac {}{}{}0{\pi }{3}\right )}$}{29}{section.16}%
+\contentsline {section}{\numberline {}JIT 5.5: The other trigonometric functions}{31}{section.17}%
+\contentsline {section}{\numberline {}JIT 5.4: Graphs involving $\qopname \relax o{sin}x$ and $\qopname \relax o{cos}x$}{32}{section.18}%
+\contentsline {section}{\numberline {}JIT 15.1: Trigonometric Identities}{35}{section.19}%
+\contentsline {section}{\numberline {}JIT 10.1: Common Factors}{40}{section.20}%
+\contentsline {section}{\numberline {}JIT 10.2: Special Formulas}{40}{section.21}%
+\contentsline {section}{\numberline {}JIT 10.3: Grouping}{41}{section.22}%
+\contentsline {section}{\numberline {}JIT 10.4: The Factor Theorem and Long Division}{42}{section.23}%
+\contentsline {section}{\numberline {}JIT 2.1: Completing the Square}{43}{section.24}%
+\contentsline {section}{\numberline {}JIT 10.5: Rationalizing Numerators or Denominators Using Conjugates}{45}{section.25}%
+\contentsline {section}{\numberline {}JIT 10.6: Extracting Factors from Radicals}{46}{section.26}%
+\contentsline {section}{\numberline {}JIT 3.1: Equations of Degree 1 (Linear equations)}{47}{section.27}%
+\contentsline {section}{\numberline {}JIT 3.2: Equations of Degree 2 (Quadratic equations)}{48}{section.28}%
+\contentsline {section}{\numberline {}JIT 3.3: Solving Other Types of Equations}{49}{section.29}%
+\contentsline {section}{\numberline {}2.1: The Idea of Limits}{51}{section.30}%
+\contentsline {section}{\numberline {}2.2: Definitions of Limits}{53}{section.31}%
+\contentsline {section}{\numberline {}2.3: Techniques for Computing Limits}{58}{section.32}%
+\contentsline {section}{\numberline {}2.4: Infinite Limits}{65}{section.33}%
+\contentsline {paragraph}{}{66}{section*.5}%
+\contentsline {section}{\numberline {}2.5: Limits at Infinity}{71}{section.34}%
+\contentsline {section}{\numberline {}JIT 6.1: The Family of Exponential Functions}{85}{section.35}%
+\contentsline {section}{\numberline {}JIT 6.2: The Function $e^x$}{87}{section.36}%
+\contentsline {section}{\numberline {}JIT 7.1: Composition and Inverse Functions}{90}{section.37}%
+\contentsline {section}{\numberline {}JIT 7.2: The Ideas of Inverses}{92}{section.38}%
+\contentsline {section}{\numberline {}JIT 7.3: Finding the Inverse of $f$ Given a Graph}{95}{section.39}%
+\contentsline {section}{\numberline {}JIT 7.4: Finding the Inverse of $f$ Given by an Expression}{96}{section.40}%
+\contentsline {section}{\numberline {}JIT 8.1: Definitions of Logarithms}{98}{section.41}%
+\contentsline {section}{\numberline {}JIT 8.2: Logs as Inverses of Exponential Functions}{99}{section.42}%
+\contentsline {section}{\numberline {}JIT 8.3: Laws of Logarithms}{100}{section.43}%
+\contentsline {section}{\numberline {}JIT 8.4: The Natural Logarithm}{102}{section.44}%
+\contentsline {section}{\numberline {}2.6: Continuity}{106}{section.45}%
+\contentsline {section}{\numberline {}2.7: Precise Definition of Limits}{118}{section.46}%
+\contentsline {section}{\numberline {}JIT 11.1: Working with Difference Quotients}{122}{section.47}%
+\contentsline {section}{\numberline {}3.1: Introducing the Derivative:}{123}{section.48}%
+\contentsline {section}{\numberline {}3.2: The Derivative as a Function}{128}{section.49}%
+\contentsline {section}{\numberline {}3.3: Rules of Differentiation}{137}{section.50}%
+\contentsline {section}{\numberline {}3.4: The Product and Quotient Rule}{147}{section.51}%
+\contentsline {section}{\numberline {}3.5: Derivatives of Trigonometric Functions}{152}{section.52}%
+\contentsline {section}{\numberline {}3.6: Rate of Change Applications}{161}{section.53}%
+\contentsline {section}{\numberline {}JIT 12.1: Decomposition of Functions}{169}{section.54}%
+\contentsline {section}{\numberline {}3.7: The Chain Rule}{170}{section.55}%

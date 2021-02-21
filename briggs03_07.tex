@@ -2,17 +2,15 @@
 \begin{document}
 %\relscale{1.4}
 \section{3.7: The Chain Rule}
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-    \textbf{Theorem 3.13} The Chain Rule
-    
-    Suppose $y=f(u)$ is differentiable at $u=g(x)$ and $u=g(x)$ is differentiable at $x$. The composite function $y=f(g(x))$ is differentiable at $x$, and its derivative can be expressed in two equivalent ways.
-      \begin{align}
-        &\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot \dfrac{du}{dx}\\[10pt]
-        &\dfrac{d}{dx}\parens{f\parens{g(x)}}=f'\parens{g(x)}\cdot g'(x)
-      \end{align}
-  }}
-\end{center}
+
+\begin{thmBox*}[Theorem 3.13: The Chain Rule]
+  Suppose $y=f(u)$ is differentiable at $u=g(x)$ and $u=g(x)$ is differentiable at $x$. The composite function $y=f(g(x))$ is differentiable at $x$, and its derivative can be expressed in two equivalent ways.
+    \begin{align}
+      &\dfrac{dy}{dx} = \dfrac{dy}{du}\cdot \dfrac{du}{dx}\\[10pt]
+      &\dfrac{d}{dx}\parens{f\parens{g(x)}}=f'\parens{g(x)}\cdot g'(x)
+    \end{align}
+\end{thmBox*}
+
 \begin{ex*}
   Take the derivatives of the following functions
 \end{ex*}
@@ -23,16 +21,15 @@
   \task $y=\sin\parens{x+\cot(x)}$
 \end{tasks}
 \vspace*{\stretch{1}}
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-    To use the chain rule,
+
+\begin{thmBox*}
+  To use the chain rule,
     \begin{itemize}
       \item Identify the inner and outer function
       \item Take the derivative of the outside, leaving the original inner function
       \item Multiply by the derivative of the inner function
     \end{itemize}
-  }}
-\end{center}
+\end{thmBox*}
 \pagebreak
 
 \begin{tasks}[resume, after-item-skip=\stretch{1}](2)

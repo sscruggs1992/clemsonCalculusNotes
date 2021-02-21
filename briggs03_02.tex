@@ -211,20 +211,17 @@
 \end{ex*}
 \pagebreak
 
-\noindent
-\fbox{\parbox{\linewidth}{
-  \textbf{When is a Function Not Differentiable at a Point?}
-  
+\begin{thmBox*}[When is a Function Not Differentiable at a Point?]
   A function $f$ is \textit{not} differentiable at $a$ if at least one of the following conditions holds:
     \begin{enumerate}
       \item $f$ is not continuous at $a$
       \item $f$ has a corner at $a$
       \item $f$ has a vertical tangent at $a$
     \end{enumerate}
-}}
+\end{thmBox*}
 
 \begin{center}
-  \begin{tikzpicture}[scale=0.85]
+  \begin{tikzpicture}[scale=0.825]
     \begin{groupplot}[
       group style={group size=3 by 1}, 
       axis lines=center,
@@ -262,9 +259,10 @@
     If $f$ is not continuous at $a$, then $f$ is not differentiable at $a$.
     }}
 \end{center}
+\vspace*{\stretch{1}}
 
 \begin{center}
-  \begin{tikzpicture}[scale=1.125]
+  \begin{tikzpicture}[scale=1]
     \begin{groupplot}[
       group style={group size=2 by 1}, 
       axis lines=center,

@@ -90,22 +90,18 @@
         \end{tikzpicture}
       \end{center}
       \pagebreak
-       
-      \begin{center}
-        \fbox{\parbox{0.9\linewidth}{
-        \begin{Thm*}
-          \textbf{Limits at Infinity of Powers and Polynomials}
-          
-          Let $n$ be a positive integer and let $p$ be the polynomial 
-            $$p(x)=a_nx^n+a_\nmo x^\nmo+\cdots+a_2x^2+a_1x+a_0, \text{ where } a_n\neq 0.$$
-          \begin{enumerate}
-            \item $\ds\lim_{x \to \pm \infty} x^n=\infty$ when $n$ is even.
-            \item $\ds\lim_{x \to \infty} x^n=\infty$ and $\ds\lim_{x \to -\infty} x^n=-\infty$ when $n$ is odd.
-            \item $\ds\lim_{x \to \pm\infty} \dfrac{1}{x^n}=\ds\lim_{x \to \pm\infty}x\inv[n]=0$.
-            \item $\ds\lim_{x \to \pm\infty} p(x)=\lim_{x \to \pm\infty} a_nx^n=\pm\infty$, depending on the degree of the polynomial and the sign of the leading coefficient $a_n$.
-          \end{enumerate}
-        \end{Thm*}}}
-      \end{center}
+
+      \begin{thmBox*}[Theorem 2.6: Limits at Infinity of Powers and Polynomials]
+        Let $n$ be a positive integer and let $p$ be the polynomial 
+          $$p(x)=a_nx^n+a_\nmo x^\nmo+\cdots+a_2x^2+a_1x+a_0, \text{ where } a_n\neq 0.$$
+        \begin{enumerate}
+          \item $\ds\lim_{x \to \pm \infty} x^n=\infty$ when $n$ is even.
+          \item $\ds\lim_{x \to \infty} x^n=\infty$ and $\ds\lim_{x \to -\infty} x^n=-\infty$ when $n$ is odd.
+          \item $\ds\lim_{x \to \pm\infty} \dfrac{1}{x^n}=\ds\lim_{x \to \pm\infty}x\inv[n]=0$.
+          \item $\ds\lim_{x \to \pm\infty} p(x)=\lim_{x \to \pm\infty} a_nx^n=\pm\infty$, depending on the degree of the polynomial and the sign of the leading coefficient $a_n$.
+        \end{enumerate}
+      \end{thmBox*}
+
       \begin{enumerate}[label=]
         \item \textit{Note:} All previous limit laws still apply (e.g. constant multiplier rule)
         \item \textit{Note:} This theorem \textit{ONLY} applies for $x\to\pm\infty$. When $x\to a, \abs{a}<\infty$, we compute the left and right limits and use sm+/sm- (as done in section 2.4).
@@ -135,36 +131,31 @@
       \end{ex*}
       \pagebreak
       
-      \begin{center}
-      \fbox{\parbox{0.95\linewidth}{
-        \begin{Thm*}
-          \textbf{End Behavior and Asymptotes of Rational Functions}
-          
-          Suppose $f(x)=\dfrac{p(x)}{q(x)}$ is a rational function, where 
-            \begin{align*}
-              p(x)&= a_mx^m+a_\mmo x^\mmo+\cdots+a_2x^2+a_1x+a_0\\
-              q(x)&= b_nx^n+b_\nmo x^\nmo+\cdots+b_2x^2+b_1x+b_0
-            \end{align*}
-          with $a_m\neq0$ and $b_n\neq 0$.
-          \begin{enumerate}
-            \item \textbf{Degree of numerator less than degree of denominator}
-            
-            If $m<n$, then $\lim_{x \to \pm\infty} f(x)=0$ and $y=0$ is a horizontal asymptote of $f$.
-            \item \textbf{Degree of numerator equals degree of denominator}
-            
-            If $m=n$, then $\lim_{x \to \pm\infty} f(x)=a_m/b_n$ and $y=a_m/b_n$ is a horizontal asymptote of $f$.
-            \item \textbf{Degree of numerator greater than degree of denominator}
-            
-            If $m>n$, then $\lim_{x \to \pm\infty} f(x)=\infty$ or $-\infty$ and $f$ has no horizontal asymptote.
-            \item \textbf{Slant Asymptote}
-            
-            If $m=n+1$, then $\lim_{x \to \pm \infty}f(x)=\infty$ or $-\infty$, and $f$ has no horizontal asymptote, but $f$ has a slant asymptote.
-            \item \textbf{Vertical asymptotes}
-            
-            Assuming $f$ is in reduced form ($p$ and $q$ share no common factors), vertical asymptotes occur at the zeros of $q$.
+      \begin{thmBox*}[Theorem 2.7: End Behavior and Asymptotes of Rational Functions]
+        Suppose $f(x)=\dfrac{p(x)}{q(x)}$ is a rational function, where 
+          \begin{align*}
+            p(x)&= a_mx^m+a_\mmo x^\mmo+\cdots+a_2x^2+a_1x+a_0\\
+            q(x)&= b_nx^n+b_\nmo x^\nmo+\cdots+b_2x^2+b_1x+b_0
+          \end{align*}
+        with $a_m\neq0$ and $b_n\neq 0$.
+        \begin{enumerate}
+          \item \textbf{Degree of numerator less than degree of denominator}
+
+          If $m<n$, then $\lim_{x \to \pm\infty} f(x)=0$ and $y=0$ is a horizontal asymptote of $f$.
+          \item \textbf{Degree of numerator equals degree of denominator}
+
+          If $m=n$, then $\lim_{x \to \pm\infty} f(x)=a_m/b_n$ and $y=a_m/b_n$ is a horizontal asymptote of $f$.
+          \item \textbf{Degree of numerator greater than degree of denominator}
+
+          If $m>n$, then $\lim_{x \to \pm\infty} f(x)=\infty$ or $-\infty$ and $f$ has no horizontal asymptote.
+          \item \textbf{Slant Asymptote}
+
+          If $m=n+1$, then $\lim_{x \to \pm \infty}f(x)=\infty$ or $-\infty$, and $f$ has no horizontal asymptote, but $f$ has a slant asymptote.
+          \item \textbf{Vertical asymptotes}
+
+          Assuming $f$ is in reduced form ($p$ and $q$ share no common factors), vertical asymptotes occur at the zeros of $q$.
           \end{enumerate}
-        \end{Thm*}}}
-      \end{center}
+      \end{thmBox*}
       \pagebreak
       
       \begin{ex*}

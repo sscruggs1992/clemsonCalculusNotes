@@ -6,18 +6,15 @@
   Suppose a function $f$ is defined on an interval $I$. We say that $f$ is increasing on $I$ if $f(x_2)>f(x_1)$ whenever $x_1$ and $x_2$ are in $I$ and $x_2>x_1$. We say that $f$ is decreasing on $I$ if $f(x_2)<f(x_1)$ whenever $x_1$ and $x_2$ are in $I$ and $x_2>x_1$.
 \end{defn*}
 \begin{center}
-  \includegraphics[width=0.65\linewidth]{images/briggs_04_03/fig4_20.png}
+  \includegraphics[width=0.625\linewidth]{images/briggs_04_03/fig4_20.png}
 \end{center}
 
-\vspace*{\stretch{1}}
-\noindent
-\fbox{\parbox{0.9875\linewidth}{
-  \textbf{Theorem 4.7: Test for Intervals of Increase and Decrease}
-  
+\begin{thmBox*}[Theorem 4.7: Test for Intervals of Increase and Decrease]
   Suppose $f$ is continuous on an interval $I$ and differentiable at every interior point of $I$. If $f'(x)>0$ at all interior points of $I$, then $f$ is increasing on $I$. If $f'(x)<0$ at all interior points of $I$, then $f$ is decreasing on $I$.
-}}
+\end{thmBox*}
+
 \begin{center}
-  \includegraphics[width=0.65\linewidth]{images/briggs_04_03/fig4_21.png}
+  \includegraphics[width=0.625\linewidth]{images/briggs_04_03/fig4_21.png}
 \end{center}
 \pagebreak
 \begin{proof}
@@ -29,12 +26,8 @@
     $$f(b)-f(a)=f'(c)(b-a).$$
   Notice that $b-a>0$ by assumption. So if $f'(c)>0$, then $f(b)-f(a)>0$. Therefore, for all $a$ and $b$ in $I$ with $b>a$, we have $f(b)>f(a)$, which implies that $f$ is increasing on $I$. Similarly, if $f'(c)<0$, then $f(b)-f(a)<0$ or $f(b)<f(a)$. It follows that $f$ is decreasing on $I$.
 \end{proof}
-\vspace*{\stretch{1}}
 
-\noindent
-\fbox{\parbox{0.9875\linewidth}{
-  \textbf{Theorem 4.8: First Derivative Test}
-  
+\begin{thmBox*}[Theorem 4.8: First Derivative Test]
   Assume that $f$ is continuous on an interval that contains a critical point $c$ and assume $f$ is differentiable on an interval containing $c$, except perhaps at $c$ itself.
 
 \vspace*{10pt}
@@ -45,10 +38,10 @@
       \item If $f'$ does not change sign at $c$ (from positive to negative or vice versa), then $f$ has no local extreme value at $c$.
     \end{itemize}
   \end{minipage}
-}}
+\end{thmBox*}
 
 \begin{center}
-  \includegraphics[width=0.65\linewidth]{images/briggs_04_03/fig4_26.png}
+  \includegraphics[width=0.6\linewidth]{images/briggs_04_03/fig4_26.png}
 \end{center}
 \vspace*{-35pt}
 \pagebreak
@@ -100,17 +93,15 @@
 \end{center}
 \pagebreak
 
-\noindent
-\fbox{\parbox{0.9875\linewidth}{
-  \textbf{Theorem 4.10: Test for Concavity}
-  
+\begin{thmBox*}[Theorem 4.10: Test for Concavity]
   Suppose $f''$ exists on an open interval $I$.
   \begin{itemize}
     \item If $f''>0$ on $I$, then $f$ is concave up on $I$.
     \item If $f''<0$ on $I$, then $f$ is concave down on $I$.
     \item If $c$ is a point of $I$ at which $f''$ changes sign at $c$, then $f$ has an inflection point at $c$.
   \end{itemize}
-}}
+\end{thmBox*}
+
 \begin{ex*}
   Consider $f(x)=5-3x^2+x^3$
 \end{ex*}
@@ -186,17 +177,14 @@ As a visual summary, here is figure 4.27 from Briggs:
 \vspace*{\stretch{1}}
 \pagebreak
 
-\noindent
-\fbox{\parbox{0.9875\linewidth}{
-  \textbf{Theorem 4.11: Second Derivative Test for Local Extrema}
-  
+\begin{thmBox*}[Theorem 4.11: Second Derivative Test for Local Extrema]
   Suppose $f''$ is continuous on an open interval containing $c$ with $f'(c)=0$.
   \begin{itemize}
     \item If $f''(c)>0$, then $f$ has a local minimum at $c$ (Figure 4.40a).
     \item If $f''(c)<0$, then $f$ has a local maximum at $c$  (Figure 4.40b).
     \item If $f''(c)=0$, then the test is inconclusive; $f$ may have a local maximum, local minimum, or neither at $c$.
   \end{itemize}
-}}
+\end{thmBox*}
 
 \begin{center}
   \includegraphics[width=0.8\linewidth]{images/briggs_04_03/fig4_40.png}

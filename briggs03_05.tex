@@ -2,14 +2,10 @@
 \begin{document}
 %\relscale{1.4}
 \section{3.5: Derivatives of Trigonometric Functions}
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-  \textbf{Theorem 3.10} Trigonometric Limits
-  
+\begin{thmBox*}[Theorem 3.10: Trigonometric Limits]
   $$\lim_{x\to 0}\dfrac{\sin x}{x}=1 \qquad \lim_{x\to 0}\dfrac{\cos x-1}{x}=0$$
-  }}
-
-  \vspace*{15pt}
+\end{thmBox*}
+\vspace*{15pt}
 
   \begin{tikzpicture}[scale=1.15]
     \begin{groupplot}[
@@ -32,7 +28,6 @@
         \addlegendentry{$\dfrac{\cos(x)-1}{x}$}
     \end{groupplot} 
   \end{tikzpicture}
-\end{center}
 \begin{ex*}
   Evaluate the following limits:
 \end{ex*}
@@ -46,13 +41,11 @@
 \end{tasks}
 \vspace*{\stretch{1}}
 \pagebreak
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-  \textbf{Theorem 3.11} Derivatives of Sine and Cosine
-  
+\begin{thmBox*}[Theorem 3.11: Derivatives of Sine and Cosine]
   $$\dfrac{d}{dx}\sbrkt{\sin(x)}=\cos(x)\hspace*{50pt} \dfrac{d}{dx}\sbrkt{\cos(x)}=-\sin(x)$$
-  }}
-\end{center}
+
+\end{thmBox*}
+
 \begin{proof}
   \begin{align*}
     \dfrac{d}{dx}\sbrkt{\sin(x)}&=\lim_{h\to 0}\dfrac{\sin(x+h)-\sin(x)}{h}\\
@@ -121,9 +114,7 @@
 \end{ex*}
 \pagebreak
 
-\begin{center}
-  \fbox{\parbox{0.95\linewidth}{
-  \textbf{Theorem 3.12} Derivatives of the Trigonometric Functions
+\begin{thmBox*}[Theorem 3.12: Derivatives of the Trigonometric Functions]
   \begin{center}
     \begin{tabular}{@{}*{2}{R@{\ =\ }L}@{}}
       \dfrac{d}{dx} \sin(x)&\cos(x)& \dfrac{d}{dx}\cos(x)&-\sin(x)\\[10pt]
@@ -131,8 +122,8 @@
       \dfrac{d}{dx} \sec(x)&\sec(x)\tan(x)& \dfrac{d}{dx}\csc(x)&-\csc(x)\cot(x)
     \end{tabular}
   \end{center}
-  }}
-\end{center}
+\end{thmBox*}
+
 \begin{ex*}
   Find the derivatives of the following:
 \end{ex*}

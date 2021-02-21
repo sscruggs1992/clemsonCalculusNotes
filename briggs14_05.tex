@@ -26,12 +26,11 @@
   \end{defn*}
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 14.4: Curvature Formula}\\
+  \begin{thmBox*}[Theorem 14.4: Curvature Formula]
     Let $\vecr(t)$ describe a smooth parameterized curve, where $t$ is any parameter. If $\vecv=\vecr'$ is the velocity and $\vecT$ is the unit tangent vector, then the curvature is
       \[\kappa(t)=\frac{1}{\abs{\vecv}}\abs{\frac{d\vecT}{dt}}=\frac{\abs{\vecT'(t)}}{\abs{\vecr'(t)}}.\]
-  }}
+  \end{thmBox*}
+
   \begin{itemize}
     \item 
       $\kappa$ is a non-negative scalar-valued function
@@ -85,13 +84,11 @@
     \[\abs{\vecv\times\veca}=\abs{\vecv}^2\abs{\frac{d\vecT}{dt}}=\abs{\vecv}^2\,\kappa\abs{\vecv}=\kappa\abs{\vecv}^3.\]
 
   \vspace*{\stretch{1}}
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 14.5: Alternative Curvature Formula}\\
+  \begin{thmBox*}[Theorem 14.5: Alternative Curvature Formula]
     Let $\vecr$ be the position of an object moving on a smooth curve. The \textbf{curvature} at a point on the curve is
       \[\kappa=\frac{\abs{\vecv\times\veca}}{\abs{\vecv}^3},\]
     where $\vecv=\vecr'$ is the velocity and $\veca=\vecv'$ is the acceleration.
-  }}
+  \end{thmBox*}
 
   \pagebreak
 
@@ -116,9 +113,7 @@
     \includegraphics[width=0.275\linewidth]{images/briggs_14_05/fig14_31}
   \end{center}
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 14.6: Properties of the Principal Unit Normal Vector}\\
+  \begin{thmBox*}[Theorem 14.6: Properties of the Principal Unit Normal Vector]
     Let $\vecr$ describe a smooth parameterized curve with unit tangent vector $\vecT$ and principal unit normal vector $\vecN$.
     \begin{enumerate}
       \item 
@@ -126,7 +121,7 @@
       \item 
         The principal unit normal vector points to the inside of the curve -- in the direction that the curve is turning.
     \end{enumerate}
-  }}
+  \end{thmBox*}
   \pagebreak
 
   \begin{ex*}
@@ -148,13 +143,11 @@
   \end{align*}   
   \vspace*{\stretch{1}}
   
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 14.7: Tangential and Normal Components of the Acceleration}\\
+  \begin{thmBox*}[Theorem 14.7: Tangential and Normal Components of the Acceleration]
     The acceleration vector of an object moving in space along a smooth curve has the following representation in terms of its \textbf{tangential component} $a_T$ (in the direction of $\vecT$) and its \textbf{normal component} $a_N$ (in the direction of $\vecN$):
       \[\veca=a_N\vecN+a_T\vecT,\]
     where $a_N=\kappa\abs{\vecv}^2=\ds\frac{\abs{\vecv\times\veca}}{\abs{\vecv}}$ and $a_T=\ds\frac{d^2s}{dt^2}$.
-  }}
+  \end{thmBox*}
   \pagebreak
 
   \begin{ex*}
@@ -237,8 +230,7 @@
   \pagebreak
   \vspace*{\stretch{1}}
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
+  \begin{thmBox*}
     \TabPositions{0.35\linewidth}
     \textbf{Summary: Formula for Curves in Space}\\
     Position function: \tab $\vecr(t)=\bracket{x(t),\,y(t),\,z(t)}$\\[\baselineskip]
@@ -251,7 +243,7 @@
     \mbox{}\tab $\ds a_N=\kappa\abs{\vecv}^2=\frac{\abs{\vecv\times\veca}}{\abs{\vecv}}$ and $\ds a_T=\frac{d^2s}{dt^2}=\frac{\vecv\cdot\veca}{\vecv}$\\[1.5\baselineskip]
     Unit binormal vector: \tab $\ds\vecB=\vecT\times\vecN=\frac{\vecv\times\veca}{\abs{\vecv\times\veca}}$\\[\baselineskip]
     Torsion: \tab $\ds\tau=-\frac{d\vecB}{ds}\cdot\vecN=\frac{\parens{\vecv\times\veca}\cdot\veca'}{\abs{\vecv\times\veca}^2}=\frac{\parens{\vecr'\times\vecr''}\cdot\vecr'''}{\abs{\vecr'\times\vecr''}^2}$
-  }}
+  \end{thmBox*}
   \vspace*{\stretch{1}}
 
   \pagebreak

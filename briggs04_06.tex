@@ -85,16 +85,17 @@
 \end{ex*}
 \vspace*{\stretch{1}}
 \pagebreak
-\noindent
-\fbox{\parbox{0.9875\linewidth}{
-  \textbf{Concavity and Overestimating versus Underestimating.} Suppose $L(x)$ is a linearization of $f(x)$ centered at $a$.
+
+\begin{thmBox*}[Concavity and Overestimating versus Underestimating.]
+  Suppose $L(x)$ is a linearization of $f(x)$ centered at $a$.
   \begin{enumerate}
     \item
         If $f''(a)>0$, then $L(x)$ is an underestimation of $f$.
     \item 
         If $f''(a)<0$, then $L(x)$ is an overestimation of $f$.
   \end{enumerate}
-}}
+\end{thmBox*}
+
 \begin{center}
     \includegraphics[scale=0.5]{images/briggs_04_06/fig4_71}
 \end{center}
@@ -109,27 +110,6 @@
 \vspace*{\stretch{1}}
 \pagebreak
 
-%\noindent
-%\fbox{\parbox{0.9875\linewidth}{
-%  \textbf{Summary: Uses of Linear Approximation}
-%  \begin{enumerate}
-%    \item 
-%      To approximate $f$ near $x=a$, use
-%        $$f(x)\approx L(x)=f(a)+f'(a)(x-a).$$
-%    \item 
-%      To approximate the change $\Delta y$ in the dependent variable when the independent variable $x$ changes from $a$ to $a+\Delta x$, use
-%        $$\Delta y\approx f'(a)\Delta x.$$
-%  \end{enumerate}
-%}}
-%\pagebreak
-
-%\begin{defn*}[Differentials]
-%  
-%  Let $f$ be differentiable on an interval containing $x$. A small change in $x$ is denoted by the \textbf{differential} $dx$. The corresponding change in $f$ is approximated by the \textbf{differential} $dy=f'(x)\,dx$. So if $\Delta x=dx$, where $\Delta x$ and $dx$ are both small, then $\Delta y\approx dy$:
-%    \[\Delta y= f(x+dx)-f(x)\approx dy=f'(x)\,dx.\]
-%    
-%\end{defn*}
-
 \begin{defn*}[Differentials]
     Let $f$ be a differentiable function on an interval containing $x$. An infinitesimal change in $x$ can be denoted by the \textbf{differential} $dx$. The corresponding change in the output of $f$ can be denoted by the \textbf{differential} $dy$. This yields the relation
         $$dy = f'(x)dx.$$
@@ -142,17 +122,13 @@
     Note that $\Delta y$ and $\Delta x$ can be thought of as the `rise' and `run' (respectively) of the secant line passing through the points $(x,f(x))$ and $(x+\Delta x, f(x+\Delta x))$.
 \end{defn*}
 
-\vspace*{\stretch{1}}
-\noindent
-\fbox{\parbox{0.9875\linewidth}{
-  \textbf{Linear Approximation and Differentials}
-    To approximate the change $\Delta y$ in the dependent variable when the independent variable $x$ changes from $x$ to $x+\Delta x$, use
-        $$\Delta y\approx f'(x)\Delta x$$
-    because if we set $\Delta x = dx$, then we have the following:
-        $$\Delta y= f(x+\Delta x)-f(x)\approx f'(x)\,dx=dy.$$
-    One can think of $\Delta y$ as the \textit{actual change} in the output of a function when $x$ changes by $\Delta x$, whereas $f'(x)\Delta x$ is the \textit{projected change} in the output of the function when the same $\Delta x$ is imposed. The point is these are approximately equal when $\Delta x$ is small.
-}}
-\vspace*{\stretch{1}}
+\begin{thmBox*}[Linear Approximation and Differentials]
+  To approximate the change $\Delta y$ in the dependent variable when the independent variable $x$ changes from $x$ to $x+\Delta x$, use
+      $$\Delta y\approx f'(x)\Delta x$$
+  because if we set $\Delta x = dx$, then we have the following:
+      $$\Delta y= f(x+\Delta x)-f(x)\approx f'(x)\,dx=dy.$$
+  One can think of $\Delta y$ as the \textit{actual change} in the output of a function when $x$ changes by $\Delta x$, whereas $f'(x)\Delta x$ is the \textit{projected change} in the output of the function when the same $\Delta x$ is imposed. The point is these are approximately equal when $\Delta x$ is small.
+\end{thmBox*}
 \pagebreak
 
 \begin{ex*}

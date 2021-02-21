@@ -3,12 +3,10 @@
 %\relscale{1.4} %TODO
 \section{15.4: The Chain Rule}
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 15.7: Chain Rule (One Independent Variable)}\\
+  \begin{thmBox*}[Theorem 15.7: Chain Rule (One Independent Variable)]
     Let $z$ be a differentiable function of $x$ and $y$ on its domain, where $x$ and $y$ are differentiable functions of $t$ on an interval $I$. Then
       \[\frac{dz}{dt}=\frac{\partial z}{\partial x}\frac{dx}{dt}+\frac{\partial z}{\partial y}\frac{dy}{dt}.\]
-  }}
+  \end{thmBox*}
   \vspace*{\baselineskip}
 
   \noindent
@@ -42,12 +40,11 @@
   \vspace*{\stretch{1}}
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 15.8: Chain Rule (Two Independent Variables)}\\
+  \begin{thmBox*}[Theorem 15.8: Chain Rule (Two Independent Variables)]
     Let $z$ be a differentiable function of $x$ and $y$, where $x$ and $y$ are differentiable functions of $s$ and $t$. Then
       \[\frac{\partial z}{\partial s}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial s}+\frac{\partial z}{\partial y}\frac{\partial y}{\partial s} \quad\textnormal{and}\quad \frac{\partial z}{\partial t}=\frac{\partial z}{\partial x}\frac{\partial x}{\partial t}+\frac{\partial z}{\partial y}\frac{\partial y}{\partial t}.\]
-  }}
+  \end{thmBox*}
+
   \begin{center}
     \hspace*{\stretch{1}}
     \includegraphics[width=0.315\linewidth]{images/briggs_15_04/fig15_39}
@@ -71,15 +68,12 @@
     For $r=\ln(x^2+xy+y^2)$, where $x=2st$ and $y=s/t$, find $\partial r/\partial s$ and $\partial r/\partial t$.
   \end{ex*}
   \vspace*{\stretch{1}}
-
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 15.9: Implicit Differentiation}\\
+  \begin{thmBox*}[Theorem 15.9: Implicit Differentiation]
     Let $F$ be differentiable on its domain and suppose $F(x,y)=0$ defines $y$ as a differentiable function of $x$. Provided $F_y\neq 0$,
       \[\frac{dy}{dx}=-\frac{F_x}{F_y}.\]
-  }}
+  \end{thmBox*}
   
   \textit{Note}: The above derivation comes from using the chain rule on $F(x,y)=0$.
   \vspace*{2\baselineskip}

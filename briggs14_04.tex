@@ -40,13 +40,12 @@
   \vspace*{\stretch{1}}
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Theorem 14.3: Arc Length as a Function of a Parameter}\\
+  \begin{thmBox*}[Theorem 14.3: Arc Length as a Function of a Parameter]
     Let $\vecr(t)$ describe a smooth curve, for $t\geq a$. The arc length is given by 
       \[s(t)=\int_a^t \abs{\vecv(u)}\,du,\]
     where $\abs{\vecv}=\abs{\vecr'}$. Equivalently, $\displaystyle \frac{ds}{dt}=\abs{\vecv(t)}$. If $\abs{\vecv(t)}=1$, for all $t\geq a$, then the parameter $t$ corresponds to arc length.
-  }}
+  \end{thmBox*}
+
   \begin{ex*}
     For the following functions, determine if $\vecr(t)$ uses arc length as a parameter. If not, find a description that uses arc length as a parameter.
   \end{ex*}
@@ -55,7 +54,6 @@
     \task $\vecr(t)=\bracket{\frac{1}{\sqrt{10}}\cos(t),\,\frac{3}{\sqrt{10}}\cos(t),\,\sin(t)}$,\ $0\leq t\leq 2\pi$.
   \end{tasks}
   \vspace*{\stretch{1}}
-  
   \pagebreak
-  
+
 \end{document}

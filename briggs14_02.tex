@@ -35,9 +35,7 @@
   \vspace*{\stretch{1}}
   \pagebreak
 
-  \noindent
-  \fbox{\parbox{0.9875\linewidth}{
-    \textbf{Derivative Rules}\\
+  \begin{thmBox*}[Derivative Rules]
     Let $\vecu$ and $\vecv$ be differentiable vector-valued functions, and let $f$ be a differentiable scalar-valued function, all at a point $t$. Let $\mathbf c$ be a constant vector. The following rules apply.
     \begin{enumerate}
       \TabPositions{0.6\linewidth}
@@ -48,7 +46,7 @@
       \item $\displaystyle \ddt\parens{\vecu(t)\cdot\vecv(t)}=\vecu'(t)\cdot\vecv(t)+\vecu(t)\cdot\vecv'(t)$ \tab \textcolor{blue}{Dot Product Rule}
       \item $\displaystyle \ddt\parens{\vecu(t)\times\vecv(t)}=\vecu'(t)\times\vecv(t)+\vecu(t)\times\vecv'(t)$ \tab \textcolor{blue}{Cross Product Rule}
     \end{enumerate}
-  }}
+  \end{thmBox*}
   \begin{ex*}
     Given $\vecu(t)=\bracket{4t^2,\,1,\,3t}$ and $\vecv(t)=\bracket{e^{-2t},\,-2e^t,\,e^t}$, find $\displaystyle \ddt\sbrkt{\vecu(t)\cdot\vecv(t)}$.
   \end{ex*}
