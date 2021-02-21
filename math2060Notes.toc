@@ -14,3 +14,5 @@
 \contentsline {section}{\numberline {}15.3: Partial Derivatives}{90}{section.14}%
 \contentsline {section}{\numberline {}15.4: The Chain Rule}{96}{section.15}%
 \contentsline {section}{\numberline {}15.5: Directional Derivatives and the Gradient}{102}{section.16}%
+\contentsline {section}{\numberline {}15.6: Tangent Planes and Linear Approximation}{112}{section.17}%
+\contentsline {section}{\numberline {}15.7: Maximum/Minimum Problems}{118}{section.18}%
