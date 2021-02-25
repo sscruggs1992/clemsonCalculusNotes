@@ -3,16 +3,16 @@
 \contentsline {section}{\numberline {}13.3: Dot Products}{13}{section.3}%
 \contentsline {section}{\numberline {}13.4: Cross Products}{18}{section.4}%
 \contentsline {section}{\numberline {}13.5: Lines and Planes in Space}{24}{section.5}%
-\contentsline {section}{\numberline {}13.6: Cylinders and Quadric Surfaces}{33}{section.6}%
-\contentsline {section}{\numberline {}14.1: Vector-Valued Functions}{41}{section.7}%
-\contentsline {section}{\numberline {}14.2: Calculus of Vector-Valued Functions}{46}{section.8}%
-\contentsline {section}{\numberline {}14.3: Motion in Space}{51}{section.9}%
-\contentsline {section}{\numberline {}14.4: Length of Curves}{56}{section.10}%
-\contentsline {section}{\numberline {}14.5: Curvature and Normal Vectors:}{60}{section.11}%
-\contentsline {section}{\numberline {}15.1: Graphs and Level Curves}{75}{section.12}%
-\contentsline {section}{\numberline {}15.2: Limits and Continuity}{83}{section.13}%
-\contentsline {section}{\numberline {}15.3: Partial Derivatives}{90}{section.14}%
-\contentsline {section}{\numberline {}15.4: The Chain Rule}{96}{section.15}%
-\contentsline {section}{\numberline {}15.5: Directional Derivatives and the Gradient}{102}{section.16}%
-\contentsline {section}{\numberline {}15.6: Tangent Planes and Linear Approximation}{112}{section.17}%
-\contentsline {section}{\numberline {}15.7: Maximum/Minimum Problems}{118}{section.18}%
+\contentsline {section}{\numberline {}13.6: Cylinders and Quadric Surfaces}{31}{section.6}%
+\contentsline {section}{\numberline {}14.1: Vector-Valued Functions}{39}{section.7}%
+\contentsline {section}{\numberline {}14.2: Calculus of Vector-Valued Functions}{44}{section.8}%
+\contentsline {section}{\numberline {}14.3: Motion in Space}{49}{section.9}%
+\contentsline {section}{\numberline {}14.4: Length of Curves}{54}{section.10}%
+\contentsline {section}{\numberline {}14.5: Curvature and Normal Vectors:}{58}{section.11}%
+\contentsline {section}{\numberline {}15.1: Graphs and Level Curves}{72}{section.12}%
+\contentsline {section}{\numberline {}15.2: Limits and Continuity}{80}{section.13}%
+\contentsline {section}{\numberline {}15.3: Partial Derivatives}{87}{section.14}%
+\contentsline {section}{\numberline {}15.4: The Chain Rule}{93}{section.15}%
+\contentsline {section}{\numberline {}15.5: Directional Derivatives and the Gradient}{99}{section.16}%
+\contentsline {section}{\numberline {}15.6: Tangent Planes and Linear Approximation}{109}{section.17}%
+\contentsline {section}{\numberline {}15.7: Maximum/Minimum Problems}{115}{section.18}%
