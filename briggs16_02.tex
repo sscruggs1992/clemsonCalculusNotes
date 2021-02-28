@@ -1,8 +1,20 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{16.2: Double Integrals over General Regions}
+
+  \begin{thmBox*}[Theorem 16.2: Double Integrals over Nonrectangular Regions]
+    Let $R$ be a region bounded below and above by the graphs of the continuous functions $y=g(x)$ and $y=h(x)$, respectively, and by the lines $x=a$ and $x=b$. If $f$ is continuous on $R$, then
+      \[\iint\limits_R f(x,y)\,dA=\int_a^b \int_{g(x)}^{h(x)} f(x,y)\,dy\,dx.\]
+    Let $R$ be a region bounded on the left and right by the graphs of the continuous functions $x=g(y)$ and $x=h(y)$, respectively, and the lines $y=c$ and $y=d$. If $f$ is continuous on $R$, then
+      \[\iint\limits_R f(x,y)\,dA=\int_c^d\int_{g(y)}^{h(y)}f(x,y)\,dx\,dy.\]
+  \end{thmBox*}
+
+  \begin{thmBox*}[Areas of Regions by Double Integrals]
+    Let $R$ be a region in the $xy$-plane. Then
+      \[\textnormal{area of } R=\iint\limits_R dA.\]
+  \end{thmBox*}
+
   \pagebreak
   
 \end{document}
