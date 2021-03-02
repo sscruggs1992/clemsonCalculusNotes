@@ -18,3 +18,4 @@
 \contentsline {section}{\numberline {}15.7: Maximum/Minimum Problems}{115}{section.18}%
 \contentsline {section}{\numberline {}15.8: Lagrange Multipliers}{124}{section.19}%
 \contentsline {section}{\numberline {}16.1: Double Integrals over Rectangular Regions}{131}{section.20}%
+\contentsline {section}{\numberline {}16.2: Double Integrals over General Regions}{136}{section.21}%
