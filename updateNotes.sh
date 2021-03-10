@@ -45,7 +45,7 @@ confirm "Copy note directory? (def Y)" -y &&
     echo "--> Copying note dir" && 
     sudo cp $NOTE_DIR/math2060_NoteKeys/* $U_DIR/;
 echo "--> Copying calendar"
-sudo cp misc/math2060_006_sp21Calendar.pdf $U_DIR/
+sudo cp /home/peter/Dropbox/Grad_School/Clemson/teaching/math2060/sp21/misc/math2060_006_sp21Calendar.pdf $U_DIR/
 # Display any differences between files
 for file in $NOTE_DIR/math2060_NoteKeys/*;
   do diff $file $U_DIR/$(basename -- $file);
