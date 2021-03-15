@@ -1,8 +1,21 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{16.4: Triple Integrals}
+
+  \begin{thmBox*}[Theorem 16.5: Triple Integrals]
+    Let $f$ be continuous over the region
+      \[D=\set{(x,y,z): a\leq x\leq b,\ g(x)\leq y\leq h(x),\ G(x,y)\leq z\leq H(x,y)},\]
+    where $g$, $h$, $G$, and $H$ are continuous functions. Then $f$ is integrable over $D$ and the triple integral is evaluated as the iterated integral
+      \[\iiint\limits_D f(x,y,z)\,dV=\int_a^b \int_{g(x)}^{h(x)} \int_{G(x,y)}^{H(x,y)} f(x,y,z)\,dz\,dy\,dx.\]
+  \end{thmBox*}
+
+  \begin{defn*}[Average Value of a Function of Three Variables]
+    If $f$ is continuous on a region $D$ of $\bbr^3$, then the \textbf{average value} of $f$ over $D$ is
+      \[\bar{f}=\frac{1}{\textnormal{volume of }D}\iiint\limits_D f(x,y,z)\,dV.\]
+  \end{defn*}
+
+
   \pagebreak
   
 \end{document}
