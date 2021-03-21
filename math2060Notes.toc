@@ -20,3 +20,5 @@
 \contentsline {section}{\numberline {}16.1: Double Integrals over Rectangular Regions}{130}{section.20}%
 \contentsline {section}{\numberline {}16.2: Double Integrals over General Regions}{135}{section.21}%
 \contentsline {section}{\numberline {}16.3: Double Integrals in Polar Coordinates}{142}{section.22}%
+\contentsline {section}{\numberline {}16.4: Triple Integrals}{151}{section.23}%
+\contentsline {section}{\numberline {}16.5: Triple Integrals in Cylindrical and Spherical Coordinates}{156}{section.24}%
