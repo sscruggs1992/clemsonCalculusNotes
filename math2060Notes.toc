@@ -22,3 +22,4 @@
 \contentsline {section}{\numberline {}16.3: Double Integrals in Polar Coordinates}{142}{section.22}%
 \contentsline {section}{\numberline {}16.4: Triple Integrals}{151}{section.23}%
 \contentsline {section}{\numberline {}16.5: Triple Integrals in Cylindrical and Spherical Coordinates}{156}{section.24}%
+\contentsline {section}{\numberline {}16.6: Integrals for Mass Calculations}{164}{section.25}%

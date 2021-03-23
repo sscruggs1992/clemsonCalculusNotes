@@ -1,6 +1,6 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
-\relscale{1.4} %TODO
+%\relscale{1.4} %TODO
 \section{16.6: Integrals for Mass Calculations}
   Suppose we have two masses $m_1$ and $m_2$ on a beam (with no mass) that are distances $d_1$ and $d_2$ away from a pivot point. This beam will be balanced when $m_1d_1=m_2d_2$.
   \vspace*{10pt}
@@ -36,6 +36,11 @@
   \begin{tasks}[after-item-skip=\stretch{1}, label=](1)
     \task 
       $\rho(x)=2+\cos(x)$, for $0\leq x\leq \pi$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=, resume](1)
     \task 
       $\rho(x)=\begin{cases}
         x^2& \textnormal{if } 0\leq x\leq 1\\
@@ -48,9 +53,17 @@
   \begin{defn*}[Center of Mass in Two Dimensions]
     Let $\rho$ be an integrable area density function defined over a closed bounded region $R$ in $\bbr^2$. The coordinates of the center of mass of the object represented by $R$ are
       \[\bar{x}=\frac{M_y}{m}=\frac{1}{m}\iint\limits_R x\rho(x,y)\,dA\quad \textnormal{ and }\quad \bar{y}=\frac{M_x}{m}=\frac{1}{m}\iint\limits_R y\rho(x,y)\,dA,\]
-    where $m=\iint_R \rho(x,y)\,dA$ is the mass, and $M_y$ and $M_x$ are the moments with respect to the $y$-axis and $x$-axis, respectively. if $\rho$ is constant, the center of mass is called the \textbf{centroid} and is independent of the density.
+    where $m=\iint_R \rho(x,y)\,dA$ is the mass, and $M_y$ and $M_x$ are the moments with respect to the $y$-axis and $x$-axis, respectively. If $\rho$ is constant, the center of mass is called the \textbf{centroid} and is independent of the density.
   \end{defn*}
+  \begin{ex*}
+    Find the center of mass of the following plane regions with variable density:
+  \end{ex*}
+  $R=\set{(x,y): 0\leq x\leq 4,\ 0\leq y\leq 2};\ \rho(x,y)=1+x/2$.
+  \vspace*{\stretch{1}}
+  \pagebreak
 
+  The quarter disk in the first quadrant bounded by $x^2+y^2=4$ with $\rho(x,y)=1+x^2+y^2$.
+  \vspace*{\stretch{1}}
   \pagebreak
 
   \begin{defn*}[Center of Mass in Two Dimensions]
