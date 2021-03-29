@@ -1,8 +1,74 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{17.2: Line Integrals}
+
+  \begin{defn*}[Scalar Line Integral in the Plane]
+    Suppose the scalar-valued function $f$ is defined on a region containing the smooth curve $C$ given by $\vecr(t)= \bracket{x(t),\,y(t)}$, for $a\leq t\leq b$. The \textbf{line integral of $f$ over $C$} is
+      \[\int_C f\parens{x(t), y(t)}\,ds=\lim_{\Delta\to 0} \sum\kto^n f\parens{x(t_k^*),\,y(t_k^*)}\Delta s_k,\]
+    provided this limit exists over all partitions of $\sbrkt{a,b}$. When the limit exists, $f$ is said to be \textbf{integrable} on $C$.
+  \end{defn*}
+
+  \begin{thmBox*}[Theorem 17.1: Evaluating Scalar Line Integrals in $\bbr^2$]
+    Let $f$ be continuous on a region containing a smooth curve $C$: $\vecr(t)=\bracket{x(t),\,y(t)}$, for $a\leq t\leq b$. Then
+    \begin{align*}
+      \int_C f\,ds&= \int_a^b f\parens{x(t),\,y(t)}\abs{\vecr'(t)}\,dt\\
+        &=\int_a^b f\parens{x(t),\,y(t)}\sqrt{x'(t)^2+y'(t)^2}\,dt.
+    \end{align*}
+  \end{thmBox*}
+
+  \begin{thmBox*}[Procedure: Evaluating the Line Integral $\ds\int_C f\,ds$]
+    \begin{enumerate}
+      \item 
+        Find a parametric description of $C$ in the form $\vecr(t)=\bracket{x(t),\,y(t)}$, for $a\leq t\leq b$.
+      \item 
+        Compute $\abs{\vecr'(t)}=\sqrt{x'(t)^2+y'(t)^2}$.
+      \item 
+        Make substitutions for $x$ and $y$ in the integrand and evaluate an ordinary integral:
+          \[\int_C f\,ds = \int_a^b f\parens{x(t),\,y(t)}\abs{\vecr'(t)}\,dt.\]
+    \end{enumerate}
+  \end{thmBox*}
+
+  \begin{thmBox*}[Theorem 17.2: Evaluating Scalar Line Integrals in $\bbr^3$]
+    Let $f$ be continuous on a region containing a smooth curve $C: \vecr(t)=\bracket{x(t),\,y(t),\,z(t)}$, for $a\leq t\leq b$. Then
+    \begin{align*}
+      \int_C f\,ds&= \int_a^b f\parens{x(t),\,y(t),\,z(t)}\abs{\vecr'(t)}\,dt\\
+        &= \int_a^b  f\parens{x(t),\,y(t),\,z(t)}\sqrt{x'(t)^2+y'(t)^2+z'(t)^2}\,dt.
+    \end{align*}
+  \end{thmBox*}
+
+  \begin{defn*}[Line Integral of a Vector Field]
+    Let $\mathbf F$ be a vector field that is continuous on a region containing a smooth oriented curve $C$ parameterized by arc length. Let $\vecT$ be the unit tangent vector at each point of $C$ consistent with the orientation. The line integral of $\mathbf F$ over $C$ is $\ds\int_C \mathbf F\cdot\vecT\,ds$.
+  \end{defn*}
+
+  \begin{thmBox*}[Different Forms of Line Integrals of Vector Fields]
+    The line integral $\int_C \mathbf F\cdot\vecT\,ds$ may be expressed in the following forms, where $\mathbf F=\bracket{f,\,g,\,h}$ and $C$ has a parameterization $\vecr(t)=\bracket{x(t),\,y(t),\,z(t)}$, for $a\leq t\leq b$:
+    \begin{align*}
+      \int_a^b \mathbf F\cdot\vecr'(t)\,dt &=\int_a^b \parens{f(t)x'(t)+g(t)y'(t)+h(t)z'(t)}\,dt\\
+        &=\int_C f\,dx+g\,dy+h\,dz\\
+        &=\int_C \mathbf F\cdot d\vecr.
+    \end{align*}
+    For line integrals in the plane, we let $\mathbf F=\bracket{f,\,g}$ and assume $C$ is parameterized in the form $\vecr(t)=\bracket{x(t),\,y(t)}$, for $a\leq t\leq b$. Then
+      \[\int_a^b \mathbf F\cdot \vecr'(t)\,dt=\int_a^b \parens{f(t)x'(t)+g(t)y'(t)}\,dt= \int_C f\,dx+g\,dy=\int_C \mathbf F\cdot d\vecr.\]
+  \end{thmBox*}
+
+  \begin{defn*}[Work Done in a Force Field]
+    Let $\mathbf F$ be a continuous force field in a region $D$ of $\bbr^3$. Let
+      \[C: \vecr(t)=\bracket{x(t),\,y(t),\,z(t)}, \textnormal{ for } a\leq t\leq b,\]
+    be a smooth curve in $D$ with a unit tangent vector $\vecT$ consistent with the orientation. The work done in moving an object along $C$ in the positive direction is
+      \[W=\int_C \mathbf F\cdot\vecT\,ds=\int_a^b \mathbf F\cdot\vecr'(t)\,dt.\]
+  \end{defn*}
+
+  \begin{defn*}[Circulation]
+    Let $\mathbf F$ be a continuous vector field on a region $D$ of $\bbr^3$, and let $C$ be a closed smooth oriented curve in $D$. The \textbf{circulation} of $\mathbf F$ on $C$ is $\ds\int_C \mathbf F\cdot\vecT\,ds$, where $\vecT$ is the unit vector tangent to $C$ consistent with the orientation. 
+  \end{defn*}
+
+  \begin{defn*}[Flux]
+    Let $\mathbf F=\bracket{f,g}$ be a continuous vector field on a region $R$ of $\bbr^2$. Let $C: \vecr(t)=\bracket{x(t),\,y(t)}$, $a\leq t\leq b$, be a smooth orientated curve in $R$ that does not intersect itself. The \textbf{flux} of the vector field $\mathbf F$ across $C$ is
+      \[\int_C \mathbf F\cdot \vecn\,ds=\int_a^b \parens{f(t)y'(t)-g(t)x'(t)}\,dt,\]
+    where $\vecn=\vecT\times\bfk$ is the unit normal vector and $\vecT$ is the unit tangent vector consistent with the orientation. If $C$ is a closed curve with counterclockwise orientation, $\vecn$ is the outward normal vector, and the flux integral gives the \textbf{outward flux} across $C$.
+  \end{defn*}
+
   \pagebreak
   
 \end{document}
