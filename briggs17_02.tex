@@ -100,8 +100,6 @@
     \begin{tasks}[after-item-skip=8\baselineskip, label=\alph*)](1)
       \task 
         The quarter-circle $C_1$ from $P(0,1)$ to $Q(1,0)$
-      \task 
-        The quarter circle $-C_1$ from $Q(1,0)$ to $P(0,1)$
     \end{tasks}
   \end{minipage}
   \begin{minipage}[t]{0.4\linewidth}\mbox{}
@@ -110,11 +108,20 @@
     \end{flushright}
   \end{minipage}
   \vspace*{\stretch{1}}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=\alph*), resume](1)
+      \task 
+        The quarter-circle $-C_1$ from $Q(1,0)$ to $P(0,1)$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
   \begin{tasks}[after-item-skip=\stretch{1}, label=\alph*), resume](1)
     \task 
-      the path $C_2$ from $P(0,1)$ to $Q(1,0)$ via two line segments throught $O(0,0)$.
+      the path $C_2$ from $P(0,1)$ to $Q(1,0)$ via two line segments through $O(0,0)$.
   \end{tasks}
+  \begin{flushright}
+    \includegraphics[width=0.3\linewidth]{images/briggs_17_02/fig17_20}
+  \end{flushright}
   \vspace*{\stretch{1}}
   \pagebreak
 
@@ -125,7 +132,7 @@
       \[W=\int_C \mathbf F\cdot\vecT\,ds=\int_a^b \mathbf F\cdot\vecr'(t)\,dt.\]
   \end{defn*}
   \begin{ex*}
-    For the force field $\mathbf F=\dfrac{\bracket{x,y,z}}{\parens{x^2+y^2+z^2}^{3/2}}$, calculate the work required to move an object from $(1,1,1)$ to $(8,4,2)$.
+    For the force field $\mathbf F=\dfrac{\bracket{x,y,z}}{\parens{x^2+y^2+z^2}^{3/2}}$, calculate the work required to move an object from $(1,1,1)$ to $(10,10,10)$.
   \end{ex*}
   \vspace*{\stretch{1}}
   \pagebreak
