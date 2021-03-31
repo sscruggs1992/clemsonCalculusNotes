@@ -14,13 +14,14 @@
 \contentsline {section}{\numberline {}15.3: Partial Derivatives}{86}{section.14}%
 \contentsline {section}{\numberline {}15.4: The Chain Rule}{92}{section.15}%
 \contentsline {section}{\numberline {}15.5: Directional Derivatives and the Gradient}{98}{section.16}%
-\contentsline {section}{\numberline {}15.6: Tangent Planes and Linear Approximation}{108}{section.17}%
-\contentsline {section}{\numberline {}15.7: Maximum/Minimum Problems}{114}{section.18}%
-\contentsline {section}{\numberline {}15.8: Lagrange Multipliers}{123}{section.19}%
-\contentsline {section}{\numberline {}16.1: Double Integrals over Rectangular Regions}{130}{section.20}%
-\contentsline {section}{\numberline {}16.2: Double Integrals over General Regions}{135}{section.21}%
-\contentsline {section}{\numberline {}16.3: Double Integrals in Polar Coordinates}{142}{section.22}%
-\contentsline {section}{\numberline {}16.4: Triple Integrals}{151}{section.23}%
-\contentsline {section}{\numberline {}16.5: Triple Integrals in Cylindrical and Spherical Coordinates}{156}{section.24}%
-\contentsline {section}{\numberline {}16.6: Integrals for Mass Calculations}{164}{section.25}%
-\contentsline {section}{\numberline {}17.1: Vector Fields}{170}{section.26}%
+\contentsline {section}{\numberline {}15.6: Tangent Planes and Linear Approximation}{107}{section.17}%
+\contentsline {section}{\numberline {}15.7: Maximum/Minimum Problems}{113}{section.18}%
+\contentsline {section}{\numberline {}15.8: Lagrange Multipliers}{122}{section.19}%
+\contentsline {section}{\numberline {}16.1: Double Integrals over Rectangular Regions}{129}{section.20}%
+\contentsline {section}{\numberline {}16.2: Double Integrals over General Regions}{134}{section.21}%
+\contentsline {section}{\numberline {}16.3: Double Integrals in Polar Coordinates}{141}{section.22}%
+\contentsline {section}{\numberline {}16.4: Triple Integrals}{150}{section.23}%
+\contentsline {section}{\numberline {}16.5: Triple Integrals in Cylindrical and Spherical Coordinates}{155}{section.24}%
+\contentsline {section}{\numberline {}16.6: Integrals for Mass Calculations}{163}{section.25}%
+\contentsline {section}{\numberline {}17.1: Vector Fields}{169}{section.26}%
+\contentsline {section}{\numberline {}17.2: Line Integrals}{174}{section.27}%
