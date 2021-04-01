@@ -1,8 +1,63 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{17.3: Conservative Vector Fields}
+
+  \begin{defn*}[Simple and Closed Curves]
+    Suppose a curve $C$ (in $\bbr^2$ or $\bbr^3$) is described parametrically by $\vecr(t)$, where $a\leq t\leq b$. Then $C$ is a \textbf{simple curve} if $\vecr(t_1)\neq \vecr(t_2)$ for all $t_1$ and $t_2$, with $a<t_1<t_2<b$; that is, $C$ never intersects itself between its endpoints. The curve $C$ is \textbf{closed} if $\vecr(a)=\vecr(b)$; that is, the initial and terminal points of $C$ are the same.
+  \end{defn*}
+  %TODO fig17_28
+
+  \begin{defn*}[Connected and Simply Connected Regions]
+    An open region $R$ in $\bbr^2$ (or $D$ in $\bbr^3$) is \textbf{connected} if it is possible to connect any two points of $R$ by a continuous curve lying in $R$. An open region $R$ is \textbf{simply connected} if every closed simple curve in $R$ can be deformed and contracted to a point in $R$.
+  \end{defn*}
+  %TODO fig17_29
+
+  \begin{defn*}[Conservative Vector Field]
+    A vector field $\mathbf F$ is said to be \textbf{conservative} on a region (in $\bbr^2$ or $\bbr^3$) if there exists a scalar function $\varphi$ such that $\mathbf F=\grad\varphi$ on that region.
+  \end{defn*}
+
+  \begin{thmBox*}[Theorem 17.3: Test for Conservative Vector Fields]
+    Let $\mathbf F=\bracket{f,g,h}$ be a vector field defined on a connected and simply connected region $D$ of $\bbr^3$, where $f$, $g$, and $h$ have continuous first partial derivatives on $D$. Then $\mathbf F$ is a conservative vector field on $D$ (there is a potential function $\varphi$ such that $\mathbf F=\grad \varphi$) if and only if
+      \[\frac{\partial f}{\partial y}=\frac{\partial g}{\partial x},\qquad
+      \frac{\partial f}{\partial z}=\frac{\partial h}{\partial x},\qquad
+      \textnormal{and } \quad\frac{\partial g}{\partial z}=\frac{\partial h}{\partial y}.\]
+    For vector fields in $\bbr^2$, we have the single condition $\ds\frac{\partial f}{\partial y}=\frac{\partial g}{\partial x}$.
+  \end{thmBox*}
+
+  \begin{thmBox*}[Procedure: Finding Potential Functions in $\bbr^3$]
+    Suppose $\mathbf F=\bracket{f,g,h}$ is a conservative vector field. To find $\varphi$ such that $\mathbf F=\grad \varphi$, use the following steps:
+    \begin{enumerate}
+      \item 
+        Integrate $\varphi_x=f$ with respect to $x$ to obtain $\varphi$, which includes an arbitrary function $c(y,z)$.
+      \item 
+        Compute $\varphi_y$ and equate it to $g$ to obtain an expression for $c_y(y,z)$.
+      \item 
+        Integrate $c_y(y,z)$ with respect to $y$ to obtain $c(y,z)$, including an arbitrary function $d(z)$.
+      \item 
+        Compute $\varphi_z$ and equate it to $h$ to get $d(z)$.
+    \end{enumerate}
+    A similar procedure beginning with $\varphi_y=g$ or $\varphi_z=h$ may be easier in some cases.
+  \end{thmBox*}
+
+  \begin{thmBox*}[Theorem 17.4: Fundamental Theorem for Line Integrals]
+    Let $R$ be a region in $\bbr^2$ or $\bbr^3$ and let $\varphi$ be a differentiable potential function defined on $R$. If $\mathbf F=\grad\varphi$ (which means that $\mathbf F$ is conservative), then
+       \[\int_C \mathbf F\cdot\vecT\,ds=\int_C \mathbf F\cdot d\vecr=\varphi(B)-\varphi(A),\]
+     for all points $A$ and $B$ in $R$ and all piecewise-smooth oriented curves $C$ in $R$ from $A$ to $B$.
+  \end{thmBox*}
+
+  \begin{defn*}[Independence of Path]
+    Let $\mathbf F$ be a continuous vector field with domain $R$. If $\int_{C_1} \mathbf F\cdot d\vecr=\int_{C_2} \mathbf F\cdot d\vecr$ for all piecewise-smooth curves $C_1$ and $C_2$ in $R$ with the same initial and terminal points, then the line integral is \textbf{independent of path}.
+  \end{defn*}
+
+  \begin{thmBox*}[Theorem 17.5]
+    Let $\mathbf F$ be a continuous vector field on an open connected region $R$ in $\bbr^2$. If $\int_C \mathbf F\cdot d\vecr$ is independent of path, then $\mathbf F$ is conservative; that is, there exists a potential function $\varphi$ such that $\mathbf F=\grad \varphi$ on $R$. 
+  \end{thmBox*}
+
+  \begin{thmBox*}[Line Integrals on Closed Curves]
+    Let $R$ be on open connected region in $\bbr^2$ or $\bbr^3$. Then $\mathbf F$ is a conservative vector field on $R$ if and only if $\oint_C \mathbf F\cdot d\vecr=0$ on all simple closed piecewise-smooth oriented curves $C$ in $R$.
+  \end{thmBox*}
+
   \pagebreak
   
 \end{document}

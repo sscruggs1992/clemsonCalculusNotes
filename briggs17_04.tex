@@ -1,8 +1,46 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{17.4: Green's Theorem}
+
+  \begin{thmBox*}[Green's Theorem --- Circulation Form]
+    Let $C$ be a simple closed piecewise-smooth curve, oriented counterclockwise, that encloses a connected and simply connected regin $R$ in the plane. Assume $\mathbf F=\bracket{f,g}$, where $f$ and $g$ have continuous first partial derivatives in $R$. Then
+      \[\underbrace{\oint_C \mathbf F\cdot d\vecr}_{\textcolor{blue}{\textnormal{circulation}}}=\underbrace{\oint_C f\,dx+g\,dy}_{\textcolor{blue}{\textnormal{circulation}}}=\iint\limits_R\parens{\frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}}\,dA.\]
+  \end{thmBox*}
+
+  \begin{thmBox*}[Area of a Plane Region by Line Integrals]
+    Under the conditions of Green's Theorem, the area of a region $R$ enclosed by a curve $C$ is
+      \[\oint_C x\,dy=-\oint_C y\,dx=\frac{1}{2}\oint_C\parens{x\,dy-y\,dx}.\]
+  \end{thmBox*}
+
+  \begin{thmBox*}[Green's Theorem --- Flux Form]
+    Let $C$ be a simple closed piecewise-smooth curve, oriented counterclockwise, that encloses a connected and simply connected region $R$ in the plane. Assume $\mathbf F=\bracket{f,g}$, where $f$ and $g$ have continuous first partial derivatives in $R$. Then
+      \[\underbrace{\oint_C \mathbf F\cdot \vecn ds}_{\textcolor{blue}{\textnormal{outward flux}}}=\underbrace{\oint_C f\,dy-g\,dx}_{\textcolor{blue}{\textnormal{outward flux}}}=\iint\limits_R\parens{\frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}}\,dA,\]
+    where $\vecn$ is the outward unit normal vector on the curve.
+  \end{thmBox*}
+
+  \begin{defn*}[Two-Dimensional Divergence]
+    The \textbf{two-dimensional divergence} of the vector field $\mathbf F=\bracket{f,g}$ is $\displaystyle \frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}$. If the divergence is zero throughout a region, the vector field is \textbf{source free} on that region.
+  \end{defn*}
+
+  \begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabularx}{0.95\linewidth}{@{}X@{\hspace*{50pt}}X@{}}\toprule
+      \textbf{Conservative Fields $\mathbf F=\bracket{f,g}$}& \textbf{Source-Free Fields $\mathbf F=\bracket{f,g}$}\\
+      curl $\ds = \frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}=0$& 
+      divergence $\ds = \frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}=0$\\
+      Potential function $\varphi$ with \newline
+      $\mathbf F=\grad\varphi$\hfill or\hfill $\ds f=\frac{\partial \varphi}{\partial x}$,\hfill $\ds g=\frac{\partial \varphi}{\partial y}$& 
+      Stream function $\psi$ with 
+
+      $\ds f=\frac{\partial \psi}{\partial y}$, \hspace*{25pt} $\ds g=-\frac{\partial \psi}{\partial x}$\\
+      Circulation $\ds=\oint_C \mathbf F\cdot d\vecr=0$ on all
+      
+      closed curves $C$.& 
+      Flux $\ds=\oint_C \mathbf F\cdot\vecn\,ds=0$ on all closed curves $C$.
+    \end{tabularx}
+  \end{center}
+
   \pagebreak
   
 \end{document}
