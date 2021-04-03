@@ -24,20 +24,54 @@
   \end{defn*}
 
   \begin{center}
-    \renewcommand{\arraystretch}{2}
-    \begin{tabularx}{0.95\linewidth}{@{}X@{\hspace*{50pt}}X@{}}\toprule
-      \textbf{Conservative Fields $\mathbf F=\bracket{f,g}$}& \textbf{Source-Free Fields $\mathbf F=\bracket{f,g}$}\\
+    \renewcommand{\arraystretch}{2.5}
+    \begin{tabularx}{0.95\linewidth}{@{}X@{\hspace*{60pt}}X@{}}
+      \textbf{Conservative Fields $\mathbf F=\bracket{f,g}$}& \textbf{Source-Free Fields $\mathbf F=\bracket{f,g}$}\\\midrule
+      %
       curl $\ds = \frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}=0$& 
       divergence $\ds = \frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}=0$\\
+      %
       Potential function $\varphi$ with \newline
       $\mathbf F=\grad\varphi$\hfill or\hfill $\ds f=\frac{\partial \varphi}{\partial x}$,\hfill $\ds g=\frac{\partial \varphi}{\partial y}$& 
       Stream function $\psi$ with 
 
       $\ds f=\frac{\partial \psi}{\partial y}$, \hspace*{25pt} $\ds g=-\frac{\partial \psi}{\partial x}$\\
+      %
       Circulation $\ds=\oint_C \mathbf F\cdot d\vecr=0$ on all
       
       closed curves $C$.& 
-      Flux $\ds=\oint_C \mathbf F\cdot\vecn\,ds=0$ on all closed curves $C$.
+      Flux $\ds=\oint_C \mathbf F\cdot\vecn\,ds=0$ on all closed curves $C$.\\
+      %
+      Evaluation of the line integral \newline$\displaystyle \int_C \mathbf F\cdot d\vecr = \varphi(B)-\varphi(A)$&
+      Evaluation of the line integral \newline$\displaystyle \int_C \mathbf F\cdot \vecn\,ds = \psi(B)-\psi(A)$\\\bottomrule
+    \end{tabularx}
+  \end{center}
+  \pagebreak
+
+  \begin{center}
+    \renewcommand{\arraystretch}{1.75}
+    \begin{tabularx}{\linewidth}{@{}
+      >{\hsize=0.8\hsize}X
+      >{\hsize=1.1\hsize}X
+      >{\hsize=1.1\hsize}X@{}}\toprule
+      \multicolumn{3}{c}{\textbf{Circulation/work integrals: $\displaystyle\int_C \mathbf F\cdot\vecT\,ds=\int_C\mathbf F\cdot d\vecr=\int_C f\,dx+g\,dy$}}\\\midrule
+      & $C$ \textbf{closed}& $C$ \textbf{not closed}\\
+      %
+      $\mathbf F$ \textbf{conservative}\newline ($\mathbf F=\grad\varphi$)& $\displaystyle \oint_C \mathbf F\cdot d\vecr=0$&
+      $\displaystyle \int_C \mathbf F\cdot d\vecr=\varphi(B)-\varphi(A)$\\
+      %
+      $\mathbf F$ \textbf{not conservative}&
+      Green's Theorem\newline $\displaystyle \oint_C \mathbf F\cdot d\vecr=\iint\limits_R \parens{g_x-f_y}\,dA$&
+      Direct evaluation\newline $\displaystyle \int_C\mathbf F\cdot d\vecr=\int_a^b \parens{fx'+gy'}\,dt$\\\midrule
+      \multicolumn{3}{c}{\textbf{Flux integrals: $\displaystyle\int_C \mathbf F\cdot\vecn\,ds=\int_C f\,dy-g\,dx$}}\\\midrule
+      & $C$ \textbf{closed}& $C$ \textbf{not closed}\\
+      %
+      $\mathbf F$ \textbf{source free}\newline ($f=\psi_y, g=-\psi_x$)& $\displaystyle \oint_C \mathbf F\cdot \vecn\,ds=0$&
+      $\displaystyle \int_C \mathbf F\cdot \vecn\,ds=\psi(B)-\psi(A)$\\
+      %
+      $\mathbf F$ \textbf{not source free}&
+      Green's Theorem\newline $\displaystyle \oint_C \mathbf F\cdot \vecn\,ds=\iint\limits_R \parens{f_x+g_y}\,dA$&
+      Direct evaluation\newline $\displaystyle \int_C\mathbf F\cdot \vecn\,ds=\int_a^b \parens{fy'-gx'}\,dt$\\\bottomrule
     \end{tabularx}
   \end{center}
 
