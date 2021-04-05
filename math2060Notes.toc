@@ -25,3 +25,4 @@
 \contentsline {section}{\numberline {}16.6: Integrals for Mass Calculations}{163}{section.25}%
 \contentsline {section}{\numberline {}17.1: Vector Fields}{169}{section.26}%
 \contentsline {section}{\numberline {}17.2: Line Integrals}{174}{section.27}%
+\contentsline {section}{\numberline {}17.3: Conservative Vector Fields}{186}{section.28}%
