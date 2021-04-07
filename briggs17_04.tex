@@ -1,6 +1,6 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
-\relscale{1.4} %TODO
+%\relscale{1.4} %TODO
 \section{17.4: Green's Theorem}
 
   \begin{thmBox*}[Green's Theorem --- Circulation Form]
@@ -113,9 +113,67 @@
     where $\vecn$ is the outward unit normal vector on the curve.
   \end{thmBox*}
 
+  \begin{flushright}
+    \includegraphics[width=0.9\linewidth]{images/briggs_17_04/fig17_33}
+  \end{flushright}
+
   \begin{defn*}[Two-Dimensional Divergence]
     The \textbf{two-dimensional divergence} of the vector field $\mathbf F=\bracket{f,g}$ is $\displaystyle \frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}$. If the divergence is zero throughout a region, the vector field is \textbf{source free} on that region.
   \end{defn*}
+  \pagebreak
+
+  \begin{ex*}
+    Compute the curl of $\mathbf F=\bracket{x^2,2y^2}$ where $C$ is the upper half of the unit circle and the line segment $-1\leq x\leq 1$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Integrate $\displaystyle \oint_C \parens{2x+e^{y^2}}\,dy-\parens{4y^2+e^{x^2}}\,dx$, where $C$ is the boundary of the square with vertices $(0,0)$, $(1,0)$, $(1,1)$, and $(0,1)$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Compute the circulation and outward flux across the boundary of the given regions:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=](1)
+    \task $\mathbf F=\bracket{x,y}$; $R$ is the half-annulus $\set{(r,\theta): 1\leq r\leq 2, 0\leq \theta\leq \pi}$,
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=, resume](1)
+    \task $\mathbf F=\bracket{-y,x}$; $R$ is the annulus $\set{(r,\theta): 1\leq r\leq 3, 0\leq \theta\leq 2\pi}$.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \textbf{Stream functions:}\newline
+  In the same way that a vector field is conservative if there exists a potential function $\varphi$, a vector field is source free if a \textbf{stream function} $\psi$ exists such that
+    \[\frac{\partial \psi}{\partial y}=f, \hspace*{25pt} \frac{\partial \psi}{\partial x}=-g.\]
+  If such a function exists, then the divergence is zero:
+    \[\frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}=\underbrace{\frac{\partial}{\partial x}\parens{\frac{\partial \psi}{\partial y}}+\frac{\partial}{\partial y}\parens{-\frac{\partial \psi}{\partial x}}}_{\textcolor{blue}{\displaystyle\psi_{yx}=\psi_{xy}}}=0\]
+
+  If a vector field is both conservative and source-free, then it has both a potential function and a stream function. Furthermore, the level curves of the potential and stream functions form orthogonal families. These vector fields have zero divergence
+    \[0=f_x+g_y=\varphi_{xx}+\varphi_{yy},\]
+  and zero curl
+    \[0=g_x-f_y=-\psi_{xx}-\psi_{yy}.\]
+  Thus, conservative, source-free vector fields satisfy \textbf{Laplace's equation}:
+    \[\varphi_{xx}+\varphi_{yy}=0 \qquad \textnormal{ and } \qquad \psi_{xx}+\psi_{yy}=0.\]
+  \pagebreak
+
+  \begin{ex*}
+    For $\mathbf F=\bracket{-e^{-x}\sin(y),\,e^{-x}\cos(y)}$
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=](1)
+    \task 
+      Show $\mathbf F$ is conservative and source-free field
+    \task 
+      Find the potential function $\varphi$ and the stream function $\psi$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
   \begin{center}
     \renewcommand{\arraystretch}{2.5}
@@ -168,7 +226,27 @@
       Direct evaluation\newline $\displaystyle \int_C\mathbf F\cdot \vecn\,ds=\int_a^b \parens{fy'-gx'}\,dt$\\\bottomrule
     \end{tabularx}
   \end{center}
-
   \pagebreak
-  
+
+  \begin{ex*}
+    Suppose $C$ is a circle centered at the origin, oriented counter-clockwise, that encloses disk $R$ in the plane. For $\mathbf F=\bracket{4x^3y, xy^2+x^4}$
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=\alph*)](1)
+    \task 
+      Calculate the two-dimensional curl of $\mathbf F$
+    \task 
+      Calculate the two-dimensional divergence of $\mathbf F$
+    \task 
+      Is $\mathbf F$ irrotational on $R$?
+    \task 
+      Is $\mathbf F$ source free on $R$?
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{proof}
+    
+  \end{proof}
+  \pagebreak 
+ 
 \end{document}

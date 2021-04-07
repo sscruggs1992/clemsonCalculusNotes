@@ -26,3 +26,4 @@
 \contentsline {section}{\numberline {}17.1: Vector Fields}{169}{section.26}%
 \contentsline {section}{\numberline {}17.2: Line Integrals}{174}{section.27}%
 \contentsline {section}{\numberline {}17.3: Conservative Vector Fields}{186}{section.28}%
+\contentsline {section}{\numberline {}17.4: Green's Theorem}{196}{section.29}%
