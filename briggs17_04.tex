@@ -4,7 +4,7 @@
 \section{17.4: Green's Theorem}
 
   \begin{thmBox*}[Green's Theorem --- Circulation Form]
-    Let $C$ be a simple closed piecewise-smooth curve, oriented counterclockwise, that encloses a connected and simply connected regin $R$ in the plane. Assume $\mathbf F=\bracket{f,g}$, where $f$ and $g$ have continuous first partial derivatives in $R$. Then
+    Let $C$ be a simple closed piecewise-smooth curve, oriented counterclockwise, that encloses a connected and simply connected region $R$ in the plane. Assume $\mathbf F=\bracket{f,g}$, where $f$ and $g$ have continuous first partial derivatives in $R$. Then
       \[\underbrace{\oint_C \mathbf F\cdot d\vecr}_{\textcolor{blue}{\textnormal{circulation}}}=\underbrace{\oint_C f\,dx+g\,dy}_{\textcolor{blue}{\textnormal{circulation}}}=\iint\limits_R\parens{\frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}}\,dA.\]
   \end{thmBox*}
 
@@ -96,6 +96,11 @@
   \vspace*{\stretch{1}}
   \pagebreak
 
+  \begin{ex*}
+    Compute the curl of $\mathbf F=\bracket{x^2,2y^2}$ where $C$ is the upper half of the unit circle and the line segment $-1\leq x\leq 1$.
+  \end{ex*}
+  \vspace*{\stretch{0.5}}
+
   \begin{thmBox*}[Area of a Plane Region by Line Integrals]
     Under the conditions of Green's Theorem, the area of a region $R$ enclosed by a curve $C$ is
       \[\oint_C x\,dy=-\oint_C y\,dx=\frac{1}{2}\oint_C\parens{x\,dy-y\,dx}.\]
@@ -109,7 +114,7 @@
 
   \begin{thmBox*}[Green's Theorem --- Flux Form]
     Let $C$ be a simple closed piecewise-smooth curve, oriented counterclockwise, that encloses a connected and simply connected region $R$ in the plane. Assume $\mathbf F=\bracket{f,g}$, where $f$ and $g$ have continuous first partial derivatives in $R$. Then
-      \[\underbrace{\oint_C \mathbf F\cdot \vecn ds}_{\textcolor{blue}{\textnormal{outward flux}}}=\underbrace{\oint_C f\,dy-g\,dx}_{\textcolor{blue}{\textnormal{outward flux}}}=\iint\limits_R\parens{\frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}}\,dA,\]
+      \[\underbrace{\oint_C \mathbf F\cdot \vecn\, ds}_{\textcolor{blue}{\textnormal{outward flux}}}=\underbrace{\oint_C f\,dy-g\,dx}_{\textcolor{blue}{\textnormal{outward flux}}}=\iint\limits_R\parens{\frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}}\,dA,\]
     where $\vecn$ is the outward unit normal vector on the curve.
   \end{thmBox*}
 
@@ -122,11 +127,12 @@
   \end{defn*}
   \pagebreak
 
-  \begin{ex*}
-    Compute the curl of $\mathbf F=\bracket{x^2,2y^2}$ where $C$ is the upper half of the unit circle and the line segment $-1\leq x\leq 1$.
-  \end{ex*}
-  \vspace*{\stretch{1}}
-  \pagebreak
+  %% \begin{ex*}
+  %%   Evaluate
+  %%     \[\oint_C \parens{4x^3+\sin(y^2)}\,dy-\parens{4y^3+\cos(x^2)}\,dx\]
+  %% \end{ex*}
+  %% \vspace*{\stretch{1}}
+  %% \pagebreak
 
   \begin{ex*}
     Integrate $\displaystyle \oint_C \parens{2x+e^{y^2}}\,dy-\parens{4y^2+e^{x^2}}\,dx$, where $C$ is the boundary of the square with vertices $(0,0)$, $(1,0)$, $(1,1)$, and $(0,1)$.
@@ -229,7 +235,7 @@
   \pagebreak
 
   \begin{ex*}
-    Suppose $C$ is a circle centered at the origin, oriented counter-clockwise, that encloses disk $R$ in the plane. For $\mathbf F=\bracket{4x^3y, xy^2+x^4}$
+    Suppose $C$ is a circle centered at the origin, oriented counterclockwise, that encloses disk $R$ in the plane. For $\mathbf F=\bracket{4x^3y, xy^2+x^4}$
   \end{ex*}
   \begin{tasks}[after-item-skip=\stretch{1}, label=\alph*)](1)
     \task 
@@ -245,6 +251,35 @@
   \pagebreak
 
   \begin{proof}
+    Consider the regions $R$ enclosed by a simple closed smooth curve $C$ oriented in a counterclockwise direction, given by
+      \[R=\set{(x,y): a\leq x\leq b, G_1(x)\leq y\leq G_2(x)}\]
+    or
+      \[R=\set{(x,y): H_1(y)\leq x\leq H_2(y), c\leq y\leq d}.\]
+    \begin{center}
+      \includegraphics[width=0.65\linewidth]{images/briggs_17_04/fig17_37}
+    \end{center}
+    To prove the circulation form of Green's Theorem, we have
+
+    \begin{minipage}{0.5\linewidth}
+      \begin{align*}
+        &\iint\limits_R \frac{\partial f}{\partial y}\,dA\\
+          &= \int_a^b \int_{G_1(x)}^{G_2(x)}\frac{\partial f}{\partial y}\,dy\,dx\\
+          &=\int_a^b \big(\underbrace{f\parens{x,G_2(x)}}_{\textnormal{on }C_2}-\underbrace{f\parens{x,G_1(x)}}_{\textnormal{on }C_1}\big)\,dx\\
+          &=\int_{-C_2} f\,dx-\int_{C_1} f\,dx\\
+          &=-\int_{C_2} f\,dx-\int_{C_1} f\,dx\\
+          &=-\oint_C f\,dx
+      \end{align*}
+    \end{minipage}%
+    \begin{minipage}{0.5\linewidth}
+      \begin{align*}
+        &\iint\limits_R \frac{\partial g}{\partial x}\,dA\\
+          &= \int_c^d \int_{H_1(y)}^{H_2(y)}\frac{\partial g}{\partial x}\,dx\,dy\\
+          &=\int_c^d \big(\underbrace{g\parens{H_2(y),y}}_{C_2}-\underbrace{f\parens{H_1(y),y}}_{-C_1}\big)\,dy\\
+          &=\int_{C_2} g\,dy-\int_{-C_1} g\,dy\\
+          &=\int_{C_2} g\,dy+\int_{C_1} g\,dy\\
+          &=\oint_C g\,dy
+      \end{align*}
+    \end{minipage}%
     
   \end{proof}
   \pagebreak 
