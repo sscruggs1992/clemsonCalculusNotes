@@ -1,8 +1,60 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{17.5: Divergence and Curl}
+
+  \begin{defn*}[Divergence of a Vector Field]
+    The \textbf{divergence} of a vector field $\mathbf F=\bracket{f,\,g,\,h}$ that is differentiable on a region of $\bbr^3$ is 
+      \[\operatorname{div} \mathbf F=\grad\cdot\mathbf F=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial y}+\frac{\partial h}{\partial z}.\]
+    If $\grad\cdot\mathbf F=0$, the vector field is \textbf{source free}.
+  \end{defn*}
+
+  \begin{thmBox*}[Theorem 17.10: Divergence of Radial Vector Fields]
+    For a real number $p$, the divergence of the radial vector field
+      \[\mathbf F=\frac{\vecr}{\abs{\vecr}^p}=\frac{\bracket{x,\,y,\,z}}{\parens{x^2+y^2+z^2}^{p/2}} \hspace*{15pt}\textnormal{ is }\hspace*{15pt} \grad\cdot\mathbf F= \frac{3-p}{\abs{\vecr}^p}.\]
+  \end{thmBox*}
+
+  \begin{defn*}[Curl of a Vector Field]
+    The \textbf{curl} of a vector field $\mathbf F=\bracket{f,\,g,\,h}$ that is differentiable on a region of $\bbr^3$ is
+    \begin{align*}
+      \grad\times\mathbf F&=\operatorname{curl} \mathbf F\\
+        &=\parens{\frac{\partial h}{\partial y}-\frac{\partial g}{\partial z}}\bfi+\parens{\frac{\partial f}{\partial z}-\frac{\partial h}{\partial x}}\bfj+\parens{\frac{\partial g}{\partial x}-\frac{\partial f}{\partial y}}\bfk
+    \end{align*}
+    If $\grad\times\mathbf F=\bfO$, the vector field is \textbf{irrotational}.
+  \end{defn*}
+
+  \begin{thmBox*}[General Rotation Vector Field]
+    The \textbf{general rotation vector field} is $\mathbf F=a\times\vecr$, when the nonzero constant vector $\mathbf a=\bracket{a_1,\,a_2,\,a_3}$ is the axis of rotation and $\vecr=\bracket{x,\,y,\,z}$. For all nonzero choices of $a$, $\abs{\grad\times\mathbf F}=2\abs{\veca}$ and $\grad\cdot\mathbf F=0$. If $\mathbf F$ is a vector field, then the constant angular speed of the field is
+      \[\omega =\abs{\veca}=\frac{1}{2}\abs{\grad\times\mathbf F}.\]
+  \end{thmBox*}
+
+  \begin{thmBox*}[Theorem 17.11: Curl of a Conservative Vector Field]
+    Suppose $\mathbf F$ is a conservative vector field on an open region $D$ of $\bbr^3$. Let $\mathbf F=\grad \varphi$, where $\varphi$ is a potential function with continuous second partial derivatives on $D$. Then $\grad\times\mathbf F=\grad\times\grad_\varphi=\bfO$: The curl of the gradient is the zero vector and $\mathbf F$ is irrotational.
+  \end{thmBox*}
+
+  \begin{thmBox*}[Theorem 17.12: Divergence of the Curl]
+    Suppose $\mathbf F=\bracket{f,\,g,\,h}$, where $f$, $g$, and $h$ have continuous second partial derivatives. Then $\grad\cdot\parens{\grad\times\mathbf F}=0$: The divergence of the curl is zero.
+  \end{thmBox*}
+
+  \begin{thmBox*}[Theorem 17.13: Product Rule for the Divergence]
+    Let $u$ be a scalar-valued function that is differentiable on a region $D$ and let $\mathbf F$ be a vector field that is differentiable on $D$. Then
+      \[\grad\cdot\parens{u\mathbf F}=\grad u\cdot\mathbf F+u\parens{\grad\cdot\mathbf F}.\]
+  \end{thmBox*}
+
+  \begin{thmBox*}[Properties of a Conservative Vector Field]
+    Let $\mathbf F$ be a conservative vector field whose components have continuous second partial derivatives on an open connected region $D$ in $\bbr^3$. Then $\mathbf F$ has the following equivalent properties.
+    \begin{enumerate}
+      \item 
+        There exists a potential function $\varphi$ such that $\mathbf F=\grad_\varphi$ (definition).
+      \item 
+        $\int_C \mathbf F\cdot d\vecr=\varphi(B)-\varphi(A)$ for all points $A$ and $B$ in $D$ and all piecewise smooth oriented curves $C$ in $D$ from $A$ to $B$.
+      \item 
+        $\oint_C \mathbf F\cdot d\vecr=0$ on all simple piecewise-smooth closed oriented curves $C$ in $D$.
+      \item 
+        $\grad\times\mathbf F=\bfO$ at all points of $D$.
+    \end{enumerate}
+  \end{thmBox*}
+
   \pagebreak
   
 \end{document}

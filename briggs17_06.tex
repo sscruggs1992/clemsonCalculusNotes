@@ -1,8 +1,57 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
-\relscale{1.4} %TODO
-\section{•: •}
-  
+%\relscale{1.4} %TODO
+\section{17.6: Surface Integrals}
+
+  \begin{defn*}[Surface Integral of Scalar-Valued Functions on Parameterized Surfaces]
+    Let $f$ be a continuous scalar-valued function on a smooth surface $S$ given parametrically by $\vecr(u,v)=\bracket{x(u,v),\,y(u,v),\,z(u,v)}$, where $u$ and $v$ vary over \newline$R=\set{(u,v): a\leq u\leq b,\, c\leq v\leq d}$. Assume also that the tangent vectors \newline$\displaystyle \mathbf t_u=\frac{\partial \vecr}{\partial u}=\bracket{\frac{\partial x}{\partial u},\, \frac{\partial y}{\partial u},\, \frac{\partial z}{\partial u}}$ and $\displaystyle\mathbf t_v=\frac{\partial \vecr}{\partial v}=\bracket{\frac{\partial x}{\partial v},\, \frac{\partial y}{\partial v},\, \frac{\partial z}{\partial v}}$ are continuous on $R$ and the normal vector $\mathbf t_u\times\mathbf t_v$ is nonzero on $R$
+  \end{defn*}
+
+  \begin{thmBox*}[Theorem 17.14: Evaluation of Surface Integrals of Scalar-Valued Functions on Explicitly Defined Surfaces]
+    Let $f$ be a continuous function on a smooth surface $S$ given by $z=g(x,y)$, for $(x,y)$ in a region $R$. The surface integral of $f$ over $S$ is
+      \[\iint\limits_S f(x,y,z)\,dS=\iint\limits_S f\parens{x,y,g(x,y)}\sqrt{z_x^2+z_y^2+1}\,dA.\]
+    If $f(x,y,z)=1$, the surface integral equals the area of the surface.
+  \end{thmBox*}
+
+  \begin{landscape}
+  \vspace*{\stretch{1}}
+    \begin{center}
+      \relscale{0.7}
+      \renewcommand{\arraystretch}{1.85}
+      \begin{tabular}{@{}m{17.5mm}m{25mm}m{26.5mm}m{25mm}@{\hspace*{7.5mm}}m{42.5mm}m{40mm}m{18mm}@{}}\toprule
+        \multicolumn{4}{c}{\textbf{Explicit Description $z=g(x,y)$}}& \multicolumn{3}{c}{\textbf{Parametric Description}}\\
+          \textbf{Surface}& \textbf{Equation}& 
+          \textbf{Normal vector}\newline $\pm\bracket{-z_x,\,-z_y,\,1}$&
+          \textbf{magnitude}\newline $\abs{\bracket{-z_x,\,-z_y,\,1}}$&
+          \textbf{Equation}&
+          \textbf{Normal vector}\newline $\mathbf t_u\times \mathbf t_v$&
+          \textbf{magnitude}\newline $\abs{\mathbf t_u\times\mathbf t_v}$\\\midrule
+          %
+          \textbf{Cylinder}& $x^2+y^2=a^2$,\newline $0\leq z\leq h$&
+          $\bracket{x,y,0}$& $a$& 
+          $\vecr=\bracket{a\cos(u),\,a\sin(u),\,v}$,\newline $0\leq u\leq 2\pi$, $0\leq v\leq h$& $\bracket{a\cos(u),\,a\sin(u),\,0}$& $a$\\
+          %
+          \textbf{Cone}& $z^2=x^2+y^2$,\newline $0\leq z\leq h$& $\bracket{x/z,\,y/z,\,-1}$& $\sqrt{2}$& 
+          $\vecr=\bracket{v\cos(u),\,v\sin(u),\,v}$,\newline $0\leq u\leq 2\pi$, $0\leq v\leq h$& $\bracket{v\cos(u),\,v\sin(u),\,-v}$& $\sqrt{2}v$\\
+          %
+          \textbf{Sphere}& $x^2+y^2+z^2=a^2$& $\bracket{x/z,\,y/z,\,1}$;& $a/z$&
+          $\vecr=\langle a\sin(u)\cos(v),$\newline \hspace*{8mm} $a\sin(u)\sin(v),$\newline \hspace*{19mm}$a\cos(u)\rangle$\newline $0\leq u\leq \pi$, $0\leq v\leq 2\pi$&
+          $\langle a^2\sin^2(u)\cos(v)$, \hspace*{2mm}$a^2\sin^2(u)\sin(v)$, \hspace*{2.5mm}$a^2\sin(u)\cos(u)\rangle$& $a^2\sin(u)$\\
+          %
+          \textbf{Paraboloid}& $z=x^2+y^2$,\newline $0\leq z\leq h$& $\bracket{2x,\,2y,\,-1}$& $\sqrt{1+4(x^2+y^2)}$&
+          $\vecr=\bracket{v\cos(u),\,v\sin(u),\,v^2}$,\newline $0\leq u\leq 2\pi$, $0\leq v\leq \sqrt{h}$& $\bracket{2v^2\cos(u),2v^2\sin(u),-v}$& $v\sqrt{1+4v^2}$\\\bottomrule
+        \end{tabular}
+    \end{center}
+  \vspace*{\stretch{1}}
+  \end{landscape}
+
+  \begin{defn*}[Surface Integral of a Vector Field]
+    Suppose $\mathbf F=\bracket{f,\,g,\,h}$ is a continuous vector field on a region of $\bbr^3$ containing a smooth oriented surface $S$. If $S$ is defined parametrically as $\vecr(u,v)=\bracket{x(u,v),y(u,v),z(u,v)}$, for $(u,v)$ in a region $R$, then
+      \[\iint\limits_S \mathbf F\cdot\vecn\,ds = \iint\limits_R \mathbf F\cdot\parens{\mathbf t_u\times\mathbf t_v}\,dA,\]
+    where $\displaystyle\mathbf t_u=\frac{\partial \vecr}{\partial u}=\bracket{\frac{\partial x}{\partial u},\,\frac{\partial y}{\partial u},\,\frac{\partial z}{\partial u}}$ and $\displaystyle\mathbf t_v=\frac{\partial \vecr}{\partial v}=\bracket{\frac{\partial x}{\partial v},\,\frac{\partial y}{\partial v},\,\frac{\partial z}{\partial v}}$ and continuous on $R$, the normal vector $\mathbf t_u\times\mathbf t_v$ is nonzero on $R$, and the direction of the normal vector is consistent with the orientation of $S$. If $S$ is defined in the form $z=s(x,y)$, for $(x,y)$ in a region $R$, then 
+      \[\iint\limits_S \mathbf F\cdot\vecn\,dS=\iint\limits_S \parens{-fz_x-gz_y+h}\,dA.\]
+  \end{defn*}
+
   \pagebreak
   
 \end{document}
