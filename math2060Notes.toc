@@ -27,3 +27,4 @@
 \contentsline {section}{\numberline {}17.2: Line Integrals}{174}{section.27}%
 \contentsline {section}{\numberline {}17.3: Conservative Vector Fields}{186}{section.28}%
 \contentsline {section}{\numberline {}17.4: Green's Theorem}{196}{section.29}%
+\contentsline {section}{\numberline {}17.5: Divergence and Curl}{209}{section.30}%
