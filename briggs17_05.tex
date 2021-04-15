@@ -136,7 +136,7 @@
   \pagebreak
 
   \begin{ex*}
-    Compute the curl of the rotation field $\mathbf F=\veca\times\vecr$, where $\veca=\bracket{-3,\,2,\,1}$ and $\vecr=\bracket{x,\,y,\,z}$. What are the direction and magnitude of the curl?
+    Compute the curl of the rotational field $\mathbf F=\veca\times\vecr$, where $\veca=\bracket{-3,\,2,\,1}$ and $\vecr=\bracket{x,\,y,\,z}$. What are the direction and magnitude of the curl?
   \end{ex*}
   \vspace*{\stretch{1}}
   \pagebreak
@@ -160,10 +160,9 @@
   \begin{thmBox*}[Theorem 17.11: Curl of a Conservative Vector Field]
     Suppose $\mathbf F$ is a conservative vector field on an open region $D$ of $\bbr^3$. Let $\mathbf F=\grad \varphi$, where $\varphi$ is a potential function with continuous second partial derivatives on $D$. Then $\grad\times\mathbf F=\grad\times\grad_\varphi=\bfO$: The curl of the gradient is the zero vector and $\mathbf F$ is irrotational.
   \end{thmBox*}
-  
-%  \vspace*{\stretch{0.25}}
+
   \begin{proof}
-    \[\grad\times\mathbf F=\grad\times\varphi=
+    \[\grad\times\mathbf F=\grad\times\grad\varphi=
       \begin{vmatrix}
         \bfi& \bfj& \bfk\\
         \dfrac{\partial}{\partial x}& \dfrac{\partial}{\partial y}& \dfrac{\partial}{\partial z}\\
