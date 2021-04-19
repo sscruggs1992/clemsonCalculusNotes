@@ -3,8 +3,9 @@ NOTE_DIR=/home/peter/Documents/notes
 U_DIR=/home/peter/Desktop/uDrive/Desktop/Stuff/math2060
 
 if [ ! -d $U_DIR ]; then
-  # First check if target dir is mounted
-  /home/peter/.scripts/mountUdrive.sh
+    # First check if target dir is mounted
+    echo "Mounting u-drive"
+    /home/peter/.scripts/mountUdrive.sh
 fi
 
 confirm(){
