@@ -186,28 +186,6 @@
   \vspace*{\stretch{1}}
   \end{landscape}
 
-  \noindent
-  \textbf{Surface Integrals of Vector Fields:}
-
-  The surfaces we consider must be 
-  \begin{itemize}
-    \item \textbf{two-sided} or \textbf{orientable}
-    \item \textbf{oriented}
-  \end{itemize}
-  
-
-  \begin{defn*}[Surface Integral of a Vector Field]
-    Suppose $\mathbf F=\bracket{f,\,g,\,h}$ is a continuous vector field on a region of $\bbr^3$ containing a smooth oriented surface $S$. If $S$ is defined parametrically as $\vecr(u,v)=\bracket{x(u,v),y(u,v),z(u,v)}$, for $(u,v)$ in a region $R$, then
-      \[\iint\limits_S \mathbf F\cdot\vecn\,ds = \iint\limits_R \mathbf F\cdot\parens{\mathbf t_u\times\mathbf t_v}\,dA,\]
-    where 
-      \[\displaystyle\mathbf t_u=\frac{\partial \vecr}{\partial u}=\bracket{\frac{\partial x}{\partial u},\,\frac{\partial y}{\partial u},\,\frac{\partial z}{\partial u}}
-      \textnormal{ and }
-      \displaystyle\mathbf t_v=\frac{\partial \vecr}{\partial v}=\bracket{\frac{\partial x}{\partial v},\,\frac{\partial y}{\partial v},\,\frac{\partial z}{\partial v}}\] 
-    and continuous on $R$, the normal vector $\mathbf t_u\times\mathbf t_v$ is nonzero on $R$, and the direction of the normal vector is consistent with the orientation of $S$. If $S$ is defined in the form $z=s(x,y)$, for $(x,y)$ in a region $R$, then 
-      \[\iint\limits_S \mathbf F\cdot\vecn\,dS=\iint\limits_S \parens{-fz_x-gz_y+h}\,dA.\]
-  \end{defn*}
-  \pagebreak
-
   \textbf{Flux Integrals:}
     \[\iint\limits_S \mathbf F\cdot\vecn\,dS\]
   \begin{center}
@@ -226,10 +204,14 @@
   \pagebreak
 
   \begin{defn*}[Surface Integral of a Vector Field]
-    Suppose $\mathbf F=\bracket{f,\,g,\,h}$ is a continuous vector field on a region of $\bbr^3$ containing a smooth oriented surface $S$. If $S$ is defined parametrically as $\vecr(u,v)=\bracket{x(u,v),\,y(u,v),\,z(u,v)}$, for $(u,v)$ in a region $R$, then
-      \[\iint\limits_S \mathbf F\cdot\vecn\,dS=\iint\limits_R \mathbf F\cdot\parens{\mathbf t_u\times\mathbf t_v}\,dA,\]
-    where $\ds\mathbf t_u=\frac{\partial \vecr}{\partial u}=\bracket{\frac{\partial x}{\partial u},\,\frac{\partial y}{\partial u},\,\frac{\partial z}{\partial u}}$ and $\ds\mathbf t_v=\frac{\partial \vecr}{\partial u}=\bracket{\frac{\partial x}{\partial v},\,\frac{\partial y}{\partial v},\,\frac{\partial z}{\partial v}}$ are continuous on $R$, the normal vector $\mathbf t_u\times\mathbf t_v$ is nonzero on $R$, and the direction of the normal vector is consistent with the orientation of $S$. If $S$ is defined in the form $z=s(x,y)$, for $(x,y)$ in a region $R$, then
-      \[\iint\limits_S \mathbf F\cdot\vecn\,dS=\iint\limits_R \parens{-fz_x-gz_y+h}\,dA.\]
+    Suppose $\mathbf F=\bracket{f,\,g,\,h}$ is a continuous vector field on a region of $\bbr^3$ containing a smooth oriented surface $S$. If $S$ is defined parametrically as $\vecr(u,v)=\bracket{x(u,v),y(u,v),z(u,v)}$, for $(u,v)$ in a region $R$, then
+      \[\iint\limits_S \mathbf F\cdot\vecn\,ds = \iint\limits_R \mathbf F\cdot\parens{\mathbf t_u\times\mathbf t_v}\,dA,\]
+    where 
+      \[\displaystyle\mathbf t_u=\frac{\partial \vecr}{\partial u}=\bracket{\frac{\partial x}{\partial u},\,\frac{\partial y}{\partial u},\,\frac{\partial z}{\partial u}}
+      \textnormal{ and }
+      \displaystyle\mathbf t_v=\frac{\partial \vecr}{\partial v}=\bracket{\frac{\partial x}{\partial v},\,\frac{\partial y}{\partial v},\,\frac{\partial z}{\partial v}}\] 
+    are continuous on $R$, the normal vector $\mathbf t_u\times\mathbf t_v$ is nonzero on $R$, and the direction of the normal vector is consistent with the orientation of $S$. If $S$ is defined in the form $z=s(x,y)$, for $(x,y)$ in a region $R$, then 
+      \[\iint\limits_S \mathbf F\cdot\vecn\,dS=\iint\limits_S \parens{-fz_x-gz_y+h}\,dA.\]
   \end{defn*}
   \pagebreak
 
