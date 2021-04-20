@@ -29,3 +29,4 @@
 \contentsline {section}{\numberline {}17.4: Green's Theorem}{196}{section.29}%
 \contentsline {section}{\numberline {}17.5: Divergence and Curl}{209}{section.30}%
 \contentsline {section}{\numberline {}17.6: Surface Integrals}{219}{section.31}%
+\contentsline {section}{\numberline {}17.7: Stokes' Theorem}{235}{section.32}%
