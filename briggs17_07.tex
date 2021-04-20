@@ -1,8 +1,18 @@
 \documentclass[mathNotesPreamble]{subfiles}
 \begin{document}
 \relscale{1.4} %TODO
-\section{•: •}
-  
+\section{17.7: Stokes' Theorem}
+
+  \begin{thmBox*}[Theorem 17.15: Stokes' Theorem]
+    Let $S$ be an oriented surface in $\bbr^3$ with a piecewise-smooth closed boundary $C$ whose orientation is consistent with that of $S$. Assume $\mathbf F=\bracket{f,\,g,\,h}$ is a vector field whose components have continuous first partial derivatives on $S$. Then
+      \[\oint\limits_C \mathbf F\cdot d\vecr=\iint\limits_S \parens{\grad\times\mathbf F}\cdot\vecn\,dS,\]
+    where $\vecn$ is the unit vector normal to $S$ determined by the orientation of $S$.
+  \end{thmBox*}
+
+  \begin{thmBox*}[Theorem 17.16: Curl $\mathbf F=\bfO$ implies $\mathbf F$ Is Conservative]
+    Suppose $\grad\times\mathbf F=\bfO$ throughout an open simply connected region $D$ of $\bbr^3$. Then $\oint_C\mathbf F\cdot d\vecr=0$ on all closed simple smooth curves $C$ in $D$, and $\mathbf F$ is a conservative vector field on $D$.
+  \end{thmBox*}
+
   \pagebreak
   
 \end{document}
