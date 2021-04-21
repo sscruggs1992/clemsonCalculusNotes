@@ -30,4 +30,4 @@
 \contentsline {section}{\numberline {}17.5: Divergence and Curl}{209}{section.30}%
 \contentsline {section}{\numberline {}17.6: Surface Integrals}{219}{section.31}%
 \contentsline {section}{\numberline {}17.7: Stokes' Theorem}{234}{section.32}%
-\contentsline {section}{\numberline {}17.8: Divergence Theorem}{244}{section.33}%
+\contentsline {section}{\numberline {}17.8: Divergence Theorem}{243}{section.33}%
