@@ -6,7 +6,7 @@ The main files are `math?0?0Notes.{pdf,tex}` which inherit their styling from `m
 * [math1060Notes.pdf](https://github.com/pwesterbaan/clemsonCalculusNotes/raw/master/math1060Notes.pdf)
 * [math1070Notes.pdf](https://github.com/pwesterbaan/clemsonCalculusNotes/raw/master/math1070Notes.pdf)
 * [math1080Notes.pdf](https://github.com/pwesterbaan/clemsonCalculusNotes/raw/master/math1080Notes.pdf) -- *currently incomplete*
-* [math2060Notes.pdf](https://github.com/pwesterbaan/clemsonCalculusNotes/raw/master/math2060Notes.pdf) -- *in progress*
+* [math2060Notes.pdf](https://github.com/pwesterbaan/clemsonCalculusNotes/raw/master/math2060Notes.pdf)
 
 My [preamble files](https://github.com/pwesterbaan/scripts/tree/master/texmf/tex/latex/local) include the following files which contain packages and macros needed to compile:
 
