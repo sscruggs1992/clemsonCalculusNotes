@@ -1,0 +1,326 @@
+\documentclass[../mathNotesPreamble]{subfiles}
+\begin{document}
+%\relscale{1.4}
+\section{5.5: Substitution Rule}
+\vspace*{-\baselineskip}
+  \begin{thmBox*}[Theorem 5.6: Substitution Rule for Indefinite Integrals]
+    Let $u=g(x)$, where $g$ is differentiable on an interval, and let $f$ be continuous on the corresponding range of $g$. On that interval,
+    \[\int f\parens{g(x)\vphantom{g(x)^1}}g'(x)\,dx=\int f(u)\,du\]
+  \end{thmBox*}
+
+  \begin{ex*}
+    We know
+      \[\ddx\sbrkt{\frac{(2x+1)^4}{4}}=2(2x+1)^3\]
+    Thus, if $f(x)=x^3$ and $g(x)=2x+1$ then $g'(x)=2$, so we let $u=2x+1$, then
+    \begin{align*}
+      \int 2(2x+1)^3\,dx&=\int f\parens{g(x)\vphantom{g(x)^1}}g'(x)\,dx\\
+        &=\int u^3\,du\\
+        &=\frac{u^4}{4}+C\\
+        &=\frac{(2x+1)^4}{4}+C
+    \end{align*}
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  
+  \begin{thmBox*}[Procedure: Substitution Rule (Change of Variables)]
+    \begin{enumerate}
+      \item Given an indefinite integral involving a composite function $f\parens{g(x)\vphantom{g(x)^1}}$, identify an inner function $u=g(x)$ such that a constant multiple of $g'(x)$ appears in the integrand.
+      \item Substitute $u=g(x)$ and $du=g'(x)\,dx$ in the integral.
+      \item Evaluate the new indefinite integral with respect to $u$.
+      \item Write the result in terms of $x$ using $u=g(x)$.
+    \end{enumerate}
+  \end{thmBox*}
+  \pagebreak
+  
+  \begin{ex*}
+    Evaluate the following integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task $\ds\int 2x(x^2+3)^4\,dx$
+    \task $\ds\int (2x+1)^3\, dx$
+    \task $\ds\int x^2\sqrt{x^3+1}\, dx$
+    \task $\ds\int \theta\sqrt[4]{1-\theta^2}\,d\theta$
+    \task $\ds\int\sqrt{4-t}\,dt$
+    \task $\ds\int (2-x)^6\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{ex*}
+    Evaluate the following integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task $\ds\int\sec(2\theta)\tan(2\theta)\,d\theta$
+    \task $\ds\int\csc^2\parens{\frac{t}{3}}\,dt$
+    \task $\ds\int \frac{\sin(x)}{1+\cos^2(x)}\,dx$
+    \task $\ds\int \frac{\tan\inv(x)}{1+x^2}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  
+  \noindent
+  The acceleration of a particle moving back and forth on a line is $a(t)=\frac{d^2s}{dt^2}=\pi^2\cos(\pi t)\ m/s^2$ for all $t$. If $s=0$ and $v=8\ m/s$ when $t=0$, find the value of $s$ when $t=1$ sec.
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{ex*}
+    Evaluate the following integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task $\ds\int(6x^2+2)\sin(x^3+x+1)\,dx$
+    \task $\ds\int \frac{\sin(\theta)}{\cos^5(\theta)}\,d\theta$
+    \task $\ds\int \frac{e^{\sqrt{x}}}{\sqrt x}\,dx$
+    \task $\ds\int \frac{2^t}{2^t+3}\,dt$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int 6x^2 4^{x^3}\,dx$
+    \task $\ds\int \frac{dx}{\sqrt{36-4x^2}}$
+    \task $\ds\int \sin(t)\sec^2\parens{\cos(t)}\,dt$
+    \task $\ds\int \frac{1}{\sqrt{x}\parens{1+\sqrt{x}}^2}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int \frac{\sin(\sqrt{x})}{\sqrt x}\,dx$
+    \task $\ds\int 5\cos(7x+5)\,dx$
+    \task $\ds\int \frac{3}{\sqrt{1-25x^2}}\,dx$
+    \task $\ds\int \frac{dx}{\sqrt{1-9x^2}}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate the following integrals using the recommended substitution:
+  \end{ex*}
+  \begin{tasks}(2)
+    \task $\ds\int \sec^2(x)\tan(x)\,dx$ \newline where $u=\tan(x)$.
+    \task $\ds\int \sec^2(x)\tan(x)\,dx$ \newline where $u=\sec(x)$.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \begin{ex*}
+  Solve the initial value problem: $\frac{dy}{dx}=4x(x^2+8)\inv[1/3], y(0)=0$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate the following integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task $\ds\int xe\inv[x^2]\,dx$
+    \task $\ds\int \frac{e^{1/x}}{x^2}\,dx$
+    \task $\ds\int \frac{dt}{8-3t}$
+    \task $\ds\int 5^t\sin(5^t)\,dt$
+    \task $\ds\int \frac{e^w}{36+e^{2w}}\,dw$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 5.7: Substitution Rule for Definite Integrals]
+    Let $u=g(x)$, where $g'$ is continuous on $\sbrkt{a,b}$, and let $f$ be continuous on the range of $g$. Then
+      \[\int_a^b f\parens{g(x)\vphantom{g(x)^1}}g'(x)\,dx=\int_{g(a)}^{g(b)}f(u)\,du\]
+  \end{thmBox*}
+
+  \begin{ex*}
+    Evaluate the integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task $\ds\int_0^1 \frac{x^3}{\sqrt{x^4+9}}\,dx$
+    \task $\ds\int_1^3 \frac{dt}{(t-4)^2}$
+    \task $\ds\int_0^3 \frac{v^2+1}{\sqrt{v^3+3v+4}}\,dv$
+    \task $\ds\int_0^1 2x\parens{4-x^2}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int_2^3 \frac{x}{\sqrt[3]{x^2-1}}\,dx$
+    \task $\ds\int_{0}^{\frac{\pi}{2}} \frac{\sin(x)}{1+\cos(x)}\,dx$
+    \task $\ds\int_0^{\frac{\pi}{4}} \frac{\sin(x)}{\cos^2(x)}\,dx$
+    \task $\ds\int_{-\frac{\pi}{12}}^{\frac{\pi}{8}} \sec^2(2y)\,dy$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int_0^1 (1-2x^9)\,dx$
+    \task $\ds\int_0^1 (1-2x)^9\,dx$
+    \task $\ds\int_0^{\frac{1}{2}} \frac{1}{1+4x^2}\,dx$
+    \task $\ds\int_0^4 \frac{x}{x^2+1}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int_0^\pi 3\cos^2(x)\sin(x)\,dx$
+    \task $\ds\int_0^{\frac{\pi}{8}} \sec(2\theta)\tan(2\theta)\,d\theta$
+    \task $\ds\int_0^1 (3t-1)^{50}\,dt$
+    \task $\ds\int_0^3 \frac{1}{5x+1}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int_0^1 xe\inv[x^2]\,dx$
+    \task $\ds\int_e^{e^4} \frac{1}{x\sqrt{\ln(x)}}\,dx$
+    \task $\ds\int_0^{\frac{1}{2}} \frac{\sin\inv(x)}{\sqrt{1-x^2}}\,dx$
+    \task $\ds\int_0^1 \frac{e^z+1}{e^z+z}\,dz$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int_1^4 \frac{dy}{2\sqrt{y}\parens{1+\sqrt{y}}^2}$
+    \task $\ds\int_{\ln\parens{\frac{\pi}{4}}}^{\ln\parens{\frac{\pi}{2}}} e^w\cos(e^w)\,dw$
+    \task $\ds\int_0^{\frac{1}{8}} \frac{x}{\sqrt{1-16x^2}}\,dx$
+    \task $\ds\int_1^{e^2} \frac{\ln(p)}{p}\,dp$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int_0^{\frac{\pi}{4}} e^{\sin^2(x)}\sin(2x)\,dx$
+    \task $\ds\int_{-\pi}^{\pi} x^2\sin(7x^3)\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \begin{ex*}
+    \textbf{Average velocity:} An object moves in one dimension with a velocity in $m/s$ given by $v(t)=8\sin(\pi t)+2t$. Find its average velocity over the time interval from $t=0$ to $t=10$, where $t$ is measured in seconds.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{ex*}
+    Prove $\ds\int \tan(x)\,dx=\ln\abs{\sec(x)}+C$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \begin{ex*}
+    Evaluate the integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task $\ds\int \frac{x}{(x-2)^3}\,dx$
+    \task $\ds\int x\sqrt{x-1}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int x^3(1+x^2)^\frac{3}{2}\,dx$
+    \task $\ds\int \frac{y^2}{(y+1)^4}\,dy$
+    \task $\ds\int (z+1)\sqrt{3z+2}\,dz$
+    \task $\ds\int_0^1 \frac{x}{(x+2)^3}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{center}
+    \fbox{\parbox{0.65\linewidth}{
+      \textbf{Half-Angle Formulas}
+      \begin{align*}
+        \cos^2(\theta)&=\frac{1+\cos(2\theta)}{2}\\
+        \sin^2(\theta)&=\frac{1-\cos(2\theta)}{2}
+      \end{align*}
+    }}
+  \end{center}
+  \begin{ex*}
+    Evaluate the integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task $\ds\int \cos^2(x)\,dx$
+    \task $\ds\int_{0}^{\frac{\pi}{2}}\cos^2(x)\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int \frac{1}{x^2}\cos^2\parens{\frac{1}{x}}\,dx$
+    \task $\ds\int x\sin^2(x^2)\,dx$
+    \task $\ds\int \sin^2\parens{\theta+\frac{\pi}{6}}\,d\theta$
+    \task $\ds\int_{0}^{\frac{\pi}{4}} \cos^2(8\theta)\,d\theta$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{ex*}
+    If $f$ is continuous and $\ds\int_0^4 f(x)\,dx=10$, find $\ds\int_0^2 f(2x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  
+  \begin{ex*}
+    If $f$ is continuous and $\ds\int_0^9 f(x)\,dx=4$, find $\ds\int_0^3 xf(x^2)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  
+  \begin{ex*}
+    Suppose $f$ is an even function with $\ds\int_0^8 f(x)\,dx=9$. Evaluate the following:
+  \end{ex*}
+  \begin{tasks}(2)
+    \task $\ds\int_{-1}^1 x f(x^2)\,dx.$
+    \task $\ds\int_{-2}^2 x^2 f(x^3)\,dx.$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{ex*}
+    Evaluate the integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task $\ds\int \sec^2(10x)\,dx$
+    \task $\ds\int \tan^{10}(4x)\sec^2(4x)\,dx$
+    \task $\ds\int\parens{x^\frac{3}{2}+8}^5\sqrt{x}\,dx$
+    \task $\ds\int \frac{2x}{\sqrt{3x+2}}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int \frac{7x^2+2x}{x}\,dx$
+    \task $\ds\int \frac{e^x-e\inv[x]}{e^x+e\inv[x]}\,dx$
+    \task $\ds\int_0^{\sqrt{3}} \frac{3}{9+x^2}\,dx$
+    \task $\ds\int_0^{\frac{\pi}{6}} \frac{\sin(2y)}{\sin^2(y)+2}\,dy$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](2)
+    \task $\ds\int \frac{\sec(z)\tan(z)}{\sqrt{\sec(z)}}\,dz$
+    \task $\ds\int \frac{1}{\sin\inv(x)\sqrt{1-x^2}}\,dx$
+    \task $\ds\int \frac{x}{\sqrt{4-9x^2}}\,dx$
+    \task $\ds\int \frac{x}{1+x^4}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](1)
+    \task $\ds\int \frac{\cos\sqrt{\theta}}{\sqrt{\theta}\sin^2\sqrt{\theta}}\,d\theta$
+    \task $\ds\int x^2\sqrt{2+x}\,dx$
+    \task* $\ds\int \parens{\sin^5(x)+3\sin^3(x)-\sin(x)}\cos(x)\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](1)
+    \task $\ds\int_{-\frac{\pi}{4}}^{\frac{\pi}{4}} \parens{x^3+x^4\tan(x)}\,dx$
+    \task $\ds\int_{0}^{\frac{\pi}{2}} \cos(x)\sin\parens{\sin(x)}\,dx$
+    \task $\ds\int \frac{1+x}{1+x^2}\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \noindent
+  \begin{ex*}
+    Evaluate these more challenging integrals:
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}](1)
+    \task $\ds\int \frac{dx}{\sqrt{1+\sqrt{1+x}}}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak  
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, resume](1)
+    \task $\ds\int x\sin^4(x^2)\cos(x^2)\,dx$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak  
+\end{document}

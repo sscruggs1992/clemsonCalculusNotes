@@ -1,0 +1,98 @@
+\documentclass[../mathNotesPreamble]{subfiles}
+\begin{document}
+%\relscale{1.4} 
+\section{3.4: The Product and Quotient Rule}
+\begin{thmBox*}[Theorem 3.7: Product Rule]
+  If $f$ and $g$ are differentiable at $x$, then 
+    $$\dfrac{d}{dx}\parens{f(x)g(x)}=f'(x)g(x)+f(x)g'(x).$$
+  \textit{Note:} This can also be denoted 
+    $$\dfrac{d}{dx}\parens{f(x)g(x)}=\dfrac{d}{dx}\sbrkt{f(x)}g(x)+f(x)\dfrac{d}{dx}\sbrkt{g(x)}.$$
+\end{thmBox*}
+  
+\begin{ex*}
+  For $f(x)=\parens{3x^2}\parens{2x}$, find $f'(x)$ first by using the product rule and then by expanding before taking the derivative.
+  \vspace*{\stretch{0.65}}
+\end{ex*}
+\begin{ex*}
+  For $g(x)=\parens{x+\dfrac{1}{x}}\parens{x-\dfrac{1}{x}+1}$, find $g'(x)$.
+  \vspace*{\stretch{1}}
+\end{ex*}
+\begin{ex*}
+  For $h(x)=\parens{x-1}\parens{x^2+x+1}$, find $h'(x)$.
+  \vspace*{\stretch{0.7}}
+\end{ex*}
+\pagebreak
+
+\begin{ex*}
+  Use the product rule to find the derivative of $1-e^{2t}$.
+  \vspace*{\stretch{1}}
+\end{ex*}
+
+\begin{thmBox*}[Theorem 3.8: Quotient Rule]
+  If $f$ and $g$ are differentiable at $x$ and $g(x)\neq 0$, then the derivative of $f/g$ at $x$ exists and 
+    $$\dfrac{d}{dx}\parens{\dfrac{f(x)}{g(x)}}=\dfrac{g(x)f'(x)-f(x)g'(x)}{\sbrkt{g(x)}^2}.$$
+  
+  \textit{Note:} A common phrase for the quotient rule is
+  
+  {\centering ``Lo De Hi minus Hi De Lo over Lo squared'' \par}
+\end{thmBox*}
+
+\begin{ex*}
+  Find the derivative of $y=\dfrac{t^2+1}{3t^2-2t+1}$.
+  \vspace*{\stretch{1}}
+\end{ex*}
+\pagebreak
+
+\begin{ex*}
+  Find the derivatives of the following functions:
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task[] $f(t)=\dfrac{2t}{4+t^2}$
+    \task[] $w=\parens{2x-7}\inv\parens{x+5}$
+    \task[] $y=\dfrac{e^x}{1-e^x}$
+    \task[] $h(w)=\dfrac{w^2-1}{w^2+1}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+\end{ex*}
+\pagebreak
+
+\begin{ex*}
+  Find the derivative of the following functions. Is using the quotient rule recommended here?
+  \begin{tasks}(2)
+    \task[] $w(z)=\dfrac{4}{z^3}$
+    \task[] $f(x)=\dfrac{x^2-2ax+a^2}{x-a}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+\end{ex*}
+
+\begin{ex*}
+  Find the second derivative of the following functions.
+  \begin{tasks}(2)
+    \task[] $f(x)=x^{\frac{5}{2}}e^x$
+    \task[] $y(t)=\dfrac{t}{t+2}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+\end{ex*}
+\pagebreak
+
+\begin{ex*}
+  Use the table below to evaluate the following
+  
+  \begin{tabular}{@{}R@{\quad}*{5}{@{\hspace*{15pt}}c}@{}}\toprule
+    x&1&2&3&4&5\\\midrule
+    f(x)& 5&4&3&2&1\\
+    f'(x)&3&5&2&1&4\\
+    g(x)&4&2&5&3&1\\
+    g'(x)&2&4&3&1&5\\\bottomrule
+  \end{tabular}
+  \begin{tasks}[after-item-skip=\stretch{1}](2)
+    \task[] $\left.\dfrac{d}{dx}\sbrkt{f(x)\cdot g(x)}\right|_{x=5}$
+    \task[] $\left.\dfrac{d}{dx}\sbrkt{\dfrac{f(x)}{g(x)}}\right|_{x=3}$
+    \task[] $\left.\dfrac{d}{dx}\sbrkt{x\cdot g(x)}\right|_{x=2}$
+    \task[] $\left.\dfrac{d}{dx}\sbrkt{\dfrac{x\cdot f(x)}{g(x)}}\right|_{x=4}$
+    \task[] $h(x)=\parens{-2x^3}\cdot f(x)$, find $h'(4)$.
+    \task[] $r(x)=\dfrac{2g(x)}{-3\sqrt[4]{x}}$, find $r'(1)$.
+  \end{tasks}
+\end{ex*}
+\vspace*{\stretch{1}}
+\pagebreak
+\end{document}

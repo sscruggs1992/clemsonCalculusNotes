@@ -1,0 +1,184 @@
+\documentclass[../mathNotesPreamble]{subfiles}
+\begin{document}
+%\relscale{1.4}
+  \section{JIT 4.6: Translations}
+    \begin{ex*}\ 
+    
+      \begin{minipage}{0.45\linewidth}
+        Graph $\dfrac{1}{x-1}+2$
+        \vspace*{100pt}
+      \end{minipage}%
+      \begin{minipage}{0.5\linewidth}
+        \begin{center}
+          \begin{tikzpicture}[scale=1.0]
+            \begin{axis}[
+              axis lines=center,
+              axis line style={->},
+              xmin=-4, xmax=4.5,
+              ymin=-4, ymax=4.5,
+              xtick={-4,-3,...,4},
+              ytick={-4,-3,...,4},
+              ticklabel style={font=\tiny,inner sep=0.75pt},
+              xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+              ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+              legend style={at={(axis cs:2,-1)},anchor=north west},
+              every axis plot/.append style={line width=0.95pt}
+              ]
+              \addplot[domain=-4:0.9,blue, samples=51] {1/(x-1)+2};
+              \addplot[domain=1.1:4,blue, samples=51] {1/(x-1)+2};
+            \end{axis}
+          \end{tikzpicture}
+        \end{center}
+      \end{minipage}
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \begin{ex*}\ 
+    
+      \begin{minipage}{0.45\linewidth}
+        Graph $g(x)=x^2-6x+5$
+        \vspace*{100pt}
+      \end{minipage}%
+      \begin{minipage}{0.5\linewidth}
+        \begin{center}
+          \begin{tikzpicture}[scale=1.0]
+            \begin{axis}[
+              axis lines=center,
+              axis line style={->},
+              xmin=-2, xmax=6.5,
+              ymin=-5, ymax=6.5,
+              xtick={-4,-3,...,7},
+              ytick={-4,-3,...,7},
+              ticklabel style={font=\tiny,inner sep=0.75pt},
+              xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+              ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+              legend style={at={(axis cs:2,-1)},anchor=north west},
+              every axis plot/.append style={line width=0.95pt}
+              ]
+              \addplot[domain=-4:7,blue, samples=101] {x^2-6*x+5};
+              \addplot[soldot] coordinates{(3,-4)} node [below right, black, yshift=5pt] {(3,-4)};
+            \end{axis}
+          \end{tikzpicture}
+        \end{center}
+      \end{minipage}
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \pagebreak
+    \textbf{Scaling a graph}
+      $$f(x)\text{  vs. }cf(x)\text{  vs.  }f(cx)$$
+    \begin{itemize}
+      \item 
+        Multiplication on the outside of the function stretches the function vertically by $c$.
+      \item 
+        Multiplication on the inside of the function stretches the function horizontally by $1/c$.
+    \end{itemize}
+    
+    \begin{center}
+      \begin{tikzpicture}[scale=1.0]
+        \begin{groupplot}[
+          group style={group size=2 by 2, horizontal sep=3.5cm, vertical sep=3cm},
+          axis lines=center,
+          axis line style={->},
+          xmin=-4, xmax=4.5,
+          ymin=-4, ymax=4.5,
+          xtick={-4,-3,...,7},
+          ytick={-4,-3,...,7},
+          ticklabel style={font=\tiny,inner sep=0.75pt},
+          legend style={at={(axis cs:2,-1)},anchor=north west},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt},
+          ]
+        \nextgroupplot 
+          \addplot[domain=-5:5, blue, samples=101, dashed] {x^2};
+            \addlegendentry{$x^2$};
+          \addplot[domain=-5:5, blue, samples=101] {2*x^2};
+            \addlegendentry{$2x^2$};
+          \draw[->, line width = 0.9pt] (axis cs:1.45,2.1025)--(axis cs:1.45,4.20);
+          \draw[->, line width = 0.9pt] (axis cs:-1.45,2.1025)--(axis cs:-1.45,4.20);
+        \nextgroupplot 
+          \addplot[domain=-5:5, blue, samples=101, dashed] {x^2};
+            \addlegendentry{$x^2$};
+          \addplot[domain=-5:5, blue, samples=101] {(2*x)^2};
+            \addlegendentry{$(2x)^2$};
+          \draw[->, line width = 0.9pt] (axis cs:2,4)--(axis cs:1.025,4);
+          \draw[->, line width = 0.9pt] (axis cs:-2,4)--(axis cs:-1.025,4);
+        \nextgroupplot 
+          \addplot[domain=-5:5, blue, samples=101, dashed] {x^2};
+            \addlegendentry{$x^2$};
+          \addplot[domain=-5:5, blue, samples=101] {0.5*x^2};
+            \addlegendentry{$\frac12x^2$};
+          \draw[->, line width = 0.9pt] (axis cs:2,4)--(axis cs:2,2);
+          \draw[->, line width = 0.9pt] (axis cs:-2,4)--(axis cs:-2,2);
+        \nextgroupplot 
+          \addplot[domain=-5:5, blue, samples=101, dashed] {x^2};
+            \addlegendentry{$x^2$};
+          \addplot[domain=-5:5, blue, samples=101] {(0.5*x)^2};
+            \addlegendentry{$\parens{\frac12x}^2$};
+          \draw[->, line width = 0.9pt] (axis cs:2,4)--(axis cs:4,4);
+          \draw[->, line width = 0.9pt] (axis cs:-2,4)--(axis cs:-4,4);
+        \end{groupplot}
+      \end{tikzpicture}
+    \end{center}
+    \pagebreak
+    \begin{ex*}\ 
+    
+      \begin{minipage}{0.45\linewidth}
+        Graph $f(t)=40t-5t^2$
+        \vspace*{100pt}
+      \end{minipage}%
+      \begin{minipage}{0.5\linewidth}
+        \begin{center}
+          \begin{tikzpicture}[scale=1.0]
+            \begin{axis}[
+              axis lines=center,
+              axis line style={->},
+              xmin=-5, xmax=5,
+              ymin=-5, ymax=5,
+              xmajorticks=false,
+              ymajorticks=false,
+              xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+              ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+              ]
+            \end{axis}
+          \end{tikzpicture}
+        \end{center}
+      \end{minipage}
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \begin{ex*}\ 
+    
+      \begin{minipage}{0.45\linewidth}
+        Graph $g(h)=100\pi h$
+        \vspace*{100pt}
+      \end{minipage}%
+      \begin{minipage}{0.5\linewidth}
+        \begin{center}
+          \begin{tikzpicture}[scale=1.0]
+            \begin{axis}[
+              axis lines=center,
+              axis line style={->},
+              xmin=-5, xmax=5,
+              ymin=-5, ymax=5,
+              xmajorticks=false,
+              ymajorticks=false,
+              xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+              ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+              ]
+            \end{axis}
+          \end{tikzpicture}
+        \end{center}
+      \end{minipage}
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \pagebreak
+    \section*{Composition}
+    $$\parens{f\circ g}(x)=f\parens{g(x)}$$
+    \begin{ex*}
+      \begin{enumerate}[label=]
+        \item $f(x)=\sqrt{x}$,\ \  $g(x)=x+1$
+        \item $\parens{f \circ g}(x)=$
+        \item $\parens{g\circ f}(x)=$
+      \end{enumerate}
+    \end{ex*}
+    \vspace*{\stretch{1}}
+\end{document}

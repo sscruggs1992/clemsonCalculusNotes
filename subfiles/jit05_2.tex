@@ -1,0 +1,56 @@
+\documentclass[../mathNotesPreamble]{subfiles}
+\begin{document}
+%\relscale{1.4}
+  \section{JIT 5.2: Definition of $\sin(\theta)$ and $\cos(\theta)$}
+    \begin{defn*}
+       The coordinates of a unit circle are given by $\parens{\cos(\theta),\sin(\theta)}$ for each $\theta$.
+    \end{defn*}
+    \begin{defn*}
+      The $\sin(\theta)$ and $\cos(\theta)$ functions are \textbf{periodic} since these functions repeat themselves over a fixed interval
+    \end{defn*}
+    \begin{center}
+      \begin{tikzpicture}[scale=1.0]
+        \begin{groupplot}[
+          group style={group size=1 by 2}, 
+          axis lines=center,
+          axis line style={->},
+          xmin=-7, xmax=7,
+          ymin=-1.25, ymax=1.25,
+          xtick={-6.28318, -4.7123889, ..., 6.28318},
+          xticklabels={$-2\pi$, $-\frac{3\pi}{2}$,$-\pi$, $-\frac{\pi}{2}$, ,
+             $\frac{\pi}{2}$,$\pi$, $\frac{3\pi}{2}$, $2\pi$},
+          height=1.5in, width=0.95\linewidth,
+          ticklabel style={font=\small, inner sep=0.75pt,fill=white},
+          ]
+          \nextgroupplot[xlabel=$\cos(\theta)$, xlabel style={at={(ticklabel* cs:1)},anchor=north west}]
+            \addplot[domain=-6.28:6.28, blue, samples=101] {cos(deg(x))};
+          \nextgroupplot[xlabel=$\sin(\theta)$, xlabel style={at={(ticklabel* cs:1)},anchor=north west}]
+            \addplot[domain=-6.28:6.28, blue, samples=101] {sin(deg(x))};
+        \end{groupplot}
+      \end{tikzpicture}
+    \end{center}
+    \pagebreak
+    \begin{defn*}
+      Alternatively, $\cos(\theta)$ and $\sin(\theta)$ can be consider the ratio of the sides of a right angle triangle.
+      
+      \begin{minipage}{0.5\linewidth}
+        \begin{tikzpicture}
+          \draw (0,0) -- (8,0) -- (8,5) -- cycle;
+          \draw (7.65,0) -- (7.65,0.35) -- (8,0.35);
+          \node at (1,0.275) {$\theta$};
+          \node at (4, -0.5) {Adj};
+          \node at (8.55, 2.5) {Opp};
+          \node at (4,3) {Hyp};
+        \end{tikzpicture}
+      \end{minipage}%
+      \begin{minipage}{0.5\linewidth}
+        \begin{eqnarray*}
+          \sin\theta&=\dfrac{\text{Opp}}{\text{Hyp}}\\[10pt]
+          \cos\theta&=\dfrac{\text{Adj}}{\text{Hyp}}\\[10pt]
+          \tan\theta&=\dfrac{\text{Opp}}{\text{Adj}}\\[10pt]
+        \end{eqnarray*}
+      \end{minipage}
+    \end{defn*}
+    \vspace*{\stretch{1}}
+    \pagebreak
+\end{document}

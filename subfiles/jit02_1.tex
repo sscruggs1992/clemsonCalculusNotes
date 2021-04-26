@@ -1,0 +1,43 @@
+\documentclass[../mathNotesPreamble]{subfiles}
+\begin{document}
+    %\relscale{1.4}
+    \section{JIT 2.1: Completing the Square}
+      $$ax^2+bx+c=a\parens{x+\frac{b}{2a}}^2+\frac{4ac-b^2}{4a}=a\parens{x-h}^2+k$$
+      \begin{center}
+        \begin{tikzpicture}[scale=2.5]
+          \draw[fill=ClemsonOrange] (0,0)--(1,0)--(1,1)--(0,1)--cycle;
+          \draw[fill=ClemsonPurple] (1,0)--(1.5,0)--(1.5,1)--(1,1)--cycle;
+          \node at (0.5,-0.125) {$x$};
+          \node at (-0.125,0.5) {$x$};
+          \node at (1.25,-0.125){$b$};
+          \draw[->, line width=0.95] (1.55,0.5) -- (2.75,0.5);
+          \draw[fill=ClemsonOrange] (3,0)--(4,0)--(4,1)--(3,1)--cycle;
+          \draw[fill=ClemsonPurple] (4,0)--(4.25,0)--(4.25,1)--(4,1)--cycle;
+          \draw[fill=ClemsonPurple] (3,1)--(3,1.25)--(4,1.25)--(4,1)--cycle;
+          \draw[dashed, pattern=north west lines, pattern color=ClemsonPurple] (4,1.25)--(4.25,1.25)--(4.25,1)--(4,1)--cycle;
+          \node at (3.5,-0.125) {$x$};
+          \node at (2.875,0.5) {$x$};
+          \node at (4.125,-0.15){$\frac{b}{2}$};
+          \node at (2.875,1.125){$\frac{b}{2}$};
+        \end{tikzpicture}
+      \end{center}
+      \begin{ex*}
+      Complete the square for $f(x)=x^2-3x+4$
+      \end{ex*}
+      \vspace*{\stretch{1}}
+      \begin{ex*}
+      Complete the square for $f(x)=4x^2+20x-100$
+      \end{ex*}
+      \vspace*{\stretch{1}}
+      \pagebreak
+      \begin{defn*}
+        The equation of a circle centered at $(h,k)$ with radius $r$ is given by
+          $$(x-h)^2+(y-k)^2=r^2$$
+      \end{defn*}
+       \begin{ex*}
+        Identify the center and radius of 
+          $$x^2-2x+y^2+2y=2$$
+          \vspace*{\stretch{1}}
+      \end{ex*}
+      \pagebreak
+\end{document}

@@ -1,0 +1,389 @@
+\documentclass[../mathNotesPreamble]{subfiles}
+\begin{document}
+%\relscale{1.4}
+\section{4.4: Graphing Functions}
+\begin{thmBox*}[Graphing Guidelines for $y=f(x)$]
+  \parbox{0.9\linewidth}{
+  \begin{enumerate}
+    \item Identify the domain or interval of interest.
+    \item Determine if the function is symmetric.
+    \item Use $f'(x)$ and $f''(x)$ to determine 
+      \begin{itemize}
+        \item intervals of increasing/decreasing\dotfill $f'(x)>0$ or $f'(x)<0$
+        \item relative max/mins\dotfill 1st or 2nd derivative test
+        \item concave up/concave down\dotfill $f''(x)>0$ or $f''(x)<0$
+        \item inflection points\dotfill $f''(x)$ changes signs
+      \end{itemize}
+    \item Find asymptotes
+      \begin{itemize}
+        \item vertical\dotfill $\lim_{x\to a} f(x)=\pm\infty$
+        \item horizontal\dotfill $\lim_{x\to \pm\infty} f(x)=c$
+        \item slant\dotfill $y=ax+b$
+      \end{itemize}
+    \item Intercepts
+      \begin{itemize}
+        \item $y$-intercept\dotfill evaluate $f(0)$
+        \item $x$-intercept\dotfill solve $f(x)=0$
+      \end{itemize}
+    \item Sketch using the characteristics found above
+  \end{enumerate}}
+\end{thmBox*}
+\pagebreak
+\begin{ex*}
+  Sketch the following functions using derivatives:
+\end{ex*}
+
+\begin{enumerate}
+  \item $f(x)=x^4-6x^2$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-3, xmax=3,
+          ymin=-6, ymax=6,
+          xtick={-8,-6,...,8},
+%          ytick={-6,-5,...,6},
+%          xmajorticks=false,
+          ymajorticks=false,
+          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $g(x)=200+8x^3+x^4$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-9, xmax=9,
+          ymin=-6, ymax=6,
+          xtick={-8,-6,...,8},
+%          ytick={-6,-5,...,6},
+%          xmajorticks=false,
+          ymajorticks=false,
+          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $y=\dfrac{x}{(x-1)^2}$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-3, xmax=3,
+          ymin=-1, ymax=1,
+          xtick={-2,0,...,2},
+          ytick={-1,0,...,1},
+%          xmajorticks=false,
+%          ymajorticks=false,
+          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $y=\dfrac{x^2-4}{x^2-2x}$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-4, xmax=4,
+          ymin=-4, ymax=4,
+          xtick={-4,-3,...,4},
+          ytick={-4,-3,...,4},
+          xticklabels={,,},
+          yticklabels={,,},
+%          xmajorticks=false,
+%          ymajorticks=false,
+%          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $f(x)=\dfrac{(x+1)^3}{(x-1)^2}$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-8, xmax=8,
+          ymin=-22, ymax=22,
+          xtick={-8,-4,...,8},
+          ytick={-20,-15,...,20},
+%         xmajorticks=false,
+%         ymajorticks=false,
+          minor x tick num=3,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $y=\dfrac{x^2}{x^2+3}$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-4.5, xmax=4.5,
+          ymin=-0.1, ymax=1.2,
+          xtick={-4,-2,...,4},
+          ytick={-4,-3,...,4},
+%          xmajorticks=false,
+%          ymajorticks=false,
+          minor x tick num=1,
+          minor y tick num=3,
+%          enlargelimits={abs=0.5},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $f(x)=\dfrac{x^3}{(x+1)^2}$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-8, xmax=8,
+          ymin=-6, ymax=6,
+          xtick={-8,-7,...,8},
+          ytick={-6,-5,...,6},
+          xticklabels={,,},
+          yticklabels={,,},
+%          xmajorticks=false,
+%          ymajorticks=false,
+%          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $y=x^{1/5}$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-1, xmax=1,
+          ymin=-1, ymax=1,
+%          xtick={-3,-2,...,2},
+%          ytick={-4,-3,...,4},
+          xmajorticks=false,
+          ymajorticks=false,
+%          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $y=2\sqrt x-x$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-1, xmax=8,
+          ymin=-1, ymax=1,
+          xtick={-3,-2,...,8},
+          ytick={-4,-3,...,8},
+          xticklabels={,,},
+%          xmajorticks=false,
+%          ymajorticks=false,
+%          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $y=\dfrac{1}{1+e\inv[x]}$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-3, xmax=3,
+          ymin=0, ymax=1,
+          xtick={-3,-2,...,2},
+          ytick={-4,-3,...,4},
+          xmajorticks=false,
+%          ymajorticks=false,
+%          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.25},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+    \pagebreak
+  \item $f(x)=\dfrac{x^2}{x^2-4}$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-4, xmax=4,
+          ymin=-3, ymax=3,
+          xtick={-2,2},
+          ytick={-4,-3,...,4},
+          yticklabels={,,},
+%          xmajorticks=false,
+%          ymajorticks=false,
+%          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.75},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+\end{enumerate}
+\pagebreak
+
+\begin{ex*}
+  Using the following derivatives, sketch a possible graph of the original function.
+\end{ex*}
+\begin{enumerate}[itemsep=\stretch{1}]
+  \item $f'(x)=\dfrac{1}{6}(x+1)(x-2)^2(x-3)$ 
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-3, xmax=3,
+          ymin=0, ymax=1,
+          xtick={-3,-2,...,2},
+          ytick={-4,-3,...,4},
+%          xmajorticks=false,
+          ymajorticks=false,
+%          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.25},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+  \item $g'(x)=x^2(x+2)(x-1)$
+    \vspace*{\stretch{1}}
+    \begin{flushright}
+      \begin{tikzpicture}
+        \begin{axis}[
+          axis lines=center,
+          axis line style={->},
+          xmin=-3, xmax=3,
+          ymin=0, ymax=1,
+          xtick={-3,-2,...,2},
+          ytick={-4,-3,...,4},
+%          xmajorticks=false,
+          ymajorticks=false,
+%          minor x tick num=1,
+%          minor y tick num=3,
+          enlargelimits={abs=0.25},
+          width=0.5\linewidth,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+\end{enumerate}
+\pagebreak
+
+%TODO remove relscale
+\end{document}
