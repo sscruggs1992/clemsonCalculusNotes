@@ -1,5 +1,18 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+  \relscale{1.4}
+  \section*{6.5: Length of Curves}
+
+  \begin{defn*}[Arc Length for $y=f(x)$]
+    Let $f$ have a continuous first derivative on the interval $\sbrkt{a,b}$. The length of the curve from $\parens{a, f(a)}$ to $\parens{b, f(b)}$ is
+      \[L=\int_a^b \sqrt{1+f'(x)^2}\,dx.\]
+  \end{defn*}
+
+  \begin{defn*}[Arc Length for $x=g(y)$]
+    Let $g$ have a continuous first derivative on the interval $\sbrkt{c,d}$. The length of the curve from $\parens{g(c),c}$ to $\parens{g(d),d}$ is
+      \[L=\int_c^d \sqrt{1+g'(y)^2}\,dy.\]
+  \end{defn*}
+
+  
 
 \end{document}

@@ -1,5 +1,28 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+  \relscale{1.4}
+  \section*{6.3: Volume by Slicing}
+
+  \begin{thmBox*}[General Slicing Method]
+    Suppose a solid object extends from $x=a$ to $y=b$, and the cross section of the solid perpendicular to the $x$-axis has an area given by a function $A$ that is integrable on $\sbrkt{a,b}$. The volume of the solid is
+      \[V=\int_a^b A(x)\,dx.\]
+  \end{thmBox*}
+
+  \begin{thmBox*}[Disk Method about the $x$-Axis]
+    Let $f$ be continuous with $f(x)\geq 0$ on the interval $\sbrkt{a,b}$. If the region $R$ bounded by the graph of $f$, the $x$-axis, and the lines $x=a$ and $x=b$ is revolved about the $x$-axis, the volume of the resulting solid of revolution is
+      \[V=\int_a^b \pi\underbrace{f(x)^{\mathrlap{2}}}_{\substack{\textnormal{disk}\\\textnormal{radius}}}\,dx.\]
+  \end{thmBox*}
+
+  \begin{thmBox*}[Washer Method about the $x$-Axis]
+    Let $f$ and $g$ be continuous functions with $f(x)\geq g(x)\geq 0$ on $\sbrkt{a,b}$. Let $R$ be the region bounded by $y=f(x)$, $y=g(x)$, and the lines $x=a$ and $x=b$. When $R$ is revolved about the $x$-axis, the volume of the resulting solid of revolution is
+      \[V=\int_a^b \pi (\underbrace{f(x)^{\mathrlap{2}}}_{\substack{\textnormal{outer}\\\textnormal{radius}}}-\underbrace{g(x)^{\mathrlap{2}}}_{\substack{\textnormal{inner}\\\textnormal{radius}}}\phantom{^2})\,dx.\]
+  \end{thmBox*}
+
+  \begin{thmBox*}[Disk and Washer Methods about the $y$-Axis]
+    Let $p$ and $q$ be continuous functions with $p(y)\geq q(y)\geq 0$ on $\sbrkt{c,d}$. Let $R$ be the region bounded by $x=p(y)$, $x=q(y)$, and the lines $y=c$ and $y=d$. When $R$ is revolved around the $y$-axis, the volume of the resulting solid of revolution is given by
+      \[V=\int_c^d (\underbrace{p(y)^{\mathrlap{2}}}_{\substack{\textnormal{outer}\\\textnormal{radius}}}-\underbrace{q(y)^{\mathrlap{2}}}_{\substack{\textnormal{inner}\\\textnormal{radius}}}\phantom{^2})\,dy.\]
+      If $q(y)=0$, the disk method results:
+        \[V=\int_c^d \underbrace{p(y)^{\mathrlap{2}}}_{\substack{\textnormal{disk}\\\textnormal{radius}}}\,dy.\]
+  \end{thmBox*} %TODO include figure 6.34
 
 \end{document}
