@@ -1,6 +1,6 @@
 # /home/peter/Desktop/uDrive/sp20/notes
 NOTE_DIR=/home/peter/Documents/notes
-U_DIR=/home/peter/Desktop/uDrive/Desktop/Stuff/math2060
+U_DIR=/home/peter/Desktop/uDrive/Desktop/Stuff/math1080
 
 if [ ! -d $U_DIR ]; then
     # First check if target dir is mounted
@@ -25,7 +25,7 @@ confirm(){
     esac
 }
 
-for file in $NOTE_DIR/math2060_NoteKeys/*; do
+for file in $NOTE_DIR/math1080_NoteKeys/*; do
     # If remote file exists
     if [ -f "$U_DIR/$(basename -- $file)" ]; then
 	# if (differ between src and dest) && (src older than dest)
@@ -44,11 +44,11 @@ for file in $NOTE_DIR/math2060_NoteKeys/*; do
 done
 confirm "Copy note directory? (def Y)" -y &&
     echo "--> Copying note dir" && 
-    sudo cp $NOTE_DIR/math2060_NoteKeys/* $U_DIR/;
+    sudo cp $NOTE_DIR/math1080_NoteKeys/* $U_DIR/;
 echo "--> Copying calendar"
-sudo cp /home/peter/Dropbox/Grad_School/Clemson/teaching/math2060/sp21/misc/math2060_006_sp21Calendar.pdf $U_DIR/
+sudo cp /home/peter/Dropbox/Grad_School/Clemson/teaching/math1080/fa21/misc/math1080_002_fa21Calendar.pdf $U_DIR/
 # Display any differences between files
-for file in $NOTE_DIR/math2060_NoteKeys/*;
+for file in $NOTE_DIR/math1080_NoteKeys/*;
   do diff $file $U_DIR/$(basename -- $file);
 done
 echo "Done!"
