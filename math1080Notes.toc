@@ -1,1 +1,5 @@
 \contentsline {section}{\numberline {}5.5: Substitution Rule}{1}{section.1}%
+\contentsline {section}{\numberline {}6.1: Velocity and Net Change}{28}{section.2}%
+\contentsline {section}{\numberline {}6.2: Regions Between Curves}{35}{section.3}%
+\contentsline {section}{\numberline {}6.3: Volume by Slicing}{40}{section.4}%
+\contentsline {section}{\numberline {}6.4: Volume by Shells}{46}{section.5}%

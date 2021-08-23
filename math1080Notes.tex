@@ -1,6 +1,6 @@
 \documentclass[mathNotesPreamble]{subfiles}
 %% Externalize graphics and save in ./images/ folder
-%% pdflatex -shell-escape <tex file>
+%% pdflatex --shell-escape <tex file>
 %% The document can be compiled with the two following
 %% lines commented out, but will recompile all figures
 %% each time.
@@ -8,13 +8,9 @@
 \tikzexternalize[prefix=images/]
 \begin{document}
   \makeatletter
-  \title{Math 1080 Class notes\\[0.25\baselineskip]Fall 2020}
+  \title{Math 1080 Class notes\\[0.25\baselineskip]Fall 2021}
   \author{\thefname\ \thelname}
-
   \pagestyle{headandfoot}
-
-  %\firstpageheader{\@title\\\@date}{}{Math 1070}
-  %\firstpageheadrule
 
   \newcommand*{\currentname}{\@currentlabelname}
 
@@ -54,11 +50,11 @@
   %% everything else
   \relscale{1.4}
 
-  \subfile{subfiles/briggs05_05}
-%  \subfile{subfiles/briggs06_01}
-%  \subfile{subfiles/briggs06_02}
-%  \subfile{subfiles/briggs06_03}
-%  \subfile{subfiles/briggs06_04}
+ \subfile{subfiles/briggs05_05}
+ \subfile{subfiles/briggs06_01}
+ \subfile{subfiles/briggs06_02}
+ \subfile{subfiles/briggs06_03}
+ \subfile{subfiles/briggs06_04}
 %  \subfile{subfiles/briggs06_05}
 %  \subfile{subfiles/briggs06_06}
 %  \subfile{subfiles/briggs06_07}
