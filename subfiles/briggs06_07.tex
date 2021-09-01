@@ -29,7 +29,7 @@
   \pagebreak
 
   \begin{ex*}
-    Imagine a chain of length $L$ meters with constant density $\rho$ kg/m is hanging vertically. Using $g$ to represent the force due to gravity, the work required to lift the chain is
+    Imagine a chain of length $L$ meters with constant density $\rho$ kg/m is hanging vertically. Using $g$ to represent the acceleration due to gravity, the work required to lift the chain is
       \[W=\int_0^L \rho g\parens{L-y}\,dy\]
     A $50$ meter long chain hangs vertically from a cylinder attached to a winch. Assume there is no friction in the system and the chain has a density of $3$\nobreakspace kg/m. How much work is required to wind the entire chain onto the cylinder if a $60$-kg load is attached to the end of the chain? Use $g$ for the acceleration due to gravity.
   \end{ex*}
@@ -55,8 +55,39 @@
   \end{thmBox*}
 
   \begin{ex*}
-    
+    A water tank is shaped like an inverted cone with height 6 meters and base radius 1.5 meters. If the tank is full, how much work is required to pump the water to the level of the top of the tank and out of the tank? Use $g$ for the acceleration due to gravity and note that the density of water is $1000$ kg/m$^3$. 
   \end{ex*}
+  \begin{flushright}
+    \def\xx{2.75}
+    \def\xxx{\xx+2.15}
+    \begin{tikzpicture}
+      \fill[
+        top color=blue!90,
+        bottom color=blue!15,
+        shading=axis,
+        opacity=0.25
+        ] 
+      (0,-2) circle (0.99cm and 0.30cm);
+      \fill[
+        left color=blue,
+        right color=blue,
+        middle color=gray!40,
+        shading=axis,
+        opacity=0.60
+        ] 
+      (1,-2) -- (0,-4) -- (-1,-2) arc (180:360:0.99cm and 0.30cm);
+      \begin{scope}
+        \clip (-1,-2) rectangle (2,-1cm);
+        \draw[dashed] (0,-2) circle(0.99cm and 0.30cm);
+      \end{scope}
+      \begin{scope}
+        \clip (-1,-2) rectangle (1,-3cm);
+        \draw (0,-2) circle(0.99cm and 0.30cm);
+      \end{scope}
+      \draw (0,0.04) circle(2.0cm and 0.60cm);
+      \draw (-2,0) -- (0,-4) -- (2,0);
+    \end{tikzpicture}
+  \end{flushright}
   \vspace*{\stretch{1}}
   \pagebreak
 
@@ -71,5 +102,27 @@
           \[F=\int_a^b \rho g\underbrace{(a-y)}_{\textnormal{depth}}\underbrace{w(y)}_{\textnormal{width}}\,dy.\]
     \end{enumerate}
   \end{thmBox*}
+
+  \begin{ex*}
+    The figure to the right shows the shape and dimensions of a small dam. Assuming the water level is at the top of the dam, find the total force on the face of the dam. Use $\rho$ for the density of the water and $g$ for the acceleration due to gravity.
+  \end{ex*}
+  \begin{flushright}
+    \begin{tikzpicture}[scale=1.25]
+      \fill[
+        draw = ClemsonOrange,
+        line width = 1.5pt, 
+        top color=gray!30,
+        middle color=ClemsonPurple!50,
+        bottom color=ClemsonPurple,
+        shading=axis,
+        opacity=0.50
+        ] 
+      (-1,3) -- (0,0) -- (1,3) -- cycle;
+      \draw[decorate, decoration={brace, amplitude=5pt}] (-1,3.125)--(1,3.125) node[pos=0.5, above, inner sep=7.5pt] {$20 m$};
+      \draw[decorate, decoration={brace, amplitude=5pt}] (-1.125,0)--(-1.125,3) node[pos=0.5, left, inner sep=7.5pt] {$30 m$};
+    \end{tikzpicture}
+  \end{flushright}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
 \end{document}
