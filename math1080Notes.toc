@@ -5,3 +5,4 @@
 \contentsline {section}{\numberline {}6.4: Volume by Shells}{46}{section.5}%
 \contentsline {section}{\numberline {}6.5: Length of Curves}{52}{section.6}%
 \contentsline {section}{\numberline {}6.6: Surface Area}{57}{section.7}%
+\contentsline {section}{\numberline {}6.7: Physical Applications}{60}{section.8}%
