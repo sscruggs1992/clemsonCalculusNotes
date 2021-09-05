@@ -1,5 +1,64 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+%  \relscale{1.4}
+  \section{8.2: Integration by Parts}
+  \begin{thmBox*}[Integraton by Parts]
+    Suppose $u$ and $v$ are differentiable functions. Then
+      \[\int u\,dv=uv-\int v\,du.\]
+  \end{thmBox*}
+  A good mnemonic is ILATE.
+  \vspace*{\stretch{1}}
+  \pagebreak
 
+  \begin{ex*}
+    Evaluate $\displaystyle\int xe^{-\frac{x}{2}}\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Find the area of the region between the $x$-axis and $f(x)=\displaystyle\frac{\ln(x)}{x^2}$ on $\sbrkt{1,e}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate $\displaystyle\int x^2 \cos(2x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate $\displaystyle\int e^{-x}\sin(3x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate $\displaystyle\int e^{4x}\cos(3x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Derive the integral formula 
+      \[\int \ln(x)\,dx+x\ln(x)-x+C\]
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}
+    Evaluate $\displaystyle\int10\cos(\sqrt{x})\,dx$
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Integration by Parts for Definite Integrals]
+    Let $u$ and $v$ be differentiable. Then
+      \[\left.\int_a^b u(x) v'(x)\,dx= u(x)v(x)\right|_a^b -\int_a^b v(x)u'(x)\,dx\]
+  \end{thmBox*}
+  \begin{ex*}
+    Evaluate $\displaystyle \int_1^e \ln(2x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
 \end{document}
