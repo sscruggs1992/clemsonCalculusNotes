@@ -1,5 +1,241 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+%  \relscale{1.4}
+  \section{8.3: Trigonometric Integrals}
+  \textbf{Important trigonometric identities}
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \begin{tabularx}{0.9\linewidth}{@{}
+      >{\hsize=0.9\hsize}X
+      >{\hsize=1.1\hsize}X
+      @{}}\toprule
+      Pythagorean Identities&
+      \vspace*{0.25\baselineskip}
+      $\sin^2(\theta)+\cos^2(\theta)=1$\\[4\baselineskip]\midrule
+      %
+      Angle sum formulas& 
+      \vspace*{0.25\baselineskip}
+      $\begin{aligned}
+        \sin(\alpha\pm\beta)&=\sin(\alpha)\cos(\beta)\pm\cos(\alpha)\sin(\alpha)\\[0.25\baselineskip]
+        \cos(\alpha\pm\beta)&=\cos(\alpha)\cos(\beta)\mp\sin(\alpha)\sin(\beta)\\[0.25\baselineskip]
+      \end{aligned}$\\\midrule
+      %
+      Double angle formulas&
+      \vspace*{0.25\baselineskip}
+      $\begin{aligned}
+        \sin(2\theta)&=2\sin(\theta)\cos(\theta)\\[0.25\baselineskip]
+        \cos(2\theta)&=\cos^2(\theta)-\sin^2(\theta)\\[0.25\baselineskip]
+      \end{aligned}$\\\midrule
+      %
+      Half angle formulas&
+      \vspace*{0.25\baselineskip}
+      $\begin{aligned}
+        \sin^2(\theta)&=\dfrac{1-\cos(2\theta)}{2}\\[0.25\baselineskip]
+        \cos^2(\theta)&=\dfrac{1-\cos(2\theta)}{2}\\[0.25\baselineskip]
+      \end{aligned}$\\\bottomrule
+    \end{tabularx}
+  \end{center}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \textbf{Derivation of angle sum formulas}
+
+  \noindent
+  \begin{minipage}{0.5\linewidth}
+    \begin{align*}
+      \sin(\alpha)&=\frac{\overline{DE}}{\overline{EF}}=\dfrac{\overline{DE}}{\sin(\beta)}
+       &\Rightarrow \overline{DE}=\sin(\alpha)\sin(\beta)\\[\baselineskip]
+      %
+      \cos(\alpha)&=\frac{\overline{DF}}{\overline{EF}}=\dfrac{\overline{DF}}{\sin(\beta)}
+       &\Rightarrow \overline{DF}=\cos(\alpha)\sin(\beta)\\[\baselineskip]
+      %
+      \sin(\beta)&=\frac{\overline{CE}}{\overline{AE}}=\dfrac{\overline{CE}}{\cos(\beta)}
+       &\Rightarrow \overline{CE}=\sin(\alpha)\cos(\beta)\\[\baselineskip]
+      %
+      \cos(\beta)&=\frac{\overline{AC}}{\overline{AE}}=\dfrac{\overline{AC}}{\cos(\beta)}
+       &\Rightarrow \overline{AC}=\cos(\alpha)\cos(\beta)\\[\baselineskip]
+    \end{align*}
+  \end{minipage}%
+  \begin{minipage}{0.45\linewidth}
+    \begin{flushright}
+      \begin{tikzpicture}[declare function={c=4; s=3; h=sqrt(c^2+s^2); FE=2.25;}]
+        \coordinate (A) at (0,0);
+        \coordinate (C) at (c,0);
+        \coordinate (E) at (c,s);
+        \coordinate (F) at ($(E)+(-FE*s/h,FE*c/h)$);
+        \coordinate (B) at ($(C)!(F)!(A)$);
+        \coordinate (D) at ($(F)!(E)!(B)$);
+
+        \draw[fill=ClemsonOrange!50, opacity=0.5] (A) -- (C) -- (E) -- cycle;
+        \draw[fill=ClemsonPurple!50, opacity=0.5, text opacity=1.0] (A) -- node[pos=0.5, above left] {$1$} (F) -- (E);
+        \draw (F) -- (B) (D) -- (E);
+
+        \node[below left, inner sep=1pt] at (A) {$A$};
+        \node[below, inner sep=2pt] at (B) {$B$};
+        \node[below right, inner sep=1pt] at (C) {$C$};
+        \node[left, inner sep=1.5pt] at (D) {$D$};
+        \node[right, inner sep=2pt] at (E) {$E$};
+        \node[above, inner sep=2pt] at (F) {$F$};
+
+        \tkzLabelAngle[pos = 1.05](C,A,E){$\alpha$}
+        \tkzLabelAngle[pos = 1.05](D,F,E){$\alpha$}
+        \tkzLabelAngle[pos = 1.05](E,A,F){$\beta$}
+
+        \draw[decorate, decoration={brace, amplitude=5pt}] ($(B)-(0,20pt)$)--($(A)-(0,20pt)$) node[pos=0.5, below, inner sep=7.5pt] {$\cos(\alpha+\beta)$};
+        \draw[decorate, decoration={brace, amplitude=5pt}] ($(A)-(10pt,0)$)--($(A|-F)-(10pt,0)$) node[pos=0.5, above, inner sep=7.5pt, sloped] {$\sin(\alpha+\beta)$};
+      \end{tikzpicture}
+    \end{flushright}
+  \end{minipage}%
+
+  \textbf{Derivation of the double angle formulas}
+
+  \begin{align*}
+    \sin(2\theta)&=\sin(\theta+\theta)
+      =\sin(\theta)\cos(\theta)+\cos(\theta)\sin(\theta)
+      =2\sin(\theta)\cos(\theta)\\[0.5\baselineskip]
+    \cos(2\theta)&=\cos(\theta+\theta)
+      =\cos(\theta)\cos(\theta)-\sin(\theta)\sin(\theta)
+      =\cos^2(\theta)-\sin^2(\theta)
+  \end{align*}
+  \vspace*{\stretch{1}}
+
+  \textbf{Derivation of the half angle formulas}
+
+  \noindent
+  Start with the cosine double angle formula:
+  \begin{align*}
+    \cos(2\theta)&=\cos^2(\theta)-\sin^2(\theta)
+      =\boxed{2\cos^2(\theta)-1}
+      =\boxed{1-2\sin^2(\theta)}
+  \end{align*}
+  Solve for either $\sin^2(\theta)$ or $\cos^2(\theta)$:
+  \begin{align*}
+    \sin^2(\theta)&=\frac{1-\cos(2\theta)}{2}&
+    \cos^2(\theta)&=\frac{1+\cos(2\theta)}{2}
+  \end{align*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate the integral $\displaystyle \int \cos^5(x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate the integral $\displaystyle \int\sin^3(x)\cos^{3/2}(x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate the integral $\displaystyle \int 20\sin^2(x)\cos^2(x)\,dx$
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate the integral $\displaystyle \int\sec^6(x)\tan^4(x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate the integral $\displaystyle \int 35\tan^5(x)\sec^4(x)\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Consider the region bounded by $y=\sec(x)$ and $y=\cos(x)$ for $0\leq x\leq \nicefrac{\pi}{3}$. Find the volume of the solid generated when rotating this region about the line $y=-1$.
+  \end{ex*}
+  \begin{flushright}
+    \begin{tikzpicture}[declare function={
+      PI=3.141592653589793;}]
+      \begin{axis}[
+        axis lines=center,
+        axis line style={black,->},
+        xmin=-0.95*PI, xmax=0.95*PI,
+        vasymptote=PI/3,  
+        ymin=-1.75, ymax=2.5,
+        xtick={-3.141592653589793,
+               -2.0943951023931953,
+               -1.0471975511965976,
+               0.0,
+               1.0471975511965976,
+               2.0943951023931953,
+               3.141592653589793},
+        xticklabels={$\displaystyle -\pi$,
+                     $\displaystyle \nicefrac{-2\pi}{3}$,
+                     $\displaystyle \nicefrac{\pi}{3}$,
+                     $\displaystyle 0$,
+                     $\displaystyle \nicefrac{\pi}{3}$,
+                     $\displaystyle \nicefrac{2\pi}{3}$,
+                     $\displaystyle \pi$},
+        height=1.75in, width=0.9*0.5\linewidth,
+        ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+        xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+        ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+        every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+        ]
+        \addplot[-, red, name path =A] expression[domain=-PI:PI]{cos(deg(x))} node[black, above left, pos=0.35, font=\normalsize, inner sep=1pt] {$y=\cos(x)$};
+        \foreach \n in {-1,0,1}{
+          \addplot[-, name path = B] expression[domain=\n*PI-0.9*PI/2:\n*PI+0.9*PI/2, unbounded coords=jump]{sec(deg(x))};
+          \addplot[fill=ClemsonPurple!55] fill between[of=A and B, soft clip={domain=0:PI/3}];
+        }
+      \end{axis}
+    \end{tikzpicture}
+  \end{flushright}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Find the length of the curve $y=\ln\parens{2\sec(x)}$ on the interval $\sbrkt{0,\nicefrac{\pi}{6}}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \renewcommand{\arraystretch}{1.65}
+    \relscale{0.9}
+    \begin{tabularx}{\linewidth}{@{}
+      >{\hsize=0.65\hsize}X
+      >{\hsize=1.35\hsize}X
+      @{}}\toprule
+      $\displaystyle \int \sin^m(x)\cos^n(x)\,dx$& \textbf{Strategy}\\
+      $m$ odd and positive, $n$ real& 
+      Split off $\sin(x)$, rewrite the resulting even power of $\sin(x)$ in terms of $\cos(x)$, and then use $u=\cos(x)$.\\
+      %
+      $n$ odd and positive, $m$ real& 
+      Split off $\cos(x)$, rewrite the resulting even power of $\cos(x)$ in terms of $\sin(x)$, and then use $u=\sin(x)$.\\
+      %
+      $m$ and $n$ both even, nonnegative integers&
+      Use half-angle formulas to transform the integrand into a polynomial in $\cos(2x)$, and apply the preceding strategies once again to powers of $\cos(2x)$ greater than $1$.\\
+      \midrule
+      $\displaystyle \int \tan^m(x)\sec^n(x)\,dx$\\
+      $n$ even and positive, $m$ real& 
+      Split off $\sec^2(x)$, rewrite the remaining even power of $\sec(x)$ in terms of $\tan(x)$, and use $u=\tan(x)$.\\
+      %
+      $m$ odd and positive, $n$ real&
+      Split off $\sec(x)\tan(x)$, rewrite the remaining even power of $\tan(x)$ in terms of $\sec(x)$, and use $u=\sec(x)$.\\
+      %
+      $n$ even and positive, $n$ odd and positive&
+      Rewrite $\tan^m(x)$ in terms of $\sec(x)$\\\midrule
+      %
+      $\displaystyle \int \sec^n(x)\,dx$\\
+      $n$ odd&
+      Use integration by parts with $u=\sec^{n-2}(x)$ and \newline$dv=\sec^2(x)\,dx$\\
+      %
+      $m$ even&
+      Split off $\sec^2(x)$, rewrite the remaining powers of $\sec(x)$ in terms of $\tan(x)$, and use $u=\tan(x)$.\\\midrule
+      %
+      $\displaystyle \int \tan^m(x)\,dx$&
+      Split off $\tan^2(x)$ and rewrite in terms of $\sec(x)$. Expand into difference of integrals substituting $u=\tan(x)$. Repeat the process as needed for remaining powers of $\tan(x)$.\\
+      \bottomrule
+    \end{tabularx}
+  \end{center}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
 \end{document}

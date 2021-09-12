@@ -8,3 +8,4 @@
 \contentsline {section}{\numberline {}6.7: Physical Applications}{60}{section.8}%
 \contentsline {section}{\numberline {}8.1: Basic Approaches (to Integration)}{68}{section.9}%
 \contentsline {section}{\numberline {}8.2: Integration by Parts}{71}{section.10}%
+\contentsline {section}{\numberline {}8.3: Trigonometric Integrals}{79}{section.11}%
