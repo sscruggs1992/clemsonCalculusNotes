@@ -9,3 +9,5 @@
 \contentsline {section}{\numberline {}8.1: Basic Approaches (to Integration)}{68}{section.9}%
 \contentsline {section}{\numberline {}8.2: Integration by Parts}{71}{section.10}%
 \contentsline {section}{\numberline {}8.3: Trigonometric Integrals}{79}{section.11}%
+\contentsline {section}{\numberline {}8.4: Trigonometric Substitutions}{89}{section.12}%
+\contentsline {section}{\numberline {}8.5: Partial Fractions}{95}{section.13}%

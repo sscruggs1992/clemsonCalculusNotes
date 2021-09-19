@@ -1,5 +1,98 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+%  \relscale{1.4}
+  \section{8.5: Partial Fractions}
+  \begin{ex*}
+    Simplify $\displaystyle f(x)=\frac{1}{x-2}+\frac{2}{x+4}$ by finding a common denominator.
+  \end{ex*}
+  \vspace*{\stretch{0.5}}
+
+  \begin{thmBox*}[Procedure: Partial Fractions with Simple Linear Factors]
+    Suppose $f(x)=p(x)/q(x)$, where $p$ and $q$ are polynomials with no common factors and with the degree of $P$ less than the degree of $q$. Assume $q$ is the product of simple linear factors. The partial fraction decomposition is obtained as follows.
+    \begin{enumerate}[label=\textbf{Step \arabic*:}, itemindent=1.5\labelwidth]
+      \item \textbf{Factor the denominator $q$} in the form $(x-r_1)(x-r_2)\dots(x-r_n)$
+      \item \textbf{Partial fraction decomposition}
+        \[\frac{p(x)}{q(x)}=\frac{A_1}{(x-r_1)}+\frac{A_2}{(x-r_2)}+\dots+\frac{A_n}{(x-r_n)}.\]
+      \item \textbf{Clear denominators} Multiply both sides of the equation in Step 2 by $q(x)=(x-r_1)(x-r_2)\dots(x-r_n)$
+      \item \textbf{Solve for coefficients} Equate like powers of $x$ in Step 3 to solve for the undetermined coefficients $A_1,\dots,A_n$.
+    \end{enumerate}
+  \end{thmBox*}
+
+  \begin{ex*}
+    Perform partial fraction decomposition on $\displaystyle f(x)=\frac{3x}{x^2+2x-8}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    $\displaystyle \int \frac{28x^3-56x^2+9}{x^2-2x}$
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Procedure: Partial Fractions for Repeated Linear Factors]
+    Suppose the repeated linear factor $(x-r)^m$ appears in the denominator of a proper rational function in reduced form. The partial fraction decomposition has a partial fraction for each power of $(x-r)$ up to and including the $m$th power; that is, the partial fraction decomposition contains the sum  
+    \[\frac{A_1}{(x-r)}+\frac{A_3}{(x-r)^2}+\frac{A_3}{(x-r)^3}+\dots+\frac{A_m}{(x-r)^m}\]
+    where $A_1,\dots,A_m$ are constants to be determined.
+  \end{thmBox*}
+  \begin{ex*}
+    Setup the partial fraction decomposition for $\displaystyle f(x)=\frac{x^3-8x+19}{x^4+3x^3}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \begin{ex*}
+    Setup the partial fraction decomposition for $\displaystyle g(x)=\frac{2}{x^5-6x^4+9x^3}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate $\displaystyle \int \frac{x^2+1}{(2x-3)(x-2)^2}\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate $\displaystyle \int \frac{8}{3x^3+7x2+4x}\,dx$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Perform partial fraction decomposition on the following fractions or identify them as irreducible.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=, item-indent=0mm](1)
+    \task $\displaystyle \frac{1}{x^2-13x+43}$
+    \task $\displaystyle \frac{x^2}{(x-4)(x+5)}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Perform partial fraction decomposition on the following fractions or identify them as irreducible.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=, item-indent=0mm](1)
+    \task $\displaystyle \frac{7}{(x^2+1)^2}$
+    \task $\displaystyle \frac{1}{x^2+11x+28}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate $\displaystyle \int \frac{4x}{(x+1)(x^2+1)}\,dx$
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate $\displaystyle \int \frac{3x^2+2x+12}{(x^2+4)^2}\,dx$
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate $\displaystyle \int \frac{1}{x\sqrt{1+2x}}\,dx$ using the substitution $u=\sqrt{1+2x}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
 \end{document}
