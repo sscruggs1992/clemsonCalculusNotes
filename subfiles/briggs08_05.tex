@@ -52,10 +52,17 @@
   \pagebreak
 
   \begin{ex*}
-    Evaluate $\displaystyle \int \frac{8}{3x^3+7x2+4x}\,dx$.
+    Evaluate $\displaystyle \int \frac{8}{3x^3+7x^2+4x}\,dx$.
   \end{ex*}
   \vspace*{\stretch{1}}
   \pagebreak
+
+
+  \begin{thmBox*}[Procedure: Partial Fractions with Simple Irreducible Quadratic Factors]
+    Suppose a simple irreducible factor $ax^2+bx+c$ appears in the denominator of a proper rational function in reduced form. The partial fraction decomposition contains a term of the form
+      \[\frac{Ax+B}{ax^2+bx+c},\]
+    where $A$ and $B$ are unknown coefficients to be determined.
+  \end{thmBox*}
 
   \begin{ex*}
     Perform partial fraction decomposition on the following fractions or identify them as irreducible.
@@ -92,6 +99,21 @@
   \begin{ex*}
     Evaluate $\displaystyle \int \frac{1}{x\sqrt{1+2x}}\,dx$ using the substitution $u=\sqrt{1+2x}$.
   \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Summary: Partial Fraction Decomposition]
+    Let $f(x)=p(x)/q(x)$ be a proper rational function in reduced form. Assume the denominator $q$ has been factored completely over the real numbers and $m$ is a positive integer.
+    \begin{enumerate}
+      \item \textbf{Simple linear factor:} A factor $x-r$ in the denominator requires the partial fraction $\dfrac{A}{x-r}$.
+      \item \textbf{Repeated linear factor: } A factor $(x-r)^m$ with $m>1$ in the denominator requires the partial fractions
+        \[\frac{A_1}{(x-r)}+\frac{A_2}{(x-r)^2}+\frac{A_3}{(x-r)^3}+\dots+\frac{A_m}{(x-r)^m}.\]
+      \item \textbf{Simple irreducible quadratic factor: } An irreducible factor $ax^2+bx+c$ in the denominator requires the partial fraction 
+        \[\frac{Ax+B}{ax^2+bx+c}.\]
+      \item \textbf{Repeated irreducible quadratic factor:} An irreducible factor $(ax^2+bx+c)^m$ with $m>1$ in the denominator requires the partial fractions
+        \[\frac{A_1x+B_1}{ax^2+bx+c}+\frac{A_2x+B_2}{(ax^2+bx+c)^2}+\dots+\frac{A_mx+B_m}{(ax^2+bx+c)^m}.\]
+    \end{enumerate}
+  \end{thmBox*}
   \vspace*{\stretch{1}}
   \pagebreak
 

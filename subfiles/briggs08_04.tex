@@ -14,8 +14,8 @@
         axis line style={black,->},
         xmin=-4.5, xmax=4.5,
         ymin=-0.0625, ymax=4.25,
-        xtick={4},
-        xticklabels={$a$},
+        xtick={-4,4},
+        xticklabels={$-a$,$a$},
         ymajorticks=false,
         ticklabel style={font=\large,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
         every axis plot/.append style={line width=0.95pt, color=blue, samples=500}, 
@@ -40,20 +40,20 @@
       \end{tikzpicture}
     }
     \blankTriangle{\sqrt{a^2-u^2}}{u}{a} \hspace*{\stretch{1}}
-    \blankTriangle{u}{a}{\sqrt{a^2-u^2}} \hspace*{\stretch{1}}
-    \blankTriangle{a}{\sqrt{a^2-u^2}}{u}
+    \blankTriangle{a}{u}{\sqrt{a^2+u^2}} \hspace*{\stretch{1}}
+    \blankTriangle{a}{\sqrt{u^2-a^2}}{u}
 
     \addtolength{\jot}{15pt}
     \begin{alignat*}{4}\toprule
       &a^2-u^2 \hspace*{12mm}& 
       u&=a\sin(\theta),\hspace*{5mm}&
       &-\frac{\pi}{2}\leq \theta\leq \frac{\pi}{2}, \hspace*{2mm} \textnormal{ for } \abs{u}\leq a
-       & \hspace*{12mm} a^2+a^2\sin^2(\theta)&=a^2\cos^2(\theta)\\
+       & \hspace*{12mm} a^2-a^2\sin^2(\theta)&=a^2\cos^2(\theta)\\
       %
       &a^2+u^2 &
       u&=a\tan(\theta),&
       &-\frac{\pi}{2}< \theta< \frac{\pi}{2},
-       & a^2-a^2\tan^2(\theta)&=a^2\sec^2(\theta)\\
+       & a^2+a^2\tan^2(\theta)&=a^2\sec^2(\theta)\\
       %
       &u^2-a^2& 
       u&=a\sec(\theta),\ 
@@ -79,7 +79,7 @@
   \pagebreak
 
   \begin{ex*}
-    $\displaystyle \int \frac{x^3}{\parens{25-4x^2}^{\nicefrac{3}{2}}}\,dx$
+    $\displaystyle \int \frac{x^2}{\parens{25-4x^2}^{\nicefrac{3}{2}}}\,dx$
   \end{ex*}
   \vspace*{\stretch{1}}
   \pagebreak
