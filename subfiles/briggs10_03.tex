@@ -1,5 +1,85 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+%  \relscale{1.4}
+  \section{10.3: Infinite Series}
+
+  \noindent A \textbf{Geometric sum} with $n$ terms has the form
+    \[S_n=a+ar+ar^2+\dots+ar^{n-1}=\sum_{k=0}^{n-1} ar^k\]
+
+  \noindent\textbf{Derivation of partial sum formula:}
+  \vspace*{\stretch{1}}
+
+  \begin{thmBox*}[Theorem 10.7: Geometric Series]
+    Let $a\neq 0$ and $r$ be real numbers. If $\abs{r}<1$, then $\displaystyle \sum_{k=0}^\infty ar^k=\frac{a}{1-r}$. If $\abs{r}\geq 1$, then the series diverges.
+
+      \begin{center}
+        \begin{tikzpicture}[scale=2]
+          \begin{axis}[
+            axis line style={<->},
+            xticklabel style = {yshift=-2pt},
+            axis y line=none,
+            axis x line*=center,
+            ymin=0, ymax=1,
+            xmin=-3, xmax=3,
+            width=0.5\textwidth, height=24mm,
+            xtick={-1,0,1},
+            ticklabel style={font=\scriptsize,fill=white,opacity=1.0, text opacity=1},
+            xlabel=$r$, xlabel style={at={(ticklabel* cs: 1.0), font=\normalsize}, below}
+            ]
+            \addplot[holdot, draw=black] coordinates{(-1,0)(1,0)};
+            \fill[ClemsonOrange, opacity=0.5] (-1,0) -- (1,0) -- (1,1) -- (-1,1) -- cycle;
+            \fill[left color=white, right color=ClemsonPurple, opacity=0.25] (-2.75,0) -- (-1,0) -- (-1,1) -- (-2.75,1) -- cycle;
+            \fill[right color=white, left color=ClemsonPurple, opacity=0.25] (2.75,0) -- (1,0) -- (1,1) -- (2.75,1) -- cycle;
+            \draw[densely dashed, line width=0.75pt] (-1,0) -- (-1,1) (1,0) -- (1,1);
+            \node[font=\scriptsize, align=center] at (axis cs: -1.8,0.5) {Diverges\\ $r\leq -1$};
+            \node[font=\scriptsize, align=center] at (axis cs: 0,0.5) {Converges\\ $-1<r< 1$};
+            \node[font=\scriptsize, align=center] at (axis cs: 1.8,0.5) {Diverges\\ $r\geq 1$};
+          \end{axis}
+        \end{tikzpicture}
+      \end{center}
+    \vspace*{-\baselineskip}
+  \end{thmBox*}
+  \pagebreak
+
+  \begin{ex*}
+    Evaluate the following geometric series or state that the series diverges
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=0}^\infty 1.1^k$
+    \task $\displaystyle\sum_{k=0}^\infty e^{-k}$
+    \task $\displaystyle\sum_{k=2}^\infty 3\parens{-0.75}^k$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{7}{10^k}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \noindent \textbf{Telescoping Series:}
+
+  \begin{ex*}
+    Evaluate the following series
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty\ \cos\parens{\frac{1}{k^2}}-\cos\parens{\frac{1}{(k+1)^2}}$
+    \task $\displaystyle\sum_{k=3}^\infty \frac{1}{(k-2)(k-1)}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 10.8: Properties of Convergent Series]
+    \begin{enumerate}
+      \item Suppose $\sum a_k$ converges to $A$ and $c$ is a real number. The series $\sum ca_k$ converges, and $\sum ca_k=c\sum a_k=cA$.
+      \item Suppose $\sum a_k$ diverges. Then $\sum ca_k$ also diverges, for any real number $c\neq 0$.
+      \item Suppose $\sum a_k$ converges to $A$ and $\sum b_k$ converges to $B$. The series $\sum \parens{a_k\pm b_k}$ converges and $\sum\parens{a_k\pm b_k}=\sum a_k \pm \sum b_k=A\pm B$.
+      \item Suppose $\sum a_k$ diverges and $\sum b_k$ converges. Then $\sum \parens{a_k\pm b_k}$ diverges.
+      \item If $M$ is a positive integer, then $\displaystyle \sum_{k=1}^\infty a_k$ and $\displaystyle\sum_{k=M}^\infty a_k$ either both converge or both diverge. In general, \textit{whether} a series converges does not depend on a finite number of terms added to or removed from the series. However, the \textit{value} of a convergent series does change if nonzero terms are added or removed.
+    \end{enumerate}
+  \end{thmBox*}
+
+  \begin{ex*}
+    Evaluate
+  \end{ex*}
+    $\displaystyle \sum_{k=1}^\infty \sbrkt{\frac{1}{2}\parens{\frac{2}{5}}^k+\frac{2}{3}\parens{\frac{1}{6}}^k}$
+  \vspace*{\stretch{1}}
+  \pagebreak
 
 \end{document}

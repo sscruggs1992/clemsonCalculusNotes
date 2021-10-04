@@ -14,3 +14,5 @@
 \contentsline {section}{\numberline {}8.6: Integration Strategies}{106}{section.14}%
 \contentsline {section}{\numberline {}8.9: Improper Integrals}{109}{section.15}%
 \contentsline {section}{\numberline {}10.1: An Overview of Sequences and Infinite Series}{118}{section.16}%
+\contentsline {section}{\numberline {}10.2: Sequences}{124}{section.17}%
+\contentsline {section}{\numberline {}10.3: Infinite Series}{131}{section.18}%

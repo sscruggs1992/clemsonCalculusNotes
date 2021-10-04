@@ -1,5 +1,163 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+%  \relscale{1.4}
+  \section{10.2: Sequences}
 
+  \begin{thmBox*}[Theorem 10.1: Limits of Sequences from Limits of Functions]
+    Suppose $f$ is a function such that $f(n)=a_n$, for positive integers $n$. If \newline$\displaystyle \lim_{x\to \infty} f(x)=L$, then the limit of the sequence $\set{a_n}$ is also $L$, where $L$ may be $\pm\infty$.
+  \end{thmBox*}
+
+  \begin{ex*}
+    Determine if the following sequences converge or diverge. If the sequence converges, find its limit.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=, item-indent=0pt](2)
+    \task $\set{e^{2n/(n+2)}}_{n=1}^{\infty}$
+    \task $\set{\frac{(-1)^n}{n}}_{n=1}^{\infty}$
+    \task $\set{\frac{\arctan(n)}{n}}_{n=1}^{\infty}$
+    \task $\set{\frac{e^{-n}}{42\sin(e^{-n})}}_{n=1}^{\infty}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[10.2: Limit Laws for Sequences]
+    Assume the sequences $\set{a_n}$ and $\set{b_n}$ have limits $A$ and $B$, respectively. Then
+      \begin{enumerate}
+        \item $\displaystyle \lim_{n\to \infty}\parens{a_n\pm b_n}=A\pm B$
+        \item $\displaystyle \lim_{n\to \infty} ca_n=cA$, where $c$ is a real number
+        \item $\displaystyle \lim_{n\to \infty} a_nb_n=AB$
+        \item $\displaystyle \lim_{n\to \infty} \frac{a_n}{b_n}= \frac{A}{B}$, provided $B\neq0$.
+      \end{enumerate}
+  \end{thmBox*}
+
+  \begin{ex*}
+    Consider the sequences $\set{a_n}$, $\set{b_n}$, $\set{c_n}$, and $\set{d_n}$ where
+      \[a=\frac{1}{n},\quad b_n=n,\quad c_n=e^n,\quad \textnormal{ and } d_n=\sqrt{n}.\]
+    Compute the following limits.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=\Alph*., item-indent=17.5pt](4)
+    \task $\displaystyle \lim_{n\to \infty} a_n$
+    \task $\displaystyle \lim_{n\to \infty} b_n$
+    \task $\displaystyle \lim_{n\to \infty} c_n$
+    \task $\displaystyle \lim_{n\to \infty} d_n$
+    \task $\displaystyle \lim_{n\to \infty} a_nb_n$
+    \task $\displaystyle \lim_{n\to \infty} a_nc_n$
+    \task $\displaystyle \lim_{n\to \infty} a_nd_n$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+
+
+  \noindent
+  True or False: If for some sequence $\set{a_n}$ and $\set{b_n}$, $\displaystyle\lim_{n\to \infty}a_n=0$ and $\displaystyle\lim_{n\to \infty} b_n=\infty$, then $\displaystyle\lim_{n\to \infty} a_nb_n=0$.
+  \pagebreak
+
+  \begin{defn*}[Terminology for Sequences]
+    \begin{enumerate}[label=\textbullet, itemsep=15pt]
+      \item $\set{a_n}$ is \textbf{increasing} if $a_{n+1}>a_n$
+      \item $\set{a_n}$ is \textbf{nondecreasing} if $a_{n+1}\geq a_n$
+      \item $\set{a_n}$ is \textbf{decreasing} if $a_{n+1}< a_n$
+      \item $\set{a_n}$ is \textbf{nonincreasing} if $a_{n+1}\leq a_n$
+      \item $\set{a_n}$ is \textbf{monotonic} if it is either nonincreasing or nondecreasing (it moves in one direction)
+      \item $\set{a_n}$ is \textbf{bounded above} if there is a number $M$ such that $a_n\leq M$, for all relevant values of $n$
+      \item $\set{a_n}$ is \textbf{bounded below} if there is a number $N$ such that $a_n\geq N$, for all relevant values of $n$.
+      \item If $\set{a_n}$ is bounded above and bounded below, then we say that $\set{a_n}$ is a \textbf{bounded} sequence.
+    \end{enumerate}
+  \end{defn*}
+  \begin{ex*}
+    Consider the sequence $\set{-n^2}_{n=1}^{\infty}$. What can we say about this sequence?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 10.3: Geometric Sequences]
+    Let $r$ be a real number. Then
+      \[\lim_{n\to \infty} r^n =
+        \begin{cases}
+          0&\textnormal{ if } \abs{r}<1\\
+          1&\textnormal{ if } r=1\\
+          \textnormal{does not exist}& \textnormal{ if } r\leq -1 \textnormal{ or } r>1.
+        \end{cases}
+      \]
+      If $r>0$, then $\set{r^n}$ is a monotonic sequence. If $r<0$, then $\set{r^n}$ oscillates.
+
+      \begin{center}
+        \begin{tikzpicture}[scale=2]
+          \begin{axis}[
+            axis line style={<->},
+            xticklabel style = {yshift=-2pt},
+            axis y line=none,
+            axis x line*=center,
+            ymin=0, ymax=1,
+            xmin=-3, xmax=3,
+            width=0.5\textwidth, height=24mm,
+            xtick={-1,0,1},
+            ticklabel style={font=\scriptsize,fill=white,opacity=1.0, text opacity=1},
+            xlabel=$r$, xlabel style={at={(ticklabel* cs: 1.0), font=\normalsize}, below}
+            ]
+            \addplot[holdot, draw=black] coordinates{(-1,0)};
+            \addplot[soldot, black] coordinates{(1,0)};
+            \fill[ClemsonOrange, opacity=0.5] (-1,0) -- (1,0) -- (1,1) -- (-1,1) -- cycle;
+            \fill[left color=white, right color=ClemsonPurple, opacity=0.25] (-2.75,0) -- (-1,0) -- (-1,1) -- (-2.75,1) -- cycle;
+            \fill[right color=white, left color=ClemsonPurple, opacity=0.25] (2.75,0) -- (1,0) -- (1,1) -- (2.75,1) -- cycle;
+            \draw[densely dashed, line width=0.75pt] (-1,0) -- (-1,1);
+            \draw[line width=0.75pt] (1,0) -- (1,1);
+            \node[font=\scriptsize, align=center] at (axis cs: -1.8,0.5) {Diverges\\ $r\leq -1$};
+            \node[font=\scriptsize, align=center] at (axis cs: 0,0.5) {Converges\\ $-1<r\leq 1$};
+            \node[font=\scriptsize, align=center] at (axis cs: 1.8,0.5) {Diverges\\ $r> 1$};
+          \end{axis}
+        \end{tikzpicture}
+      \end{center}
+    \vspace*{-\baselineskip}
+  \end{thmBox*}
+
+  \begin{ex*}
+    Determine if the following sequences converge
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=, item-indent=0pt](2)
+    \task $\displaystyle \set{\frac{3^{n+1}+3}{3^n}}$
+    \task $\displaystyle \set{2^{n+1}3^{-n}}$
+    \task $\displaystyle \set{\frac{(-1)^n}{2^n}}$
+    \task $\displaystyle \set{\frac{75^{n-1}}{99^n}+\frac{5^n\sin(n)}{8^n}}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 10.4: Squeeze Theorem for Sequences]
+    Let $\set{a_n}$, $\set{b_n}$, and $\set{c_n}$ be sequences with $a_n\leq b_n\leq c_n$, for all integers $n$ greater than some index $N$. If $\displaystyle\lim_{n\to \infty} a_n=\lim_{n\to \infty} c_n=L$, then $\displaystyle\lim_{n\to \infty} b_n=L$.
+  \end{thmBox*}
+  \begin{ex*}
+    Find the limit of the sequence $b_n=\dfrac{9\cos(n)}{n^2+1}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{thmBox*}[Theorem 10.5: Bounded Monotonic Sequence]
+    A bounded monotonic sequence converges.
+  \end{thmBox*}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 10.6: Growth Rates of Sequences]
+    The following sequences are ordered according to increasing growth rates as $n\to\infty$; that is, if $\set{a_n}$ appears before $\set{b_n}$ in the list, then $\displaystyle\lim_{n\to \infty} \frac{a_n}{b_n}=0$ and $\displaystyle\lim_{n\to \infty} \frac{b_n}{a_n}=\infty$:
+      \[\set{\parens{\ln n}^q} \hspace*{2.5pt} \ll \hspace*{2.5pt} \set{n^p} \hspace*{2.5pt} \ll \hspace*{2.5pt} \set{n^p\parens{\ln n}^r} \hspace*{2.5pt} \ll \hspace*{2.5pt} \set{n^{p+s}} \hspace*{2.5pt} \ll \hspace*{2.5pt} \set{b^n} \hspace*{2.5pt} \ll \hspace*{2.5pt} \set{n!} \hspace*{2.5pt} \ll \hspace*{2.5pt} \set{n^n}\]
+  \end{thmBox*}
+
+  \begin{ex*}
+    Use growth rates to determine which of the following sequences converge.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\set{\frac{\ln(n^{10})}{0.00001n}}$
+    \task $\displaystyle\set{\frac{n^8\ln(n)}{n^{8.001}}}$
+    \task $\displaystyle\set{\frac{n!}{10^n}}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{defn*}[Limit of a Sequence]
+    The sequence $\set{a_n}$ converges to $L$ provided the terms of $a_n$ can be made arbitrarily close to $L$ by taking $n$ sufficiently large. More precisely, $\set{a_n}$ has the unique limit $L$ if, given any $\eps >0$, it is possible to find a positive integer $N$ (depending only on $\eps$) such that
+      \[\abs{a_n-L}< \eps \qquad \textnormal{ whenever } n>N.\]
+    If the \textbf{limit of a sequence} is $L$, we say the sequence \textbf{converges} to $L$, written
+      \[\lim_{n\to \infty} a_n=L.\]
+    A sequence that does not converge is said to \textbf{diverge}.
+  \end{defn*}
+  \vspace*{\stretch{1}}
+
+\pagebreak
 \end{document}
