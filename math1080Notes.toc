@@ -16,3 +16,5 @@
 \contentsline {section}{\numberline {}10.1: An Overview of Sequences and Infinite Series}{118}{section.16}%
 \contentsline {section}{\numberline {}10.2: Sequences}{124}{section.17}%
 \contentsline {section}{\numberline {}10.3: Infinite Series}{131}{section.18}%
+\contentsline {section}{\numberline {}10.4: The Divergence and Integral Tests}{135}{section.19}%
+\contentsline {section}{\numberline {}10.5: Comparison Tests}{143}{section.20}%

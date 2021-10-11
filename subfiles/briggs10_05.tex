@@ -1,5 +1,60 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+%  \relscale{1.4}
+  \section{10.5: Comparison Tests}
+
+  \begin{thmBox*}[Theorem 10.14: Comparison Test]
+    Let $\sum a_k$ and $\sum b_k$ be series with positive terms where $a_k\leq b_k$. 
+    \begin{enumerate}
+      \item If $\sum b_k$ converges, then $\sum a_k$ converges.
+      \item If $\sum a_k$ diverges, then $\sum b_k$ diverges.
+    \end{enumerate}
+  \end{thmBox*}
+  \begin{ex*}
+    Use the comparison test to determine if the series $\displaystyle\sum_{k=1}^\infty \frac{k^2}{k^3-3}$ converges or diverges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak 
+
+  \begin{thmBox*}[Theorem 10.15: Limit Comparison Test]
+    Let $\sum a_k$ and $\sum b_k$ be series with positive terms and let
+      \[\lim_{k\to \infty} \frac{a_k}{b_k}=L.\]
+    \begin{enumerate}
+      \item If $0<L<\infty$ (that is, $L$ is a finite positive number), then $\sum a_k$ and $\sum b_k$ either both converge or both diverge.
+      \item If $L=0$ and $\sum b_k$ converges, then $\sum a_k$ converges.
+      \item If $L=\infty$ and $\sum b_k$ diverges, then $\sum a_k$ diverges.
+    \end{enumerate}
+  \end{thmBox*}
+  \begin{ex*}
+    Using either the Comparison Test or the Limit Comparison Test, determine if the series
+      \[\sum_{k=1}^\infty \frac{4k^2-k}{k^3+9}\]
+    converges or diverges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Determine if the following series converge or diverge.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \frac{1}{k\sqrt{k^2+1}}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{\ln(k)}{k^2}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \parens{1+\frac{2}{k}}^k$
+    \task $\displaystyle \frac{1}{14^3}+\frac{2}{15^3}+\frac{3}{16^3}+\dots$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \frac{\sin\parens{\frac{\pi}{k}}}{k^3}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{\sqrt[3]{k^2+4}}{\sqrt{k^3+9}}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
 \end{document}
