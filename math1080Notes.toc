@@ -18,3 +18,4 @@
 \contentsline {section}{\numberline {}10.3: Infinite Series}{131}{section.18}%
 \contentsline {section}{\numberline {}10.4: The Divergence and Integral Tests}{135}{section.19}%
 \contentsline {section}{\numberline {}10.5: Comparison Tests}{143}{section.20}%
+\contentsline {section}{\numberline {}10.6: Alternating Series}{148}{section.21}%

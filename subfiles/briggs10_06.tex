@@ -1,5 +1,135 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+%  \relscale{1.4}
+  \section{10.6: Alternating Series}
+
+  \begin{thmBox*}[Theorem 10.16: Alternating Series Test]
+    The alternating series $\sum(-1)^{k+1}a_k$ converges provided
+    \begin{enumerate}
+      \item the terms of the series are nonincreasing in magnitude $(0< a_{k+1}\leq a_k$, for $k$ greater than some index $N$) and
+      \item $\displaystyle \lim_{k\to \infty} a_k=0$.
+    \end{enumerate}
+  \end{thmBox*}
+  \begin{ex*}
+    Which of the following are considered alternating series?
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](4)
+    \task $\displaystyle \sum_{k=0}^\infty \frac{(-1)^{k+1}}{k+2}$
+    \task $\displaystyle \sum_{k=4}^\infty \parens{\frac{-3}{2}}^k$
+    \task $\displaystyle \sum_{k=0}^\infty (-1)\parens{\frac{1}{2}}^k$
+    \task $\displaystyle \sum_{k=1}^\infty (-1)^{k+1}\parens{\frac{1}{2}}^k$
+    \task $\displaystyle \sum_{k=-3}^\infty \frac{\cos(k\pi)}{(k+4)^2}$
+    \task $\displaystyle \sum_{k=1}^\infty \frac{\sin(k)}{k^2}$
+    \task $\displaystyle \sum_{k=0}^\infty (-1)^{k+1}\parens{\frac{1}{-2}}^k$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Consider the series $\displaystyle\sum_{k=1}^\infty (-1)^k \frac{\sqrt{k}}{2k+3}$. Let $a_k$ represent that magnitude of the terms of the given series.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=\textbullet,item-indent=0pt](1)
+    \task What is $\displaystyle\lim_{k\to \infty} a_k$?
+    \task Compute $f'(x)$ where $f(k)=a_k$.
+    \task Use the Alternating Series Test to determine if the given series converges.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Does the series $\displaystyle\sum_{k=0}^\infty (-1)^{k+1}\parens{\frac{4}{3}}^k$ converge?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}
+    Does the series $\displaystyle\sum_{k=1}^\infty \cos(\pi k)e^{-k}$ converge? 
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 10.17: Alternating Harmonic Series]
+    The alternating harmonic series $\displaystyle\sum_{k=1}^\infty \frac{(-1)^{k+1}}{k}$ converges (even though the harmonic series $\displaystyle\sum_{k=1}^\infty \frac{1}{k}$ diverges).
+  \end{thmBox*}
+  \begin{ex*}
+    Use the Alternating Series Test to show that the alternating harmonic series converges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 10.18: Remainder in Alternating Series]
+    Let $\displaystyle\sum_{k=1}^\infty (-1)^{k+1} a_k$ be a convergent alternating series with terms that are nonincreasing in magnitude. Let $R_n=S-S_n$ be the remainder in approximating the value of that series  by the sum of its first $n$ terms. Then $\abs{R_n}\leq a_{n+1}$. In other words, the magnitude of the remainder is less than or equal to the magnitude of the first neglected term.
+  \end{thmBox*}
+
+  
+
+  \noindent
+  \begin{minipage}[t]{0.6\linewidth}
+    \begin{ex*}
+      Find the minimum value of $n$ such that $\abs{R_n}< 10^{-4}$ for the following series:
+    \end{ex*}
+      \[\ln(2)=\sum_{k=1}^\infty \frac{(-1)^{k+1}}{k}\]
+  \end{minipage}%
+  \begin{minipage}[t]{0.4\linewidth}
+    \mbox{}\vspace*{-1.5\baselineskip}
+    \begin{flushright}
+      \begin{tikzpicture}[
+        declare function={S=3; 
+        n=1.75;   Sn=4.5;
+        npo=4.75; Snpo=2.25;}]
+        \begin{axis}[
+          major grid style={line width=0.375pt, draw=gray!75},
+          axis lines=center,
+          axis line style={black,->},
+          xmin=-0.5, xmax=6,
+          ymin=-0.5, ymax=6,
+          xtick={n,npo},
+          xticklabels={$n$,$n+1$},
+          ytick={S},
+          yticklabels={$S$},
+          ticklabel style={font=\normalsize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          ylabel=$S_n$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+          \addplot[dashed] expression[domain=0:6]{S};
+          \addplot[soldot,red] coordinates{(n,Sn)} node[above, black, font=\large] {$S_n$};
+          \addplot[soldot,red] coordinates{(npo,Sn)} node[above, black, font=\large] {$S_n$};
+          \addplot[soldot,red] coordinates{(npo,Snpo)} node[below, black, font=\large] {$S_{n+1}$};
+          \draw[<->, shorten < = 2pt] (n,Sn) -- node[font=\scriptsize, fill=white, inner sep=1.5pt] {$\abs{R_n}=\abs{S-S_n}$} (n,S) ;
+          \draw[<->, shorten > = 2pt, shorten < = 2pt] (npo,Sn) -- node[font=\scriptsize, fill=white, inner sep=1.5pt] {$\abs{S_n-S_{n+1}}$} (npo,Snpo);
+          \node[font=\normalsize, draw=black!50, rounded corners] at (3.5,0.75) {$\abs{R_n}\leq \abs{S_{n+1}-S_n}=a_{n+1}$};
+        \end{axis}
+      \end{tikzpicture}
+    \end{flushright}
+  \end{minipage}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{defn*}[Absolute and Conditional Convergence]
+    If $\sum\abs{a_k}$ converges, then $\sum a_k$ \textbf{converges absolutely}.\newline
+    If $\sum\abs{a_k}$ diverges and $\sum a_k$ converges, then $\sum a_k$ \textbf{converges conditionally}.
+  \end{defn*}
+  \begin{ex*}
+    Can a series of strictly positive terms converge conditionally?
+  \end{ex*}
+  \vspace*{\stretch{0.25}}
+  \begin{ex*}
+    Consider the series $\displaystyle\sum_{k=1}^\infty (-1)^{k+1}\frac{4+k}{k^2}$. Determine if this series converges absolute, converges conditionally, or diverges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Determine if the following series converge absolute, converge conditionally, or diverge.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-1)^{k+1}}{2\sqrt{k}-1}$
+    \task $\displaystyle\sum_{k=1}^\infty \parens{\frac{3}{4}}^k$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+
+  \begin{thmBox*}[Theorem 10.19: Absolute Convergence Implies Convergence]
+    If $\sum \abs{a_k}$ converges, then $\sum a_k$ converges (absolute convergence implies convergence). Equivalently, if $\sum a_k$ diverges, then $\sum\abs{a_k}$ diverges.
+  \end{thmBox*}
+  \pagebreak
 
 \end{document}
