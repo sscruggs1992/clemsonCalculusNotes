@@ -1,5 +1,154 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
 %\relscale{1.4}
+  \section*{10.8: Choosing a Convergence Test}
+
+  \begin{ex*}
+    Consider the series $\displaystyle\sum_{k=1}^\infty \frac{(-1)^{k+1}}{k}$. Is this series conditionally convergent, absolutely convergent, or divergent? Which test do you use?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Consider the series $\displaystyle\sum_{k=1}^\infty \frac{(-1)^{k+1}}{k^2}$. Is this series conditionally convergent, absolutely convergent, or divergent? Which test do you use?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Which of the following series can be rewritten as a $p$-series?
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](2)
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-1)^{2k}}{k\sqrt{k}}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-1)^k}{k^5}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{k^2+k+1}{k^4+2}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{3^k}{k^4}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{\sqrt{k}}{k^2}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Which test \textit{cannot} be used to determine the convergence of $\displaystyle\sum_{k=1}^\infty \frac{k^2\,2^{k-1}}{(-5)^k}$?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}
+    For the following series, which test should be used to determine if the series converges or diverges? Use your selected test to show convergence or divergence.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty (-1)^k \frac{k}{k+2}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty (-1)^k \frac{k}{k+2}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{k!}{2^k(k+2)!}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \frac{\abs{\sin(2k)}}{1+2^k}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-1)^{k-1}}{\sqrt{k}-1}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=2}^\infty \frac{1}{k\sqrt{\ln(k)}}$
+    \task $\displaystyle\sum_{k=1}^\infty \parens{2^{1/k}-1}^k$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=3}^\infty \frac{1}{k^{2/5}\ln(k)}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{8(3k)!}{(k!)^3}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \sin\parens{\frac{9}{k^{12}}}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{landscape}
+    \relscale{0.65}
+    \vspace*{\stretch{1}}
+    \begin{center}
+      \renewcommand{\arraystretch}{2.75}
+      \hspace*{-7.5mm}
+      \begin{tabularx}{1.15\textheight}{*{4}{>{\hsize=0.895\hsize}X}>{\hsize=1.42\hsize}X}\toprule
+        \textbf{Series or Test}& \textbf{Form of Series}& \textbf{Condition for\newline Convergence}& \textbf{Condition for \newline Divergence}& \textbf{Comments}\\\midrule
+        %
+        Geometric series& 
+        $\displaystyle\sum_{k=0}^\infty ar^k$, $a\neq 0$& 
+        $\abs{r}<1$& 
+        $\abs{r}\geq 1$& 
+        If $\abs{r}<1$, then $\sum_{k=0}^\infty ar^k=\frac{a}{1-r}$.\\
+        %
+        Divergence Test& 
+        $\displaystyle\sum_{k=1}^\infty a_k$& 
+        Does not apply& 
+        $\displaystyle\lim_{k\to \infty} a_k\neq 0$& 
+        Cannot be used to prove convergence.\\
+        %
+        Integral Test& 
+        $\displaystyle\sum_{k=1}^\infty a_k$, where $a_k=f(k)$ and $f$ is continuous,\newline positive, and decreasing.& 
+        $\displaystyle\int_1^\infty f(x)\,dx$ converges.& 
+        $\displaystyle\int_1^\infty f(x)\,dx$ diverges.& 
+        The value of the integral is not the value of the series.\\
+        %
+        $p$-series& 
+        $\displaystyle\sum_{k=1}^\infty \frac{1}{k^p}$& 
+        $p>1$& 
+        $p\leq 1$& 
+        Useful for comparison tests.\\
+        %
+        Ratio Test& 
+        $\displaystyle\sum_{k=1}^\infty a_k$& 
+        $\displaystyle\lim_{k\to \infty} \abs{\frac{a_{k+1}}{a_k}}<1$& 
+        $\displaystyle\lim_{k\to \infty} \abs{\frac{a_{k+1}}{a_k}}>1$& 
+        Inconclusive if $\displaystyle\lim_{k\to \infty} \abs{\frac{a_{k+1}}{a_k}}=1$\\
+        %
+        Root Test& 
+        $\displaystyle\sum_{k=1}^\infty a_k$& 
+        $\displaystyle\lim_{k\to \infty} \sqrt[k]{\abs{a_k}}<1$& 
+        $\displaystyle\lim_{k\to \infty} \sqrt[k]{\abs{a_k}}>1$& 
+        Inconclusive if $\displaystyle\lim_{k\to \infty} \sqrt[k]{\abs{a_k}}=1$\\
+        %
+        Comparison Test\newline (DCT)& 
+        $\displaystyle\sum_{k=1}^\infty a_k$, where $a_k>0$&
+        $a\leq b_k$ and $\displaystyle\sum_{k=1}^\infty b_k$\newline converges.& 
+        $b_k\leq a_k$ and $\displaystyle\sum_{k=1}^\infty b_k$\newline diverges.& 
+        $\displaystyle\sum_{k=1}^\infty a_k$ is given; you supply $\displaystyle\sum_{k=1}^\infty b_k$.\\
+        %
+        Limit Comparison Test\newline (LCT)& 
+        $\displaystyle\sum_{k=1}^\infty a_k$, where\newline $a_k>0$, $b_k>0$& 
+        $\displaystyle 0\leq \lim_{k\to \infty} \frac{a_k}{b_k}<\infty$ and\newline $\displaystyle\sum_{k=1}^\infty b_k$ converges.& 
+        $\displaystyle\lim_{k\to \infty} \frac{a_k}{b_k}>0$ and \newline $\displaystyle\sum_{k=1}^\infty b_k$ diverges.& 
+        $\displaystyle\sum_{k=1}^\infty a_k$ is given; you supply $\displaystyle\sum_{k=1}^\infty b_k$.\\
+        %
+        Alternating Series Test\newline (AST)&
+        $\displaystyle\sum_{k=1}^\infty (-1)^k a_k$, where\newline $a_k>0$&
+        $\displaystyle\lim_{k\to \infty} a_k$ and\newline $0<a_{k+1}\leq a_k$&
+        $\displaystyle\lim_{k\to \infty} a_k\neq 0$&
+        Remainder $R_n$ satisfies $\abs{R_n}\leq a_{n+1}$\\
+        %
+        Absolute Convergence&
+        $\displaystyle\sum_{k=1}^\infty a_k$, $a_k$ arbitrary&
+        $\displaystyle\sum_{k=1}^\infty \abs{a_k}$ converges.&
+        &
+        Applies to arbitrary series\\\bottomrule
+      \end{tabularx}
+    \end{center}
+    \vspace*{\stretch{1}}
+  \end{landscape}
 
 \end{document}

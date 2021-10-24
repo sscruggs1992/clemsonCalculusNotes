@@ -1,5 +1,123 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
 %\relscale{1.4}
+  \section{10.7: The Ratio and Root Tests}
+
+  \begin{thmBox*}[Theorem 10.20: Ratio Test]
+    Let $\sum a_k$ be an infinite series, and let $\displaystyle r=\lim_{k\to \infty}\abs{\frac{a_{k+1}}{a_k}}$
+    \begin{enumerate}
+      \item If $r<1$, the series converges absolutely, and therefore it converges\newline (by Theorem 10.19)
+      \item If $r>1$ (including $r=\infty$), the series diverges.
+      \item If $r=1$, the test is inconclusive.
+    \end{enumerate}
+  \end{thmBox*}
+  \noindent\textit{Note:} The ratio test is used to determine if a series converges or diverges and indicates nothing about the \textit{value} of the series.
+  %Include hint lim_{n\to\infty} (1+x/n)^n=e^x
+  %Show divergence test is inconclusive
+  %Show ratio test on harmonic and p-series is inconclusive
+  \begin{ex*}
+    Use the ratio test on the harmonic series $\displaystyle\sum_{k=1}^\infty \frac{1}{k}$ and the alternating harmonic series $\displaystyle\sum_{k=1}^\infty \frac{(-1)^k}{k}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    \textit{Note:} $n!=n\cdot(n-1)\cdots3\cdot2\cdot1$\newline
+  \end{ex*}
+  \vspace*{-\baselineskip}
+  \noindent
+  Rewrite $n!n!$ \hspace{\stretch{1}} and $\displaystyle\frac{(2n)!}{(2n-1)!}$ \hspace{\stretch{1}}
+  \vspace*{\baselineskip}
+
+  \begin{ex*}
+    Consider the series below. Use the ratio test, if appropriate, to show if each of the series converges or diverges.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \frac{k^2}{2^k}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-1)^k k}{k^3+1}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \frac{5^k k!}{k^k}$ \hspace*{\stretch{1}} $\displaystyle\lim_{k\to \infty} \parens{1+\frac{x}{k}}^k=e^x$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-7)^k}{(2k+1)!}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-1)^k\ln(k)}{k}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Use the ratio test to determine if the series $\displaystyle\sum_{k=1}^\infty k\parens{\frac{2}{3}}^k$ converges or diverges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Use the ratio test to determine if the series $\displaystyle\sum_{k=1}^\infty \frac{(-1)^k k}{(2k)!}$ converges or diverges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Use the ratio test to determine if the series $\displaystyle\sum_{k=1}^\infty \frac{(2k)!}{(k!)^2}$ converges or diverges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[10.21: Root Test]
+    Let $\sum a_k$ be an infinite series, and let $\displaystyle\rho=\lim_{k\to \infty} \sqrt[k]{\abs{a_k}}$.
+    \begin{enumerate}
+      \item If $\rho<1$, the series converges absolutely, and therefore it converges\newline (by Theorem 10.19)
+      \item If $\rho>1$ (including $\rho=\infty$), the series diverges.
+      \item If $\rho=1$, the test is inconclusive.
+    \end{enumerate}
+  \end{thmBox*}
+  \noindent\textit{Note:} The root test is used to determine if a series converges or diverges and indicates nothing about the \textit{value} of the series.
+  \begin{ex*}
+    Use the root test to determine if the series $\displaystyle\sum_{k=1}^\infty \frac{(-1)^{k+1} k^k}{3^{k^2}}$ converges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Consider the series below. Use the root test to show if each of the series converges or diverges.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \parens{\frac{1}{\ln(k+1)}}^k$
+    \task $\displaystyle\sum_{k=1}^\infty (-1)^{k+1}\parens{\frac{3k^2+1}{k-2k^2}}^k$
+    \task $\displaystyle\sum_{k=1}^\infty \parens{\frac{k+3}{k+1}}^{2k}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Use the root test to determine if the series $\displaystyle\sum_{k=1}^\infty \parens{1-\frac{3}{k}}^{k^2}$ converges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Determine whether each of the series below converges conditionally, converges absolutely, or diverges.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $\displaystyle\sum_{k=1}^\infty \parens{-1}^k k^{-1/3}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-1)^k}{\arctan(k)}$
+    \task $\displaystyle\sum_{k=1}^\infty \frac{(-1)^k}{k!}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Determine if the series $\displaystyle\sum_{k=1}^\infty \parens{\frac{k}{k+5}}^{3k^2}$ converges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Determine a condition for $x\geq0$ such that $\displaystyle\sum_{k=1}^\infty \frac{4x^k}{5k^2}$ converges.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
 \end{document}
