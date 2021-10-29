@@ -36,6 +36,8 @@ for file in $NOTE_DIR/math1080_NoteKeys/*; do
 	    echo "  src older than dest: $(basename -- $file)";
 	    ls -l $file $U_DIR/$(basename -- $file);
 	    echo ""
+	# else
+	    # echo "--> Updating $(basename -- $file) on u-drive"
 	fi
     # else tell user that new file is being created
     else
