@@ -1,5 +1,154 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
 %\relscale{1.4}
+  \section{11.2: Properties of Power Series}
+
+  From the \textit{geometric series}, we have
+    \[\sum_{k=0}^\infty x^k=1+x+x^2+\dots=\frac{1}{1-x},\quad\textnormal{provided } \abs{x}<1.\]
+
+  \begin{defn*}[Power Series]
+    A \textbf{power series} has the general form
+      \[\sum_{k=0}^\infty c_k\parens{x-a}^k,\]
+    where $a$ and $c_k$ are real numbers, and $x$ is a variable. The $c_k$'s are the \textbf{coefficients} of the power series, and $a$ is the \textbf{center} of the power series. The set of values of $x$ for which the series converges is its \textbf{interval of convergence}. The \textbf{radius of convergence} of the power series, denoted $R$, is the distance from the center of the series to the boundary of the interval of convergence.
+  \end{defn*}
+
+  \begin{thmBox*}[Theorem 11.3: Convergence of Power Series]
+    A power series $\displaystyle\sum_{k=0}^\infty c_k\parens{x-a}^k$ centered at $a$ converges in one of three ways:
+    \begin{enumerate}
+      \item The series converges absolutely for all $x$. It follows, by Theorem 10.19, that the series converges for all $x$, in which the interval of convergence is $\parens{-\infty,\infty}$ and the radius of convergence is $R=\infty$.
+      \item There is a real number $R>0$ such that the series converges absolutely (and therefore converges) for $\abs{x-a}<R$ and diverges for $\abs{x-a}>R$, in which case the radius of converge is $R$.
+      \item The series converges only at $a$, in which case the radius of convergence is $R=0$.
+    \end{enumerate}
+  \end{thmBox*}
+  \pagebreak
+
+  \begin{thmBox*}[Summary: Determining the Radius and Interval of Convergence of $\sum c_k\parens{x-a}^k$]
+    \begin{enumerate}
+      \item Use the Ratio Test or the Root Test to find the interval $(a-R, a+R)$ on which the series converges absolutely; the radius of convergence for the series is $R$.
+      \item Use the \textit{radius} of convergence to find the \textit{interval} of convergence:
+        \begin{enumerate}[label=\textbullet]
+          \item If $R=\infty$, the interval of convergence is $(-\infty,\infty)$.
+          \item If $R=0$, the interval of convergence is the single point $x=a$.
+          \item If $0<R<\infty$, the interval of convergence consists of the interval $(a-R,a+R)$ and possibly one or both of its endpoints. Determining whether the series $\sum c_k\parens{x-a}^k$ converges at the endpoints $x=a-R$ and $x=a+R$ amounts to analyzing the series $\sum c_k(-R)^k$ and $\sum c_kR^k$.
+        \end{enumerate}
+    \end{enumerate}
+  \end{thmBox*}
+  \begin{ex*}[\textcolor{blue}{LC 28.1}]
+    Where is the power series $\displaystyle\sum_{k=1}^\infty c_k(x-3)^k$ centered?\newline 
+    Could it's interval of convergence be $(-2,8)$?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}[\textcolor{blue}{LC 28.2}]
+    Where is the power series $\displaystyle\sum_{k=0}^\infty \frac{(4x-1)^k}{k^2+3}$ centered?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  
+  \begin{ex*}[\textcolor{blue}{LC 28.3}]
+    Where is the power series $\displaystyle\sum_{k=1}^\infty c_k(x-1)^k$ centered?\newline 
+    Could it's interval of convergence be $(-1,1)$?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 28.4-28.5}]
+    For the following, determine the radius and interval of convergence.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Power series only converges if $\abs{4x-8}\leq 40$.
+    \task Power series only converges if $\abs{x-3}< 4$.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 28.6-28.9}]
+    Consider the power series $\displaystyle\sum_{k=1}^\infty \frac{(-1)^{k+1}(x-4)^k}{9^k\,\sqrt{k}}$.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Use the ratio test to compute the radius of convergence.
+    \task What is the interval of convergence?
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 28.10-28.13}]
+    Consider the power series $\displaystyle\sum_{k=1}^\infty \frac{(x-2)^k}{k^k}$.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Use the root test to compute the radius of convergence.
+    \task What is the interval of convergence?
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 11.4: Combining Power Series]
+    Suppose the power series $\sum c_kx^k$ and $\sum d_k x^k$ converge to $f(x)$ and $g(x)$, respectively, on an interval $I$.
+      \begin{enumerate}
+        \item \textbf{Sum and difference:} The power series $\sum\parens{c_k\pm d_k}x^k$ converges to $f(x)\pm g(x)$ on $I$
+        \item \textbf{Multiplication by a power:} Suppose $m$ is an integer such that $k+m\geq 0$, for all terms of the power series $x^m\sum c_k x^k=\sum c_k x^{k+m}$. This series converges to $x^m f(x)$, for all $x\neq 0$ in $I$. When $x=0$, the series converges to $\displaystyle\lim_{x\to 0} x^m f(x)$.
+        \item \textbf{Composition:} If $h(x)=bx^m$, where $m$ is a positive integer and $b$ is a nonzero real number, the power series $\sum c_k\parens{h(x)}^k$ converges to the composite function $f\parens{h(x)}$, for all $x$ such that $h(x)$ is in $I$.
+      \end{enumerate}
+  \end{thmBox*}
+
+  \begin{ex*}[\textcolor{blue}{LC 29.1}]
+    Using the power series representation of 
+      \[f(x)=\ln(1-x)=-\sum_{k=1}^\infty \frac{x^k}{k},\]
+    where $-1\leq x<1$, find the power series centered at $0$ for $g(x)=x\ln(1-x^3)$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 29.2-29.3}]
+    Recall the geometric series:
+      \[\sum_{k=0}^\infty x^k=1+x+x^2+\dots=\frac{1}{1-x},\quad\textnormal{provided } \abs{x}<1.\]
+    Find the function represented by the power series $\displaystyle\sum_{k=0}^\infty \parens{\sqrt{x}-2}^k$.\newline What is the interval of convergence?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Find the function represented by the power series $\displaystyle\sum_{k=0}^\infty \parens{\frac{x^2+3}{7}}^k$.\newline What is the interval of convergence?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Theorem 11.5: Differentiating and Integrating Power Series]
+    Suppose the power series $\sum c_k\parens{x-a}^k$ converges for $\abs{x-a}<R$ and defines a function $f$ on that interval.
+    \begin{enumerate}
+      \item Then $f$ is differentiable (which implies continuous) for $\abs{x-a}<R$, and $f'$ is found by differentiating the power series for $f$ term by term; that is
+          \[f'(x)=\sum kc_k\parens{x-a}^{k-1},\]
+        for $\abs{x-a}<R$.
+      \item The indefinite integral of $f$ is found by integrating the power series for $f$ term by term; that is
+          \[\int f(x)\,dx= \sum c_k \frac{\parens{x-a}^{k+1}}{k+1}+C,\]
+        for $\abs{x-a}<R$, where $C$ is an arbitrary constant.
+    \end{enumerate}
+  \end{thmBox*}
+  \noindent \textit{Note:} (\textcolor{blue}{LC 29.4}) Differentiating or integrating a power series does not change the radius of convergence.
+
+  \begin{ex*}[\textcolor{blue}{LC 29.5}]
+    Evaluate $\displaystyle\int xe^{-x^3}\,dx$ by integrating the power series representation:
+      \[f(x)=xe^{-x^3}=\sum_{k=0}^\infty \frac{(-1)^k x^{3k+1}}{k!},\quad\textnormal{for }-\infty<x<\infty.\]
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 29.6}]
+    Compute $f'(x)$ given that
+      \[f(x)=\sum_{k=0}^\infty \frac{(-1)^kx^{4k+2}}{2k+1},\textnormal{ for }\abs{x}\leq1.\]
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 29.7}]
+    Find the power series representation of $g(x)=\dfrac{2}{(1-2x)^2}$ by using $f(x)=\dfrac{1}{1-2x}$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 29.8-29.10}]
+    Find the power series representation of $g(x)=\ln(1-3x)$ by using $f(x)=\dfrac{1}{1-3x}$. What is the interval of convergence of this power series?
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
 \end{document}

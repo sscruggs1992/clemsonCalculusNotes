@@ -21,3 +21,5 @@
 \contentsline {section}{\numberline {}10.6: Alternating Series}{148}{section.21}%
 \contentsline {section}{\numberline {}10.7: The Ratio and Root Tests}{158}{section.22}%
 \contentsline {section}{\numberline {}10.8: Choosing a Convergence Test}{170}{section.23}%
+\contentsline {section}{\numberline {}11.1: Approximating Functions with Polynomials}{180}{section.24}%
+\contentsline {section}{\numberline {}11.2: Properties of Power Series}{191}{section.25}%

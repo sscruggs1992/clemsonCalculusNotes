@@ -1,5 +1,127 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
 %\relscale{1.4}
+  \section{11.1: Approximating Functions with Polynomials}
+
+  A \textit{power series} is an infinite series of the form
+%    \[\sum_{k=0}^\infty c_kx^k=\underbrace{c_0+c_1x+c_2x^2+\dots+c_nx^n}_{n\textnormal{th-degree polynomial}}+c_{n-1}x^{n-1}+\dots,\]
+%  or, more generally,
+    \[\sum_{k=0}^\infty c_k\parens{x-a}^k=\underbrace{c_0+c_1\parens{x-a}+c_2\parens{x-a}^2+\dots+c_n\parens{x-a}^n}_{n\textnormal{th-degree polynomial}}+c_{n-1}\parens{x-a}^{n-1}+\dots,\]
+  \begin{ex*}
+    The tangent line of a function $f(x)$ at $x=a$ is a linear function $p_1(x)$ that can approximate $f(x)$ for values of $x$ `close' to $a$:
+      \[p_1(x)=f(a)+f'(a)(x-a)\]
+    \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+      \task Find a quadratic function $p_2(x)$ that can approximate $f(x)$ near $x=a$,
+      \task Find a cubic function $p_2(x)$ that can approximate $f(x)$ near $x=a$,
+      \task Find an $n$th degree polynomial $p_n(x)$ that can approximate $f(x)$ near $x=a$.
+    \end{tasks}
+
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{defn*}[Taylor Polynomials]
+    Let $f$ be a function with $f', f'', \dots,$ and $f^{(n)}$ defined at $a$. The \textbf{$n$th-order Taylor polynomial} for $f$ with its \textbf{center} at $a$, denoted $p_n$, has the property that it matches $f$ in value, slope, and all derivatives up to the $n$th derivative at $a$; that is,
+      \[p_n(a)=f(a),\ p_n'(a)=f'(a),\dots,\textnormal{ and } p_n^{(n)}(a)=f^{(n)}(a).\]
+    The $n$th-order Taylor polynomial centered at $a$ is
+      \[p_n(x)=f(a)+f'(a)\parens{x-a}+\frac{f''(a)}{2!}\parens{x-a}^2+\dots+\frac{f^{(n)}(a)}{n!}\parens{x-a}^n\]
+    More compactly, $\displaystyle p_n(x)=\sum_{k=0}^\infty c_k\parens{x-a}^k$, where the \textbf{coefficients} are
+      \[c_k=\frac{f^{(k)}(a)}{k!},\quad\textnormal{ for }k=0,1,2,\dots,n.\]
+  \end{defn*}
+  \begin{ex*}[\textcolor{blue}{{LC 26.1}}]
+    Suppose $f(4)=3$, $f'(4)=-1$, $f''(4)=6$, and $f^{(3)}(4)=16$. Find the third-order Taylor polynomial $p_3(x)$ for $f$ centered at $a=4$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 26.2}]
+    For the following functions, find $p_2(x)$, the $2$nd degree Taylor polynomial, centered at $a=0$.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $y=\sqrt{1+2x}$
+    \task $y=\dfrac{1}{\sqrt{1+2x}}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $y=\dfrac{1}{1+2x}$
+    \task $y=\dfrac{1}{(1+2x)^3}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task $y=e^{2x}$
+    \task $y=e^{-2x}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 26.3}]
+    Find the Taylor polynomial $p_3(x)$ centered at $a=\frac{\pi}{4}$ for $f(x)=\sin(x)$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 26.4}]
+    Use the $4$th degree Taylor polynomial of $y=\ln(x)$ centered at $a=1$ to approximate $\ln(1.1)$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{defn*}[Remainder in a Taylor Polynomial]
+    Let $p_n$ be the Taylor polynomial of order $n$ for $f$. The \textbf{remainder} in using $p_n$ to approximate $f$ at the point $x$ is
+      \[R_n(x)=f(x)-p_n(x).\]
+  \end{defn*}
+  \vspace*{\stretch{1}}
+
+  \begin{thmBox*}[Theorem 11.1: Taylor's Theorem (Remainder Theorem)]
+    Let $f$ have continuous derivatives up to $f^{(n+1}$ on an open interval $I$ containing $a$. For all $x$ in $I$,
+      \[f(x)=p_n(x)+R_n(x),\]
+    where $p_n$ is the $n$th-order Taylor polynomial for $f$ centered at $a$ and the remainder is
+      \[R_n(x)=\frac{f^{(n+1)}(c)}{(n+1)!}\parens{x-a}^{n+1},\]
+    for some point $c$ between $x$ and $a$.
+  \end{thmBox*}
+  \vspace*{\stretch{1}}
+
+  \begin{thmBox*}[Theorem 11.2: Estimate of the Remainder]
+    Let $n$ be a fixed positive integer. Suppose there exists a number $M$ such that $\abs{f^{(n+1)}(n)}\leq M$, for all $c$ between $a$ and $x$ inclusive. The remainder in the $n$th-order Taylor polynomial for $f$ centered at $a$ satisfies
+      \[\abs{R_n(x)}=\abs{f(x)-p_n(x)}\leq M\frac{\abs{x-a}^{n+1}}{(n+1)!}.\]
+  
+  \end{thmBox*}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 27.1-27.2}]
+    The third-order Taylor polynomial centered at $a=1$ for $f(x)=x\ln(x)$ is
+      \[p_3(x)=(x-1)+\frac{(x-1)^2}{2}-\frac{(x-1)^3}{6}.\]
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Find the smallest number $M$ such that $\abs{f^{(4)}(x)}\leq M$ for $\frac{1}{2}\leq x\leq \frac{3}{2}.$
+    \task Compute the upper bound for $\abs{R_3(x)}$.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 27.3-27.5}]
+    Consider $f(x)=e^x$.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Find the Taylor polynomial $p_4(x)$ centered at $a=0$.
+    \task What is the smallest \textit{integer} $M$ such that $\abs{f^{(5)}(x)}\leq M$ for $0\leq x\leq \sfrac{1}{4}$?
+    \task Compute the upper bound for $\abs{R_4(x)}$ when $p_4(x)$ is used to compute $e^{\sfrac{1}{4}}$.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 27.6-27.7}]
+    We want to approximate $\sin(0.2)$ with an absolute error no greater than $10^{-3}$ by using a $n$th degree Taylor polynomial for $f(x)=\sin(x)$ centered at $a=0$. We want to determine the minimum order of the Taylor polynomial that is required to meet this condition.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task 
+      What is the smallest \textit{integer} number $M$ that bounds $f^{(n+1)}(x)$ on $0\leq x\leq 0.2$?
+    \task 
+      Apply Taylor's Estimate of the Remainder Theorem to find the minimum value of $n$ such that $\abs{R_n(x)}\leq \frac{1}{10^3}$.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
 \end{document}
