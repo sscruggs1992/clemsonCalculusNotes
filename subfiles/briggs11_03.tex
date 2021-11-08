@@ -1,5 +1,103 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
 %\relscale{1.4}
+  \section{11.3: Taylor Series}
+    \begin{defn*}[Taylor/Maclaurin Series for a Function]
+      Suppose the function $f$ has derivatives of all orders on an interval centered at the point $a$. The \textbf{Taylor series for $f$ centered at $a$ is}
+        \[f(a)+f'(a)(x-a)+\frac{f''(a)}{2!}(x-a)^2+\frac{f^{(3)}(a)}{3!}(x-a)^3+\dots=\sum_{k=0}^\infty \frac{f^{(k)}(a)}{k!}(x-a)^k.\]
+      A Taylor series centered at $0$ is called a \textbf{Maclaurin series}.
+    \end{defn*}
+
+    \begin{ex*}[\textcolor{blue}{LC 30.1}]
+      Can we find a Taylor series centered at $a=0$ for $f(x)=\sqrt{x}$?
+    \end{ex*}
+    \vspace*{\baselineskip}
+    \begin{ex*}[\textcolor{blue}{LC 30.2-30.5}]
+      Consider the function $f(x)=\sin(\pi x)$ and the Taylor series representation centered at $a=0$.
+    \end{ex*}
+    \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+      \task Find the first four nonzero terms
+    \end{tasks}
+    \vspace*{\stretch{1}}
+    \pagebreak
+    \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+      \task Write this Taylor series using summation notation
+    \end{tasks}
+    \vspace*{\stretch{1}}
+    
+    \begin{thmBox*}[Theorem 11.7: Convergence of Taylor Series]
+      Let $f$ have derivatives of all orders on an open interval $I$ containing $a$. The Taylor series for $f$ centered at $a$ converges to $f$, for all $x$ in $I$, if and only if $\displaystyle\lim_{n\to \infty} R_n(x)=0$, for all $x$ in $I$, where
+        \[R_n(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}\]
+      is the remainder at $x$, with $c$ between $x$ and $a$.
+    \end{thmBox*}
+    \pagebreak
+
+    \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+      \task What is the interval of convergence?
+      \task What is the upper bound on $\abs{R_n(x)}$?
+    \end{tasks}
+    \vspace*{\stretch{1}}
+    
+    \begin{ex*}[\textcolor{blue}{LC 30.6}]
+      If a Taylor series only converges on $(-2,2)$, does $f(x^2)$ have a Taylor series that also only converges on $(-2,2)$?
+    \end{ex*}
+    \vspace*{2\baselineskip}
+    \pagebreak
+
+    \begin{ex*}[\textcolor{blue}{LC 30.7}]
+      Use the definition of a Taylor series to find the Taylor series for $f(x)=e^{2x}$ at $a=3$.
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \pagebreak
+
+    \begin{ex*}[\textcolor{blue}{LC 30.8}]
+      Given that $\displaystyle \ln(1+x)=\sum_{k=1}^\infty \frac{(-1)^{k+1}x^k}{k}$, for $-1<x\leq 1$, find the first nonzero terms of the Taylor series centered at $a=0$ for the function $\ln(1+2x)$.
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \pagebreak
+
+    \begin{ex*}[\textcolor{blue}{LC 30.9}]
+      Given that $\displaystyle\cos(x)=\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!}$, for $\abs{x}<\infty$, find the Taylor series centered at $a=0$ for the function $x\cos(x^3)$.
+    \end{ex*}
+    \vspace*{\stretch{1}}
+    \pagebreak
+
+    \noindent\textbf{Common Taylor Series:}
+    \vspace*{\stretch{1}}
+    \begingroup
+      \relscale{0.91}
+      \addtolength{\jot}{0.675\baselineskip}
+      \begin{alignat*}{4}
+        \frac{1}{1-x}&= 1+x+x^2+\dots+x^k+\dots&=&\sum_{k=0}^\infty x^k,&&\textnormal{ for }\abs{x}<1\\
+        \frac{1}{1+x}&= 1-x+x^2-\dots+(-1)^kx^k+\dots\ &=&\sum_{k=0}^\infty (-1)^k x^k,&&\textnormal{ for }\abs{x}<1\\
+        e^x&=1+x+\frac{x^2}{2!}+\dots+\frac{x^k}{k!}+\dots\ &=&\sum_{k=0}^\infty \frac{x^k}{k!},&&\textnormal{ for }\abs{x}<\infty\\
+        \sin(x)&=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+\frac{(-1)^k x^{2k+1}}{(2k+1)!}+\dots\ &=&\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!},&&\textnormal{ for } \abs{x}<\infty\\
+        \cos(x)&=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+\frac{(-1)^k x^{2k}}{(2k)!}+\dots\ &=&\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!},&&\textnormal{ for } \abs{x}<\infty\\
+        \ln(1+x)&=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+\frac{(-1)^{k+1}x^k}{k}+\dots\ &=&\sum_{k=1}^\infty \frac{(-1)^{k+1}x^k}{k},&&\textnormal{ for } -1<x\leq 1\\
+        -\ln(1-x)&=x+\frac{x^2}{2}+\frac{x^3}{3}+\dots+\frac{x^k}{k}+\dots\ &=&\sum_{k=1}^\infty \frac{x^k}{k},&&\textnormal{ for } -1\leq x< 1\\
+        \tan\inv(x)&=x-\frac{x^3}{3}+\frac{x^5}{5}-\dots+\frac{(-1)^k x^{2k+1}}{2k+1}+\dots\ &=&\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{2k+1},&&\textnormal{ for } \abs{x}\leq 1\\
+        \sinh(x)&= x+\frac{x^3}{3!}+\frac{x^5}{5!}+\dots+ \frac{x^{2k+1}}{(2k+1)!}+\dots\ &=&\sum_{k=0}^\infty \frac{x^{2k+1}}{(2k+1)!},&&\textnormal{ for } \abs{x}<\infty\\
+        \cosh(x)&= 1+\frac{x^2}{2!}+\frac{x^4}{4!}+\dots+ \frac{x^{2k}}{(2k)!}+\dots\ &=&\sum_{k=0}^\infty \frac{x^{2k}}{(2k)!},&&\textnormal{ for } \abs{x}<\infty\\
+        (1+x)^p&=\sum_{k=0}^\infty {p\choose k} x^k, \textnormal{ for } \abs{x}<1 \textnormal{ and } \mathrlap{{p\choose k}=\frac{p(p-1)(p-2)\dots(p-k+1)}{k!},\ {p\choose 0}=1}
+      \end{alignat*}
+    \endgroup
+    \vspace*{\stretch{1}}
+    \pagebreak
+
+%% The next definition and theorem accompany an example from the textbook about
+%% the Binomial series that just felt a bit out of place
+%    \begin{defn*}[Binomial Coefficients]
+%      For real numbers $p$ and integers $k\geq 1$,
+%        \[{p\choose k}=\frac{p(p-1)(p-2)\dots(p-k+1)}{k!},\quad {p\choose0}=1.\]
+%    \end{defn*}
+%
+%    \begin{thmBox*}[Theorem 11.6: Binomial Series]
+%      For real numbers $p\neq0$, the Taylor series for $f(x)=(1+x)^p$ centered at $0$ is the \textbf{binomial series}
+%        \begin{align*}
+%          \sum_{k=0}^\infty {p\choose k} x^k &= 1+\sum_{k=1}^\infty \frac{p(p-1)(p-2)\dots(p-k+1)}{k!}x^k\\
+%            &=1+px+\frac{p(p-1)}{2!}x^2+\frac{p(p-1)(p-2)}{3!}x^3+\dots
+%        \end{align*}
+%      The series converges for $\abs{x}<1$ (and possibly at the endpoints, depending on $p$). If $p$ is a nonnegative integer, the series terminates and results in a polynomial of degree $p$.
+%    \end{thmBox*}
 
 \end{document}

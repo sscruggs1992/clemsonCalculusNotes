@@ -1,5 +1,90 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+%  \relscale{1.4}
+  \section{11.4: Working with Taylor Series}
+  \mbox{}
 
+    \textbf{Limits by Taylor Series}
+      \begin{ex*}[\textcolor{blue}{LC 31.1-31.2}]
+        Evaluate the following limit using its Taylor series:
+          \[\lim_{x\to 0} \frac{12x-8x^3-6\sin(2x)}{x^5}\]
+      \end{ex*}
+      \vspace*{\stretch{1}}
+      \pagebreak
+
+      \begin{ex*}
+        Evaluate the following limit using its Taylor series:
+          \[\lim_{x\to \infty} 2x^2\parens{e^{-2/x^2}-1}\]
+      \end{ex*}
+      \vspace*{\stretch{1}}
+      \pagebreak
+
+    \textbf{Differentiating Power Series}
+      \begin{ex*}[\textcolor{blue}{LC 31.3-31.4}]
+        The differential equation
+          \[y'(t)+4y=8;\quad y(0)=0\]
+        is satisfied by the function
+          \[y(t)=\sum_{k=1}^\infty \frac{8(-4)^{k-1}t^k}{k!}\]
+      \end{ex*}
+      \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+        \task Find $y'(t)$ as a power series.
+        \task Identify the function $y(t)$ represented by this power series. \hspace*{\stretch{1}} $e^x=1+\displaystyle\sum_{k=1}^\infty \frac{x^k}{k!}$
+      \end{tasks}
+      \vspace*{\stretch{1}}
+      \pagebreak
+
+    \textbf{Integrating Power Series}
+      \begin{ex*}[\textcolor{blue}{LC 31.5-31.6}]
+        Given that
+          \[x\cos\parens{x^3}=\sum_{k=0}^\infty \frac{(-1)^k x^{6k+1}}{(2k)!},\textnormal{ for } \abs{x}<\infty\]
+      \end{ex*}
+      \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+        \task Evalute $\displaystyle\int_0^1 x\cos\parens{x^3}\,dx$ as an infinite series
+        \task Using the Alternating Series Estimation Theorem, what is the bound on $\abs{R_3}$?
+      \end{tasks}
+      \vspace*{\stretch{1}}
+      \pagebreak
+
+    \textbf{Representing Real Numbers}
+      \begin{ex*}[\textcolor{blue}{LC 31.7}]
+        Given that $\displaystyle\tan\inv(x)=\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{2k+1}$, for $\abs{x}\leq 1$,\newline can we approximate $\dfrac{\pi}{3}$ using $x=\sqrt{3}$?
+      \end{ex*}
+      \vspace*{\stretch{1}}
+
+      \begin{ex*}[\textcolor{blue}{LC 31.8}]
+        Evaluate $\displaystyle \sum_{k=0}^\infty \frac{(\ln(2))^k}{k!}$.
+      \end{ex*}
+      \vspace*{\stretch{1}}
+      \pagebreak
+
+      \begin{ex*}
+        Let $f(x)=\begin{cases}
+          \frac{e^x-1}{x},& x\neq 0\\
+          1,& x=0
+        \end{cases}$. Using $f(x)$ and $f'(x)$, evaluate 
+          \[\sum_{k=1}^\infty \frac{k\,2^{k-1}}{(k+1)!}\]
+      \end{ex*}
+      \vspace*{\stretch{1}}
+      \pagebreak
+
+    \textbf{Representing Functions as Power Series}
+      \begin{ex*}[\textcolor{blue}{LC 31.9-31.10}]
+        Consider the following Taylor series:
+          \[\sum_{k=1}^\infty (-1)^{k+1}\frac{3^k}{k\,5^k}\]
+      \end{ex*}
+      \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+        \task What function is being represented by this power series?
+        \task What does the sum of the series equal?
+      \end{tasks}
+      \vspace*{\stretch{1}}
+      \pagebreak
+
+      \begin{ex*}
+        Identify the function represented by  
+          \[\sum_{k=0}^\infty (-1)^k \frac{x^{5k}}{3^k}\]
+      \end{ex*}
+      \vspace*{\stretch{1}}
+      \pagebreak
+
+    
 \end{document}
