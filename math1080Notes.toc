@@ -24,4 +24,4 @@
 \contentsline {section}{\numberline {}11.1: Approximating Functions with Polynomials}{180}{section.24}%
 \contentsline {section}{\numberline {}11.2: Properties of Power Series}{191}{section.25}%
 \contentsline {section}{\numberline {}11.3: Taylor Series}{203}{section.26}%
-\contentsline {section}{\numberline {}11.4: Working with Taylor Series}{211}{section.27}%
+\contentsline {section}{\numberline {}11.4: Working with Taylor Series}{210}{section.27}%

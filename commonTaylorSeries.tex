@@ -1,0 +1,23 @@
+\documentclass{exam}
+\usepackage{amsmath,mathtools}
+
+\newcommand*{\abs}[1]{{\left\vert#1\right\vert}}
+\newcommand*{\inv}[1][1]{^{-#1}}
+
+\begin{document}
+  \noindent\textbf{Common Taylor Series:}
+  \addtolength{\jot}{0.675\baselineskip}
+  \begin{alignat*}{4}
+    \frac{1}{1-x}&= 1+x+x^2+\dots+x^k+\dots\hspace*{35mm}&=&\sum_{k=0}^\infty x^k,&\hspace*{40pt}&\textnormal{ for }\abs{x}<1\\
+    \frac{1}{1+x}&= 1-x+x^2-\dots+(-1)^kx^k+\dots\ &=&\sum_{k=0}^\infty (-1)^k x^k,&&\textnormal{ for }\abs{x}<1\\
+    e^x&=1+x+\frac{x^2}{2!}+\dots+\frac{x^k}{k!}+\dots\ &=&\sum_{k=0}^\infty \frac{x^k}{k!},&&\textnormal{ for }\abs{x}<\infty\\
+    \sin(x)&=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\dots+\frac{(-1)^k x^{2k+1}}{(2k+1)!}+\dots\ &=&\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{(2k+1)!},&&\textnormal{ for } \abs{x}<\infty\\
+    \cos(x)&=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\dots+\frac{(-1)^k x^{2k}}{(2k)!}+\dots\ &=&\sum_{k=0}^\infty \frac{(-1)^k x^{2k}}{(2k)!},&&\textnormal{ for } \abs{x}<\infty\\
+    \ln(1+x)&=x-\frac{x^2}{2}+\frac{x^3}{3}-\dots+\frac{(-1)^{k+1}x^k}{k}+\dots\ &=&\sum_{k=1}^\infty \frac{(-1)^{k+1}x^k}{k},&&\textnormal{ for } -1<x\leq 1\\
+    -\ln(1-x)&=x+\frac{x^2}{2}+\frac{x^3}{3}+\dots+\frac{x^k}{k}+\dots\ &=&\sum_{k=1}^\infty \frac{x^k}{k},&&\textnormal{ for } -1\leq x< 1\\
+    \tan\inv(x)&=x-\frac{x^3}{3}+\frac{x^5}{5}-\dots+\frac{(-1)^k x^{2k+1}}{2k+1}+\dots\ &=&\sum_{k=0}^\infty \frac{(-1)^k x^{2k+1}}{2k+1},&&\textnormal{ for } \abs{x}\leq 1\\
+    \sinh(x)&= x+\frac{x^3}{3!}+\frac{x^5}{5!}+\dots+ \frac{x^{2k+1}}{(2k+1)!}+\dots\ &=&\sum_{k=0}^\infty \frac{x^{2k+1}}{(2k+1)!},&&\textnormal{ for } \abs{x}<\infty\\
+    \cosh(x)&= 1+\frac{x^2}{2!}+\frac{x^4}{4!}+\dots+ \frac{x^{2k}}{(2k)!}+\dots\ &=&\sum_{k=0}^\infty \frac{x^{2k}}{(2k)!},&&\textnormal{ for } \abs{x}<\infty\\
+    (1+x)^p&=\sum_{k=0}^\infty {p\choose k} x^k, \textnormal{ for } \abs{x}<1 \textnormal{ and } \mathrlap{{p\choose k}=\frac{p(p-1)(p-2)\dots(p-k+1)}{k!},\ {p\choose 0}=1}
+  \end{alignat*}
+\end{document}
