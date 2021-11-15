@@ -1,6 +1,6 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-\relscale{1.4}
+%\relscale{1.4}
   \section{12.2: Polar Coordinates}
 
   \noindent\textbf{Defining Polar Coordinates}
@@ -147,20 +147,22 @@
     Rewrite the following in either polar coordinates or Cartesian coordinates
   \end{ex*}
   \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](2)
-    \task $r=\cos\theta+2\sin\theta$
-    \task $ $
-    \task 
-    \task 
+    \task $r=5\cos(\theta)+12\sin(\theta)$
+    \task $x=\dfrac{3}{y}$
+    \task $r\cos(\theta)=\sin(2\theta)$
+    \task $y=x^2$
   \end{tasks}
   \vspace*{\stretch{1}}
   \pagebreak
 
+  \vspace*{\stretch{0.5}}
   \begin{thmBox*}[Procedure: Cartesian-to-Polar Method for Graphing $r=f(\theta)$]
     \begin{enumerate}
       \item Graph $r=f(\theta)$ as if $r$ and $\theta$ were Caresian coordinates with $\theta$ on the horizontal axis and $r$ on the vertical axis. Be sure to choose an interval for $\theta$ on which the entire polar curve is produced.
       \item Use the Cartesian graph that you created in Step 1 as a guide to sketch the points $(r,\theta)$ on the final \textit{polar} curve.
     \end{enumerate}
   \end{thmBox*}
+  \vspace*{\stretch{1}}
 
   \begin{thmBox*}[Summary: Symmetry in Polar Equations]
     \begin{description}
@@ -169,5 +171,47 @@
       \item[Symmetry about the origin] occurs if the point $(r,\theta)$ is on the graph whenever $(-r,\theta)=(r,\theta+\pi)$ is on the graph.
     \end{description}
   \end{thmBox*}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
-\end{document}
+  \begin{ex*}[\textcolor{blue}{LC 33.8-33.9}]
+    Consider the polar curve $r=2\sin(\theta)-1$
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Complete the table below
+      \begin{center}
+        \begin{tabularx}{0.9\linewidth}{@{}
+          >{\hsize=1.54\hsize}X
+          |*{6}{>{\hsize=0.82\hsize}Y}}
+          $\theta$& $0$& $\pi/6$& $\pi/4$& $\pi/2$& $\pi$& $3\pi/2$\\\midrule
+          $r=2\sin(\theta)-1$
+        \end{tabularx}
+      \end{center}
+    \task Graph the polar curve $r=2\sin(\theta)-1$
+  \end{tasks}
+  \begin{center}
+    \begin{tikzpicture}[scale=1.5]
+      \begin{polaraxis}[
+        axis on top,
+        domain=0:360,
+        samples=180,
+        grid=both,
+        grid style={line width=0.1pt, draw=gray!75},
+        major grid style={black, line width=0.5pt},
+        minor grid style={black!60, line width=0.15pt}, 
+        minor x tick num=1,
+        minor y tick num=1,
+        xmin=0, xmax=360,
+        ymin=0, ymax=2.5,
+        xtick={0,30,...,360},
+        xticklabels={},
+        yticklabels={,,$1$,$2$},
+        yticklabel style={anchor=north west, inner sep=1.0pt, fill=white, opacity=0.5, text opacity=1.0, font=\normalsize},
+        every axis plot/.append style={line width=0.5pt, color=blue, samples=360}
+        ]
+      \end{polaraxis}
+    \end{tikzpicture}
+  \end{center}
+  \pagebreak
+
+\end{document}  

@@ -26,3 +26,4 @@
 \contentsline {section}{\numberline {}11.3: Taylor Series}{203}{section.26}%
 \contentsline {section}{\numberline {}11.4: Working with Taylor Series}{210}{section.27}%
 \contentsline {section}{\numberline {}12.1: Parametric Equations}{218}{section.28}%
+\contentsline {section}{\numberline {}12.2: Polar Coordinates}{228}{section.29}%
