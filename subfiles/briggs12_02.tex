@@ -1,5 +1,173 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+\relscale{1.4}
+  \section{12.2: Polar Coordinates}
+
+  \noindent\textbf{Defining Polar Coordinates}
+    When using polar coordinates, the origin of the coordinate system is called the \textbf{pole}, and the positive $x$-axis is called the \textbf{polar axis}. The polar coordinates for a point $P$ are of the form $(r,\theta)$. \newline 
+    The \textbf{radial coordinate} $r$ describes the \textit{signed} (\textit{directed}) distance from the origin to $P$.\newline 
+    The \textbf{angular coordinate} $\theta$ describes an angle whose initial side is the positive $x$-axis and whose terminal side lies on the ray passing through the origin and $P$.
+
+  \begin{ex*}[\textcolor{blue}{LC 33.4}]
+    Graph the following polar coordinates
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{0}, label=\Alph*)](4)
+    \task $\parens{\dfrac{3}{2},\dfrac{\pi}{2}}$
+    \task $\parens{1,\dfrac{5\pi}{3}}$
+    \task $\parens{\dfrac{3}{2},\dfrac{7\pi}{4}}$
+    \task $\parens{-1,\dfrac{-\pi}{3}}$
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \begin{center}
+    \begin{tikzpicture}[scale=1.4]
+      \begin{polaraxis}
+        [
+        axis on top,
+        domain=0:360,
+        samples=180,
+        grid=both,
+        grid style={line width=0.1pt, draw=gray!75},
+        major grid style={black, line width=0.5pt},
+        minor grid style={black!60, line width=0.15pt}, 
+        minor x tick num=1,
+        minor y tick num=1,
+        xmin=0, xmax=360,
+        ymin=0, ymax=1.5,
+        xtick={0,30,...,360},
+        xticklabels={$0$,,,$\frac{\pi}{2}$,,,$\pi$,,,$\frac{3\pi}{2}$,,,},
+        ytick={0,1},
+        yticklabels={,$1$},
+        yticklabel style={anchor=north west, inner sep=1.0pt, fill=white, opacity=0.5, text opacity=1.0, font=\normalsize},
+        every axis plot/.append style={line width=0.5pt, color=blue, samples=360}
+        ]
+      \end{polaraxis}
+    \end{tikzpicture}
+  \end{center}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Procedure: Converting Coordinates]
+    A point with polar coordinates $(r,\theta)$ has Cartesian coordinates $(x,y)$, where
+      \[x=r\cos\theta \qquad\textnormal{ and }\qquad y=r\sin\theta.\]
+    A point with Cartesian coordinates $(x,y)$ has polar coordinates $(r,\theta)$, where 
+      \[r^2=x^2+y^2 \qquad \textnormal{ and }\qquad \tan\theta=\frac{y}{x}.\]
+  \end{thmBox*}
+
+  \begin{ex*}[\textcolor{blue}{LC 33.5}]
+    Consider the Cartesian coordinate $\parens{4\sqrt{3},-4}$. Rewrite this point in polar coordinates. \hspace*{\stretch{1}} \textit{Note}: There are infinitely many polar representations
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}[\textcolor{blue}{LC 33.6}]
+    Rewrite $y=3$ in terms of polar coordinates.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}[\textcolor{blue}{LC 33.7}]
+    Graph $r=4$ and $\theta=\frac{2\pi}{3}$
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \begin{flushright}
+    \smash{
+    \begin{tikzpicture}
+      \begin{polaraxis}[
+        axis on top,
+        domain=0:360,
+        samples=180,
+        grid=both,
+        grid style={line width=0.1pt, draw=gray!75},
+        major grid style={black, line width=0.5pt},
+        minor grid style={black!60, line width=0.15pt}, 
+        xmin=0, xmax=360,
+        ymin=0, ymax=5,
+        xtick={0,30,...,360},
+        xticklabels={},
+        yticklabels={,,$2$,$4$},
+        yticklabel style={anchor=north west, inner sep=1.0pt, fill=white, opacity=0.5, text opacity=1.0, font=\normalsize},
+        every axis plot/.append style={line width=0.5pt, color=blue, samples=360}
+        ]
+      \end{polaraxis}
+    \end{tikzpicture}}
+  \end{flushright}
+  \pagebreak
+
+  \begin{thmBox*}[Summary: Circles in Polar Coordinates]
+    The equation $r=a$ describes a circle of radius $\abs{a}$ centered at $(0,0)$.\newline
+    The equation $r=2a\cos\theta+2b\sin\theta$ describes a circle of radius $\sqrt{a^2+b^2}$ centered at $(a,b)$.
+    \begin{center}
+      \begin{tikzpicture}[declare function={
+        a=2; b=1.5; 
+        aa=a/sqrt(a^2+b^2); bb=b/sqrt(a^2+b^2);}]
+        \begin{axis}[
+          axis lines=center,
+          axis line style={black,->},
+          axis equal,
+          xmin=-1.35, xmax=1.35,
+          ymin=-1.35, ymax=1.35,
+          xmajorticks=false,
+          ymajorticks=false,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+            \addplot[data cs=polar, domain=0:360] (x,{1}) node[above right, black, pos=0.175, font=\normalsize] {$r=a$};
+            \addplot[soldot, red] coordinates{(0,0)} node[below left, black, font=\normalsize] {$(0,0)$};
+            \draw[red] (axis cs: 0,0) -- (axis cs: aa,bb) node[above, pos=0.45, font=\normalsize] {$\abs{a}$};
+        \end{axis}
+      \end{tikzpicture}
+      \hspace*{15mm}
+      \begin{tikzpicture}[declare function={
+        a=2; b=1; 
+        aa=a/sqrt(a^2+b^2); bb=b/sqrt(a^2+b^2);
+        c=3/5; d=4/5;}]
+        \begin{axis}[
+          axis lines=center,
+          axis line style={black,->},
+          axis equal,
+          xmin=-0.5, xmax=2.15,
+          ymin=-0.5, ymax=2.25,
+          xmajorticks=false,
+          ymajorticks=false,
+          ticklabel style={font=\footnotesize,inner sep=0.5pt,fill=white,opacity=1.0, text opacity=1},
+          xlabel=$x$, xlabel style={at={(ticklabel* cs:1)},anchor=north west},
+          ylabel=$y$, ylabel style={at={(ticklabel* cs:1)},anchor=south west},
+          every axis plot/.append style={line width=0.95pt, color=blue, samples=100}
+          ]
+            \addplot[data cs=polar, domain=0:360] (x,{2*c*cos(x)+2*d*sin(x)}) node[above, black, pos=0.15, yshift=10pt, font=\normalsize] {$r=2a\cos(\theta)+2b\sin(\theta)$};
+            \addplot[soldot, red] coordinates{(0,0)} node[below left, black, font=\normalsize] {$O$};
+            \addplot[soldot, black] coordinates{(c,d)} node[above, black, font=\normalsize] {$(a,b)$};
+            \draw[red] (axis cs: 0,0) -- (axis cs: c,d) node[right, pos=0.45, font=\normalsize] {$\sqrt{a^2+b^2}$};
+        \end{axis}
+      \end{tikzpicture}
+    \end{center}
+  \end{thmBox*}
+
+  \begin{ex*}
+    Rewrite the following in either polar coordinates or Cartesian coordinates
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](2)
+    \task $r=\cos\theta+2\sin\theta$
+    \task $ $
+    \task 
+    \task 
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{thmBox*}[Procedure: Cartesian-to-Polar Method for Graphing $r=f(\theta)$]
+    \begin{enumerate}
+      \item Graph $r=f(\theta)$ as if $r$ and $\theta$ were Caresian coordinates with $\theta$ on the horizontal axis and $r$ on the vertical axis. Be sure to choose an interval for $\theta$ on which the entire polar curve is produced.
+      \item Use the Cartesian graph that you created in Step 1 as a guide to sketch the points $(r,\theta)$ on the final \textit{polar} curve.
+    \end{enumerate}
+  \end{thmBox*}
+
+  \begin{thmBox*}[Summary: Symmetry in Polar Equations]
+    \begin{description}
+      \item[Symmetry about the $x$-axis] occurs if the point $(r,\theta)$ is on the graph whenever $(r,-\theta)$ is on the graph.
+      \item[Symmetry about the $y$-axis] occurs if the point $(r,\theta)$ is on the graph whenever $r,\pi-\theta)=(-r,-\theta)$ is on the graph.
+      \item[Symmetry about the origin] occurs if the point $(r,\theta)$ is on the graph whenever $(-r,\theta)=(r,\theta+\pi)$ is on the graph.
+    \end{description}
+  \end{thmBox*}
 
 \end{document}

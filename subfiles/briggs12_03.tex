@@ -1,5 +1,21 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-%\relscale{1.4}
+\relscale{1.4}
+  \section{12.3: Calculus in Polar Coordinates}
 
+  \begin{thmBox*}[Theorem 12.2: Slope of a Tangent Line]
+    Let $f$ be a differentiable function at $\theta_0$. The slope of the line tangent to the curve $r=f(\theta)$ at the point $(f(\theta_0),\theta_0)$ is
+      \[\frac{dy}{dx}=\frac{f'(\theta_0)\sin(\theta_0)+f(\theta_0)\cos(\theta_0)}{f'(\theta_0)\cos(\theta_0)-f(\theta_0)\sin(\theta_0)},\]
+    provided the denominator is nonzero at the point. At angles $\theta_0$ for which $f(\theta_0)=0$, $f'(\theta_0)\neq0$, and $\cos(\theta_0)\neq 0$, the tangent line is $\theta=\theta_0$ with slope $\tan(\theta_0)$.
+  \end{thmBox*}
+
+  \begin{defn*}[Area of Regions in Polar Coordinates]
+    Let $R$ be the region bounded by the graphs of $r=f(\theta)$ and $r=g(\theta)$, between $\theta=\alpha$ and $\theta=\beta$, where $f$ and $g$ are continuous and $f(\theta)\geq g(\theta)\geq 0$ on $[\alpha,\beta]$. The area of $R$ is
+      \[\int_\alpha^\beta \frac{1}{2}\parens{f(\theta)^2-g(\theta)^2}\,d\theta.\]
+  \end{defn*}
+
+  \begin{thmBox*}[Arc Length of a Polar Curve]
+    Let $f$ have a continuous derivative on the interval $[\alpha,\beta]$. The \textbf{arc length} of the polar curve $r=f(\theta)$ on $[\alpha,\beta]$ is
+      \[L=\int_\alpha^\beta \sqrt{f(\theta)^2+f'(\theta)^2}\,d\theta.\]
+  \end{thmBox*}
 \end{document}
