@@ -1,6 +1,6 @@
 \documentclass[../mathNotesPreamble]{subfiles}
 \begin{document}
-\relscale{1.4}
+%\relscale{1.4}
   \section{12.3: Calculus in Polar Coordinates}
 
   \begin{thmBox*}[Theorem 12.2: Slope of a Tangent Line]
@@ -8,14 +8,214 @@
       \[\frac{dy}{dx}=\frac{f'(\theta_0)\sin(\theta_0)+f(\theta_0)\cos(\theta_0)}{f'(\theta_0)\cos(\theta_0)-f(\theta_0)\sin(\theta_0)},\]
     provided the denominator is nonzero at the point. At angles $\theta_0$ for which $f(\theta_0)=0$, $f'(\theta_0)\neq0$, and $\cos(\theta_0)\neq 0$, the tangent line is $\theta=\theta_0$ with slope $\tan(\theta_0)$.
   \end{thmBox*}
+  \begin{ex*}[\textcolor{blue}{LC 34.1-34.3}]
+    Consider the polar curve $r=2\sin(\theta)$.
+  \end{ex*}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Express this polar curve in Cartesian coordinates
+  \end{tasks}
+  \begin{flushright}
+    \smash{\raisebox{-\height+1.5\baselineskip}{
+      \begin{tikzpicture}[scale=1.0]
+        \begin{polaraxis}[
+          axis on top,
+          domain=0:360,
+          samples=180,
+          grid=both,
+          grid style={line width=0.1pt, draw=gray!75},
+          major grid style={black!70, line width=0.35pt},
+          minor x tick num=1,
+          xmin=0, xmax=360,
+          ymin=0, ymax=2.25,
+          xtick={0,30,...,360},
+          xticklabels={},
+          yticklabels={,,,$2$},
+          yticklabel style={anchor=north west, inner sep=1.0pt, fill=white, opacity=0.5, text opacity=1.0, font=\normalsize},
+          every axis plot/.append style={line width=1.0pt, color=blue, samples=360}
+          ]
+          \addplot[-] expression[domain=0:360]{2*sin(x)};
+        \end{polaraxis}
+      \end{tikzpicture}
+    }}
+  \end{flushright}
+  \pagebreak
+
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Locate all points $(r,\theta)$, where this curve has a horizontal tangent line
+    \task Locate all points $(r,\theta)$, where this curve has a vertical tangent line
+  \end{tasks}
+  \vspace*{\stretch{1}}
+
+  \begin{ex*}
+    Compute the slope of the line tangent to the polar curve $r=e^{-\theta}$ at $\theta=\pi$.
+  \end{ex*}
+  \vspace*{\stretch{1}}
+  \pagebreak
 
   \begin{defn*}[Area of Regions in Polar Coordinates]
     Let $R$ be the region bounded by the graphs of $r=f(\theta)$ and $r=g(\theta)$, between $\theta=\alpha$ and $\theta=\beta$, where $f$ and $g$ are continuous and $f(\theta)\geq g(\theta)\geq 0$ on $[\alpha,\beta]$. The area of $R$ is
       \[\int_\alpha^\beta \frac{1}{2}\parens{f(\theta)^2-g(\theta)^2}\,d\theta.\]
   \end{defn*}
 
+  \begin{ex*}[\textcolor{blue}{LC 34.5-34.6}]
+    Find the area enclosed by the polar curve $r=3+2\cos(\theta)$.
+  \end{ex*}
+  \begin{flushright}
+    \smash{\raisebox{-\height+1.5\baselineskip}{
+      \begin{tikzpicture}[scale=1.0]
+        \begin{polaraxis}[
+          axis on top,
+          domain=0:360,
+          samples=180,
+          grid=both,
+          grid style={line width=0.1pt, draw=gray!75},
+          major grid style={black!70, line width=0.35pt},
+          minor x tick num=1,
+          xmin=0, xmax=360,
+          ymin=0, ymax=6,
+          xtick={0,30,...,360},
+          xticklabels={},
+%          yticklabels={,$1$},
+          yticklabel style={anchor=north west, inner sep=1.0pt, fill=white, opacity=0.5, text opacity=1.0, font=\normalsize},
+          every axis plot/.append style={line width=1.0pt, color=blue, samples=360}
+          ]
+          \addplot[-] expression[domain=0:360]{3+2*cos(x)};
+        \end{polaraxis}
+      \end{tikzpicture}
+    }}
+  \end{flushright}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}[\textcolor{blue}{LC 34.7-34.9}]
+    Find the area of the region inside the polar curve $r=2$ and outside of the polar curve $r=3+2\sin(\theta)$.
+  \end{ex*}
+  \begin{flushright}
+    \smash{\raisebox{-\height+1.5\baselineskip}{
+    \begin{tikzpicture}[scale=1.0], declare function={
+      f(x)=3+2*sin(x); g(x)=2;}]
+      \pgfplotsset{set layers}
+      \begin{polaraxis}[
+        axis on top,
+        domain=0:360,
+        samples=180,
+        grid=both,
+        grid style={line width=0.1pt, draw=gray!75},
+        major grid style={black!70, line width=0.35pt},
+        minor x tick num=1,
+        xmin=0, xmax=360,
+        ymin=0, ymax=6,
+        xtick={0,30,...,360},
+        ytick={4},
+        xticklabels={},
+        ymajorticks=false,
+        every axis plot/.append style={line width=1.0pt, color=blue, samples=360}
+        ]
+        % save path is defined in texPreamble.sty
+        \addplot[name path=A, -] expression[red,domain=0:360, save path=\innerCardiod]{3+2*sin(x)};
+        \addplot[name path=B, -] expression[domain=0:360, save path=\outerCircle]{2};
+        \pgfonlayer{axis background}
+          % shade inside curves on background
+          % prevents shading the grid away
+          \fill[gray!60, even odd rule, reuse path=\outerCircle];
+          % clip isolates the previous line(s) 
+          % from further modification
+          \clip[reuse path=\innerCardiod];
+          \fill[white, reuse path=\outerCircle];
+        \endpgfonlayer
+      \end{polaraxis}
+    \end{tikzpicture}
+    }}
+  \end{flushright}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
+  \begin{ex*}
+    Consider the polar curves $r=1+\cos(\theta)$ and $r=1-\cos(\theta)$. 
+  \end{ex*}
+  \begin{flushright}
+    \smash{\raisebox{-\height}{
+    \begin{tikzpicture}
+      \pgfplotsset{set layers}
+      \begin{polaraxis}[
+        axis on top,
+        domain=0:360,
+        samples=180,
+        grid=both,
+        grid style={line width=0.1pt, draw=gray!75},
+        major grid style={black, line width=0.15pt},
+        minor grid style={black!75, line width=0.05pt}, 
+        minor x tick num=1,
+        minor y tick num=3,
+        xmin=0, xmax=360,
+        xtick={0,30,...,360},
+        xticklabels={},
+        ytick={0,1,2},
+        ymajorticks=false,
+        yticklabel style={anchor=north},
+        every axis plot/.append style={line width=0.5pt, color=blue, samples=360}
+        ]
+        \addplot[draw=red, domain=0:360, save path=\RedPath] {1+cos(\x)};
+        \addplot[draw=none, domain=0:180, save path=\TopBluePath] {1-cos(\x)};
+        \addplot[draw=none, domain=0:360, save path=\BotBluePath] {1-cos(\x)};
+        \addplot[draw=blue, domain=0:360] {1-cos(\x)};
+        \pgfonlayer{axis background}
+          % shade inside curves on background
+          % prevents shading the grid away
+          \fill[red!20,even odd rule,reuse path=\RedPath];
+          % clip isolates the previous line(s) 
+          % from further modification
+          \clip[reuse path=\BotBluePath];
+          \fill[white,even odd rule,reuse path=\RedPath];
+          \clip[reuse path=\TopBluePath];
+          \fill[blue!20,even odd rule,reuse path=\RedPath];
+        \endpgfonlayer
+        \node[fill=white, circle, inner sep=0.5pt, opacity=0.8, text opacity=1] at (22.5, 1.5) {$1$};
+        \node[fill=white, circle, inner sep=0.5pt, opacity=0.8, text opacity=1] at (90, 0.574) {$2$};
+      \end{polaraxis}
+    \end{tikzpicture}
+    }}
+  \end{flushright}
+  \vspace*{-2\baselineskip}
+  \begin{tasks}[after-item-skip=\stretch{1}, label=,item-indent=0pt](1)
+    \task Setup the integral(s) that finds the area of area $1$.
+    \task Setup and solve the integral(s) that finds the area of area $2$.
+  \end{tasks}
+  \vspace*{\stretch{1}}
+  \pagebreak
+
   \begin{thmBox*}[Arc Length of a Polar Curve]
     Let $f$ have a continuous derivative on the interval $[\alpha,\beta]$. The \textbf{arc length} of the polar curve $r=f(\theta)$ on $[\alpha,\beta]$ is
       \[L=\int_\alpha^\beta \sqrt{f(\theta)^2+f'(\theta)^2}\,d\theta.\]
   \end{thmBox*}
+
+  \begin{ex*}[\textcolor{blue}{LC 34.13}]
+    Find the length of the polar curve $r=e^{-a\theta}$ for $\theta\geq 0$ and $a>0$ ($a$ is constant).
+  \end{ex*}
+  \begin{flushright}
+    \begin{tikzpicture}[scale=1]
+      \pgfplotsset{set layers}
+        \begin{polaraxis}[
+          axis on top,
+          domain=0:360,
+          samples=180,
+          grid=both,
+          grid style={line width=0.1pt, draw=gray!75},
+          major grid style={black, line width=0.15pt},
+          minor grid style={black!75, line width=0.05pt}, 
+          minor x tick num=1,
+          minor y tick num=3,
+          xmin=0, xmax=360,
+          xtick={0,30,...,360},
+          xticklabels={},
+          ytick={0,1,2},
+          ymajorticks=false,
+          yticklabel style={anchor=north},
+          every axis plot/.append style={line width=0.65pt, color=blue, samples=360*6}
+          ]
+          \addplot[domain=0:360*12] {exp(-0.00125*\x)};
+        \end{polaraxis}
+      \end{tikzpicture}
+  \end{flushright}
+
 \end{document}
